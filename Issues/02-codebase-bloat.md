@@ -23,7 +23,7 @@ Between 2021 and 2024:
 - For the first time in GitClear's measurement history, **copy-paste volume exceeded moved code** — meaning developers are adding duplicates faster than they are reusing or reorganizing existing logic
 - **Code churn** (new code revised within two weeks of commit) rose from 3.1% to 5.7% — evidence that AI-generated code requires more immediate rework than human-written code
 
-The 2025 DORA report, drawn from nearly 5,000 developer responses, corroborates this from the review side: AI adoption correlates with a **154% increase in pull request size** and a **9% increase in bug rates**.[^3] Engineers are merging larger, buggier PRs and spending 91% more time on code review to process them.
+Faros AI's telemetry across 10,000 developers on 1,255 engineering teams corroborates this from the review side: AI adoption correlates with a **154% increase in pull request size** and a **9% increase in bug rates**.[^3] Engineers are merging larger, buggier PRs and spending 91% more time on code review to process them.
 
 These numbers describe a compounding dynamic. Larger PRs mean less rigorous review. Less rigorous review means more defects. More defects mean more churn. And more churn means the codebase is growing even faster, as new "fixes" are layered over the original AI-generated code rather than replacing it.
 
@@ -49,7 +49,7 @@ The METR randomized controlled trial — 16 experienced open-source developers, 
 
 This is the velocity illusion in action. Early adoption of AI tools produces real speedups in greenfield work. But as the codebase grows — padded with duplicated code, under-refactored modules, and AI-generated boilerplate that no engineer fully owns — the productivity gains erode. The MIT Sloan Management Review's reporting on AI coding economics found that unmanaged AI-generated code can drive **maintenance costs to 4x traditional levels by year two**.[^5]
 
-A Harness survey of 500 engineering leaders (2025) found that 92% acknowledge increased AI-driven code volume raises deployment risks, and 67% report spending more time debugging AI-generated code. The verification overhead from AI-generated code "arguably offsets a considerable amount of the productivity gains."[^6]
+A Harness survey of 900 engineers and technical managers found that 72% of organizations have experienced at least one production incident directly caused by AI-generated code, and 45% of deployments involving AI-generated code introduce problems. The resulting gap — faster code generation without equivalent downstream automation — is what the report terms the "AI Velocity Paradox."[^6]
 
 ---
 
@@ -99,8 +99,8 @@ AI tools generate code at a rate that outpaces any team's capacity to review, re
 [^2]: Joel Becker, Nate Rush, Elizabeth Barnes, David Rein (METR) — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity," arXiv:2507.09089, July 2025. https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
     Randomized controlled trial with 16 experienced developers across 246 real tasks. AI tools (Cursor Pro + Claude 3.5/3.7) produced a 19% slowdown vs. no-AI control group. Slowdown most pronounced in large, complex, mature codebases.
 
-[^3]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025," July 2025. https://dora.dev/dora-report-2025/
-    Survey of ~5,000 developers. AI adoption correlates with +98% more PRs merged, +154% increase in PR size, +91% increase in code review time, and +9% increase in bug rates. Individual productivity gains do not translate to organizational delivery improvements.
+[^3]: Faros AI — "DORA Report 2025 Key Takeaways: AI Impact on Dev Metrics," 2025. https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025
+    Telemetry across 10,000 developers on 1,255 teams. AI adoption correlates with +98% more PRs merged, +154% increase in PR size, +91% increase in code review time, and +9% increase in bug rates. Individual productivity gains do not translate to organizational delivery improvements. The 2025 DORA report (dora.dev/research/2025/dora-report/) separately confirmed AI acts as an amplifier of existing team strengths and weaknesses across ~5,000 respondents.
 
 [^4]: Ox Security — "The Army of Juniors: The AI Code Security Crisis," October 2025. https://www.ox.security/resource-category/whitepapers-and-reports/army-of-juniors/
     Analysis of 300+ open-source repositories. "Avoidance of Refactors" appears in 80–90% of AI-generated codebases. AI generates highly functional but architecturally judgment-free code.
@@ -108,8 +108,8 @@ AI tools generate code at a rate that outpaces any team's capacity to review, re
 [^5]: Edward Anderson, Geoffrey Parker, Burcu Tan — "The Hidden Costs of Coding With Generative AI," *MIT Sloan Management Review*, August 18, 2025. https://sloanreview.mit.edu/article/the-hidden-costs-of-coding-with-generative-ai/
     Interview-based study across industries. Documents code duplication, integration problems, and dependency conflicts from AI-generated code. Unmanaged AI-generated code can drive maintenance costs to 4x traditional levels by year two.
 
-[^6]: Harness Inc. — "The State of Software Delivery Report 2025: The Role of AI in the SDLC," January 8, 2025. https://www.harness.io/state-of-software-delivery
-    Survey of 500 engineering leaders. 92% acknowledge increased AI code volume raises deployment risks. 67% report more time debugging AI-generated code. Verification overhead arguably offsets productivity gains.
+[^6]: Harness Inc. — "The State of AI in Software Engineering," January 2026. https://www.harness.io/the-state-of-ai-in-software-engineering
+    Survey of 900 engineers, platform leaders, and technical managers (conducted August 2025). 72% of organizations experienced at least one production incident from AI-generated code. 45% of AI code deployments introduce problems. 48% worry about increased vulnerabilities. Identifies the "AI Velocity Paradox": code generation accelerates but downstream testing, security, and deployment automation has not kept pace.
 
 [^7]: Jonathan Cordeiro, Shayan Noei, Ying Zou (Queen's University) — "An Empirical Study on the Code Refactoring Capability of Large Language Models," ACM Transactions on Software Engineering and Methodology, 2025. https://arxiv.org/abs/2411.02320
     Evaluated LLM refactoring across 30 Java projects. LLMs excel at systematic surface-level refactoring but perform poorly on complex context-dependent structural changes — the operations most relevant to preventing bloat.

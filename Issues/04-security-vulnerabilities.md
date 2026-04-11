@@ -20,7 +20,7 @@ The scope of the problem is documented across multiple independent analyses from
 
 **Apiiro's empirical analysis** of tens of thousands of repositories across Fortune 50 enterprises found that AI-assisted developers produce 3–4x more commits but introduce **10x more security findings**. By June 2025, AI code was adding over 10,000 new security findings per month — a 10x spike from December 2024. Privilege escalation paths increased 322%. Azure credential exposure nearly doubled. Syntax errors dropped 76% — masking the severity of the underlying security regression.[^2]
 
-**AppSec Santa's 2026 study** tested GPT-5.2, Claude Opus 4.6, Gemini 2.5 Pro, DeepSeek V3, Llama 4, and Grok 4 against the OWASP Top 10:2021 standard using multiple static analysis tools. **25.1% of generated code contained confirmed vulnerabilities.** Server-Side Request Forgery (SSRF) was the most common single finding. Injection-class weaknesses totaled 37.1% of all findings. Standard SAST tools caught only 35.7% of issues; a hybrid SAST+LLM approach raised detection to 89.5%.[^4]
+**AppSec Santa's 2026 study** tested GPT-5.2, Claude Opus 4.6, Gemini 2.5 Pro, DeepSeek V3, Llama 4 Maverick, and Grok 4 against the OWASP Top 10:2021 standard using five open-source SAST tools. **25.1% of generated code contained confirmed vulnerabilities.** Server-Side Request Forgery (SSRF) was the most common single finding at 32 confirmed instances. Critically, **78% of confirmed vulnerabilities were detected by only one of the five SAST tools** — no single scanner provides comprehensive coverage of AI-generated code.[^4]
 
 **DryRun Security's Agentic Coding Security Report** (March 2026) built two real applications with Claude Code, OpenAI Codex, and Gemini — from MVP through production. **87% of PRs contained at least one vulnerability**. 143 security issues were found across 38 scans. No agent produced a fully secure application. Systemic authentication failures persisted in every final codebase.[^11]
 
@@ -74,7 +74,7 @@ The OpenSSF's August 2025 security guidance for AI code assistants establishes t
 
 **1. Automated SAST in CI/CD — Before Review, Not After**
 
-Every PR containing AI-generated code should pass automated static analysis before it reaches a human reviewer. The AppSec Santa study found that standard SAST tools have a 35.7% precision baseline against AI-generated vulnerabilities; a hybrid SAST+LLM approach raises this to 89.5%.[^4] Tools such as Semgrep, Snyk Code, or CodeQL should be configured specifically for the vulnerability patterns most common in AI-generated code: injection flaws, hardcoded credentials, and SSRF.
+Every PR containing AI-generated code should pass automated static analysis before it reaches a human reviewer. The AppSec Santa study found that 78% of confirmed vulnerabilities in AI-generated code were caught by only one SAST tool — meaning no single scanner provides comprehensive coverage.[^4] Running multiple complementary tools (Semgrep, Snyk Code, CodeQL) is required to approximate full coverage, particularly for the injection flaws, hardcoded credentials, and SSRF patterns most common in AI-generated code.
 
 **2. Dependency Auditing for AI-Suggested Packages**
 
@@ -110,7 +110,7 @@ AI-generated code introduces security vulnerabilities at structurally higher rat
     100+ LLMs tested across 80 OWASP-mapped tasks. 45% of AI-generated code failed security tests. Java: 72% failure rate. XSS prevented in only 14% of cases; Log Injection in only 12%. No improvement in security despite years of model capability improvements.
 
 [^4]: Suphi Cankurt (AppSec Santa) — "AI Code Security Study 2026: 6 LLMs vs OWASP Top 10," February 16, 2026. https://appsecsanta.com/research/ai-code-security-study-2026
-    534 code samples from 6 frontier models tested against OWASP Top 10:2021. 25.1% contained confirmed vulnerabilities. SSRF most common. Injection-class: 37.1% of findings. Standard SAST precision: 35.7%; hybrid SAST+LLM: 89.5%.
+    534 code samples from 6 frontier models tested against OWASP Top 10:2021 using 5 open-source SAST tools. 25.1% contained confirmed vulnerabilities. SSRF (CWE-918) most common at 32 instances. 78% of confirmed vulnerabilities were caught by only one SAST tool — no single scanner provides comprehensive coverage.
 
 [^5]: Cloud Security Alliance — "Vibe Coding's Security Debt: The AI-Generated CVE Surge," April 4, 2026. https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-generated-code-vulnerability-surge-2026/
     74 confirmed CVEs traceable to AI tools through March 2026, with 35 in March alone. True figure estimated 5–10x higher. ~80% of developers believe AI produces more secure code — contradicted by all empirical evidence.

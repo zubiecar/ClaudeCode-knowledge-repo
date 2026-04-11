@@ -16,7 +16,7 @@ This is not a theoretical concern. Anthropic's own documentation notes that with
 
 The solution is to move verification upstream: into the session itself, before the human ever sees the output. When Claude runs tests and sees them pass, it has evidence of correctness. When it runs a linter and sees no errors, it has evidence of conformance. When it takes a screenshot and compares it to a design, it has evidence of visual correctness. Each verification mechanism Claude has access to is a feedback loop that reduces the error rate of its final output — and reduces the review burden that lands on the human.[^1]
 
-The METR productivity study found a 19% slowdown from AI tool use on complex tasks — a result that correlates with insufficient verification infrastructure. Tasks where AI tools helped the most were those with fast, automated feedback loops; tasks where AI tools hurt the most were those where verification required human judgment at each step.[^4]
+The METR productivity study found a 19% slowdown from AI tool use across 246 real tasks — a counterintuitive result the authors examined across 20 potential explanations without identifying a definitive cause.[^4] One plausible interpretation supported by the TDAD findings: the pattern of when AI helps (bounded, verifiable tasks) vs. when it doesn't (open-ended, judgment-dependent tasks) suggests that verification infrastructure is a key variable distinguishing the two.
 
 **Recommended Practice:**
 - Treat verification infrastructure as a prerequisite for AI-assisted development, not an afterthought. Before beginning an AI session on a module with poor test coverage, invest time in adding at minimum a smoke test or integration test that Claude can run.[^1]
@@ -68,7 +68,7 @@ For teams with uneven test coverage, a pragmatic hybrid is available: write test
 
 Anthropic's documentation on hooks supports integrating CI/CD at the session level as well: hooks run automatically at defined points in Claude's workflow, allowing linters, type checkers, and tests to run automatically after each file edit rather than only at commit time. This creates a session-level feedback loop that catches errors before they accumulate into a correction spiral.[^1]
 
-The safer CI pattern for agentic code review (documented by Roman Fedytskyi, March 2026) establishes a four-layer architecture: scope isolation (agents start with read-only access), context validation (semantic retrieval finds relevant files), validation stage (agent suggestions pass engineering and policy gates before application), and observability (full audit trails of prompts, tool calls, and validation results).[^9] For AI-generated code specifically, this pattern addresses the risk that an AI session makes changes that are locally valid but violate system-level security or operational constraints.
+The safer CI pattern for agentic code review (documented by Roman Fedytskyi, March 2026) establishes a four-layer architecture: scope isolation (agents start with read-only access), context validation (semantic retrieval finds relevant files), validation stage (agent suggestions pass engineering and policy gates before application), and observability (full audit trails of prompts, tool calls, and validation results).[^8] For AI-generated code specifically, this pattern addresses the risk that an AI session makes changes that are locally valid but violate system-level security or operational constraints.
 
 SAST scanning should be integrated into CI for AI-generated code, per Issue 4. The connection to verification-driven development is direct: SAST is a verification mechanism Claude can run against its own output during a session ("Run Snyk Code against the changes I've made and address any findings"), not just a post-session check.[^3]
 
@@ -76,7 +76,7 @@ SAST scanning should be integrated into CI for AI-generated code, per Issue 4. T
 - Configure PostToolUse hooks to run linters and type checkers after each file edit. This creates a tight feedback loop within the session, not just at commit time.[^1]
 - Add SAST to the list of verification tools Claude should run before considering a task complete: "Implement X, run tests, run the linter, and run Snyk against the changes."[^3]
 - Use `claude -p "lint the changes vs. main and report issues"` in CI pipelines as an automated review step. This catches AI-specific patterns that standard linters miss.[^1]
-- Separate the CI verification stages: test correctness (does it work?), security correctness (is it safe?), and architectural correctness (does it fit the system?). Each is a different verification mechanism requiring different tools.[^9]
+- Separate the CI verification stages: test correctness (does it work?), security correctness (is it safe?), and architectural correctness (does it fit the system?). Each is a different verification mechanism requiring different tools.[^8]
 
 ---
 

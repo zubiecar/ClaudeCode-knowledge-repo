@@ -22,9 +22,7 @@ None of these systems were wrong. All would pass basic tests. But they were arch
 
 ### AI Defaults to the Internet, Not Your Codebase
 
-The mechanism behind architectural drift was named the "Constraint Persona Problem" in industry engineering practice: when AI is not given an explicit architectural role and constraints upfront, it defaults to common patterns from its training data — code that works but introduces hidden architectural inconsistency.[^7]
-
-A martinfowler.com article by a Thoughtworks principal engineer (April 2026) provides concrete examples: AI tools use the wrong frameworks (Express.js when the team uses Fastify), incorrect file organization (`utils/` vs. `lib/services/`), and contradictory paradigms (class-based vs. functional approaches) — not because the AI is incompetent, but because "AI uses project-inappropriate patterns by drawing on aggregated internet patterns rather than understanding a particular team's architectural decisions."[^7]
+A martinfowler.com article by a Thoughtworks principal engineer (February 2026) identifies the mechanism behind architectural drift: when AI is not given an explicit architectural role and constraints upfront, it defaults to common patterns from its training data — code that works but introduces hidden architectural inconsistency.[^7] The article provides concrete examples: AI tools use the wrong frameworks (Express.js when the team uses Fastify), incorrect file organization (`utils/` vs. `lib/services/`), and contradictory paradigms (class-based vs. functional approaches) — not because the AI is incompetent, but because "AI uses project-inappropriate patterns by drawing on aggregated internet patterns rather than understanding a particular team's architectural decisions."[^7]
 
 An empirical analysis of 2,923 GitHub repositories studied how teams configure agentic AI tools (Claude Code, GitHub Copilot, Cursor) to constrain this behavior.[^2] The findings were sobering: Context Files (CLAUDE.md, AGENTS.md) dominate as the configuration mechanism, but most teams use only the most basic configuration. Advanced mechanisms — Skills, Subagents, custom tool definitions — are "only shallowly adopted." The result is that current mechanisms "leave a major gap in enforcing organizational architectural constraints."
 
@@ -108,7 +106,7 @@ Architectural drift in AI-assisted development is not a failure of individual en
 [^6]: Alessio Bucaioni et al. — "Artificial Intelligence for Software Architecture: Literature Review and the Road Ahead," arXiv:2504.04334, April 6, 2025. https://arxiv.org/abs/2504.04334
     Systematic review of 35 primary studies. AI architecture tools offer "isolated suggestions rather than ensuring system-wide modularity" and "cannot adapt to unforeseen changes." Architectural documentation tools extract structural elements rather than maintain semantic documentation.
 
-[^7]: Rahul Garg (Thoughtworks) — "Patterns for Reducing Friction in AI-Assisted Development," martinfowler.com, April 8, 2026. https://martinfowler.com/articles/reduce-friction-ai/
+[^7]: Rahul Garg (Thoughtworks) — "Patterns for Reducing Friction in AI-Assisted Development," martinfowler.com, February 24, 2026. https://martinfowler.com/articles/reduce-friction-ai/
     Documents specific AI drift behaviors: wrong frameworks, incorrect file organization, contradictory paradigms. Core insight: AI uses project-inappropriate patterns by drawing on aggregated internet patterns. Proposes five patterns including Knowledge Priming and Context Anchoring.
 
 [^8]: Kyle Howard et al. — "Architectural Governance at AI Speed," InfoQ, March 26, 2026. https://www.infoq.com/articles/architectural-governance-ai-speed/

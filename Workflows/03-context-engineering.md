@@ -150,7 +150,7 @@ The GitHub blog's 2026 work on spec-driven development describes maintaining a "
     - Subagent delegation mechanics and context isolation
     - Worktree integration for parallel sessions with context isolation
 
-[^9]: Phillip Carter — "How I Code With LLMs These Days," Honeycomb, March 2025. https://www.honeycomb.io/blog/how-i-code-with-llms-these-days
+[^9]: Phillip Carter — "How I Code With LLMs These Days," phillipcarter.dev, January 31, 2025. https://www.phillipcarter.dev/posts/coding-with-llms
     - Context-self-updating technique: asking Claude to update its own understanding when a component is verified
     - RAG approach to context building: using llms.txt standard and project rules files
     - Incremental context accumulation over a feature's development lifecycle

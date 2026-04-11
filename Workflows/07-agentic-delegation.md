@@ -149,7 +149,7 @@ For our team, the practical expression of this principle is the "review before m
     - Auto mode and safety classifier: blocking scope escalation in unattended runs
     - --allowedTools and permission allowlists for bounded autonomy
 
-[^7]: Phillip Carter — "How I Code With LLMs These Days," Honeycomb, March 2025. https://www.honeycomb.io/blog/how-i-code-with-llms-these-days
+[^7]: Phillip Carter — "How I Code With LLMs These Days," phillipcarter.dev, January 31, 2025. https://www.phillipcarter.dev/posts/coding-with-llms
     - Pattern precedence as a delegability criterion: existing patterns vs. first-of-kind architectural work
     - Agent limitations in existing codebases: "wandering into nonsensical code" without firm scope constraints
     - Incremental generation principle applied to delegation: small, verifiable tasks not sprawling features
