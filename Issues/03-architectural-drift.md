@@ -1,6 +1,6 @@
 ## Architectural Drift: When Every Engineer's AI Speaks a Different Language
 
-**Related to:** [Issues Overview](overview.md) — Issue 3
+**Related to:** [Issues Overview](overview.md) — Issue 3 · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^a] · [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c] · [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md)[^d]
 
 ---
 
@@ -126,3 +126,11 @@ Architectural drift in AI-assisted development is not a failure of individual en
 
 [^13]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025." https://dora.dev/research/2025/dora-report/
     "Clear and communicated AI stances" and "strong version control practices" are two of seven capabilities that separate teams where AI adoption improves outcomes from those where it amplifies problems. Without these, AI-driven inconsistencies propagate across codebases.
+
+[^a]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — ADRs are the primary countermeasure to architectural drift; maintaining accessible decision records prevents sessions from regenerating already-rejected alternatives.
+
+[^b]: [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md) — CLAUDE.md is where ADR constraints are enforced at session time; it is the operational layer that translates architectural decisions into AI behavior constraints.
+
+[^c]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies require ADR references in AI-primary PRs; the review gate is the last line of defense against drift that passes through session context.
+
+[^d]: [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md) — code quality metrics include architectural consistency signals; drift is measured and surfaced through the health dashboard before it becomes structural.

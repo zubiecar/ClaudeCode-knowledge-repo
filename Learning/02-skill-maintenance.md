@@ -1,6 +1,6 @@
 ## Skill Maintenance: Staying Sharp Alongside AI Assistance
 
-**Related to:** [Learning Overview](00-overview.md) — Practice 2
+**Related to:** [Learning Overview](00-overview.md) — Practice 2 · [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md)[^a] · [Learning: AI-Free Practice Protocols](04-ai-free-practice-protocols.md)[^b] · [Ethics: Developer Impact](../Ethics/02-developer-impact.md)[^c] · [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md)[^d]
 
 ---
 
@@ -150,3 +150,8 @@ The highest-signal sources for an 11-person team are: Anthropic's own documentat
     - Crutch vs. multiplier distinction: the specific behavioral differences between engineers who use AI as a capability multiplier and those who have allowed it to become a dependency
     - AI-free practice format: what effective deliberate practice looks like in an AI-assisted team context, distinct from both total AI avoidance and unrestricted AI use
     - The teach-back moment: why explaining AI-generated code to another engineer is the highest-leverage single skill maintenance practice for teams that cannot easily schedule dedicated practice sessions
+
+[^a]: [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md) — skill maintenance is the direct countermeasure to skill atrophy; the practices here are designed to preserve the capabilities that document identifies as at risk.
+[^b]: [Learning: AI-Free Practice Protocols](04-ai-free-practice-protocols.md) — AI-free practice protocols are the structural mechanism for skill maintenance; the two documents define the goal and the practice.
+[^c]: [Ethics: Developer Impact](../Ethics/02-developer-impact.md) — skill maintenance is the operational form of the ethical commitment to developer career health; the ethics document provides the rationale for why skill maintenance is not optional.
+[^d]: [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md) — session efficiency metrics include signals that distinguish AI-assisted from AI-dependent output; declining efficiency without AI is the leading indicator of atrophy that skill maintenance prevents.

@@ -1,6 +1,6 @@
 ## Bias and Representation: Reviewing AI Outputs for Embedded Assumptions
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 6
+**Related to:** [Ethics Overview](00-overview.md) — Risk 6 · [Governance: Review Policies](../Governance/01-review-policies.md)[^a] · [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md)[^b] · [Learning: Continuing Education](../Learning/05-continuing-education.md)[^c]
 
 ---
 
@@ -156,3 +156,9 @@ The additional review input question — when to involve reviewers beyond the st
     - Bias pattern identification in AI output: a structured walkthrough of the three bias categories with live code examples and the review interventions that catch each
     - Accessibility prompting strategy: the specific prompt structure that produces more accessible frontend code from Claude and the verification steps that confirm compliance
     - Diverse review escalation in practice: how to route high-exposure features to broader review without adding significant overhead to standard review workflows
+
+[^a]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies should include bias review criteria; this document's analysis informs what reviewers should look for in AI-generated content.
+
+[^b]: [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md) — bias testing is a category of test session design for AI-generated outputs; test cases should include representation and edge-case coverage.
+
+[^c]: [Learning: Continuing Education](../Learning/05-continuing-education.md) — bias awareness is a continuing education topic for engineers working with AI; staying current on bias research is part of responsible AI use.

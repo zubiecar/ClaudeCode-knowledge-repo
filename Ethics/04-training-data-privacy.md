@@ -1,6 +1,6 @@
 ## Training Data and Privacy: Managing Sensitive Information in AI Sessions
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 4
+**Related to:** [Ethics Overview](00-overview.md) — Risk 4 · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md)[^c] · [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md)[^d]
 
 ---
 
@@ -153,3 +153,11 @@ CLAUDE.md session scope reminders are the primary operational tool for maintaini
     - How session data travels: a technical walkthrough of what happens to data submitted to AI coding tools, from prompt submission through processing and retention
     - Real examples of sensitive data in AI sessions: common patterns of inadvertent exposure in developer workflows and how to recognize them before submitting
     - Practical hygiene rules: the three categories of information that should never appear in an AI session under any circumstances and why
+
+[^a]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — privacy constraints on what data enters AI sessions are a core usage policy requirement; this ethical analysis is the basis for those policy provisions.
+
+[^b]: [Security: Secrets Management](../Security/04-secrets-management.md) — secrets entering AI sessions are a training data privacy risk; the operational and ethical perspectives address the same exposure.
+
+[^c]: [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md) — permission scoping controls what Claude Code can access; privacy protection is implemented through permission boundaries.
+
+[^d]: [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md) — data privacy compliance is a primary audit category; the ethical analysis defines what the compliance documentation must demonstrate.

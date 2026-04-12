@@ -1,6 +1,6 @@
 ## MCP Server 1: GitHub Integration
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 1
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 1 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Governance: Review Policies](../Governance/01-review-policies.md)[^b] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^c]
 
 ---
 

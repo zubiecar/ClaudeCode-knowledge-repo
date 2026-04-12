@@ -1,6 +1,6 @@
 ## Quarterly Engineering Health Review: Strategic Governance and CTO Decision Authorities
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 5: Quarterly Engineering Health Review
+**Related to:** [Governance Overview](00-overview.md) — Policy 5: Quarterly Engineering Health Review · [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md)[^a] · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^b] · [Governance: Compliance and Audit](06-compliance-and-audit.md)[^c] · [Issues: Velocity Governance](../Issues/08-velocity-governance.md)[^d]
 
 ---
 
@@ -154,3 +154,11 @@ The specific governance findings that translate to annual planning inputs are: p
     - Quarterly vs. monthly governance: why the signals that matter for strategic decisions are invisible in monthly data but clear in six-month trends
     - CTO as strategic governance actor: what changes when the CTO attends the quarterly review as a decision-maker rather than an observer
     - Annual planning connection: how one team translated three consecutive quarterly reviews showing AI-primary rework accumulation into a successful annual planning argument for a spec.md tooling investment
+
+[^a]: [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md) — The health dashboard is the primary data source for quarterly review; the review cadence and the dashboard metrics are designed together.
+
+[^b]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — Quarterly review includes an ADR currency check; are recent architectural decisions documented and are existing ADRs still accurate.
+
+[^c]: [Governance: Compliance and Audit](06-compliance-and-audit.md) — Quarterly health review feeds into compliance documentation; the review output is the evidence record for audit requirements.
+
+[^d]: [Issues: Velocity Governance](../Issues/08-velocity-governance.md) — Quarterly review is the strategic-level intervention point for the velocity-governance feedback loop; it is where the CTO evaluates whether the balance has shifted.

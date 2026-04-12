@@ -1,6 +1,6 @@
 ## MCP Server 2: Slack Integration
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 2
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 2 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Documentation: Knowledge Transfer](../Documentation/03-knowledge-transfer.md)[^b] · [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md)[^c]
 
 ---
 

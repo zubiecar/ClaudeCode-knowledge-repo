@@ -1,6 +1,6 @@
 ## Settings and Permissions: Governing What Claude Code Can Do
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 5
+**Related to:** [Tooling Overview](00-overview.md) — Tool 5 · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [MCP Servers: Configuration, Security, and Governance](../MCP%20Servers/06-configuration-security-governance.md)[^c] · [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md)[^d]
 
 ---
 
@@ -135,3 +135,11 @@ CLAUDE.md serves as a permission governance layer when it explicitly documents t
     - Quarterly permission audit mechanics: what to compare, how to use git history to detect undocumented changes, and how to bring configuration back into alignment with intent
     - CTO as audit owner: why permission governance is a leadership responsibility, not just an engineering one
     - CLAUDE.md as governance documentation: how maintaining a "Permission Model" section creates a visible target for divergence detection during code review
+
+[^a]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — settings and permissions are the technical enforcement layer for usage policy; policy constraints become permission configurations.
+
+[^b]: [Security: Secrets Management](../Security/04-secrets-management.md) — permission scoping controls what Claude Code can access; secrets management and permission boundaries are the same security concern at different layers.
+
+[^c]: [MCP Servers: Configuration, Security, and Governance](../MCP%20Servers/06-configuration-security-governance.md) — MCP server permissions are a specific category of settings governance; the two documents address the same concern at tool level and MCP level.
+
+[^d]: [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md) — privacy constraints on what data Claude Code can access are implemented through permission settings; policy and technical control are paired here.

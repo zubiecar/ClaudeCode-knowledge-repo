@@ -1,6 +1,6 @@
 ## Developer Impact: Skill Equity and Career Development in AI-Assisted Teams
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 2
+**Related to:** [Ethics Overview](00-overview.md) — Risk 2 · [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md)[^a] · [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md)[^b] · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^c]
 
 ---
 
@@ -144,3 +144,9 @@ This is not a macro problem that individual teams are powerless about. It is a c
     - Skill equity in practice: how AI adoption affects different engineers differently based on existing capability levels; the differential benefit pattern that makes senior engineers stronger while potentially making junior engineers dependent
     - Career implications: what the job market for AI-dependent vs. AI-capable engineers looks like, and the difference between the two
     - Team responsibility: what engineering leaders can do to prevent AI adoption from undermining junior developer career trajectories
+
+[^a]: [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md) — skill atrophy is the operational manifestation of the career impact described here; the ethical concern and the operational risk are two framings of the same phenomenon.
+
+[^b]: [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md) — skill maintenance practices are the direct countermeasure to the developer impact described here; the ethical concern informs why those practices are not optional.
+
+[^c]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — usage policy includes developer equity considerations; the ethical analysis of developer impact informs policy scope and enforcement priorities.

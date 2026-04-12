@@ -1,6 +1,6 @@
 ## Prompt and Context Fragmentation: The Hidden Variable in AI Output Quality
 
-**Related to:** [Issues Overview](overview.md) — Issue 7
+**Related to:** [Issues Overview](overview.md) — Issue 7 · [Prompting: Prompt Architecture](../Prompting/01-prompt-architecture.md)[^a] · [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md)[^b] · [Tooling: Custom Skills](../Tooling/04-custom-skills.md)[^c] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^d]
 
 ---
 
@@ -151,3 +151,11 @@ Prompt and context fragmentation is the mechanism by which eleven engineers usin
 
 [^13]: Mahan Tafreshipour et al. — "Prompting in the Wild: An Empirical Study of Prompt Evolution in Software Repositories," arXiv:2412.17298, MSR 2025. https://arxiv.org/abs/2412.17298
     Analysis of 1,262 prompt changes across 243 GitHub repositories. Only 21.9% documented in commit messages. Undocumented changes introduce logical inconsistencies and misalignment between prompts and LLM responses.
+
+[^a]: [Prompting: Prompt Architecture](../Prompting/01-prompt-architecture.md) — prompt architecture is the discipline that prevents fragmentation; structured, reusable prompt patterns are the countermeasure to the ad-hoc variation this document describes.
+
+[^b]: [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md) — CLAUDE.md provides the baseline context that reduces the per-engineer variation in prompt approach; shared context is the infrastructure layer beneath prompt standardization.
+
+[^c]: [Tooling: Custom Skills](../Tooling/04-custom-skills.md) — custom skills encode standardized prompt patterns as team-wide commands; they are the distribution mechanism for the prompt architecture that prevents fragmentation.
+
+[^d]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — context engineering addresses the root cause of fragmentation at the session level; consistent context structures produce consistent prompt behavior across engineers.

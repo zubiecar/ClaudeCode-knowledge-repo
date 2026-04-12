@@ -1,6 +1,6 @@
 ## Skill Atrophy and the Junior Pipeline: What AI Is Costing the Engineering Team
 
-**Related to:** [Issues Overview](overview.md) — Issue 6
+**Related to:** [Issues Overview](overview.md) — Issue 6 · [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md)[^a] · [Learning: AI-Free Practice Protocols](../Learning/04-ai-free-practice-protocols.md)[^b] · [Ethics: Developer Impact](../Ethics/02-developer-impact.md)[^c] · [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md)[^d]
 
 ---
 
@@ -146,3 +146,11 @@ Skill atrophy from AI over-reliance is not a problem that announces itself. It a
 
 [^13]: Joel Becker et al. (METR) — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity," arXiv:2507.09089, July 2025. https://arxiv.org/abs/2507.09089
     RCT with 16 experienced developers. AI tools produced 19% slowdown. Even after experiencing the slowdown, developers still believed AI had helped them go faster — evidence that over-reliance can suppress existing judgment and mental models.
+
+[^a]: [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md) — skill maintenance is the direct countermeasure to skill atrophy; the practices defined there are designed to preserve exactly the capabilities this document identifies as at risk.
+
+[^b]: [Learning: AI-Free Practice Protocols](../Learning/04-ai-free-practice-protocols.md) — AI-free practice protocols are the structural mechanism for preventing atrophy; deliberate off-AI practice preserves the skills that AI assistance otherwise replaces.
+
+[^c]: [Ethics: Developer Impact](../Ethics/02-developer-impact.md) — developer impact documents the career and equity dimensions of skill atrophy; the ethical concern and the operational risk are two framings of the same phenomenon.
+
+[^d]: [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md) — session efficiency metrics include signals that distinguish AI-dependent output from AI-assisted output; declining efficiency without AI is the leading indicator of atrophy.

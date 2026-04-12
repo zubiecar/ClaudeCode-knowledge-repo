@@ -1,6 +1,6 @@
 ## Review Theater: When Code Review Becomes a Formality
 
-**Related to:** [Issues Overview](overview.md) — Issue 5
+**Related to:** [Issues Overview](overview.md) — Issue 5 · [Governance: Review Policies](../Governance/01-review-policies.md)[^a] · [Workflows: Writer/Reviewer Pattern](../Workflows/06-writer-reviewer-pattern.md)[^b] · [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md)[^c] · [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md)[^d]
 
 ---
 
@@ -134,3 +134,11 @@ Review theater is what happens when the volume and format of AI-generated code o
 
 [^13]: Kowshik Chowdhury et al. — "From Industry Claims to Empirical Reality: An Empirical Study of Code Review Agents in Pull Requests," arXiv:2604.03196, April 3, 2026. https://arxiv.org/abs/2604.03196
     Tests the "80% autonomous review" industry claim. CRA-only PRs: 45.20% merge rate vs. 68.37% for human-only. 60.2% of closed CRA-only PRs had low signal ratios. CRAs should augment, not replace, human reviewers.
+
+[^a]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies are designed to prevent review theater; the standards, required checks, and reviewer qualifications defined there are the structural countermeasure.
+
+[^b]: [Workflows: Writer/Reviewer Pattern](../Workflows/06-writer-reviewer-pattern.md) — the writer/reviewer pattern separates generation from review into independent sessions; this structural separation is the primary workflow mechanism for preventing theater.
+
+[^c]: [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md) — code quality metrics detect review theater after the fact; a high pass rate combined with high post-merge defect rates is the signal that review was not substantive.
+
+[^d]: [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md) — test session design governs what QA verifies independently of reviewer approval; independent QA coverage is the backstop when review theater lets defects through.

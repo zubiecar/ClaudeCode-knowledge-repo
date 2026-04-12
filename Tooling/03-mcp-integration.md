@@ -1,6 +1,6 @@
 ## MCP Integration: Extending Claude Into Your Stack
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 3
+**Related to:** [Tooling Overview](00-overview.md) — Tool 3 · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^a] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^b] · [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md)[^c] · [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md)[^d]
 
 ---
 
@@ -138,3 +138,11 @@ Prompt injection via MCP is an emerging risk category: if Claude fetches content
     - Why MCP changes AI-assisted development: the shift from manually assembling context to having external tools integrated directly into the session
     - Custom server development: when to build vs. adopt existing community servers; the maintenance cost calculation for custom MCP implementations
     - Production readiness: what it means to treat a custom MCP server as production code and why skipping this step creates hidden reliability risks
+
+[^a]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — MCP servers make ADRs stored in Google Drive or Confluence queryable within sessions; ADR accessibility depends on MCP configuration for teams using external documentation stores.
+
+[^b]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — MCP is the primary mechanism for injecting live external context into sessions; MCP integration and context engineering are operationally the same discipline at different layers.
+
+[^c]: [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md) — CLAUDE.md instructions direct sessions to query MCP servers for specific context categories; the two tools are configured together and reference each other.
+
+[^d]: [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md) — MCP integration reduces per-engineer context variation by providing shared, queryable data sources; consistent context is the structural countermeasure to fragmentation.

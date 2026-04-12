@@ -1,6 +1,6 @@
 ## MCP Server 5: Internal Site Integration (Custom Servers)
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 5
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 5 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [MCP Servers: Configuration, Security, and Governance](06-configuration-security-governance.md)[^c]
 
 ---
 

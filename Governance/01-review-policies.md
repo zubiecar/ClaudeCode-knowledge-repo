@@ -1,6 +1,6 @@
 ## AI Code Review Policy: Standards for AI-Generated Pull Requests
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 1
+**Related to:** [Governance Overview](00-overview.md) — Policy 1 · [Issues: Review Theater](../Issues/05-review-theater.md)[^a] · [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md)[^b] · [Tooling: Hooks and Automation](../Tooling/02-hooks-and-automation.md)[^c] · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^d]
 
 ---
 
@@ -153,3 +153,11 @@ The automation configuration is the team's first line of defense against the mos
     - PR template configuration: how to configure Claude Code PR template fields to trigger the appropriate review process automatically based on code origin
     - Writer/reviewer pre-review workflow: the specific session configuration and prompting approach that produces review-ready finding sets before human review begins
     - CI automation setup: configuring SAST, coverage, and complexity checks as pre-review gates that handle routine findings before human review begins
+
+[^a]: [Issues: Review Theater](../Issues/05-review-theater.md) — Review theater describes exactly what these policies exist to prevent; the failure mode and the countermeasure are paired documents.
+
+[^b]: [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md) — Test session design governs what QA verifies independently; independent QA is the structural backstop when review policies are the first gate.
+
+[^c]: [Tooling: Hooks and Automation](../Tooling/02-hooks-and-automation.md) — Hooks enforce review policy requirements at the session layer before code reaches review; automated checks and review policy requirements are complementary enforcement levels.
+
+[^d]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — ADR references in PR descriptions are a review policy requirement; review policy depends on ADRs being current and accessible.

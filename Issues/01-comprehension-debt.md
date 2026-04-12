@@ -1,6 +1,6 @@
 ## Comprehension Debt: The Hidden Cost of AI-Generated Code
 
-**Related to:** [Issues Overview](overview.md) — Issue 1
+**Related to:** [Issues Overview](overview.md) — Issue 1 · [Documentation: Rationale Capture](../Documentation/04-rationale-capture.md)[^a] · [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md)[^b] · [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md)[^c] · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^d]
 
 ---
 
@@ -133,3 +133,11 @@ The research consensus is that passive AI use degrades comprehension even when i
 
 [^12]: CodeRabbit — "State of AI Code Generation: AI vs. Human Code Report," December 17, 2025. https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report
     Analysis of 470 GitHub PRs. AI PRs had logic/correctness issues 75% more common and readability problems 3x higher than human-written PRs. Root cause: AI tools "infer code patterns statistically, not semantically."
+
+[^a]: [Documentation: Rationale Capture](../Documentation/04-rationale-capture.md) — rationale capture is the direct countermeasure to comprehension debt; documenting AI decisions at the moment they are made prevents the debt from accruing.
+
+[^b]: [Learning: Skill Maintenance](../Learning/02-skill-maintenance.md) — skill maintenance preserves the comprehension capacity that comprehension debt erodes; engineers who maintain genuine understanding catch AI errors that accumulate into debt.
+
+[^c]: [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md) — test coverage analysis is the primary mechanism for detecting comprehension debt in merged code; gaps in coverage often correspond to sections no engineer genuinely understood.
+
+[^d]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — ADRs are the structured form of comprehension preservation; without them, architectural comprehension is the first type of knowledge to be lost.

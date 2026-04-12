@@ -1,6 +1,6 @@
 ## Security Vulnerability Accumulation: The Threat Surface AI Is Building
 
-**Related to:** [Issues Overview](overview.md) — Issue 4
+**Related to:** [Issues Overview](overview.md) — Issue 4 · [Security: Threat Modeling](../Security/01-threat-modeling.md)[^a] · [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md)[^b] · [Ethics: Security Responsibility](../Ethics/03-security-responsibility.md)[^c] · [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md)[^d]
 
 ---
 
@@ -138,3 +138,11 @@ AI-generated code introduces security vulnerabilities at structurally higher rat
 
 [^13]: Nicole Kobie — "Nearly Half of Software Developers Don't Check AI-Generated Code," *IT Pro*, January 9, 2026. https://www.itpro.com/software/development/software-developers-not-checking-ai-generated-code-verification-debt
     Nearly 50% of developers do not verify AI code before committing. 17% of organizations have no AI use control policies. 98% of security professionals say their teams lack visibility into how GenAI is used in development.
+
+[^a]: [Security: Threat Modeling](../Security/01-threat-modeling.md) — threat modeling provides the framework for identifying which vulnerability classes AI-generated code is most likely to introduce; these are the risks this document describes.
+
+[^b]: [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md) — SAST/DAST integration is the primary detection mechanism for the vulnerabilities described here; automated scanning in the pipeline is the operational countermeasure.
+
+[^c]: [Ethics: Security Responsibility](../Ethics/03-security-responsibility.md) — security responsibility documents the accountability structure when AI-generated vulnerabilities reach production; this document describes what accumulates, that one describes who owns it.
+
+[^d]: [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md) — vulnerability trend metrics operationalize the risk described here; tracking trends over time converts a qualitative concern into a measurable governance signal.

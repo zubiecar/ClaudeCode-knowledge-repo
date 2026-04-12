@@ -1,6 +1,6 @@
 ## Hooks and Automation: Enforcing Standards at the Session Layer
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 2
+**Related to:** [Tooling Overview](00-overview.md) — Tool 2 · [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md)[^a] · [Governance: Review Policies](../Governance/01-review-policies.md)[^b] · [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md)[^c] · [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md)[^d]
 
 ---
 
@@ -138,3 +138,11 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
     - UserPromptSubmit hooks for dynamic context: how automated context injection removes the engineer burden of supplying standard context manually in every session
     - Hook composition: how to build multi-stage hook pipelines that gate on sequential conditions rather than treating each hook as independent
     - Team standardization: how project-level settings files ensure hook consistency without requiring individual engineer setup steps
+
+[^a]: [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md) — hooks extend CLAUDE.md constraints into executable enforcement; the two tools together form the complete session governance layer.
+
+[^b]: [Governance: Review Policies](../Governance/01-review-policies.md) — hooks automate the pre-commit and pre-push checks that review policies require; automated enforcement reduces the reviewer burden and prevents policy drift.
+
+[^c]: [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md) — coverage analysis hooks run test coverage automatically on AI-generated code; the hook triggers what the QA section defines as the coverage requirement.
+
+[^d]: [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md) — SAST scanning can be integrated as a pre-commit hook; the two documents describe the security tool and its automation integration point.

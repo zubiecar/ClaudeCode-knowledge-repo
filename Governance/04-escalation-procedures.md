@@ -1,6 +1,6 @@
 ## Escalation Procedures: Override Requests, Violation Handling, and Policy Revision
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 4: Escalation and Override Procedures
+**Related to:** [Governance Overview](00-overview.md) — Policy 4: Escalation and Override Procedures · [Governance: Review Policies](01-review-policies.md)[^a] · [Governance: Incident Response](07-incident-response.md)[^b] · [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md)[^c]
 
 ---
 
@@ -155,3 +155,9 @@ The PR process for governance documents is not bureaucratic overhead — it is t
     - Escalation log format: the specific fields that make an escalation log useful for pattern detection rather than just compliance tracking
     - Override expiration enforcement: how time-limited overrides prevent exception accumulation; the automated reminder that fires when an override reaches its expiration sprint
     - Quarterly log review process: how to structure a 30-minute log review that finds patterns that monthly summaries miss
+
+[^a]: [Governance: Review Policies](01-review-policies.md) — Escalation procedures handle cases where review policy requirements create friction or are disputed; the two documents form the policy and exception framework.
+
+[^b]: [Governance: Incident Response](07-incident-response.md) — Incident response triggers escalation procedures when AI-generated code failures reach production; escalation and incident response are sequential phases of the same governance chain.
+
+[^c]: [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md) — Security vulnerability trends are a leading indicator that should trigger escalation before incidents occur; metrics inform when escalation thresholds are being approached.

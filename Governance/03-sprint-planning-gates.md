@@ -1,6 +1,6 @@
 ## Sprint Planning Gates: AI Readiness Classification and Velocity Management
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 3: Sprint Planning and AI Readiness Gates
+**Related to:** [Governance Overview](00-overview.md) — Policy 3: Sprint Planning and AI Readiness Gates · [Governance: Review Policies](01-review-policies.md)[^a] · [Issues: Velocity Governance](../Issues/08-velocity-governance.md)[^b] · [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md)[^c] · [Workflows: Task Decomposition](../Workflows/02-task-decomposition.md)[^d]
 
 ---
 
@@ -154,3 +154,11 @@ The communication challenge is framing governance in terms that are meaningful t
     - Spec.md construction walkthrough: how to produce a complete specification in 30–60 minutes that gives Claude Code the context it needs for reliable AI-primary output
     - Classification system onboarding: how to introduce the three tiers to new engineers so that their first sprint uses the classification correctly without constant guidance
     - Retrospective calibration workflow: using sprint retrospective data to identify systematic classification errors and adjust the criteria for the next sprint
+
+[^a]: [Governance: Review Policies](01-review-policies.md) — Sprint planning gates determine AI readiness classification before work begins; review policies govern what happens after; together they bracket the development cycle.
+
+[^b]: [Issues: Velocity Governance](../Issues/08-velocity-governance.md) — The velocity-governance feedback loop is what sprint planning gates are designed to interrupt; readiness classification prevents ungoverned velocity from compounding.
+
+[^c]: [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md) — Health dashboard metrics are the data input to sprint planning gates; readiness classification depends on current health signals.
+
+[^d]: [Workflows: Task Decomposition](../Workflows/02-task-decomposition.md) — Task decomposition determines what is appropriate to give to AI; sprint planning gates govern which tasks qualify for AI-primary treatment at the sprint level.

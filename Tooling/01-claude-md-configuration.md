@@ -1,6 +1,6 @@
 ## CLAUDE.md Configuration: The Team's Persistent Context Layer
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 1
+**Related to:** [Tooling Overview](00-overview.md) — Tool 1 · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^a] · [Issues: Architectural Drift](../Issues/03-architectural-drift.md)[^b] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^c] · [Governance: Review Policies](../Governance/01-review-policies.md)[^d]
 
 ---
 
@@ -140,3 +140,11 @@ The validation method is direct: ask Claude to behave in ways that the CLAUDE.md
     - Real-world file structure evolution: how a CLAUDE.md grows, accumulates noise, and what a disciplined pruning process looks like in practice
     - Import system walkthrough: live demonstration of modular configuration with domain-specific instruction files and conditional imports
     - Common mistakes: instructions that seemed important but produced no observable behavior change when added — and what that pattern reveals about file length and attention distribution
+
+[^a]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — ADR AI Constraints fields are the source of truth for CLAUDE.md entries; ADR acceptance triggers CLAUDE.md updates as a required workflow step.
+
+[^b]: [Issues: Architectural Drift](../Issues/03-architectural-drift.md) — CLAUDE.md is the session-time enforcement layer for the architectural constraints that prevent drift; the issue and its countermeasure are paired.
+
+[^c]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — CLAUDE.md is the foundational layer of context engineering; the two documents describe the artifact and the discipline around it.
+
+[^d]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies require that AI-primary PRs reference the CLAUDE.md constraints that governed the session; the two documents are operationally linked at review time.

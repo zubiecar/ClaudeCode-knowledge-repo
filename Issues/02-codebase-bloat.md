@@ -1,6 +1,6 @@
 ## Codebase Bloat: The Expanding Surface Area Nobody Signed Up to Maintain
 
-**Related to:** [Issues Overview](overview.md) — Issue 2
+**Related to:** [Issues Overview](overview.md) — Issue 2 · [Metrics: Codebase Health](../Metrics/06-codebase-health.md)[^a] · [QA & Testing: Regression Prevention](../QA%20%26%20Testing/04-regression-prevention.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c] · [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md)[^d]
 
 ---
 
@@ -131,3 +131,11 @@ AI tools generate code at a rate that outpaces any team's capacity to review, re
 
 [^13]: Kosei Horikawa et al. — "Agentic Refactoring: An Empirical Study of AI Coding Agents," arXiv:2511.04824, November 2025. https://arxiv.org/abs/2511.04824
     Analyzed 15,451 AI refactoring instances across Java projects. Top operations are cosmetic (variable renaming, type changes). Median class LOC reduction: 15 lines — insufficient to counteract the 4x duplication growth documented concurrently. Agents preferentially avoid the complex structural refactoring most important for codebase health.
+
+[^a]: [Metrics: Codebase Health](../Metrics/06-codebase-health.md) — codebase health indicators are the primary measurement mechanism for bloat; the metrics defined there operationalize the risks described here.
+
+[^b]: [QA & Testing: Regression Prevention](../QA%20%26%20Testing/04-regression-prevention.md) — regression prevention is more expensive as the codebase surface area grows; bloat and regression risk compound each other.
+
+[^c]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies include scope gates that limit AI-generated additions per PR; these are the primary governance mechanism for controlling bloat rate.
+
+[^d]: [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md) — CLAUDE.md constraints can prohibit specific patterns that generate bloat; the configuration layer is the session-time enforcement point for scope discipline.

@@ -1,6 +1,6 @@
 ## Git Worktrees for Parallel Session Isolation
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 7
+**Related to:** [Tooling Overview](00-overview.md) — Tool 7 · [Workflows: Parallel Agent Coordination](../Workflows/08-parallel-agent-coordination.md)[^a] · [Workflows: Agentic Delegation](../Workflows/07-agentic-delegation.md)[^b] · [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md)[^c]
 
 ---
 
@@ -126,3 +126,9 @@ The review discipline for fan-out output is more demanding than for single-sessi
 
 [^5]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
     Parallel delegation as an emerging team practice; the infrastructure prerequisites that distinguish safe parallel execution from uncontrolled concurrency; bounded autonomy requirements for multi-session workflows.
+
+[^a]: [Workflows: Parallel Agent Coordination](../Workflows/08-parallel-agent-coordination.md) — worktree isolation is the prerequisite for safe parallel agent execution; the workflow pattern depends on the isolation mechanism this document describes.
+
+[^b]: [Workflows: Agentic Delegation](../Workflows/07-agentic-delegation.md) — agentic delegation to long-running tasks benefits from worktree isolation to prevent cross-session state corruption; the two documents address delegation and its safety infrastructure.
+
+[^c]: [Tooling: CLAUDE.md Configuration](01-claude-md-configuration.md) — each worktree inherits CLAUDE.md configuration; understanding isolation requires understanding how configuration is scoped per worktree.

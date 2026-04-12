@@ -1,6 +1,6 @@
 ## Continuing Education: Staying Current Without Drowning in Noise
 
-**Related to:** [Learning Overview](00-overview.md) — Practice 5
+**Related to:** [Learning Overview](00-overview.md) — Practice 5 · [Learning: Team Knowledge Sharing](03-team-knowledge-sharing.md)[^a] · [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md)[^b] · [Ethics: Bias and Representation](../Ethics/06-bias-and-representation.md)[^c]
 
 ---
 
@@ -164,3 +164,7 @@ The risk of AI-only education budget is a team whose AI tool proficiency increas
     - Source selection in practice: how experienced practitioners decide which AI development content is worth monitoring vs. which can be safely ignored; the evaluation criteria that filter for team-applicable signal
     - Quarterly brief calibration: what makes a learning brief actionable rather than informational; the specific finding characteristics that warrant a practice review agenda item vs. those that belong in an archive
     - Integration path examples: concrete examples of the path from external learning observation to team experiment to team standard, including cases where the experiment did not produce adoption
+
+[^a]: [Learning: Team Knowledge Sharing](03-team-knowledge-sharing.md) — continuing education findings become team knowledge sharing material; individual learning feeds the team knowledge base.
+[^b]: [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md) — quarterly review includes evaluation of team AI capability currency; continuing education effectiveness is a health signal.
+[^c]: [Ethics: Bias and Representation](../Ethics/06-bias-and-representation.md) — bias awareness is a continuing education topic; staying current on bias research in AI outputs is part of responsible use.

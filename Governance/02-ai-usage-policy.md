@@ -1,6 +1,6 @@
 ## AI Acceptable Use Policy: Authorized and Prohibited Uses of Claude Code
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 2
+**Related to:** [Governance Overview](00-overview.md) — Policy 2 · [Ethics: Intellectual Property](../Ethics/01-intellectual-property.md)[^a] · [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md)[^b] · [Governance: Review Policies](01-review-policies.md)[^c] · [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md)[^d]
 
 ---
 
@@ -147,3 +147,11 @@ The review cadence for the acceptable use policy matters as much as the initial 
     - Usage category onboarding: how to introduce the three usage categories to new engineers in a way that makes policy compliance the default behavior rather than a remembered obligation
     - Session data hygiene: the specific prompt patterns and CLAUDE.md configurations that implement data handling policy at the session level
     - Acceptable use policy as living document: how the quarterly review process keeps the policy current with evolving tool capabilities and team practices
+
+[^a]: [Ethics: Intellectual Property](../Ethics/01-intellectual-property.md) — IP and license risk is a primary category of prohibited use covered by usage policy; acceptable use boundaries are the operational form of the ethical analysis there.
+
+[^b]: [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md) — Privacy constraints on what data enters AI sessions are a core usage policy requirement; the ethical analysis and the operational policy are paired.
+
+[^c]: [Governance: Review Policies](01-review-policies.md) — Usage policy and review policy together form the complete AI governance framework; one governs what engineers do, the other governs what ships.
+
+[^d]: [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md) — Settings and permissions are the technical enforcement layer for usage policy; policy without enforcement is advisory only.

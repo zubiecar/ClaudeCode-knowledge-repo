@@ -1,6 +1,6 @@
 ## CI/CD Integration: Running Claude Code in the Pipeline
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 6
+**Related to:** [Tooling Overview](00-overview.md) — Tool 6 · [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md)[^a] · [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c] · [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md)[^d]
 
 ---
 
@@ -141,3 +141,11 @@ Tracking suppressed findings is as important as tracking acted-upon findings. If
     - Suppression tracking as a quality signal: why the ratio of suppressed to acted-upon findings per category is the primary metric for CI integration health
     - Feedback loop design: how monthly governance reports create the recalibration cycle that prevents CI integrations from ossifying around their initial configuration
     - Dismissal justification requirements: the operational case for requiring engineers to justify finding dismissals and why this data is more valuable than the findings themselves
+
+[^a]: [QA & Testing: AI-Generated Test Coverage](../QA%20%26%20Testing/02-ai-generated-test-coverage.md) — CI/CD pipelines run coverage analysis on every merge; the integration document describes the pipeline and the QA document defines what the coverage gates require.
+
+[^b]: [Security: SAST and DAST Integration](../Security/02-sast-dast-integration.md) — SAST/DAST scanning is a primary CI/CD integration component for AI-generated code; the two documents describe the security tools and their pipeline integration.
+
+[^c]: [Governance: Review Policies](../Governance/01-review-policies.md) — CI/CD gates enforce the automated checks that review policies require as merge conditions; the pipeline is the technical enforcement layer for policy.
+
+[^d]: [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md) — CI/CD pipelines generate the quality signal data that the health dashboard aggregates; the integration is the data collection layer for quality metrics.

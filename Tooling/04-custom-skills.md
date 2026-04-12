@@ -1,6 +1,6 @@
 ## Custom Skills: Encoding Team Workflows as Invocable Commands
 
-**Related to:** [Tooling Overview](00-overview.md) — Tool 4
+**Related to:** [Tooling Overview](00-overview.md) — Tool 4 · [Prompting: Prompt Library Management](../Prompting/06-prompt-library.md)[^a] · [Workflows: Agentic Delegation](../Workflows/07-agentic-delegation.md)[^b] · [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md)[^c]
 
 ---
 
@@ -135,3 +135,9 @@ A quarterly audit of the skill library is the minimum maintenance cadence. The a
 
 [^12]: The Pragmatic Engineer — "Engineering Practices in the Age of AI Agents," The Pragmatic Engineer Newsletter, March 2026. https://newsletter.pragmaticengineer.com/p/engineering-practices-ai-agents-2026
     Quarterly skill audit process: the three-question framework for evaluating each skill; the migration path from skills to CLAUDE.md or MCP tools when the use case evolves.
+
+[^a]: [Prompting: Prompt Library Management](../Prompting/06-prompt-library.md) — the prompt library is the source repository from which skills are extracted; high-value, stable prompts become skills, making the prompt library the upstream dependency.
+
+[^b]: [Workflows: Agentic Delegation](../Workflows/07-agentic-delegation.md) — custom skills are the primary mechanism for packaging agentic workflows as invocable commands; delegation patterns become skills once they are stable.
+
+[^c]: [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md) — custom skills eliminate per-engineer prompt variation for common tasks by standardizing the invocation; team-wide skills are the distribution mechanism for consistent prompting.

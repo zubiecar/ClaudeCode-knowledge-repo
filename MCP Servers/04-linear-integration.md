@@ -1,6 +1,6 @@
 ## MCP Server 4: Linear Integration
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 4
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 4 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Governance: Sprint Planning Gates](../Governance/03-sprint-planning-gates.md)[^b] · [Workflows: Task Decomposition](../Workflows/02-task-decomposition.md)[^c]
 
 ---
 

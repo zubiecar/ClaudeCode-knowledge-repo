@@ -1,6 +1,6 @@
 ## Compliance and Audit: AI Governance Documentation for Security and Regulatory Requirements
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 6: Compliance and Audit Requirements
+**Related to:** [Governance Overview](00-overview.md) — Policy 6: Compliance and Audit Requirements · [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md)[^a] · [Ethics: Intellectual Property](../Ethics/01-intellectual-property.md)[^b] · [Security: Security Review Checklist](../Security/06-security-review-checklist.md)[^c] · [Governance: AI Usage Policy](02-ai-usage-policy.md)[^d]
 
 ---
 
@@ -161,3 +161,11 @@ Regulatory monitoring is not a full-time responsibility for an 11-person team �
     - Governance log format for non-engineers: how to write a governance log that an enterprise security reviewer can evaluate without a technical translator
     - Prepared statement construction: the difference between a disclosure that satisfies enterprise security reviewers and one that creates more questions than it answers
     - Regulatory monitoring in practice: how a CTO built a two-hour quarterly scanning habit that caught a material EU AI Act implementation change six months before it became an audit issue
+
+[^a]: [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md) — Data privacy compliance is a primary audit category; the ethical analysis of what enters AI sessions maps directly to the compliance documentation requirements here.
+
+[^b]: [Ethics: Intellectual Property](../Ethics/01-intellectual-property.md) — IP and license compliance is a recurring audit requirement; what the ethics section identifies as risk, this section documents as the audit evidence trail.
+
+[^c]: [Security: Security Review Checklist](../Security/06-security-review-checklist.md) — Security checklist completion is a compliance artifact; the checklist provides the per-PR evidence that the security compliance requirements here demand.
+
+[^d]: [Governance: AI Usage Policy](02-ai-usage-policy.md) — Usage policy is the policy document that compliance audits assess adherence to; these two documents are the policy and the audit framework for the same governance scope.

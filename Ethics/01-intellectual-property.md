@@ -1,6 +1,6 @@
 ## Intellectual Property: Code Attribution and License Risk in AI-Assisted Development
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 1
+**Related to:** [Ethics Overview](00-overview.md) — Risk 1 · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^a] · [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md)[^b] · [Security: Dependency Security](../Security/03-dependency-security.md)[^c]
 
 ---
 
@@ -141,3 +141,9 @@ The checklist is not overhead — it is the due diligence record that protects t
     - Legal landscape update: current status of AI-generated code IP cases as of mid-2025 and the practical implications for teams using AI code generation tools commercially
     - Due diligence vs. legal certainty: why practical due diligence is the right goal for small teams, not waiting for legal certainty that the courts have not yet provided
     - Case study: a team that discovered close similarity between AI-generated code and a GPL-licensed implementation, and the decision process that followed
+
+[^a]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — usage policy operationalizes the IP risk analysis here into prohibited and permitted use categories; the ethical analysis and the policy are paired.
+
+[^b]: [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md) — IP compliance is a recurring audit requirement; the ethical analysis determines what evidence the audit must capture.
+
+[^c]: [Security: Dependency Security](../Security/03-dependency-security.md) — dependency license selection is a primary IP risk vector; AI-generated dependency choices require the same license review the ethical analysis demands.

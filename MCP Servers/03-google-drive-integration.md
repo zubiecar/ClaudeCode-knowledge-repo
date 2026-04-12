@@ -1,6 +1,6 @@
 ## MCP Server 3: Google Drive Integration
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 3
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 3 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md)[^b] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^c]
 
 ---
 

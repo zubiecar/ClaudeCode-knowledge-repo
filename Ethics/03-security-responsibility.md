@@ -1,6 +1,6 @@
 ## Security Responsibility: Accountability for AI-Generated Vulnerabilities
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 3
+**Related to:** [Ethics Overview](00-overview.md) — Risk 3 · [Issues: Security Vulnerabilities](../Issues/04-security-vulnerabilities.md)[^a] · [Governance: Incident Response](../Governance/07-incident-response.md)[^b] · [Security: Vulnerability Response](../Security/05-vulnerability-response.md)[^c]
 
 ---
 
@@ -150,3 +150,9 @@ The security lead's responsibility under AI adoption is to ensure that security 
     - Security-critical path identification: how to build and maintain the list of code paths where AI-generated output requires security-specific review before merge
     - Two-reviewer process in practice: what the second security review looks like in a small team context and how to calibrate it for security-critical vs. non-critical AI-generated code
     - Attestation workflow: the specific PR checklist language and process for creating the security accountability record
+
+[^a]: [Issues: Security Vulnerabilities](../Issues/04-security-vulnerabilities.md) — security vulnerability accumulation is the operational risk; this document defines the accountability structure when that risk materializes.
+
+[^b]: [Governance: Incident Response](../Governance/07-incident-response.md) — incident response procedures include accountability assignments that this document's analysis informs; the ethical framework shapes who owns what in an incident.
+
+[^c]: [Security: Vulnerability Response](../Security/05-vulnerability-response.md) — vulnerability response is where security accountability is exercised in practice; this document's framework governs who initiates and owns the response.

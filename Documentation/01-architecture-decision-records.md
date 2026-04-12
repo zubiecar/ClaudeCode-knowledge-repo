@@ -1,6 +1,6 @@
 ## Architecture Decision Records in AI-Assisted Teams
 
-**Related to:** [Documentation Overview](00-overview.md) — Area 1: Architecture Decision Records
+**Related to:** [Documentation Overview](00-overview.md) — Area 1: Architecture Decision Records · [Issues: Architectural Drift](../Issues/03-architectural-drift.md)[^a] · [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^d] · [Documentation: Rationale Capture](04-rationale-capture.md)[^e]
 
 ---
 
@@ -109,3 +109,13 @@ Claude Code can draft ADRs from the raw material of decision discussions — mee
 
 [^9]: The Pragmatic Engineer — "AI Tooling for Software Engineers in 2026," March 2026. https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
     ADR documentation lag as the primary failure mode for ADR adoption; using AI to draft from discussion transcripts as the mechanism that reduces per-ADR creation cost and improves adoption rates.
+
+[^a]: [Issues: Architectural Drift](../Issues/03-architectural-drift.md) — ADRs are the primary countermeasure to architectural drift; the three failure modes identified here (session amnesia, drift, review blindness) map directly to that issue's documented patterns and root causes.
+
+[^b]: [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md) — ADR AI Constraints fields are the source of truth for CLAUDE.md entries; the two artifacts are maintained together, with each ADR acceptance triggering a corresponding CLAUDE.md update.
+
+[^c]: [Governance: Review Policies](../Governance/01-review-policies.md) — ADR references in PR descriptions are a review policy requirement; the PR review workflow depends on ADRs being current, accessible, and linked at the time of review.
+
+[^d]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — pre-loading ADR context before sessions is a core context engineering pattern; ADR accessibility via docs/adr/README.md and MCP is a prerequisite for that workflow functioning correctly.
+
+[^e]: [Documentation: Rationale Capture](04-rationale-capture.md) — rationale capture extends ADR discipline to AI-generated decisions that do not rise to ADR threshold; the two practices are complementary and together close the full documentation gap in AI-assisted teams.

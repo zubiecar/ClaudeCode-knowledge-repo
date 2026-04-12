@@ -1,6 +1,6 @@
 ## The Velocity–Governance Feedback Loop: When Going Fast Is the Risk
 
-**Related to:** [Issues Overview](overview.md) — Issue 8
+**Related to:** [Issues Overview](overview.md) — Issue 8 · [Governance: Review Policies](../Governance/01-review-policies.md)[^a] · [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md)[^b] · [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md)[^c] · [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md)[^d]
 
 ---
 
@@ -131,3 +131,11 @@ The Velocity–Governance Feedback Loop is the condition in which the metrics th
 
 [^12]: Ox Security — "The Army of Juniors: The AI Code Security Crisis," October 2025. https://www.ox.security/resource-category/whitepapers-and-reports/army-of-juniors/
     Analysis of 300+ repositories. "Functional applications can now be built faster than humans can properly evaluate them." Critical security findings nearly quadrupled YoY as consequence of velocity-without-oversight adoption patterns.
+
+[^a]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies are the primary structural mechanism for governing velocity; mandatory checks and PR standards are what prevent fast shipping from becoming ungoverned shipping.
+
+[^b]: [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md) — the quarterly health review is where velocity and governance outcomes are evaluated together; it is the strategic-level mechanism for detecting when the feedback loop described here has taken hold.
+
+[^c]: [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md) — the health dashboard operationalizes the velocity-governance tension as a measurable signal; dashboard trends are the leading indicator before the feedback loop becomes self-reinforcing.
+
+[^d]: [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md) — verification-driven development is the workflow practice that maintains quality at speed; it is the session-level mechanism that prevents velocity from outpacing correctness.

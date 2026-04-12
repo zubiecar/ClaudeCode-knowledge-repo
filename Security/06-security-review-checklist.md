@@ -1,6 +1,6 @@
 ## AI-Assisted Security Review Checklist
 
-**Related to:** [Security Overview](00-overview.md) — Security Area 6
+**Related to:** [Security Overview](00-overview.md) — Security Area 6 · [Governance: Review Policies](../Governance/01-review-policies.md)[^a] · [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md)[^b] · [Security: Threat Modeling](01-threat-modeling.md)[^c] · [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md)[^d]
 
 ---
 
@@ -131,3 +131,11 @@ The CI integration architecture is straightforward: a GitHub Actions workflow th
 
 [^7]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     CI integration for automated PR security comment generation; Semgrep JSON output formatting for PR comments; required status check configuration for blocking merge on critical findings.
+
+[^a]: [Governance: Review Policies](../Governance/01-review-policies.md) — the security review checklist is a required artifact within the review policy workflow; policy mandates when the checklist is used and what completion means.
+
+[^b]: [QA & Testing: Test Session Design](../QA%20%26%20Testing/01-test-session-design.md) — QA test session design includes security-specific test cases; the checklist and test session design are parallel review artifacts covering the same PR from different perspectives.
+
+[^c]: [Security: Threat Modeling](01-threat-modeling.md) — threat model outputs determine which checklist sections are most critical for a given component; the threat model informs how the checklist is applied.
+
+[^d]: [Governance: Compliance and Audit](../Governance/06-compliance-and-audit.md) — completed checklists are compliance artifacts; audit requirements reference checklist completion rates as evidence of systematic security review.

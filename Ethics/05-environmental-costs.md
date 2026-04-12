@@ -1,6 +1,6 @@
 ## Environmental Costs: Compute Energy and the Ethics of AI Tool Usage
 
-**Related to:** [Ethics Overview](00-overview.md) — Risk 5
+**Related to:** [Ethics Overview](00-overview.md) — Risk 5 · [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md)[^a] · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^b]
 
 ---
 
@@ -152,3 +152,7 @@ Proportionate use also serves the team's skill development goals (see Developer 
     - 1:12:45 — Compute cost and AI tool responsibility: the environmental and professional arguments for deliberate use of AI tools rather than reflexive delegation
     - 2:34:07 — Agentic session efficiency: how multi-step agentic tasks multiply compute consumption and why task selection matters for both quality and efficiency
     - 3:58:22 — The value-add test for AI tool use: how experienced engineers decide when AI assistance genuinely accelerates outcomes vs. when it adds process overhead
+
+[^a]: [Metrics: Session Efficiency](../Metrics/05-session-efficiency.md) — session efficiency metrics measure the output-per-compute ratio; efficient sessions reduce the environmental cost that this document analyzes.
+
+[^b]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — usage policy may include compute efficiency expectations; environmental cost considerations can inform policy provisions around session length and scope.

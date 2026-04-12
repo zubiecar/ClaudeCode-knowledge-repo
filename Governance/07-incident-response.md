@@ -1,6 +1,6 @@
 ## Incident Response for AI-Generated Code Failures
 
-**Related to:** [Governance Overview](00-overview.md) — Policy 7
+**Related to:** [Governance Overview](00-overview.md) — Policy 7 · [Documentation: Runbook Standards](../Documentation/02-runbook-standards.md)[^a] · [Security: Vulnerability Response](../Security/05-vulnerability-response.md)[^b] · [Governance: Escalation Procedures](04-escalation-procedures.md)[^c] · [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md)[^d]
 
 ---
 
@@ -123,3 +123,11 @@ The PR template update addresses review process failures. If the incident reveal
 
 [^6]: GitClear — "Coding on Copilot: 2025 Data Suggests Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_suggests_downward_pressure_on_code_quality
     Empirical data on AI-generated code quality trends; failure mode distribution in AI-assisted codebases; post-incident policy revision as a compounding quality mechanism; the relationship between incident frequency and governance investment.
+
+[^a]: [Documentation: Runbook Standards](../Documentation/02-runbook-standards.md) — Runbooks are the operational artifacts incident response depends on; an incident response process without current runbooks has no execution path.
+
+[^b]: [Security: Vulnerability Response](../Security/05-vulnerability-response.md) — Vulnerability response is a specific type of incident response for security failures; the two documents share procedures and escalation paths.
+
+[^c]: [Governance: Escalation Procedures](04-escalation-procedures.md) — Escalation procedures are invoked during incidents; the two documents form the complete governance chain from detection to resolution to policy review.
+
+[^d]: [Metrics: Security Vulnerability Trends](../Metrics/04-security-vulnerability-trends.md) — Vulnerability trend metrics detect the pre-incident accumulation that makes incident response necessary; monitoring is the prevention layer for incident response.

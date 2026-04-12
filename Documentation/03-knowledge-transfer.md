@@ -1,6 +1,6 @@
 ## Knowledge Transfer in AI-Assisted Teams
 
-**Related to:** [Documentation Overview](00-overview.md) — Area 3: Knowledge Transfer in AI-Assisted Teams
+**Related to:** [Documentation Overview](00-overview.md) — Area 3: Knowledge Transfer in AI-Assisted Teams · [Learning: Engineer Onboarding](../Learning/01-engineer-onboarding.md)[^a] · [Learning: Team Knowledge Sharing](../Learning/03-team-knowledge-sharing.md)[^b] · [Issues: Comprehension Debt](../Issues/01-comprehension-debt.md)[^c] · [Workflows: Session Hygiene](../Workflows/04-session-hygiene.md)[^d]
 
 ---
 
@@ -121,3 +121,8 @@ The most effective ongoing practice is the comprehension check built into standa
 
 [^13]: The Pragmatic Engineer — "AI Tooling for Software Engineers in 2026," March 2026. https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
     Ongoing comprehension practices embedded in existing team rituals: the weekly codebase question and its role in surfacing silent comprehension debt before it manifests as incidents.
+
+[^a]: [Learning: Engineer Onboarding](../Learning/01-engineer-onboarding.md) — knowledge transfer practices are the upstream input to onboarding; what the team documents is what new engineers receive.
+[^b]: [Learning: Team Knowledge Sharing](../Learning/03-team-knowledge-sharing.md) — team knowledge sharing is the ongoing form of the same discipline; these two documents cover the ramp and the steady state.
+[^c]: [Issues: Comprehension Debt](../Issues/01-comprehension-debt.md) — comprehension debt is what accumulates when knowledge transfer fails; these documents are cause and effect.
+[^d]: [Workflows: Session Hygiene](../Workflows/04-session-hygiene.md) — session hygiene practices determine which tacit session knowledge gets transferred versus lost; the two practices share many of the same mechanisms.
