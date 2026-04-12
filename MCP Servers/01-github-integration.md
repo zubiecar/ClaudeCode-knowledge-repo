@@ -16,14 +16,14 @@ This memo goes deeper than the overview's summary. It covers the specific operat
 
 **Description:** The GitHub MCP server, maintained by GitHub as an official integration, exposes repository contents, issues, pull requests, branches, code search, and commit history to Claude Code sessions through the MCP protocol.[^1] The range of supported operations spans read and write, but the value case for the team begins entirely on the read side — and that is where configuration should start.
 
-For read operations, the integration allows Claude to retrieve the full text of any issue, including its description, label set, milestone assignment, and complete comment history. For pull requests, Claude can retrieve the diff, the PR description, reviewer assignments, and existing review comments in a single operation. For code search, Claude can locate references, definitions, and usage patterns across the repository without requiring the engineer to navigate to GitHub manually.[^2]
+For read operations, the integration allows Claude to retrieve the full text of any issue, including its description, label set, milestone assignment, and complete comment history. For pull requests, Claude can retrieve the diff, the PR description, reviewer assignments, and existing review comments in a single operation. For code search, Claude can locate references, definitions, and usage patterns across the repository without requiring the engineer to navigate to GitHub manually.
 
 Write operations — creating issues, opening pull requests, posting review comments, pushing commits — are available but require deliberate permission grant. The team's initial configuration should not enable write access. The risk is not that Claude will perform write operations maliciously; it is that an unintended write in a shared repository is visible to others, hard to retract cleanly, and erodes trust in Claude-mediated workflows if it happens early in adoption.[^3]
 
 **Recommended Practice:**
 - Configure the GitHub MCP server in the shared `.mcp.json` with read-only OAuth scopes: `repo:read`, `issues:read`, `pull_requests:read`, and `contents:read`. Explicitly exclude `write` and `admin` scopes from the initial configuration.[^1]
 - Add a comment block to `.mcp.json` documenting which scopes are granted and why write access is excluded — this prevents a future engineer from "helpfully" adding write scopes without understanding the reasoning.[^4]
-- Test the read integration in a session that involves a known issue before deploying to the full team: verify that Claude correctly retrieves the issue text, comments, and linked PRs, and that it does not attempt any write operations unprompted.[^2]
+- Test the read integration in a session that involves a known issue before deploying to the full team: verify that Claude correctly retrieves the issue text, comments, and linked PRs, and that it does not attempt any write operations unprompted.
 - Review GitHub MCP operation logs quarterly using GitHub's audit log to confirm that only read operations have been executed and that no credential has been used in an unintended context.[^3]
 
 ---
@@ -40,7 +40,7 @@ For the QA engineer, the same pattern applies to test planning: a session that r
 - Establish a team convention: every implementation session that corresponds to a GitHub issue begins with Claude reading the issue before any code is written. Document this in CLAUDE.md as a required step, not a suggestion.[^4]
 - When an issue has a linked Linear ticket (see [Linear Integration](04-linear-integration.md)), instruct Claude to read both before beginning. The issue and ticket often contain complementary context — the ticket has the product framing, the issue has the technical constraints and comment-accumulated edge cases.[^6]
 - For sessions where multiple related issues are relevant — an epic with child issues, or a bug that references a prior bug — instruct Claude to read all relevant issues before beginning rather than retrieving them on demand mid-session. Complete context at session start produces more coherent implementations than piecemeal context retrieval.[^5]
-- If an issue does not contain sufficient implementation detail (a common occurrence), instruct Claude to identify what is missing and surface those gaps before proceeding. This converts a discovery that would otherwise happen mid-implementation into a pre-implementation clarification that can be addressed with the issue author.[^2]
+- If an issue does not contain sufficient implementation detail (a common occurrence), instruct Claude to identify what is missing and surface those gaps before proceeding. This converts a discovery that would otherwise happen mid-implementation into a pre-implementation clarification that can be addressed with the issue author.
 
 ---
 
@@ -62,17 +62,17 @@ For the architect, PR review with MCP access is also an architectural consistenc
 
 ## Section 4: Write Access Introduction and Governance
 
-**Description:** Write access to GitHub is a qualitatively different capability from read access. A session that can create issues, open pull requests, and post review comments is a session that produces artifacts visible to the entire team and potentially to external stakeholders. The technical boundary between an attended write (an engineer reviews Claude's proposed comment before it posts) and an unattended write (Claude posts directly without human review) is small but the organizational consequences are large.[^8]
+**Description:** Write access to GitHub is a qualitatively different capability from read access. A session that can create issues, open pull requests, and post review comments is a session that produces artifacts visible to the entire team and potentially to external stakeholders. The technical boundary between an attended write (an engineer reviews Claude's proposed comment before it posts) and an unattended write (Claude posts directly without human review) is small but the organizational consequences are large.
 
-The progression from read-only to write-enabled should follow a specific sequence, gated on team confidence rather than a calendar. The first write operation to introduce should be comment posting on issues — low-stakes, easily corrected, and useful for the QA engineer's workflow of posting test result summaries on completed issues. The second is draft PR creation — the PR is created in draft state, requiring a human to promote it to ready for review. The third, if needed, is PR comment posting — Claude's review comments appear under a dedicated bot account, making their AI origin visible.[^9]
+The progression from read-only to write-enabled should follow a specific sequence, gated on team confidence rather than a calendar. The first write operation to introduce should be comment posting on issues — low-stakes, easily corrected, and useful for the QA engineer's workflow of posting test result summaries on completed issues. The second is draft PR creation — the PR is created in draft state, requiring a human to promote it to ready for review. The third, if needed, is PR comment posting — Claude's review comments appear under a dedicated bot account, making their AI origin visible.
 
-Pull request creation and commit pushing should remain human-gated indefinitely: a human must review Claude's intended diff and description before the PR is opened, and must approve any commit before it is pushed. These operations are difficult to reverse cleanly if they go wrong, and the upside of full automation does not justify the downside of an erroneous push to a shared branch.[^8]
+Pull request creation and commit pushing should remain human-gated indefinitely: a human must review Claude's intended diff and description before the PR is opened, and must approve any commit before it is pushed. These operations are difficult to reverse cleanly if they go wrong, and the upside of full automation does not justify the downside of an erroneous push to a shared branch.
 
 **Recommended Practice:**
-- Introduce write access incrementally, one operation type at a time, with a two-week observation period before enabling the next type. Each new write operation should be used in at least ten sessions before the next is enabled.[^9]
+- Introduce write access incrementally, one operation type at a time, with a two-week observation period before enabling the next type. Each new write operation should be used in at least ten sessions before the next is enabled.
 - Use a dedicated GitHub bot account for all Claude-initiated write operations rather than individual engineer credentials. This makes Claude's actions auditable, distinguishable from human-initiated actions in the audit log, and revocable without affecting individual access.[^1]
-- Configure the bot account's permissions at the repository level, not the organization level. A bot account with repository-scoped write access can only affect the repositories it has been explicitly granted access to; organization-level write access has a blast radius that is not justified by the workflow gains.[^8]
-- For any PR creation workflow, require that Claude produce the PR title, description, and linked issue references for human review before the PR is opened. The engineer approves the content and triggers the create operation; Claude does not self-initiate PR creation in an unattended session.[^9]
+- Configure the bot account's permissions at the repository level, not the organization level. A bot account with repository-scoped write access can only affect the repositories it has been explicitly granted access to; organization-level write access has a blast radius that is not justified by the workflow gains.
+- For any PR creation workflow, require that Claude produce the PR title, description, and linked issue references for human review before the PR is opened. The engineer approves the content and triggers the create operation; Claude does not self-initiate PR creation in an unattended session.
 
 ---
 
@@ -80,12 +80,12 @@ Pull request creation and commit pushing should remain human-gated indefinitely:
 
 **Description:** The GitHub MCP server's code search capability — searching across repository contents, finding definitions, locating usage patterns — is a complement to Claude Code's local file access rather than a replacement for it. Local file access is faster and does not require API calls; remote code search is useful for cross-repository queries, for searching in branches the engineer has not checked out locally, and for locating historical references in commits and issues simultaneously.[^6]
 
-For a team working across multiple repositories — a common pattern for backend/frontend splits or microservice architectures — code search via the GitHub MCP server allows Claude to find references across repository boundaries without the engineer needing to manually switch contexts or maintain multiple local clones. A session implementing a shared API contract can search the backend repository for the implementation and the frontend repository for the consumer in the same step.[^2]
+For a team working across multiple repositories — a common pattern for backend/frontend splits or microservice architectures — code search via the GitHub MCP server allows Claude to find references across repository boundaries without the engineer needing to manually switch contexts or maintain multiple local clones. A session implementing a shared API contract can search the backend repository for the implementation and the frontend repository for the consumer in the same step.
 
 For the QA engineer, cross-repository search is useful for identifying test coverage gaps: searching for references to a function across the codebase reveals whether it is tested in all the contexts where it is used, or only in the context where it was initially implemented.[^7]
 
 **Recommended Practice:**
-- Use local file access (Glob, Grep, Read) as the default for in-repository navigation; reserve GitHub MCP code search for cross-repository queries and branch-specific searches that would require checking out a branch locally.[^2]
+- Use local file access (Glob, Grep, Read) as the default for in-repository navigation; reserve GitHub MCP code search for cross-repository queries and branch-specific searches that would require checking out a branch locally.
 - When a session requires understanding the surface area of a change — all files that import a module, all tests that exercise a function — use GitHub code search to produce a complete inventory before beginning, rather than discovering affected areas incrementally during implementation.[^6]
 - For QA sessions focused on regression risk assessment, instruct Claude to search for all usages of the changed code path before generating the test plan. Test plans written with complete usage context are more comprehensive than those written from the changed file alone.[^7]
 - Log code search queries that produce unexpectedly large result sets — more than fifty matches for what seemed like a narrow query — as signals that the codebase has a cross-cutting dependency that warrants architectural attention.[^4]
@@ -107,9 +107,6 @@ For the QA engineer, cross-repository search is useful for identifying test cove
 [^1]: GitHub — "GitHub MCP Server," GitHub Official Repository, 2025. https://github.com/github/github-mcp-server
     Full operation catalog: repositories, issues, pull requests, branches, file contents, code search. Authentication setup, OAuth scope configuration, and permission model for read vs. write access.
 
-[^2]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - ~4:30 — Configuring GitHub MCP server: authentication flow, OAuth scoping, and `.mcp.json` structure for team-shared access
-    - ~12:15 — Security: credential management, minimum-permission scoping, and audit log configuration
 
 [^3]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging patterns for external service integrations; quarterly review practices; treating AI tool access with the same governance applied to other service dependencies.
@@ -126,13 +123,6 @@ For the QA engineer, cross-repository search is useful for identifying test cove
 [^7]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
     MCP architecture overview; permission scoping guidance; the three primary MCP security risks relevant to GitHub write access.
 
-[^8]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~0:00 — Team rollout sequencing: why starting with read-only scopes is risk management; how write access should be gated on observed behavior
-    - ~25:30 — Case study: a small engineering team's GitHub and Linear MCP rollout, including permission incidents and how they tightened configuration
-
-[^9]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~9:10 — Shared `.mcp.json` in version control: review discipline, per-server scope documentation, and quarterly access audit workflow
-    - ~17:50 — Prompt injection via MCP tool results: threat model and the human-in-the-loop confirmation pattern
 
 [^a]: [Tooling: MCP Integration](../Tooling/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the GitHub server specifically.
 [^b]: [Governance: Review Policies](../Governance/01-review-policies.md) — GitHub MCP enables sessions to query PR context during review; it is a tool for making review policy requirements actionable within a session.

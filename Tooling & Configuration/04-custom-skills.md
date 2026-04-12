@@ -42,12 +42,12 @@ The distinction between skills and CLAUDE.md is one of scope and trigger. CLAUDE
 
 ## Section 2: Designing Effective Skills
 
-**Description:** The most common failure mode in skill design is over-specification: encoding so many conditions, edge cases, and sub-steps into a single skill that it becomes brittle and produces inconsistent results. Effective skills follow the single-responsibility principle — one skill, one clearly scoped task. A skill that is simultaneously a code review, a security audit, and an architectural assessment will produce worse results than three separate focused skills, because each invocation will trade depth for breadth and Claude will allocate attention across too many dimensions simultaneously.[^5] The single-responsibility principle also makes skills easier to maintain: a narrowly scoped skill has a clear test for correctness, while a broad skill is difficult to evaluate or improve.
+**Description:** The most common failure mode in skill design is over-specification: encoding so many conditions, edge cases, and sub-steps into a single skill that it becomes brittle and produces inconsistent results. Effective skills follow the single-responsibility principle — one skill, one clearly scoped task. A skill that is simultaneously a code review, a security audit, and an architectural assessment will produce worse results than three separate focused skills, because each invocation will trade depth for breadth and Claude will allocate attention across too many dimensions simultaneously. The single-responsibility principle also makes skills easier to maintain: a narrowly scoped skill has a clear test for correctness, while a broad skill is difficult to evaluate or improve.
 
 Trigger clarity is the second design dimension. A skill's trigger — the moment when an engineer would reach for it — should be unambiguous. If two skills might plausibly be invoked for the same situation, one of them is redundant or the two are insufficiently differentiated. A skill for reviewing PR diffs (`/review-pr`) and a skill for reviewing a full module before a major release (`/release-review`) serve different triggers and different depths of analysis; both are justified.[^6] When designing a new skill, the test is: can an engineer on the team, reading the slash command name alone, correctly predict when to use it? If not, the name or scope needs refinement before the skill is added to the shared library.
 
 **Recommended Practice:**
-- Apply the single-responsibility principle strictly: each skill should do one thing and produce one type of output. If you find yourself writing "and also" in a skill description, split it into two skills.[^5]
+- Apply the single-responsibility principle strictly: each skill should do one thing and produce one type of output. If you find yourself writing "and also" in a skill description, split it into two skills.
 - Define the trigger condition explicitly in the skill file's opening paragraph. State what state the repository or session must be in for this skill to be appropriate, and what it is not for.[^4]
 - Avoid encoding knowledge that belongs in CLAUDE.md into a skill. If a constraint should apply universally (no direct database mutations, always write tests before implementation), it belongs in CLAUDE.md, not in a skill that might be skipped.[^1]
 - After writing a first draft of a skill, test it in three real sessions before adding it to the shared library. Skills that work well in theory often need adjustment once they encounter actual codebases; building in a trial period catches design flaws before the skill is team-standard.[^6]
@@ -58,11 +58,11 @@ Trigger clarity is the second design dimension. A skill's trigger — the moment
 
 **Description:** A team skill library is a shared, versioned collection of `.claude/commands/` files that encodes the team's most-repeated AI-assisted workflows. The value of a shared library over individual engineers maintaining their own skills is consistency: when everyone uses the same `/review-pr` skill, PR reviews have a predictable structure, findings are comparable across reviewers, and the quality of AI-assisted review improves as the skill is refined based on collective feedback.[^7] The library is most useful when it is small enough to be well-maintained: a library of five highly reliable skills is more valuable than a library of twenty skills of varying quality and unknown reliability.
 
-Naming conventions and a review process before adding new skills are the two structural requirements that keep a team library functional over time. Without naming conventions, the library accumulates redundant or ambiguous commands that engineers avoid because they cannot predict what they will do. Without a review process, skills are added impulsively and the library grows to include skills that duplicate CLAUDE.md instructions, overlap with each other, or have never been tested against real sessions.[^8] Both requirements are lightweight to implement: a naming convention fits in a single paragraph of documentation, and a review process can be as simple as requiring one other engineer to test the skill in a real session before it is merged.
+Naming conventions and a review process before adding new skills are the two structural requirements that keep a team library functional over time. Without naming conventions, the library accumulates redundant or ambiguous commands that engineers avoid because they cannot predict what they will do. Without a review process, skills are added impulsively and the library grows to include skills that duplicate CLAUDE.md instructions, overlap with each other, or have never been tested against real sessions. Both requirements are lightweight to implement: a naming convention fits in a single paragraph of documentation, and a review process can be as simple as requiring one other engineer to test the skill in a real session before it is merged.
 
 **Recommended Practice:**
 - Adopt a naming convention for the shared library before adding the first skill. Recommended: `{verb}-{scope}.md` where verb is the action (`review`, `audit`, `check`, `generate`) and scope is the target (`pr`, `security`, `architecture`, `migration`). Document the convention in a `README.md` in `.claude/commands/`.[^7]
-- Require that new skills pass a two-session test — tested by the author and one other team member in real sessions — before being merged into the shared library. Include the test session notes as a comment in the PR that adds the skill.[^8]
+- Require that new skills pass a two-session test — tested by the author and one other team member in real sessions — before being merged into the shared library. Include the test session notes as a comment in the PR that adds the skill.
 - Version the shared skill library with the repository. When a skill is modified, record the change in the PR description so the team understands what changed and why. Skills that change frequently are signals that they are either too broad or not well-understood.[^1]
 - Keep the shared library small: target five to eight skills that cover the team's most common AI-assisted workflows. Prefer depth and reliability in a small library over breadth in a large one. Additional candidate skills can live in a `candidates/` subdirectory until they have proven value.[^3]
 
@@ -78,21 +78,21 @@ Security review and architectural assessment are natural extensions of the revie
 - Create a `/review-pr` skill as the first entry in the shared library. Define the review dimensions explicitly: correctness, test coverage, security surface, CLAUDE.md constraint adherence, and naming/readability. The skill should output a structured list of findings by dimension, with severity ratings.[^9]
 - Create a `/audit-security` skill that references the specific security constraints in CLAUDE.md and adds stack-specific vulnerability categories (e.g., SQL injection surface, authentication boundary checks, dependency vulnerability patterns relevant to the team's stack).[^10]
 - Create a `/check-architecture` skill that encodes the team's architectural principles as a checklist. Each principle should be a named item Claude checks explicitly, with a pass/fail determination and an explanation for any failures.[^6]
-- For the writer/reviewer pattern, the review skill should explicitly instruct Claude to adopt a critical perspective distinct from the implementation perspective — to look for what is wrong, not to defend what was written. Include this role-shift instruction explicitly in the skill definition.[^5]
+- For the writer/reviewer pattern, the review skill should explicitly instruct Claude to adopt a critical perspective distinct from the implementation perspective — to look for what is wrong, not to defend what was written. Include this role-shift instruction explicitly in the skill definition.
 
 ---
 
 ## Section 5: Skill Maintenance and Deprecation
 
-**Description:** A skill library that is not actively maintained degrades in the same way that documentation degrades: it drifts out of alignment with actual practice, accumulates dead weight, and gradually stops being trusted by the team. Staleness signals are the primary indicator that a skill needs attention: if engineers are frequently editing a skill's output before using it, the skill is not well-calibrated; if a skill is rarely invoked, it is either redundant or solving a problem that is no longer common; if a skill produces findings that do not match the team's current standards, it has not kept pace with the team's evolving practices.[^11]
+**Description:** A skill library that is not actively maintained degrades in the same way that documentation degrades: it drifts out of alignment with actual practice, accumulates dead weight, and gradually stops being trusted by the team. Staleness signals are the primary indicator that a skill needs attention: if engineers are frequently editing a skill's output before using it, the skill is not well-calibrated; if a skill is rarely invoked, it is either redundant or solving a problem that is no longer common; if a skill produces findings that do not match the team's current standards, it has not kept pace with the team's evolving practices.
 
-A quarterly audit of the skill library is the minimum maintenance cadence. The audit should answer three questions for each skill: Is it still being invoked? Is its output still useful without significant editing? Has anything changed in CLAUDE.md, the stack, or the team's practices that should update the skill's instructions?[^12] Skills that no longer pass this audit should be deprecated explicitly — either removed from the library or moved to a `deprecated/` subdirectory with a note explaining what replaced them. A library that shrinks during an audit is healthier than one that only grows.
+A quarterly audit of the skill library is the minimum maintenance cadence. The audit should answer three questions for each skill: Is it still being invoked? Is its output still useful without significant editing? Has anything changed in CLAUDE.md, the stack, or the team's practices that should update the skill's instructions? Skills that no longer pass this audit should be deprecated explicitly — either removed from the library or moved to a `deprecated/` subdirectory with a note explaining what replaced them. A library that shrinks during an audit is healthier than one that only grows.
 
 **Recommended Practice:**
-- Establish staleness signals for the library: if a skill has not been invoked in the past 30 days or if its output requires editing more than 50% of the time, flag it for review at the next quarterly audit.[^11]
-- During the quarterly audit, check each skill against the current CLAUDE.md and the current MCP tool set. Skills that duplicate CLAUDE.md instructions should be simplified; skills that are better implemented as MCP tool workflows should be migrated and removed.[^12]
+- Establish staleness signals for the library: if a skill has not been invoked in the past 30 days or if its output requires editing more than 50% of the time, flag it for review at the next quarterly audit.
+- During the quarterly audit, check each skill against the current CLAUDE.md and the current MCP tool set. Skills that duplicate CLAUDE.md instructions should be simplified; skills that are better implemented as MCP tool workflows should be migrated and removed.
 - When deprecating a skill, do not silently delete it. Add a `deprecated/` subdirectory, move the skill there with a `DEPRECATED.md` note explaining what replaced it and when, and announce the deprecation in the team's engineering channel. This preserves the skill's history and prevents engineers from re-adding it.[^7]
-- Assign skill library ownership to a named role (the Architect, in this team's structure). The owner is responsible for the quarterly audit, for reviewing new skill additions, and for ensuring the library reflects current team practice. Without a named owner, maintenance defaults to nobody.[^8]
+- Assign skill library ownership to a named role (the Architect, in this team's structure). The owner is responsible for the quarterly audit, for reviewing new skill additions, and for ensuring the library reflects current team practice. Without a named owner, maintenance defaults to nobody.
 
 ---
 
@@ -120,10 +120,6 @@ A quarterly audit of the skill library is the minimum maintenance cadence. The a
 [^4]: Anthropic — "CLAUDE.md Configuration Guide," Claude Code Documentation, 2026. https://docs.anthropic.com/en/docs/claude-code/memory
     CLAUDE.md vs. skills distinction: persistent context and universal defaults belong in CLAUDE.md; invocable procedures belong in skills. Trigger clarity as a design criterion.
 
-[^5]: Boris Cherny — "Building Claude Code Skills for Structured Review," YC Startup School, February 2026. https://www.youtube.com/watch?v=HbzF7l1gG9Y
-    - Writer/reviewer pattern as a skill: why encoding the role shift explicitly in a skill produces better review output than ad hoc review requests
-    - Single-responsibility design: how overly broad skills produce worse results than narrow focused ones; splitting "and also" skills into separate commands
-    - Skill testing before library inclusion: the two-session test as a quality gate for new skills added to a shared library
 
 [^6]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - Trigger clarity in skill design: defining the precise conditions under which a skill should be invoked and explicitly excluding adjacent use cases
@@ -133,10 +129,6 @@ A quarterly audit of the skill library is the minimum maintenance cadence. The a
 [^7]: Sabrina Ramonov — "AI Coding Productivity at Scale," March 2026. https://sabrina.dev/blog/ai-coding-productivity-2026
     Shared skill library management: naming conventions, version control practices, and the value of a small, reliable library over a large, inconsistently maintained one.
 
-[^8]: Theo (t3.gg) — "How I Structure My Claude Code Commands," YouTube, January 2026. https://www.youtube.com/watch?v=Qb7wDVpIGcs
-    - Team skill library review process: requiring peer testing before merging new skills; recording test session notes in the PR description
-    - Library ownership: why a named owner is necessary for maintenance discipline; what the quarterly audit should cover
-    - Deprecation practice: the `deprecated/` subdirectory pattern and why silent deletion is worse than annotated archiving
 
 [^9]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
     Structured review skills: how explicitly encoding review dimensions (correctness, coverage, security, naming) in a skill produces more consistent and actionable findings than unstructured review requests.
@@ -144,11 +136,6 @@ A quarterly audit of the skill library is the minimum maintenance cadence. The a
 [^10]: CodeRabbit — "AI Code Review Best Practices 2026," CodeRabbit Blog, 2026. https://coderabbit.ai/blog/ai-code-review-best-practices-2026
     Security review skills: calibrating audit skills to team-specific vulnerability categories rather than generic lists; the role of CLAUDE.md security constraints in security review skill design.
 
-[^11]: GitClear — "AI-Assisted Code Quality Report 2026," GitClear, 2026. https://www.gitclear.com/ai_assisted_code_quality_2026
-    Skill staleness signals: frequency of invocation and output editing rate as proxies for skill calibration quality; how drift between skills and current practices manifests in review output.
-
-[^12]: The Pragmatic Engineer — "Engineering Practices in the Age of AI Agents," The Pragmatic Engineer Newsletter, March 2026. https://newsletter.pragmaticengineer.com/p/engineering-practices-ai-agents-2026
-    Quarterly skill audit process: the three-question framework for evaluating each skill; the migration path from skills to CLAUDE.md or MCP tools when the use case evolves.
 
 [^a]: [Prompting: Prompt Library Management](../Prompting/06-prompt-library.md) — the prompt library is the source repository from which skills are extracted; high-value, stable prompts become skills, making the prompt library the upstream dependency.
 

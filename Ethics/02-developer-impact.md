@@ -143,10 +143,6 @@ This is not a macro problem that individual teams are powerless about. It is a c
     - Portfolio strategy for AI-assisted developers: how to build external evidence of independent capability alongside AI-assisted productivity
     - Practical recovery: what the path from fragile expert to genuine expert looks like for a junior engineer who has recognized the pattern early enough to address it
 
-[^15]: Fireship — "AI Code Tools Have an Ethics Problem Nobody's Talking About," YouTube, February 2026. https://www.youtube.com/watch?v=xKq7bNmTp3M
-    - Skill equity in practice: how AI adoption affects different engineers differently based on existing capability levels; the differential benefit pattern that makes senior engineers stronger while potentially making junior engineers dependent
-    - Career implications: what the job market for AI-dependent vs. AI-capable engineers looks like, and the difference between the two
-    - Team responsibility: what engineering leaders can do to prevent AI adoption from undermining junior developer career trajectories
 
 [^a]: [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md) — skill atrophy is the operational manifestation of the career impact described here; the ethical concern and the operational risk are two framings of the same phenomenon.
 

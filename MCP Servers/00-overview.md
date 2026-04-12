@@ -30,13 +30,13 @@ The GitHub MCP server supports both read and write operations. Write operations 
 
 **Description:** The official Slack MCP server allows Claude Code to read messages, search channel history, retrieve thread context, and — with appropriate permissions — post messages and create canvases.[^6] For a team that uses Slack as its primary coordination layer, this integration addresses a concrete and recurring problem: engineering context is frequently distributed across Slack threads, and that context is currently invisible to Claude Code sessions that need it.
 
-A debugging session benefits from knowing that the same error was reported in #incidents last week and resolved by a specific configuration change. A feature implementation session benefits from reading the relevant product discussion thread in #product rather than receiving a summarized brief. A PR review session benefits from seeing the Slack conversation where the architectural decision being reviewed was originally made. In each case, the value of the Slack integration is converting conversational context — which currently lives outside Claude's view — into accessible session input.[^7]
+A debugging session benefits from knowing that the same error was reported in #incidents last week and resolved by a specific configuration change. A feature implementation session benefits from reading the relevant product discussion thread in #product rather than receiving a summarized brief. A PR review session benefits from seeing the Slack conversation where the architectural decision being reviewed was originally made. In each case, the value of the Slack integration is converting conversational context — which currently lives outside Claude's view — into accessible session input.
 
 Write access to Slack carries social implications that file writes do not. A hook that automatically posts to a shared channel is not equivalent to a file write that only the engineer sees. For this reason, Slack write access should be restricted to sessions where the engineer has explicitly initiated and reviewed the post content, and should never be configured as an automated hook output.
 
 **Proposed Solution:**
 - Configure the Slack MCP server with read-only access initially: message history, channel search, and thread retrieval. Limit the accessible channels to those with engineering-relevant content rather than granting access to all workspaces.[^6]
-- Establish a specific use pattern for Slack search: before beginning any debugging session on a known error, instruct Claude to search relevant Slack channels for prior context on that error. This converts an optional step that engineers often skip under time pressure into a session-default.[^7]
+- Establish a specific use pattern for Slack search: before beginning any debugging session on a known error, instruct Claude to search relevant Slack channels for prior context on that error. This converts an optional step that engineers often skip under time pressure into a session-default.
 - If write access is introduced, restrict it to a dedicated bot channel rather than granting access to shared team channels. A session that goes wrong should not post to #engineering or #general.[^6]
 - Brief the team on the Slack integration explicitly: engineers should understand that Claude can read Slack history in sessions where the integration is active, so they can make informed decisions about what context to invoke.[^5]
 
@@ -138,11 +138,6 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
 [^6]: Slack — "Slack MCP Server," Slack Developer Documentation, 2025. https://api.slack.com/docs/mcp
     Official Slack MCP server capabilities: message search, channel history, thread retrieval, and write operations including message posting and canvas creation. Permission scope definitions and workspace access controls.
 
-[^7]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - ~0:00 — MCP server architecture: how Claude Code acts as an MCP client and connects to external services through the standardized protocol layer
-    - ~4:30 — Configuring Slack and GitHub MCP servers: authentication flow, OAuth scoping, and the `.mcp.json` project file structure for team-shared access
-    - ~12:15 — Security considerations: credential management, minimum-permission scoping, and audit log configuration for MCP read and write operations
-    - ~18:40 — Live demo: building a Postgres MCP server for live schema inspection and parameterized query execution against a development database
 
 [^8]: Google — "Google Drive MCP Server," Google Workspace Developer Documentation, 2025. https://developers.google.com/workspace/mcp
     Official Google Drive MCP server: file and folder access, document content retrieval, search by content, and permission scoping to specific Drive folders. Authentication via OAuth and service account configuration.
@@ -161,17 +156,7 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
 [^12]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
     Prompt injection risk via retrieved content, minimum-permission configuration guidance, MCP server shadowing and how to detect it, and the governance model for write-access MCP operations in team environments.
 
-[^13]: David Ondrej — "Build Your Own MCP Server from Scratch (Full Tutorial)," YouTube, February 2026. https://www.youtube.com/watch?v=y4CaCldMDXs
-    - ~0:00 — Project setup: initializing the TypeScript MCP SDK and defining the initial server skeleton with resource and tool handler boilerplate
-    - ~8:20 — Connecting a custom internal documentation site: search tool implementation, document resource type definition, and authentication against internal APIs using bearer tokens
-    - ~22:45 — Deploying to internal infrastructure: health check endpoints, structured error logging, and team credential management without hardcoded secrets
-    - ~31:00 — Testing the integration end-to-end: verifying Claude Code can discover and invoke the custom server's tools within a live session
 
 [^14]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as a component of context engineering; the argument that reducing manual context assembly is as important as prompt quality; shared configuration artifacts as team-level productivity multipliers.
 
-[^15]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~0:00 — Team rollout sequencing for MCP integrations: why starting with read-only scopes is risk management rather than caution, and how write access should be gated on observed behavior
-    - ~9:10 — Shared `.mcp.json` in version control: review discipline, per-server scope documentation, and the quarterly access audit workflow that keeps permissions bounded
-    - ~17:50 — Prompt injection via MCP tool results: the threat model, real-world examples of malicious content in retrieved documents, and the human-in-the-loop confirmation pattern that mitigates it
-    - ~25:30 — Case study: a small engineering team's rollout of GitHub and Linear MCP servers, including the permission incidents they encountered and how they tightened configuration

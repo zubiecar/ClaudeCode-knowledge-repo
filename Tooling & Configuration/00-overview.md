@@ -97,8 +97,8 @@ A CI pipeline that runs a standardized reviewer session on every PR — using a 
 | Tooling Area | Immediate Action | Owner |
 |---|---|---|
 | CLAUDE.md Configuration | Create team CLAUDE.md; establish architect update protocol | Architect |
-| Hooks and Automation | Define team-standard hooks in .claude/settings.json; check in | Architect |
-| MCP Integration | Configure read-only servers first; define shared .mcp.json | Backend lead |
+| Hooks and Automation | Define team-standard hooks in.claude/settings.json; check in | Architect |
+| MCP Integration | Configure read-only servers first; define shared.mcp.json | Backend lead |
 | Custom Skills | Build initial 5-command library; establish PR review process | Engineering team |
 | Permissions Management | Define work-context permission profiles; educate team on approval hygiene | Architect |
 | CI/CD Integration | Add focused PR review step with CLAUDE.md context | Backend lead + QA |
@@ -143,10 +143,6 @@ A CI pipeline that runs a standardized reviewer session on every PR — using a 
 [^12]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Headless CI mode patterns, plan-mode analysis pipelines, PR comment severity classification, and the argument for treating AI pipeline failures as blocking rather than advisory.
 
-[^13]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - MCP server architecture: the connection between Claude Code and external services and the read vs. write permission boundary
-    - Building a custom Postgres MCP server for live schema inspection and parameterized query execution
-    - Security considerations: credential management, OAuth scoping, and audit log configuration for MCP operations
 
 [^14]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - Modular CLAUDE.md: using import directives to maintain separate context files for git conventions, API patterns, and testing requirements

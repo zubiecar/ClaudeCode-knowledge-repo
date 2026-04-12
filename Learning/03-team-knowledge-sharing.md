@@ -139,20 +139,12 @@ The "first week AI tour" is a half-day structured introduction to the team's acc
 [^15]: CIO — "Managing AI-Augmented Engineering Teams: What Leaders Need to Know," April 2026. https://www.cio.com/article/ai-augmented-engineering-teams-leadership
     Onboarding challenges in AI-assisted teams: the compounding divergence that results when new engineers default to prior-role AI habits; what structured knowledge transfer reduces vs. what it cannot address without pairing and mentorship.
 
-[^16]: Dex Horthy — YC Root Access Podcast, August 2025. https://www.youtube.com/watch?v=RootAccess2025
-    - Knowledge accumulation in small teams: how 10–20 person engineering teams develop and maintain institutional AI workflow knowledge without dedicated tooling infrastructure
-    - Session log culture: the cultural preconditions for engineers to document and share AI workflow findings voluntarily; what makes sharing feel valuable rather than administrative
-    - Library maintenance: how to prevent a shared prompt library from becoming stale or overgrown; the curation practices that keep it a trusted reference
 
 [^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Session log as a teaching artifact: how annotated session recordings transfer workflow knowledge that written documentation alone cannot convey; what to highlight when sharing a session for team learning
     - Command library demonstration: how the tutorial's walkthrough of reusable commands illustrates the value of team-level prompt and pattern libraries vs. individual prompt collections
     - Knowledge transfer for new team members: the first-session walkthrough format as an onboarding pattern applicable to team AI workflow orientation
 
-[^18]: NetworkChuck — "I Let Claude Code Run My Server (Here's What Happened)," YouTube, February 2026. https://www.youtube.com/watch?v=NetworkChuck2026ClaudeCode
-    - Failure mode documentation: the value of recording what went wrong in an AI session, not just what succeeded; how failure documentation prevents team-wide reinvention of the same mistakes
-    - Real-session transparency: sharing unedited session outcomes — including failures and corrections — creates more useful team learning artifacts than polished retrospective summaries
-    - Async knowledge sharing: how session recordings and summaries posted asynchronously provide value to engineers in different time zones or who missed a synchronous stand-up
 
 [^a]: [Documentation: Knowledge Transfer](../Documentation/03-knowledge-transfer.md) — team knowledge sharing is the ongoing form of the same discipline; knowledge transfer covers the ramp, knowledge sharing covers the steady state.
 [^b]: [Tooling: Custom Skills](../Tooling/04-custom-skills.md) — custom skills are a primary knowledge sharing artifact; a prompt pattern that one engineer discovers becomes a team asset when it is encoded as a skill.

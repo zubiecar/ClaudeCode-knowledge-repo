@@ -42,13 +42,13 @@ The prerequisite for AI-primary classification is a completed spec.md. A spec.md
 
 ## Section 3: Sprint-Level AI Code Percentage Targets
 
-**Description:** Individual task classification is necessary but not sufficient. A sprint where 80% of stories are classified AI-primary will accumulate rework and review debt regardless of how good the individual classifications are, because the team's review capacity is finite and the architectural coherence of a sprint's output depends on human judgment distributed across the work. The 40% cap on AI-primary tasks per sprint is not an arbitrary restriction — it is a practical limit derived from review capacity. An 11-person team with three frontend and four backend engineers can maintain review quality for AI-primary output on roughly 40% of stories; above that, review quality degrades, review cycle times lengthen, and the integration quality of the sprint's output suffers.[^9]
+**Description:** Individual task classification is necessary but not sufficient. A sprint where 80% of stories are classified AI-primary will accumulate rework and review debt regardless of how good the individual classifications are, because the team's review capacity is finite and the architectural coherence of a sprint's output depends on human judgment distributed across the work. The 40% cap on AI-primary tasks per sprint is not an arbitrary restriction — it is a practical limit derived from review capacity. An 11-person team with three frontend and four backend engineers can maintain review quality for AI-primary output on roughly 40% of stories; above that, review quality degrades, review cycle times lengthen, and the integration quality of the sprint's output suffers.
 
-Monitoring the AI-primary percentage in real time during a sprint matters because classification drift accumulates mid-sprint. Engineers who planned AI-assisted work sometimes find the task is more AI-ready than expected and shift to AI-primary mid-sprint — individually reasonable decisions that collectively push the sprint above the target. A simple dashboard showing current sprint AI-primary percentage, updated as stories move through the board, makes the aggregate visible without requiring manual tracking. When the percentage approaches the cap at sprint mid-point, the appropriate response is to route the remaining unstarted AI-primary stories to AI-assisted treatment, not to hope review capacity will expand.[^10]
+Monitoring the AI-primary percentage in real time during a sprint matters because classification drift accumulates mid-sprint. Engineers who planned AI-assisted work sometimes find the task is more AI-ready than expected and shift to AI-primary mid-sprint — individually reasonable decisions that collectively push the sprint above the target. A simple dashboard showing current sprint AI-primary percentage, updated as stories move through the board, makes the aggregate visible without requiring manual tracking. When the percentage approaches the cap at sprint mid-point, the appropriate response is to route the remaining unstarted AI-primary stories to AI-assisted treatment, not to hope review capacity will expand.
 
 **Recommended Practice:**
-- Set the sprint-level AI-primary cap at 40% of total story points, not story count. A sprint with three large AI-primary stories and ten small human-primary stories may be within count limits but above the review capacity limit in terms of actual output volume that needs thorough review.[^9]
-- Add a sprint health indicator to the team board that shows current AI-primary percentage vs. the 40% target. The indicator should update automatically when ticket classifications are updated. Engineers can self-monitor without requiring a process gate.[^10]
+- Set the sprint-level AI-primary cap at 40% of total story points, not story count. A sprint with three large AI-primary stories and ten small human-primary stories may be within count limits but above the review capacity limit in terms of actual output volume that needs thorough review.
+- Add a sprint health indicator to the team board that shows current AI-primary percentage vs. the 40% target. The indicator should update automatically when ticket classifications are updated. Engineers can self-monitor without requiring a process gate.
 - When mid-sprint tracking shows the sprint is above the 40% cap, the architect holds a brief triage: which in-progress AI-primary stories are most advanced? Those continue; unstarted AI-primary stories are reclassified to AI-assisted for the remainder of the sprint. The triage should not interrupt stories that are already in review.[^4]
 - Report the sprint-level AI-primary percentage in the sprint review, alongside standard velocity metrics. The CTO uses this data at the quarterly health review to assess whether the cap is calibrated correctly. A team that consistently operates at 38–40% may benefit from a cap increase; one that frequently needs mid-sprint reduction may need a lower default target.[^6]
 
@@ -122,11 +122,6 @@ The communication challenge is framing governance in terms that are meaningful t
 [^8]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
     Spec.md as a prerequisite for AI-primary output quality; how specification completeness at planning time correlates with review round count and QA failure rates.
 
-[^9]: GitClear — "Coding on Copilot: 2025 Data Suggests Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_suggests_coding_quality_is_decreasing
-    Review capacity constraints as the empirical basis for AI-primary sprint percentage caps; churn rate and rework accumulation as a function of ungoverned AI-primary task volume.
-
-[^10]: daily.dev — "AI Code Generation in 2026: The Governance Gap," April 2026. https://daily.dev/blog/ai-code-generation-governance-gap-2026
-    Real-time sprint health monitoring for AI-primary percentage; mid-sprint classification drift and the triage mechanism that prevents review queue overload.
 
 [^11]: Stack Overflow — "2025 Developer Survey," Stack Overflow, December 2025. https://survey.stackoverflow.co/2025/
     AI productivity misalignment by task type; the relationship between classification accuracy and team AI maturity as a lagging indicator; retrospective calibration as a learning mechanism.
@@ -140,15 +135,6 @@ The communication challenge is framing governance in terms that are meaningful t
 [^14]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt
     The rework accumulation mechanism that sprint planning gates prevent; product-engineering velocity dialogue as a governance practice; the 40% cap as rework risk management rather than restriction.
 
-[^15]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Sprint velocity miscalibration: how teams that adopted AI without classification systems discovered mid-sprint that their commitments were based on the wrong task distribution
-    - Task classification in practice: demonstration of the three-question rapid assessment applied to real sprint stories, showing how the classification shifts effort estimates
-    - The 40% cap: what happens to sprint review queues and integration quality when AI-primary task volume exceeds review capacity
-
-[^16]: ThePrimeagen — "Sprint Planning in the AI Era," YouTube, February 2026. https://www.youtube.com/watch?v=K7mP3aQzX9d
-    - Pattern precedent assessment: how the architect's codebase context knowledge makes them the right facilitator for the AI readiness assessment in sprint planning
-    - Spec.md in practice: the difference between a user story and an actual specification, demonstrated with before/after examples from a real sprint planning session
-    - Mid-sprint reclassification: how to handle the conversation when an AI-primary story turns out to require human-primary effort, without creating team friction
 
 [^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Spec.md construction walkthrough: how to produce a complete specification in 30–60 minutes that gives Claude Code the context it needs for reliable AI-primary output

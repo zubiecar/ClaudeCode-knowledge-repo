@@ -145,10 +145,6 @@ The risk of AI-only education budget is a team whose AI tool proficiency increas
 [^17]: METR — "We Are Changing Our Developer Productivity Experiment Design," METR Research, February 2026. https://www.metr.org/blog/2026-02-24-uplift-update/
     Foundational skill preservation under AI adoption: the dependency trajectory when education budget prioritizes AI tool proficiency over foundational skills; the long-term capability costs of systematically underfunding foundational engineering education.
 
-[^18]: Dex Horthy — YC Root Access Podcast, August 2025. https://www.youtube.com/watch?v=RootAccess2025
-    - Monitoring discipline for small teams: how 10–20 person engineering teams design practical external monitoring commitments that stay current without consuming disproportionate engineering bandwidth
-    - Source quality heuristics: the criteria practitioners use to evaluate whether a new source belongs on a team monitoring list vs. should be treated as a one-off reference
-    - Brief format in practice: how structured learning briefs are actually used in practice review meetings; the difference between briefs that change team practice and briefs that are noted and filed
 
 [^19]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Content anxiety in AI development: the psychological experience of trying to track a fast-moving field; how selective source monitoring resolves the anxiety without creating a fear of missing out
@@ -160,10 +156,6 @@ The risk of AI-only education budget is a team whose AI tool proficiency increas
     - Practitioner workflow publishing: how detailed workflow tutorials by experienced Claude Code practitioners serve as high-signal sources for teams developing their own practices
     - Conference debrief application: the tutorial's content illustrates what a team-applicable external learning finding looks like — specific, implementable, and grounded in direct tool experience
 
-[^21]: Jack Herrington — "Claude Code in 2026 — What Actually Works," YouTube, 2026. https://www.youtube.com/watch?v=JackHerrington2026ClaudeCode
-    - Source selection in practice: how experienced practitioners decide which AI development content is worth monitoring vs. which can be safely ignored; the evaluation criteria that filter for team-applicable signal
-    - Quarterly brief calibration: what makes a learning brief actionable rather than informational; the specific finding characteristics that warrant a practice review agenda item vs. those that belong in an archive
-    - Integration path examples: concrete examples of the path from external learning observation to team experiment to team standard, including cases where the experiment did not produce adoption
 
 [^a]: [Learning: Team Knowledge Sharing](03-team-knowledge-sharing.md) — continuing education findings become team knowledge sharing material; individual learning feeds the team knowledge base.
 [^b]: [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md) — quarterly review includes evaluation of team AI capability currency; continuing education effectiveness is a health signal.

@@ -139,15 +139,6 @@ Complexity and duplication metrics require tooling to measure automatically — 
 [^15]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/
     Automated quality tool configuration: how SonarQube and equivalent tools provide the complexity, duplication, and coverage metrics needed for codebase health tracking without manual measurement.
 
-[^16]: Theo (t3.gg) — "Did AI Actually Make Us Faster? My Team's 6-Month Retrospective," YouTube, January 2026. https://www.youtube.com/watch?v=KpL8R7bBzTs
-    - Six-month retrospective findings: how velocity metrics overstated AI benefit while rework, security findings, and complexity accumulation were untracked
-    - Defect attribution methodology: the specific commit tagging and PR classification system used to compute origin-based defect rates
-    - Actionable thresholds: the specific metric values at which the team made governance interventions, and whether those interventions produced measurable improvement
-
-[^17]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Velocity metrics as misleading signals: why PR merge rate and lines-of-code metrics systematically understate the cost of AI-generated code quality problems
-    - Security finding trends: how tracking findings by category (not just count) reveals specific prompting and CLAUDE.md improvements that address root causes
-    - Coverage interpretation: the difference between line coverage and behavioral coverage for AI-generated code, and why the former can be high while the latter is inadequate
 
 [^18]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Quality gate metrics: how to configure CI output for central tracking of security findings, complexity trends, and coverage rates by PR origin

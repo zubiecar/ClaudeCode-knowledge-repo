@@ -157,15 +157,6 @@ The METR productivity studies found that tasks where engineers expected 19% spee
 [^16]: METR — "We Are Changing Our Developer Productivity Experiment Design," METR Research, February 2026. https://www.metr.org/blog/2026-02-24-uplift-update/
     Productivity slowdown from premature delegation: the 19% slowdown on complex tasks as evidence that agentic delegation of the wrong task types produces more debugging overhead than it saves in execution time.
 
-[^17]: Theo (t3.gg) — "Prompting AI Correctly Is a Skill and Most Devs Don't Have It," YouTube, January 2026. https://www.youtube.com/watch?v=9xRmNzGiBo4
-    - Vague improvement requests in practice: live examples of the "make it better" anti-pattern and the specific ways the output diverges from the engineer's actual intent
-    - Closed-loop review recognition: how to identify when you are asking for review from a non-independent context and the structural fix for each scenario
-    - Permission skip behavior: why engineers reflexively approve permission prompts and the three-step habit change that restores meaningful permission review
-
-[^18]: Fireship — "5 AI Coding Mistakes That Are Killing Your Productivity," YouTube, March 2026. https://www.youtube.com/watch?v=KpQ9R2HbfDg
-    - The context flood anti-pattern: demonstration of how excessive context injection degrades output quality compared to minimum sufficient context prompts
-    - Preservation constraint failure: before-and-after comparison of refactoring prompts with and without explicit "do not change" constraints
-    - Premature delegation: real examples of agentic sessions that resolved implicit decision points incorrectly and the debugging cost that followed
 
 [^19]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Anti-pattern catalog: all six anti-patterns demonstrated in context of a real development workflow, with structural alternatives shown in the same session

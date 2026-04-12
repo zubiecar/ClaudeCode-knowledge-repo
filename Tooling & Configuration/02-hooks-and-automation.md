@@ -108,10 +108,10 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
 | Practice | Immediate Action | Owner |
 |---|---|---|
 | Hook Event Model | Document blocking vs. non-blocking policy for each hook type | Architect |
-| Quality Gate Hooks | Configure lint + test PostToolUse hooks in .claude/settings.json | Architect + Backend lead |
+| Quality Gate Hooks | Configure lint + test PostToolUse hooks in.claude/settings.json | Architect + Backend lead |
 | Context Injection Hooks | Add date + recent git log UserPromptSubmit hook | Architect |
 | Notification Hooks | Configure system notification Stop hook for parallel session coordination | All engineers |
-| Team Standardization | Verify .claude/settings.json is committed and applied on all developer machines | Architect |
+| Team Standardization | Verify.claude/settings.json is committed and applied on all developer machines | Architect |
 
 ---
 
@@ -150,10 +150,6 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
     - UserPromptSubmit hook configuration: live demonstration of dynamic context injection including date, sprint context, and recent git activity
     - settings.json team configuration: how to structure the project-level settings file for consistent hook distribution across all developer machines
 
-[^12]: NetworkChuck — "I Automated My Entire Code Quality Pipeline With Claude Hooks," YouTube, February 2026. https://www.youtube.com/watch?v=5aQvKhLb2mE
-    - Building a complete hook pipeline: lint → test → SAST → notify in a sequential PostToolUse chain for source file writes
-    - Notification hook configuration: practical setup for macOS system notifications and Slack integration for parallel session coordination
-    - Audit logging: PreToolUse hook on Bash commands that creates a per-session command log for security review and debugging
 
 [^13]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - UserPromptSubmit hooks for dynamic context: how automated context injection removes the engineer burden of supplying standard context manually in every session

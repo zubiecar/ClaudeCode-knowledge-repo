@@ -135,15 +135,6 @@ Documentation prompts that do not specify the audience, purpose, and format prod
     - Refactoring command walkthrough: live demonstration of a preservation-constraint-leading refactoring prompt and the observable difference from a generic refactoring request
     - Security review command: vulnerability class enumeration, threat model reference, and severity-classified output format in a reusable team command
 
-[^14]: Jack Herrington — "AI Code Review That Actually Works: Task-Specific Prompts," YouTube, March 2026. https://www.youtube.com/watch?v=Lm9pXK2bHNr
-    - Feature scaffolding Explore phase: why reading existing patterns before generating new ones produces measurably more consistent output in multi-engineer codebases
-    - Test generation with dependencies: live comparison of test quality with and without dependency context in the prompt; the separate-session test generation pattern for AI-generated code
-    - Documentation audience specification: how the same code produces fundamentally different documentation quality with and without explicit audience and format directives
-
-[^15]: ThePrimeagen — "Writing Better AI Prompts for Real Engineering Work," YouTube, January 2026. https://www.youtube.com/watch?v=Cn7dK9jqPmQ
-    - The refactoring trap: real examples of unasked-for changes from poorly constrained refactoring prompts and the downstream debugging cost
-    - Task type matching: why applying the same prompt structure to scaffolding, refactoring, and security review produces systematically poor results for all three
-    - Security review specificity: the measurable difference between generic security review prompts and vulnerability-class-enumerated prompts in a live code review demonstration
 
 [^a]: [Workflows: Task Decomposition](../Workflows/02-task-decomposition.md) — task decomposition determines what tasks are appropriate for AI; task prompt patterns determine how to structure those tasks once selected.
 [^b]: [Prompting: Prompt Architecture](01-prompt-architecture.md) — task prompt patterns are the applied form of prompt architecture; the architecture principles manifest as specific patterns per task type.

@@ -18,13 +18,13 @@ This memo covers the implementation and QA workflows where Linear access changes
 
 The architecture of a well-structured Linear ticket contains more implementation signal than an engineer's paraphrase of it. The ticket body has the product requirement; the comments contain the engineering discussion of edge cases, the decision about implementation approach, and the acceptance criteria refinements that accumulated during grooming; the linked issues provide the context for dependencies and prior art. An engineer who has read all of this is better positioned to implement correctly than one who described the ticket from memory. Claude, given direct access, starts from the same complete picture that the fully-prepared engineer does.[^2]
 
-Write operations — status updates, comment creation, issue creation, label assignment — are available and appropriate for specific workflows, particularly the QA engineer's pattern of posting test result summaries to the corresponding issue. These should be introduced selectively and governed through a bot account rather than individual credentials.[^3]
+Write operations — status updates, comment creation, issue creation, label assignment — are available and appropriate for specific workflows, particularly the QA engineer's pattern of posting test result summaries to the corresponding issue. These should be introduced selectively and governed through a bot account rather than individual credentials.
 
 **Recommended Practice:**
 - Configure a Linear MCP server with read-only API key access initially: issues, comments, project structure, and team information. Read-only is sufficient for the primary value case — anchoring implementation sessions to ticket context.[^1]
 - Verify the integration covers the full ticket structure before rolling out: confirm that Claude retrieves the issue body, all comments (not just the most recent), linked issues, and the current status. A partial retrieval that omits comment history misses the most implementation-critical context.[^2]
 - Store the Linear API key in the team's secrets management system; reference it via environment variable in `.mcp.json`. Do not commit API keys, even read-only ones, to the repository.[^4]
-- Establish a testing protocol before full rollout: run a session on a known, recently completed ticket and verify that Claude's retrieved context matches what the implementing engineer experienced during the actual implementation. Gaps between the two indicate retrieval limitations to address before relying on the integration.[^3]
+- Establish a testing protocol before full rollout: run a session on a known, recently completed ticket and verify that Claude's retrieved context matches what the implementing engineer experienced during the actual implementation. Gaps between the two indicate retrieval limitations to address before relying on the integration.
 
 ---
 
@@ -62,15 +62,15 @@ The second QA application is defect reporting: when a test session finds behavio
 
 ## Section 4: Write Access and Bot Account Governance
 
-**Description:** Linear write access — status updates, comment posting, issue creation — is appropriate for the QA engineer's workflow and for certain project management automations, but requires more careful governance than read access. Linear tickets are the team's shared record of what is being built; modifications to tickets by a bot account affect the information that all team members and stakeholders rely on. The governance model must ensure that Claude's write operations are both correct and attributable.[^3]
+**Description:** Linear write access — status updates, comment posting, issue creation — is appropriate for the QA engineer's workflow and for certain project management automations, but requires more careful governance than read access. Linear tickets are the team's shared record of what is being built; modifications to tickets by a bot account affect the information that all team members and stakeholders rely on. The governance model must ensure that Claude's write operations are both correct and attributable.
 
 The appropriate governance model is a dedicated Linear bot account rather than individual engineer credentials. A bot account makes Claude's actions visible in Linear's activity log under a distinct identity — "Engineering Bot" rather than an individual's name — ensuring that Claude-initiated changes are distinguishable from human-initiated changes. If a Claude-posted comment contains an error, it is immediately clear that the comment came from an automated source, not from the engineer whose session produced it.[^9]
 
-Status transitions — marking a ticket as "In Review," "In QA," or "Done" — are a higher-stakes write operation than comment posting. A status transition that is incorrect or premature affects the entire team's view of project progress and may trigger downstream automation. Status transitions by Claude should require explicit engineer confirmation in every case; they should never be configured as an automatic session output.[^3]
+Status transitions — marking a ticket as "In Review," "In QA," or "Done" — are a higher-stakes write operation than comment posting. A status transition that is incorrect or premature affects the entire team's view of project progress and may trigger downstream automation. Status transitions by Claude should require explicit engineer confirmation in every case; they should never be configured as an automatic session output.
 
 **Recommended Practice:**
 - Create a dedicated Linear bot account for all Claude-initiated write operations. Configure the bot's permissions at the team level, not the workspace level: it should have access to the engineering team's issues and no others.[^9]
-- Introduce write access incrementally: begin with comment posting on issues the engineer has open in session, observe behavior for two weeks, then evaluate whether status transitions are appropriate to enable.[^3]
+- Introduce write access incrementally: begin with comment posting on issues the engineer has open in session, observe behavior for two weeks, then evaluate whether status transitions are appropriate to enable.
 - For all write operations, require engineer confirmation before execution: Claude proposes the comment or status change, the engineer approves, and the operation executes. There is no configuration where Claude writes to Linear without a human in the loop.[^9]
 - Audit the bot account's Linear activity monthly: review which issues received comments, whether the comments were accurate representations of the session's findings, and whether any status transitions were incorrect. Use the audit to identify patterns that warrant additional constraints.[^4]
 
@@ -78,14 +78,14 @@ Status transitions — marking a ticket as "In Review," "In QA," or "Done" — a
 
 ## Section 5: Cross-Tool Context Chaining
 
-**Description:** The Linear integration's full value is realized when it is used in combination with the GitHub and Google Drive integrations. A Linear ticket references a GitHub issue; the GitHub issue has a linked pull request; the pull request closes the ticket. An implementation session that begins by reading the Linear ticket, follows the link to the GitHub issue, reads the comment history there, and then reads the referenced Drive document for architectural context is a session with materially more complete context than one that starts from a verbal description of any individual piece.[^10]
+**Description:** The Linear integration's full value is realized when it is used in combination with the GitHub and Google Drive integrations. A Linear ticket references a GitHub issue; the GitHub issue has a linked pull request; the pull request closes the ticket. An implementation session that begins by reading the Linear ticket, follows the link to the GitHub issue, reads the comment history there, and then reads the referenced Drive document for architectural context is a session with materially more complete context than one that starts from a verbal description of any individual piece.
 
 This cross-tool chaining pattern is the practical realization of context engineering: rather than constructing context manually by copying relevant passages from multiple tools into a prompt, the engineer provides the Linear ticket identifier and instructs Claude to follow the relevant links. Claude reads the Linear ticket, identifies linked GitHub issues and Drive documents, retrieves them, and begins implementation from a synthesized understanding of all three.
 
 For the architect reviewing implementation sessions, cross-tool chaining also creates an audit trail: the session's retrieved context is visible in Claude's reasoning, making it possible to verify that the implementation was anchored to the correct ticket, the correct GitHub issue, and the correct architectural documents. This is more verifiable than implementation anchored to an engineer's verbal description.[^6]
 
 **Recommended Practice:**
-- When a Linear ticket links to a GitHub issue, instruct Claude to read both before beginning. The ticket has the product framing; the issue has the technical constraints and comment-accumulated edge cases. Together they provide complete context; individually each is partial.[^10]
+- When a Linear ticket links to a GitHub issue, instruct Claude to read both before beginning. The ticket has the product framing; the issue has the technical constraints and comment-accumulated edge cases. Together they provide complete context; individually each is partial.
 - When an implementation session requires both Linear context and Drive document context (ADRs, runbooks, API specs), establish the session-start sequence in CLAUDE.md: Linear ticket first, then linked GitHub issue, then relevant Drive documents. This ordering ensures product requirements frame the session before architectural constraints are applied.[^4]
 - Use the cross-tool context pattern to generate implementation summaries at session end: given the ticket, the issue, and the implementation produced, Claude writes a brief summary of what was implemented and how it addresses the ticket's requirements. This summary becomes the PR description or the Linear comment that closes the implementation loop.[^6]
 - For sessions where the Linear ticket, the GitHub issue, and the Drive documents tell inconsistent stories — different acceptance criteria, conflicting constraints — instruct Claude to surface the inconsistency explicitly before proceeding. Inconsistent context is a pre-implementation signal that requires human resolution.[^5]
@@ -110,9 +110,6 @@ For the architect reviewing implementation sessions, cross-tool chaining also cr
 [^2]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in reducing manual coordination overhead; how ticket context access changes implementation session quality; context engineering as the primary discipline in agentic development.
 
-[^3]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~0:00 — Team rollout sequencing: read-only first; write access gated on observed behavior
-    - ~25:30 — Case study: a small engineering team's Linear MCP rollout, permission incidents, and configuration tightening
 
 [^4]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
     Shared `.mcp.json` project configuration; CLAUDE.md session-start convention patterns; checking AI configuration into git as a team-owned resource.
@@ -132,9 +129,6 @@ For the architect reviewing implementation sessions, cross-tool chaining also cr
 [^9]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
     Minimum-permission configuration; bot account governance for write-access operations; prompt injection risk via retrieved ticket content.
 
-[^10]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - ~4:30 — Cross-tool MCP configuration: combining Linear, GitHub, and Drive integrations in a single session configuration
-    - ~12:15 — Security: credential management for multiple MCP servers; minimum-permission scoping across tool integrations
 
 [^a]: [Tooling: MCP Integration](../Tooling/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the Linear server specifically.
 [^b]: [Governance: Sprint Planning Gates](../Governance/03-sprint-planning-gates.md) — Linear MCP provides ticket context to sessions; sprint planning gate classifications can be surfaced within sessions working on classified tickets.

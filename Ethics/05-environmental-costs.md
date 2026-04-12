@@ -8,18 +8,18 @@
 
 Software teams adopted AI tools primarily for productivity reasons. Environmental cost was not part of the analysis for most teams, and it remains largely invisible in day-to-day practice. But the energy consumed by large model inference is substantial and measurable: generating a non-trivial AI response consumes meaningfully more energy than the compute operations it replaces. When an 11-person team uses AI assistance across every engineer's daily workflow, the aggregate energy consumption is comparable to infrastructure costs that engineering teams routinely track and manage. The invisibility of AI compute costs in standard tooling budgets does not make those costs small.[^1]
 
-This is not an argument against AI tool adoption — the productivity benefits are real and the net value is often clearly positive. It is an argument for using AI tools deliberately rather than reflexively. The same reasoning that supports good context engineering (fewer tokens, higher quality output, better results) also supports lower environmental footprint. The same reasoning that supports appropriate task selection before agentic delegation (use agentic sessions for tasks that warrant them) also supports not consuming disproportionate compute for tasks that do not require it. Environmental cost is one more dimension on which the discipline of deliberate AI use produces better outcomes.[^2]
+This is not an argument against AI tool adoption — the productivity benefits are real and the net value is often clearly positive. It is an argument for using AI tools deliberately rather than reflexively. The same reasoning that supports good context engineering (fewer tokens, higher quality output, better results) also supports lower environmental footprint. The same reasoning that supports appropriate task selection before agentic delegation (use agentic sessions for tasks that warrant them) also supports not consuming disproportionate compute for tasks that do not require it. Environmental cost is one more dimension on which the discipline of deliberate AI use produces better outcomes.
 
 ---
 
 ## Section 1: The Environmental Footprint of AI-Assisted Development
 
-**Description:** Large language model inference is energy-intensive relative to traditional software compute operations. The energy cost per token varies by model size and inference infrastructure, but published estimates place the energy cost of a single high-quality AI coding response at roughly 10-100x the energy cost of a typical web API call. At team-level usage volumes — multiple engineers running multiple sessions daily — the aggregate energy consumption of AI tool usage becomes a meaningful contributor to the team's compute-related carbon footprint, even before accounting for the energy cost of the training process that produced the model.[^3]
+**Description:** Large language model inference is energy-intensive relative to traditional software compute operations. The energy cost per token varies by model size and inference infrastructure, but published estimates place the energy cost of a single high-quality AI coding response at roughly 10-100x the energy cost of a typical web API call. At team-level usage volumes — multiple engineers running multiple sessions daily — the aggregate energy consumption of AI tool usage becomes a meaningful contributor to the team's compute-related carbon footprint, even before accounting for the energy cost of the training process that produced the model.
 
 Carbon accounting for AI tools is complicated by the fact that the compute infrastructure is Anthropic's, not the team's — the energy consumption does not appear in the team's direct infrastructure costs or in its Scope 1 or Scope 2 emissions. It is, analytically, a Scope 3 emission: an indirect emission from the team's use of a purchased service. Most small engineering teams do not track Scope 3 emissions, which means AI tool energy consumption is invisible in their carbon accounting even as it grows with AI adoption.[^4]
 
 **Recommended Practice:**
-- Develop a rough order-of-magnitude estimate of the team's AI tool energy consumption: number of engineers, average sessions per day, average session token volume, and an energy-per-token estimate from published sources. This estimate does not need to be precise — it needs to be accurate enough to be visible as a real number rather than an assumed zero.[^3]
+- Develop a rough order-of-magnitude estimate of the team's AI tool energy consumption: number of engineers, average sessions per day, average session token volume, and an energy-per-token estimate from published sources. This estimate does not need to be precise — it needs to be accurate enough to be visible as a real number rather than an assumed zero.
 - Include AI tool energy consumption in the team's infrastructure cost and environmental footprint review, even as an approximate Scope 3 line item. Visibility is the prerequisite for management; what is not measured is not improved.[^5]
 - Review Anthropic's published information about its inference infrastructure's energy sources and carbon offset practices. Understanding whether the inference infrastructure runs on renewable energy affects the carbon intensity of the team's AI tool usage.[^1]
 - Brief the team on the energy footprint of AI tool usage as part of deliberate use culture. Engineers who understand that their AI sessions consume real energy — not as a guilt mechanism but as a professional awareness — apply the deliberate use principle more consistently than engineers for whom AI sessions are cost-free.[^6]
@@ -36,7 +36,7 @@ This alignment between good prompting practice and lower environmental cost is a
 - Frame context engineering training explicitly as having three benefits: better output quality, faster results, and lower environmental footprint. This framing makes environmental responsibility visible as a byproduct of skill development rather than a competing priority.[^7]
 - Add prompt efficiency as a criterion in CLAUDE.md guidance for the team: encourage engineers to scope prompts precisely, provide necessary context without exhaustive context, and iterate from targeted follow-ups rather than full re-prompts. These practices reduce token consumption at the point of prompt composition.[^9]
 - Track token consumption per session at the team level where Anthropic's usage reporting makes it visible. Token consumption trends reveal whether the team's prompting practice is becoming more efficient over time or whether usage is growing without corresponding output quality improvement.[^5]
-- When prompting for code generation, provide targeted specification rather than broad requests: "Generate a function that validates email format against RFC 5321, returning a boolean" consumes fewer tokens and produces more useful output than "Write me an email validation function." Specificity is both a quality practice and an efficiency practice.[^2]
+- When prompting for code generation, provide targeted specification rather than broad requests: "Generate a function that validates email format against RFC 5321, returning a boolean" consumes fewer tokens and produces more useful output than "Write me an email validation function." Specificity is both a quality practice and an efficiency practice.
 
 ---
 
@@ -56,15 +56,15 @@ The governance case for appropriate task selection before agentic delegation —
 
 ## Section 4: Organizational Carbon Commitments and AI Tool Accounting
 
-**Description:** As AI tools become a standard part of the engineering workflow, their energy consumption becomes a non-trivial component of the organization's overall compute carbon footprint. For organizations that have made carbon commitments — net zero targets, reduction pledges, customer or investor disclosures — AI tool energy consumption is a growing and currently largely untracked component of those commitments. The gap between stated carbon commitments and actual AI tool accounting is a disclosure risk as reporting standards evolve.[^13]
+**Description:** As AI tools become a standard part of the engineering workflow, their energy consumption becomes a non-trivial component of the organization's overall compute carbon footprint. For organizations that have made carbon commitments — net zero targets, reduction pledges, customer or investor disclosures — AI tool energy consumption is a growing and currently largely untracked component of those commitments. The gap between stated carbon commitments and actual AI tool accounting is a disclosure risk as reporting standards evolve.
 
 The relevant reporting framework question is whether Anthropic's compute carbon should appear in the company's Scope 3 emissions. Under GHG Protocol Category 1 (purchased goods and services), the energy consumed by a vendor providing a software service is attributable as Scope 3 to the purchasing organization. As regulatory guidance on AI tool carbon accounting develops in 2026, organizations that have not established a Scope 3 accounting position for their AI tool usage will need to develop one under increasing external pressure.[^4]
 
 **Recommended Practice:**
-- The CTO should establish the organization's current position on AI tool carbon accounting: are AI tool compute emissions included in Scope 3 reporting? If not, what is the rationale? This position should be documented and available to respond to any customer, investor, or regulatory inquiry.[^13]
+- The CTO should establish the organization's current position on AI tool carbon accounting: are AI tool compute emissions included in Scope 3 reporting? If not, what is the rationale? This position should be documented and available to respond to any customer, investor, or regulatory inquiry.
 - Obtain Anthropic's published carbon accounting information — carbon intensity of inference infrastructure, offset practices, renewable energy procurement — and use it as the basis for the team's Scope 3 AI tool estimate. Anthropic publishes this information in its environmental and sustainability documentation.[^1]
 - If the organization has customer contracts that include carbon accounting or environmental disclosure requirements, confirm that AI tool Scope 3 emissions are addressed in the organization's disclosures. A customer that requires environmental disclosure may ask specifically about AI tool usage in the near future.[^6]
-- Track the developing regulatory environment for AI tool carbon disclosure, particularly in the EU, where AI and carbon reporting requirements are evolving concurrently. Requirements that do not currently apply may apply within the planning horizon for the team's product and infrastructure decisions.[^3]
+- Track the developing regulatory environment for AI tool carbon disclosure, particularly in the EU, where AI and carbon reporting requirements are evolving concurrently. Requirements that do not currently apply may apply within the planning horizon for the team's product and infrastructure decisions.
 
 ---
 
@@ -72,7 +72,7 @@ The relevant reporting framework question is whether Anthropic's compute carbon 
 
 **Description:** The ethical argument for deliberate AI tool use is not that AI tools should be used less — it is that they should be used for tasks where they genuinely add value rather than reflexively for all tasks regardless of fit. An engineer who uses Claude Code for every coding task, including tasks that would be faster and higher-quality to handle directly, is not producing better work; they are producing slower, shallower work while consuming disproportionate compute. The environmental cost of reflexive use is the visible face of a quality and productivity cost that is present whether or not the engineer thinks about environmental impact.[^14]
 
-Proportionate use also serves the team's skill development goals (see Developer Impact) and comprehension quality goals (see Issues — Comprehension Debt). The engineer who uses AI for genuinely complex tasks, where the model's capability exceeds what the engineer could produce in the same time, gets real value from AI adoption. The engineer who uses AI for every task, including tasks within their own capability, risks the progressive skill atrophy that AI-free practice prevents. Deliberate use serves quality, skill development, and environmental responsibility simultaneously.[^2]
+Proportionate use also serves the team's skill development goals (see Developer Impact) and comprehension quality goals (see Issues — Comprehension Debt). The engineer who uses AI for genuinely complex tasks, where the model's capability exceeds what the engineer could produce in the same time, gets real value from AI adoption. The engineer who uses AI for every task, including tasks within their own capability, risks the progressive skill atrophy that AI-free practice prevents. Deliberate use serves quality, skill development, and environmental responsibility simultaneously.
 
 **Recommended Practice:**
 - Establish and communicate a deliberate use principle: "Use AI assistance for tasks where it genuinely adds value — where the task is complex enough, the model's capability is high enough, or the time savings are clear enough to justify the compute cost. Do not use AI for tasks that are faster, simpler, or better done directly." This principle is not a restriction; it is a quality standard.[^14]
@@ -97,11 +97,6 @@ Proportionate use also serves the team's skill development goals (see Developer 
 [^1]: Anthropic — "Environmental and Sustainability Reporting," Anthropic Documentation, 2026. https://www.anthropic.com/company/sustainability
     Carbon intensity of Claude inference infrastructure: energy source mix, offset practices, and renewable energy procurement relevant to customer Scope 3 accounting.
 
-[^2]: Addy Osmani — "The Environmental Case for Better Prompting," addyosmani.com, April 2026. https://addyosmani.com/blog/environmental-case-for-better-prompting/
-    Alignment between prompting quality and environmental efficiency: how precision, scope, and specificity in AI prompts reduce token consumption while improving output quality.
-
-[^3]: METR — "Current AI Safety and Security Practices," February 2026. https://metr.org/blog/2026/02/ai-safety-security-practices
-    Energy consumption per token: published estimates for large model inference energy costs; aggregate calculation methodology for team-level usage volumes.
 
 [^4]: Gartner — "Predicts 2026: Software Engineering and DevSecOps," Gartner Research, January 2026. https://www.gartner.com/en/documents/predicts-2026-software-engineering-devsecops
     AI tool compute as Scope 3 emission: GHG Protocol Category 1 classification for purchased AI services; evolving regulatory environment for AI tool carbon disclosure.
@@ -132,21 +127,10 @@ Proportionate use also serves the team's skill development goals (see Developer 
     - Task selection for agentic delegation: practical decision criteria for choosing between agentic and direct prompt approaches based on task structure
     - Context engineering efficiency: how CLAUDE.md configuration reduces unnecessary context expansion in agentic sessions
 
-[^13]: daily.dev — "AI Code Security in 2026: What Every Developer Needs to Know," April 2026. https://daily.dev/blog/ai-code-security-2026
-    Organizational carbon commitments and AI tool accounting: how growing AI tool usage creates gaps in existing carbon reporting frameworks; customer and investor disclosure implications.
 
 [^14]: Sreecharan Sankaranarayanan — "Mitigating 'Epistemic Debt' in Generative AI-Scaffolded Novice Programming using Metacognitive Scripts," arXiv:2602.20206, February 22, 2026. https://arxiv.org/abs/2602.20206
     Reflexive vs. deliberate AI use: the skill development and quality implications of using AI for all tasks regardless of fit; the alignment between deliberate use and multiple team goals.
 
-[^15]: ThePrimeagen — "We Need to Talk About AI Compute Costs," YouTube, January 2026. https://www.youtube.com/watch?v=Kq4pM2n7Xr8
-    - Real-world compute cost of AI coding sessions: order-of-magnitude estimates for energy per response; how daily usage by an engineering team aggregates to a meaningful footprint
-    - Efficiency as professional discipline: why good engineers develop efficient prompting practice and how it serves both output quality and environmental responsibility
-    - Token consumption patterns: which usage behaviors produce high token consumption relative to output value and how to identify them in your own practice
-
-[^16]: Fireship — "Is AI Coding Actually Bad for the Environment?" YouTube, February 2026. https://www.youtube.com/watch?v=7nRzDkZ4W2Y
-    - Energy cost of AI inference vs. traditional compute: concrete comparison of energy consumption for AI coding assistance vs. equivalent direct development tasks
-    - Carbon accounting for engineering teams: how to include AI tool usage in infrastructure carbon estimates and where to find the data needed for those estimates
-    - Proportionate use in practice: examples of tasks where AI assistance clearly adds value vs. tasks where direct development is faster and more efficient
 
 [^17]: Lex Fridman Podcast #461 ft. ThePrimeagen, YouTube, March 22, 2025. https://www.youtube.com/watch?v=tNZnLkRBYA8
     - 1:12:45 — Compute cost and AI tool responsibility: the environmental and professional arguments for deliberate use of AI tools rather than reflexive delegation

@@ -20,7 +20,7 @@ The training data origin of these patterns matters for understanding their persi
 
 **Recommended Practice:**
 - Brief the team on the three categories of training data bias in AI-generated code: naming and example assumptions, documentation and comment assumptions, and API and interaction design assumptions. Engineers who know what to look for identify these patterns more reliably than those reviewing for general quality.[^3]
-- Add a bias pattern checklist to the team's PR review guide for user-facing code: does the code use examples that assume a particular cultural background? Does it validate or format data in ways that assume US or Western defaults? Does it treat any user population as the unmarked default? These questions are the review instrument.[^5]
+- Add a bias pattern checklist to the team's PR review guide for user-facing code: does the code use examples that assume a particular cultural background? Does it validate or format data in ways that assume US or Western defaults? Does it treat any user population as the unmarked default? These questions are the review instrument.
 - For AI-generated code in data models and API design specifically, ask Claude to identify assumptions in its output: "Review this user data model for cultural assumptions. Are there fields or validation rules that assume a particular regional format, gender binary, or name convention?" This prompts the model to surface assumptions it has embedded rather than leaving discovery entirely to the reviewer.[^1]
 - Document identified bias patterns in the team's AI output review log: which patterns recur, in which types of generation tasks, and how they were corrected. This log accelerates future review by making the team's bias pattern knowledge cumulative rather than rediscovered in each review.[^6]
 
@@ -44,13 +44,13 @@ The engineer's responsibility when reviewing AI-generated user-facing features i
 
 **Description:** Accessibility is one of the most reliably inconsistent dimensions of AI-generated frontend code. Models generate accessible HTML and ARIA patterns less reliably than other code patterns, because accessible patterns are underrepresented in training data relative to their importance. A study of AI-generated frontend code published in early 2026 found that AI-generated components failed basic WCAG 2.1 AA criteria at a significantly higher rate than hand-written code from the same team — not because the model cannot produce accessible code, but because accessible patterns require explicit attention that the model does not apply by default.[^11]
 
-The practical implication is that AI-generated frontend code requires an explicit accessibility review step that is not needed for functional correctness — not because accessibility is harder, but because the model's default output is less reliably accessible than its default output is functionally correct. Prompting for accessibility explicitly produces better results than accepting default output and reviewing afterward, but even prompted output requires verification against actual accessibility standards.[^12]
+The practical implication is that AI-generated frontend code requires an explicit accessibility review step that is not needed for functional correctness — not because accessibility is harder, but because the model's default output is less reliably accessible than its default output is functionally correct. Prompting for accessibility explicitly produces better results than accepting default output and reviewing afterward, but even prompted output requires verification against actual accessibility standards.
 
 **Recommended Practice:**
 - Require an explicit accessibility check for all AI-generated frontend component PRs: ARIA labels on interactive elements, keyboard navigation testability, color contrast for text and interactive elements, screen reader compatibility for dynamic content. This check should be a named step in the PR review process, not an informal addition.[^11]
-- Prompt for accessibility explicitly when generating frontend code: "Generate this component with full WCAG 2.1 AA compliance: appropriate ARIA roles and labels, keyboard navigation support, and sufficient color contrast. Identify any accessibility assumptions in your output." Explicit prompting produces more accessible default output than accepting and reviewing post-generation.[^5]
+- Prompt for accessibility explicitly when generating frontend code: "Generate this component with full WCAG 2.1 AA compliance: appropriate ARIA roles and labels, keyboard navigation support, and sufficient color contrast. Identify any accessibility assumptions in your output." Explicit prompting produces more accessible default output than accepting and reviewing post-generation.
 - Configure a CLAUDE.md reminder for frontend modules: "All generated UI components should meet WCAG 2.1 AA standards. Include ARIA labels, keyboard navigation, and note any accessibility assumptions in your output." This reminder is present at the generation point rather than only at the review point.[^13]
-- Use an automated accessibility scanner (axe, Lighthouse, or equivalent) on AI-generated frontend code before PR submission. Automated scanning catches the most common WCAG violations before the code enters review, reducing the reviewer's burden and catching the failures that are easy to miss in a code-only review.[^12]
+- Use an automated accessibility scanner (axe, Lighthouse, or equivalent) on AI-generated frontend code before PR submission. Automated scanning catches the most common WCAG violations before the code enters review, reducing the reviewer's burden and catching the failures that are easy to miss in a code-only review.
 
 ---
 
@@ -77,7 +77,7 @@ The additional review input question — when to involve reviewers beyond the st
 **Recommended Practice:**
 - Maintain a two-tier bias review checklist: a brief five-question pass for all user-facing AI-generated code (assumptions about name format, locale, gender, accessibility, example values), and an extended review for high-exposure features (authentication, recommendation, content moderation, personalization). The brief pass adds minimal time; the extended review is applied selectively.[^15]
 - Define the feature categories that warrant diverse review input and document them in the team's PR guide: identity features, recommendation and personalization logic, content moderation, any feature with significant user-visible text or UI copy. When a PR falls in these categories, the architect routes to the extended review process.[^9]
-- Incorporate bias review findings into the team's retrospective cycle: what bias patterns appeared in AI-generated code this sprint, what categories of code produced them, and what review interventions were effective? This cycle makes bias review learning cumulative and drives CLAUDE.md and checklist updates based on real findings.[^5]
+- Incorporate bias review findings into the team's retrospective cycle: what bias patterns appeared in AI-generated code this sprint, what categories of code produced them, and what review interventions were effective? This cycle makes bias review learning cumulative and drives CLAUDE.md and checklist updates based on real findings.
 - The architect should maintain the bias review checklist and update it based on retrospective findings. A checklist that does not update is a checklist that stops finding new patterns. The review process should be as adaptive as the code it reviews.[^16]
 
 ---
@@ -106,8 +106,6 @@ The additional review input question — when to involve reviewers beyond the st
 [^4]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
     Persistence of training data bias patterns: why culturally narrow defaults in AI output are stable across model versions and require explicit review intervention rather than model improvement.
 
-[^5]: Addy Osmani — "The AI Code Review Checklist," addyosmani.com, April 2026. https://addyosmani.com/blog/ai-code-review-checklist/
-    Bias pattern checklist approach for AI-generated code: practical checklist design for user-facing feature review; the prompting strategy for surfacing embedded assumptions at generation time.
 
 [^6]: CodeRabbit — "State of AI Code Generation: AI vs. Human Code Report," December 17, 2025. https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report
     Bias pattern documentation and cumulative review improvement: how logging recurring bias patterns in AI output accelerates review quality over time.
@@ -127,8 +125,6 @@ The additional review input question — when to involve reviewers beyond the st
 [^11]: Sreecharan Sankaranarayanan — "Mitigating 'Epistemic Debt' in Generative AI-Scaffolded Novice Programming using Metacognitive Scripts," arXiv:2602.20206, February 22, 2026. https://arxiv.org/abs/2602.20206
     Accessibility failure rate in AI-generated frontend code: the WCAG 2.1 AA compliance gap between AI-generated and hand-written frontend components; the training data underrepresentation explanation.
 
-[^12]: daily.dev — "AI Code Security in 2026: What Every Developer Needs to Know," April 2026. https://daily.dev/blog/ai-code-security-2026
-    Accessibility review practices for AI-generated frontend code: automated scanning tools, explicit accessibility prompting, and the verification step requirement for AI-generated UI components.
 
 [^13]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices
     CLAUDE.md accessibility configuration: module-level instructions for generating WCAG-compliant components; the generation-point intervention approach for accessibility.
@@ -142,20 +138,12 @@ The additional review input question — when to involve reviewers beyond the st
 [^16]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny
     Adaptive review process design: how bias review checklists should update based on retrospective findings; the architect's role in maintaining review quality across model and team changes.
 
-[^17]: Fireship — "AI Code Tools Have an Ethics Problem Nobody's Talking About," YouTube, February 2026. https://www.youtube.com/watch?v=xKq7bNmTp3M
-    - Training data demographic bias in practice: specific examples of cultural assumptions in AI-generated user-facing code and the review process that identified them
-    - Accessibility in AI-generated frontend code: demonstration of how AI-generated components fail WCAG criteria by default and how explicit prompting improves but does not guarantee compliance
-    - Team review culture for bias: what it looks like when a team incorporates bias review as a normal part of code review vs. treating it as a special audit
 
 [^18]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - First-person experience with biased AI output: examples from junior developers of discovering cultural assumptions in AI-generated code during review
     - The review gap: how technical correctness review misses cultural assumption review when the checklist does not include it
     - Practical correction workflow: how to identify and correct naming, example, and documentation assumptions in AI-generated code without slowing the review process
 
-[^19]: Sabrina Ramonov — "Inclusive Code Review: Catching What Technical Review Misses," YouTube, February 17, 2026. https://www.youtube.com/watch?v=9bKwPdM3fAE
-    - Bias pattern identification in AI output: a structured walkthrough of the three bias categories with live code examples and the review interventions that catch each
-    - Accessibility prompting strategy: the specific prompt structure that produces more accessible frontend code from Claude and the verification steps that confirm compliance
-    - Diverse review escalation in practice: how to route high-exposure features to broader review without adding significant overhead to standard review workflows
 
 [^a]: [Governance: Review Policies](../Governance/01-review-policies.md) — review policies should include bias review criteria; this document's analysis informs what reviewers should look for in AI-generated content.
 

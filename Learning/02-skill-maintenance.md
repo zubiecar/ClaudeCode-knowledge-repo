@@ -146,10 +146,6 @@ The highest-signal sources for an 11-person team are: Anthropic's own documentat
     - 4:18:32 — Leadership modeling: how senior engineers and CTOs demonstrate the skill maintenance practices they expect from their teams, and why this modeling matters more than policy
     - 5:01:16 — Future-proofing engineering careers: which skills remain high-value as AI handles more code generation, and how deliberate skill maintenance positions engineers for the highest-leverage work
 
-[^17]: Fireship — "Stop Using AI as a Crutch (How to Use It Correctly)," YouTube, April 2026. https://www.youtube.com/watch?v=Qp7vDj9MCXQ
-    - Crutch vs. multiplier distinction: the specific behavioral differences between engineers who use AI as a capability multiplier and those who have allowed it to become a dependency
-    - AI-free practice format: what effective deliberate practice looks like in an AI-assisted team context, distinct from both total AI avoidance and unrestricted AI use
-    - The teach-back moment: why explaining AI-generated code to another engineer is the highest-leverage single skill maintenance practice for teams that cannot easily schedule dedicated practice sessions
 
 [^a]: [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md) — skill maintenance is the direct countermeasure to skill atrophy; the practices here are designed to preserve the capabilities that document identifies as at risk.
 [^b]: [Learning: AI-Free Practice Protocols](04-ai-free-practice-protocols.md) — AI-free practice protocols are the structural mechanism for skill maintenance; the two documents define the goal and the practice.

@@ -121,8 +121,6 @@ The PR template update addresses review process failures. If the incident reveal
 [^5]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt
     Financial and operational costs of AI-generated code failures; structural vs. individual failure modes; CLAUDE.md gap analysis as a root cause methodology; governance action completion rates as a system health metric.
 
-[^6]: GitClear — "Coding on Copilot: 2025 Data Suggests Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_suggests_downward_pressure_on_code_quality
-    Empirical data on AI-generated code quality trends; failure mode distribution in AI-assisted codebases; post-incident policy revision as a compounding quality mechanism; the relationship between incident frequency and governance investment.
 
 [^a]: [Documentation: Runbook Standards](../Documentation/02-runbook-standards.md) — Runbooks are the operational artifacts incident response depends on; an incident response process without current runbooks has no execution path.
 

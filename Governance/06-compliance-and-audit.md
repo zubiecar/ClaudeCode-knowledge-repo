@@ -34,7 +34,7 @@ The governance log serves two audiences simultaneously. Internal governance uses
 
 **Recommended Practice:**
 - Maintain the AI governance log as a living document in the repository under `/Governance/`. It should contain: the list of authorized AI tools with authorization date and authorizing owner; the list of governing policies with current version, last review date, and policy owner; a link to the override history (from the escalation log in Governance/04); a link to the incident log; and a summary of data handling commitments (enterprise API plan status, training opt-out configuration).[^7]
-- Update the governance log after every quarterly health review to reflect current policy versions, last review dates, and any changes to authorized tools or data handling configuration. A governance log that is accurate as of the last quarterly review satisfies the "actively maintained" standard most auditors apply.[^9]
+- Update the governance log after every quarterly health review to reflect current policy versions, last review dates, and any changes to authorized tools or data handling configuration. A governance log that is accurate as of the last quarterly review satisfies the "actively maintained" standard most auditors apply.
 - Format the governance log for external readability, not just internal use. When an enterprise customer or auditor requests AI governance documentation, the governance log should be readable by a non-engineer: clear section headings, plain-language descriptions of what each policy covers, and dates that make the review cadence visible. A log that is only intelligible to the engineering team is not usable for external compliance purposes.[^8]
 - Store the governance log with version control so that the history of governance decisions is preserved. An auditor may ask what the team's AI policies were at a specific date — a git-tracked document can answer that question; a wiki page or shared document with no version history cannot.[^2]
 
@@ -64,7 +64,7 @@ The prepared statement about AI code generation practices is not a marketing doc
 - Prepare a standard AI development practices statement that covers the six questions enterprise customers most commonly ask: (1) Do you use AI code generation tools? (2) What data do AI tools access? (3) Is customer data ever included in AI sessions? (4) What review process applies to AI-generated code? (5) What security testing applies to AI-generated code? (6) What governance oversight exists for AI tool use? The prepared statement answers all six accurately and concisely.[^12]
 - Store the prepared statement in the team's sales and RFP response repository alongside other security documentation. It should be retrievable by anyone responding to a security questionnaire, not only by engineers who were involved in writing the governance policies. Consistent delivery requires accessible documentation.[^13]
 - The distinction between tool use disclosure and code attribution disclosure matters for customer communication. Enterprise customers are asking whether AI tools are used in your development process (tool use disclosure) — not whether specific lines of code were AI-generated (code attribution disclosure). The former is a standard security and governance question; the latter is a product liability and IP question with different implications. Be clear about which question you are answering.[^6]
-- Update the prepared statement after any significant governance policy change or tooling change. A prepared statement that describes last year's practices, when the team has since adopted agentic use or changed its data handling configuration, is a compliance liability. The governance log update after each quarterly review (Section 2) should include a check that the prepared statement is still accurate.[^9]
+- Update the prepared statement after any significant governance policy change or tooling change. A prepared statement that describes last year's practices, when the team has since adopted agentic use or changed its data handling configuration, is a compliance liability. The governance log update after each quarterly review (Section 2) should include a check that the prepared statement is still accurate.
 
 ---
 
@@ -126,8 +126,6 @@ Regulatory monitoring is not a full-time responsibility for an 11-person team �
 [^8]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Governance log external readability requirements; the audit-ready formatting standard that makes internal governance documentation usable for external compliance purposes.
 
-[^9]: daily.dev — "AI Code Generation in 2026: The Governance Gap," April 2026. https://daily.dev/blog/ai-code-generation-governance-gap-2026
-    Governance log quarterly update as a compliance maintenance practice; prepared statement currency check as a quarterly review checklist item.
 
 [^10]: CodeRabbit — "State of AI Code Generation: AI vs. Human Code Report," December 17, 2025. https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report
     Vendor SOC 2 attestation requirements in enterprise security reviews; the vendor documentation file and its maintenance cadence.
@@ -147,20 +145,6 @@ Regulatory monitoring is not a full-time responsibility for an 11-person team �
 [^15]: METR — "Autonomy Evaluation Resources," METR, February 2026. https://metr.org/autonomy-evaluation-resources/
     AI regulatory landscape assessment for software development; sector-specific guidance development pace; the monitoring sources curated to avoid coverage gaps and information overload.
 
-[^16]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Enterprise security questionnaire reality: the actual questions customers are asking in 2026 security reviews and why teams without prepared statements are losing deals over AI governance gaps
-    - SOC 2 AI scope expansion: what auditors are now asking that they were not asking 18 months ago, and how the governance log answers the new questions
-    - Compliance cost case study: the before/after story of a team that built governance documentation proactively vs. one that reconstructed it during an audit
-
-[^17]: NetworkChuck — "How I Secured My AI Code Review Pipeline," YouTube, February 2026. https://www.youtube.com/watch?v=5aQvKhLb2mE
-    - Vendor documentation file setup: where to store Anthropic's SOC 2 attestation, how to track expiry dates, and what happens when you discover the attestation has lapsed during a customer review
-    - Data processing agreement walkthrough: the specific clauses that matter for AI tool use and what to look for in Anthropic's API terms
-    - BAA applicability assessment: how to determine whether a business associate agreement is needed and what to do if you discover it should have been in place before sessions began
-
-[^18]: Theo (t3.gg) — "Why Your AI Policies Don't Work," YouTube, January 2026. https://www.youtube.com/watch?v=QwN2tZ8Hg3p
-    - Governance log format for non-engineers: how to write a governance log that an enterprise security reviewer can evaluate without a technical translator
-    - Prepared statement construction: the difference between a disclosure that satisfies enterprise security reviewers and one that creates more questions than it answers
-    - Regulatory monitoring in practice: how a CTO built a two-hour quarterly scanning habit that caught a material EU AI Act implementation change six months before it became an audit issue
 
 [^a]: [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md) — Data privacy compliance is a primary audit category; the ethical analysis of what enters AI sessions maps directly to the compliance documentation requirements here.
 

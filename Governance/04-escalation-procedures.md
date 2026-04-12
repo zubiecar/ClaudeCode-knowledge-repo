@@ -76,11 +76,11 @@ The override request process serves two purposes. For the requesting engineer, i
 
 **Description:** Individual violations and override requests are data points; aggregate patterns are signals. An engineer who requests an override because a secondary reviewer is unavailable is an individual operational issue. Five engineers who request overrides for the same secondary reviewer availability reason across a quarter is a signal that the secondary reviewer pool is too small for the volume of security-critical AI-generated code the team is producing — a structural issue that individual override approvals cannot fix. Pattern detection turns the escalation log from a compliance record into a governance diagnostic tool.[^10]
 
-The failure mode is treating the log as only a compliance record and never aggregating it. Teams that log violations and overrides without reviewing the aggregate typically discover systemic issues late — after a pattern has produced enough individual incidents to become visible without deliberate review. A quarterly log review that explicitly looks for repeating patterns — same policy section, same escalation class, same alternative scenario — catches systemic issues at a scale where they can be addressed with policy adjustment rather than requiring incident response.[^11]
+The failure mode is treating the log as only a compliance record and never aggregating it. Teams that log violations and overrides without reviewing the aggregate typically discover systemic issues late — after a pattern has produced enough individual incidents to become visible without deliberate review. A quarterly log review that explicitly looks for repeating patterns — same policy section, same escalation class, same alternative scenario — catches systemic issues at a scale where they can be addressed with policy adjustment rather than requiring incident response.
 
 **Recommended Practice:**
 - At the monthly practice review, the architect presents a brief log summary: how many escalations occurred in the prior month, which class they belonged to, which policy sections were most frequently involved. This is a five-minute agenda item, not a deep analysis — the goal is visibility, not investigation.[^10]
-- Define pattern detection thresholds: three or more edge case escalations citing the same policy section within a quarter triggers a policy clarification review; three or more override requests citing the same policy constraint within a quarter triggers a policy recalibration review; two or more policy violations with the same proximate cause within a quarter triggers a communication or CLAUDE.md update.[^11]
+- Define pattern detection thresholds: three or more edge case escalations citing the same policy section within a quarter triggers a policy clarification review; three or more override requests citing the same policy constraint within a quarter triggers a policy recalibration review; two or more policy violations with the same proximate cause within a quarter triggers a communication or CLAUDE.md update.
 - The quarterly log review is distinct from the monthly summary: it is a 30-minute structured analysis using the full quarter's data, looking for patterns that are invisible in any single month. The architect prepares the analysis; the CTO attends to provide input on whether detected patterns warrant policy revision or resource changes.[^2]
 - Document the outcome of every pattern detection finding: what pattern was detected, what investigation it triggered, and what change resulted (policy clarification, policy revision, resource addition, communication update, or no action with reasoning). Undocumented findings that produced no action are indistinguishable from findings that were never reviewed.[^5]
 
@@ -150,8 +150,6 @@ The PR process for governance documents is not bureaucratic overhead — it is t
 [^10]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt
     Monthly escalation log summary as a five-minute practice review agenda item; pattern detection as a governance diagnostic rather than a compliance exercise.
 
-[^11]: GitClear — "Coding on Copilot: 2025 Data Suggests Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_suggests_downward_pressure_on_code_quality
-    Pattern detection thresholds: empirical basis for three-occurrence triggers; systemic vs. individual error detection in code quality and governance logs.
 
 [^12]: Gartner — "Predicts 2026: Software Engineering and DevSecOps," Gartner Research, January 2026. https://www.gartner.com/en/documents/predicts-2026-software-engineering-devsecops
     Policy revision cadence: why AI tooling capability changes require active policy recalibration; the deliberate vs. accidental policy drift distinction.
@@ -159,20 +157,6 @@ The PR process for governance documents is not bureaucratic overhead — it is t
 [^13]: CIO — "How Agentic AI Will Reshape Engineering Workflows in 2026," April 2026. https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
     PR-based policy governance: audit trail, review enforcement, and communication notification as the three functions the PR process provides for governance document changes.
 
-[^14]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Policy violation culture: how teams that treated violations as punitive events suppressed the signal data that could have prevented larger incidents
-    - Override request in practice: walkthrough of a real override request — what the engineer submitted, how the architect evaluated it, and what condition was added to the approval
-    - Policy revision trigger: the specific pattern of escalations that caused a team to realize their AI-primary cap was too low and initiate a policy revision
-
-[^15]: Theo (t3.gg) — "Why Your AI Policies Don't Work," YouTube, January 2026. https://www.youtube.com/watch?v=QwN2tZ8Hg3p
-    - Three-class escalation routing: how distinguishing violation from edge case from policy error changes the conversation completely and produces better outcomes for all three
-    - Policy change communication: the difference between a policy change that engineers notice and adopt vs. one they discover by surprise when something breaks
-    - Escalation normalization: how a 10-person team built a culture where escalating an edge case was a sign of professionalism, not uncertainty
-
-[^16]: NetworkChuck — "How I Secured My AI Code Review Pipeline," YouTube, February 2026. https://www.youtube.com/watch?v=5aQvKhLb2mE
-    - Escalation log format: the specific fields that make an escalation log useful for pattern detection rather than just compliance tracking
-    - Override expiration enforcement: how time-limited overrides prevent exception accumulation; the automated reminder that fires when an override reaches its expiration sprint
-    - Quarterly log review process: how to structure a 30-minute log review that finds patterns that monthly summaries miss
 
 [^a]: [Governance: Review Policies](01-review-policies.md) — Escalation procedures handle cases where review policy requirements create friction or are disputed; the two documents form the policy and exception framework.
 

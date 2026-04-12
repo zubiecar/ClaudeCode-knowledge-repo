@@ -160,15 +160,6 @@ The automation configuration is the team's first line of defense against the mos
 [^15]: CIO — "How Agentic AI Will Reshape Engineering Workflows in 2026," April 2026. https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
     Automation for high-frequency, low-judgment checks: how CI configuration frees human review for judgment-intensive evaluation; the efficiency argument for comprehensive pre-review automation.
 
-[^16]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Review process calibration: how return rates and cycle times reveal whether AI review standards are appropriately calibrated vs. over-restrictive or under-restrictive
-    - Security review case study: what happened when a team merged plausible-looking AI authentication code that passed tests but failed in production; the CLAUDE.md update that followed
-    - Metrics that reveal review quality gaps: the specific dashboard metrics that surface whether human review is finding issues or passing them through
-
-[^17]: ThePrimeagen — "Why Your Code Reviews Are Failing," YouTube, January 2026. https://www.youtube.com/watch?v=R5nK8X1JjxM
-    - Explanation requirement in practice: how asking "why did you choose this pattern?" changed the team's AI-generated code quality more than any automated check
-    - Architectural review separation: the specific conversation that happens in architectural review vs. implementation review, demonstrated with real PR examples
-    - Senior engineer review modeling: how the senior engineer's review behavior sets the standard for what thorough review looks like on the team
 
 [^18]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - PR template configuration: how to configure Claude Code PR template fields to trigger the appropriate review process automatically based on code origin

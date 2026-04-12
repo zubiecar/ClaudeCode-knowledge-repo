@@ -139,10 +139,6 @@ The review cadence for the acceptable use policy matters as much as the initial 
     - New capability authorization in practice: the specific session configuration decisions that translate a new capability authorization conversation into CLAUDE.md and settings.json constraints
     - Agentic delegation scope management: how to configure multi-step agentic sessions with checkpointing intervals that satisfy the agentic-delegated use governance requirements
 
-[^15]: NetworkChuck — "How I Secured My AI Code Review Pipeline," YouTube, February 2026. https://www.youtube.com/watch?v=5aQvKhLb2mE
-    - Pipeline-enforced policy: how CI configuration can enforce usage category requirements (AI origin tagging, security scanning) without relying on engineer compliance alone
-    - Prohibited use detection: automated flags for common prohibited patterns (PII in prompts, dangerouslySkipPermissions in CI logs) that surface violations before they become incidents
-    - Policy changelog automation: using CI output and PR annotations to produce the audit trail that active governance requires
 
 [^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Usage category onboarding: how to introduce the three usage categories to new engineers in a way that makes policy compliance the default behavior rather than a remembered obligation

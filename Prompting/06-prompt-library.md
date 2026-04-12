@@ -58,7 +58,7 @@ The deprecation path is as important as the entry criteria. Prompts that no long
 
 **Description:** The prompt library, CLAUDE.md, and the skills directory form a connected system with a natural lifecycle direction. A prompt starts as an ad-hoc session experiment. If it works well, it is contributed to the library as an experimental entry. Once validated by multiple engineers and multiple task instances, it becomes a stable library entry. When a stable library entry is used frequently enough that the adaptation overhead is worth eliminating, it is elevated to a Claude Code skill or a CLAUDE.md instruction. The lifecycle direction is always from ad-hoc toward stability and automation.[^12]
 
-CLAUDE.md integration is the highest form of prompt graduation: a pattern validated in the library becomes a global session default. "Always generate Jest tests with our `describe/it/expect` structure" starts as a prompt template, becomes a library entry, and eventually becomes a CLAUDE.md instruction that applies to all sessions. At that point the library entry is superseded and can be deprecated — its content lives at a higher level. Teams that understand this lifecycle avoid the anti-pattern of maintaining the same content in both the library and CLAUDE.md, which creates the context duplication problem documented in Prompt Architecture.[^13]
+CLAUDE.md integration is the highest form of prompt graduation: a pattern validated in the library becomes a global session default. "Always generate Jest tests with our `describe/it/expect` structure" starts as a prompt template, becomes a library entry, and eventually becomes a CLAUDE.md instruction that applies to all sessions. At that point the library entry is superseded and can be deprecated — its content lives at a higher level. Teams that understand this lifecycle avoid the anti-pattern of maintaining the same content in both the library and CLAUDE.md, which creates the context duplication problem documented in Prompt Architecture.
 
 **Recommended Practice:**
 - Review the library quarterly for patterns that have become stable enough to graduate to CLAUDE.md or skills. The graduation signal is: every engineer using the prompt is using the same variables with the same values, and the adaptation step is mechanical rather than judgmental. Mechanical adaptation is a sign the template should become an automated skill.[^12]
@@ -130,8 +130,6 @@ The quarterly audit is the structural mechanism for detecting staleness at scale
 [^12]: Sreecharan Sankaranarayanan — "Towards Reliable AI Code Agents: A Framework for Evaluating Context Window Management," arXiv:2602.20206, February 2026. https://arxiv.org/abs/2602.20206
     Prompt lifecycle direction: the progression from ad-hoc experiment to library entry to skill or CLAUDE.md instruction; graduation criteria and lifecycle documentation.
 
-[^13]: CodeRabbit — "AI Code Review in 2026: Patterns, Pitfalls, and Best Practices," CodeRabbit, January 2026. https://coderabbit.ai/blog/ai-code-review-2026
-    Context duplication anti-pattern in library-CLAUDE.md integration; supersession as the correct relationship when a library prompt graduates to a global instruction.
 
 [^14]: GitClear — "2025 Coding on Copilot: 2023 Data Shows Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality
     Prompt staleness and codebase evolution: how codebase changes degrade prompt quality without any change to the prompt; retirement notes as institutional memory preservation.
@@ -149,10 +147,6 @@ The quarterly audit is the structural mechanism for detecting staleness at scale
     - Metadata in practice: what each of the five metadata fields communicates to a peer engineer and the trust calibration difference between a fully-documented entry and a bare prompt file
     - Quarterly audit process: how to run the audit efficiently, what triggers an update vs. a deprecation, and how to read the health report to identify library coverage gaps
 
-[^18]: ThePrimeagen — "Stop Writing Bad AI Prompts — Build a Prompt Library Instead," YouTube, January 2026. https://www.youtube.com/watch?v=7qTbek5Jz9M
-    - Individual vs. shared prompt collections: the concrete quality gap between teams with shared validated libraries and teams relying on personal prompt notes
-    - Entry criteria enforcement: why rubber-stamp PR reviews undermine library quality and how to run a prompt review that actually tests the validation criteria
-    - Deprecation practice: the retirement-note convention for preserving context when prompts are superseded, and why silent deletion is worse than documented deprecation
 
 [^a]: [Tooling: Custom Skills](../Tooling/04-custom-skills.md) — custom skills are extracted from the prompt library when patterns stabilize; the library is the upstream source and skills are the distribution mechanism.
 [^b]: [Learning: Team Knowledge Sharing](../Learning/03-team-knowledge-sharing.md) — the prompt library is the primary artifact of team knowledge sharing for prompting practices; library contributions and maintenance are how individual discoveries become team assets.

@@ -6,7 +6,7 @@
 
 ## Overview
 
-The most reliable way to get bad tests from Claude Code is to append "write tests for this" to the end of an implementation session. The session already holds the implementation in context; it already made the decisions about what the code does. Tests generated in that state verify the implementation's behavior rather than the requirements' intent. They are structurally incapable of finding the bugs the implementation introduced, because the same context that generated the bugs is generating the tests.[^1]
+The most reliable way to get bad tests from Claude Code is to append "write tests for this" to the end of an implementation session. The session already holds the implementation in context; it already made the decisions about what the code does. Tests generated in that state verify the implementation's behavior rather than the requirements' intent. They are structurally incapable of finding the bugs the implementation introduced, because the same context that generated the bugs is generating the tests.
 
 Test session design is the discipline of treating test generation as a first-class Claude Code task with its own context requirements, inputs, and quality criteria. It applies the same structured approach used for implementation sessions — spec injection, task decomposition, clear output criteria — to the specific challenge of generating tests that can catch the failures AI-generated code tends to introduce. A well-designed test session does not just produce more tests; it produces tests that will actually fail when the implementation is wrong.
 
@@ -22,7 +22,7 @@ The specification input is the most critical. When Claude Code has access to the
 
 **Recommended Practice:**
 - Begin every test generation session with three injected inputs: the relevant spec or acceptance criteria, the module to be tested, and any known edge cases from CLAUDE.md or the regression library. Never start a test session without the spec — it is the independent reference that makes tests more than implementation transcription.[^2]
-- Define the coverage target in behavioral terms, not metric terms. "Cover all error paths defined in the spec" produces better tests than "reach 80% branch coverage." Coverage metrics are an output to verify; they are not a useful target for Claude Code to optimize toward.[^1]
+- Define the coverage target in behavioral terms, not metric terms. "Cover all error paths defined in the spec" produces better tests than "reach 80% branch coverage." Coverage metrics are an output to verify; they are not a useful target for Claude Code to optimize toward.
 - Instruct Claude explicitly not to derive test assertions from implementation internals: "Write tests that would fail if the implementation were incorrect, not tests that verify the current implementation is what it is." This instruction needs to be explicit — without it, the default behavior is to mirror implementation assumptions.[^3]
 - Maintain a standing test generation prompt in `.claude/commands/generate-tests` that encodes these input requirements. Every engineer should use this command rather than composing test generation requests from scratch — consistency of inputs is more important than individual optimization.[^4]
 
@@ -49,7 +49,7 @@ The reviewer session for a test suite has a different prompt than the reviewer s
 
 **Recommended Practice:**
 - After generating a test suite, open a fresh Claude Code session with the spec, the test suite, and no implementation code. Prompt the reviewer to identify: (a) spec requirements not covered by any test, (b) boundary conditions not exercised, (c) error paths not validated, and (d) assertions that are too permissive to catch real failures.[^5]
-- Do not show the reviewer session the implementation. The reviewer's independence from implementation context is the source of its value. If the reviewer sees the implementation, it will evaluate whether tests are consistent with the implementation rather than whether tests are consistent with the spec.[^1]
+- Do not show the reviewer session the implementation. The reviewer's independence from implementation context is the source of its value. If the reviewer sees the implementation, it will evaluate whether tests are consistent with the implementation rather than whether tests are consistent with the spec.
 - Route the reviewer's gap report back to the test author — human or AI — as a required extension list. The gap report is not advisory; any gap identified by the reviewer session must be addressed before the test suite is considered complete for review.[^4]
 - Document recurring gap patterns in CLAUDE.md. If the reviewer session consistently identifies missing error path coverage or missing null input tests, that pattern is a signal to update the test generation prompt to include those cases as required outputs.[^2]
 
@@ -71,12 +71,12 @@ The session pattern differences are structural. A unit test session should recei
 
 ## Section 4: Avoiding AI-Generated Assertions That Mirror Implementation Bugs
 
-**Description:** The most insidious failure mode of AI-generated test suites is not insufficient coverage — it is incorrect assertions that pass. When AI generates both the implementation and the tests, a bug in the implementation may be consistently reflected in the test assertions. The test passes because the assertion was derived from the buggy behavior, not from the correct behavior. The bug ships to production with a passing test suite.[^1]
+**Description:** The most insidious failure mode of AI-generated test suites is not insufficient coverage — it is incorrect assertions that pass. When AI generates both the implementation and the tests, a bug in the implementation may be consistently reflected in the test assertions. The test passes because the assertion was derived from the buggy behavior, not from the correct behavior. The bug ships to production with a passing test suite.
 
 This failure mode is distinct from coverage gaps. Coverage tools will report 100% coverage because every line is exercised. Mutation testing will surface the problem because the assertion, when the mutation changes the implementation behavior, will still pass — the assertion never encoded what "correct" meant. The root cause is that Claude Code, when generating tests without an independent specification, naturally writes assertions that describe what the implementation currently does, which is the same as what it intends to do — and when it intends wrong, the assertions intend wrong alongside it.[^7]
 
 **Recommended Practice:**
-- Require that test assertions be derived from the spec, not from implementation inspection. In the test generation prompt, state explicitly: "All assertions must be derivable from the specification alone. Do not read the implementation to determine expected values — derive them from the requirements." This instruction materially changes assertion quality.[^1]
+- Require that test assertions be derived from the spec, not from implementation inspection. In the test generation prompt, state explicitly: "All assertions must be derivable from the specification alone. Do not read the implementation to determine expected values — derive them from the requirements." This instruction materially changes assertion quality.
 - Use the QA engineer to audit assertion correctness for any AI-generated test suite in a new module or after a significant AI-generated implementation. The audit should verify that expected values in assertions match the specification, not just that the tests pass.[^7]
 - Add mutation testing to the CI pipeline for modules with high AI-generated test coverage. A mutation score below 50% in a module with 80% line coverage is a direct signal that assertions are mirroring implementation behavior rather than encoding correct behavior independently.[^5]
 - When an incorrect assertion is found post-production — when a bug ships with a passing test that should have caught it — treat the assertion as a session design failure, not a one-time mistake. Update the test generation prompt and CLAUDE.md to prevent the same category of assertion error from recurring.[^4]
@@ -96,8 +96,6 @@ This failure mode is distinct from coverage gaps. Coverage tools will report 100
 
 ---
 
-[^1]: Addy Osmani — "The Productivity Paradox of AI Coding Tools," addyosmani.com, April 2026. https://addyosmani.com/blog/ai-productivity-paradox
-    Tautological test generation: the mechanism by which tests derived from implementation describe behavior rather than validate requirements; spec-first session design as the structural remedy.
 
 [^2]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
     Test session context requirements: why spec injection matters more than implementation context for test quality; known edge case injection as a coverage completeness mechanism.

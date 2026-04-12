@@ -166,7 +166,3 @@ The most operationally relevant form of this bias for a software team is archite
     - 4:18:32 — Leadership responsibility: why CTOs must model the ethical standards around AI use they expect from their teams, including transparency about limitations and active skill development investment
     - 20:00 — The broader profession: implications of mass AI adoption for the software engineering pipeline and the long-term capability of the field
 
-[^20]: Fireship — "AI Code Tools Have an Ethics Problem Nobody's Talking About," YouTube, February 2026. https://www.youtube.com/watch?v=xKq7bNmTp3M
-    - IP risk in practice: examples of AI-generated code with identifiable similarity to licensed implementations and how engineering teams handled the discovery
-    - Privacy incidents: how sensitive information reaches public AI tools and what policy structures prevent it
-    - The junior developer pipeline: the systemic effect on the profession if AI removes the apprenticeship pathway that has historically developed foundational engineering skill

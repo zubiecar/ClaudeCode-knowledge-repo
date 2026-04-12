@@ -124,20 +124,12 @@ Prompt injection via MCP is an emerging risk category: if Claude fetches content
 [^10]: Boris Cherny — "How Boris Uses Claude Code," January 2026. https://howborisusesclaudecode.com
     MCP as session context extension: how external tool integrations reduce the manual context-gathering burden that precedes effective AI sessions; integration sequencing from read-only to write-access.
 
-[^11]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - MCP server architecture explained: the client-server model, how tool manifests are exposed to Claude, and the difference between resource, tool, and prompt server types
-    - PostgreSQL read-only setup: step-by-step configuration for live schema inspection with a read-only database user and SELECT-only permissions
-    - Security review walkthrough: how to audit MCP server permissions before team-wide deployment and what to look for in access logs
 
 [^12]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - MCP integration strategy: how to evaluate integration candidates against coordination overhead frequency and severity
     - Shared `.mcp.json` configuration: how team-level server configuration ensures consistent access without per-engineer setup
     - Prompt injection risk: practical examples of how external data fetched via MCP can contain embedded instructions and how to configure Claude to treat fetched content as data-only
 
-[^13]: ThePrimeagen — "Model Context Protocol Is Actually Kind of Amazing," YouTube, October 2025. https://www.youtube.com/watch?v=Bj8KrZFv8TE
-    - Why MCP changes AI-assisted development: the shift from manually assembling context to having external tools integrated directly into the session
-    - Custom server development: when to build vs. adopt existing community servers; the maintenance cost calculation for custom MCP implementations
-    - Production readiness: what it means to treat a custom MCP server as production code and why skipping this step creates hidden reliability risks
 
 [^a]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — MCP servers make ADRs stored in Google Drive or Confluence queryable within sessions; ADR accessibility depends on MCP configuration for teams using external documentation stores.
 

@@ -147,15 +147,6 @@ The Anthropic 2026 Agentic Coding Trends Report found that organizations achievi
 [^14]: CIO — "How Agentic AI Will Reshape Engineering Workflows in 2026," April 2026. https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
     Retrospective cadence as governance infrastructure: the organizations achieving consistent improvement share structured regular review — AI quality metrics are only as valuable as the decisions they inform.
 
-[^15]: Theo (t3.gg) — "Did AI Actually Make Us Faster? My Team's 6-Month Retrospective," YouTube, January 2026. https://www.youtube.com/watch?v=KpL8R7bBzTs
-    - Measuring AI impact honestly: how velocity metrics overstated the benefit while rework and debugging time were untracked
-    - Session quality observation: the correlation between unstructured prompting and multi-cycle corrections that only became visible when the team started logging session outcomes
-    - Retrospective format: how structured reviews of AI governance metrics changed team behavior more than general sprint retrospectives
-
-[^16]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Velocity metrics as a misleading signal: why lines of code and feature count metrics systematically understate the cost of AI-generated code in 2026
-    - Rework visibility: how teams that added rework tracking to their dashboards discovered costs invisible in standard velocity metrics
-    - The measurement gap: the discrepancy between what engineering dashboards track and what determines whether AI adoption is going well
 
 [^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Quality gate metrics: using hook-driven CI output as the raw data for security vulnerability trend tracking

@@ -20,7 +20,7 @@ The critical distinction is between what is logged and what is used for training
 
 **Recommended Practice:**
 - Brief the full team on the distinction between session logging (which occurs under all plans) and training data contribution (which varies by plan and configuration). Engineers who understand the full data lifecycle make more careful session composition decisions.[^1]
-- Add a session data awareness question to the team's development workflow checklist: "Does this session include data that was produced under a privacy obligation or competitive confidentiality expectation?" This question, asked before session composition, is the primary intervention point for preventing inadvertent privacy exposure.[^5]
+- Add a session data awareness question to the team's development workflow checklist: "Does this session include data that was produced under a privacy obligation or competitive confidentiality expectation?" This question, asked before session composition, is the primary intervention point for preventing inadvertent privacy exposure.
 - Maintain a written summary of the team's current Anthropic plan type and its data handling provisions, updated whenever the plan changes. This document should be accessible to all engineers, not just to the CTO who manages the account.[^3]
 - Review the team's data handling provisions after any significant change to the product's data processing obligations — a new customer contract, a new regulatory requirement, a significant product feature change. What was adequate before the change may not be adequate after it.[^6]
 
@@ -47,7 +47,7 @@ Under the current policies, enterprise plan customers can negotiate data process
 This pattern — real data in debugging sessions — is not unusual behavior by careless engineers. It is the natural result of applying AI assistance to real-world development tasks. The practical question is not how to prevent engineers from debugging production issues, but how to apply the data minimization principle to the way those sessions are composed: use the minimum customer data necessary to diagnose the issue, prefer synthetic or anonymized examples where possible, and recognize that real customer data in an AI session is a data handling event that should be deliberate rather than incidental.[^11]
 
 **Recommended Practice:**
-- Establish a data minimization standard for AI debugging sessions: use anonymized or synthetic data wherever the diagnostic question can be answered without real customer data. When real data is genuinely necessary, use the minimum subset required — not full records when partial records will do, not production data when staging data will do.[^5]
+- Establish a data minimization standard for AI debugging sessions: use anonymized or synthetic data wherever the diagnostic question can be answered without real customer data. When real data is genuinely necessary, use the minimum subset required — not full records when partial records will do, not production data when staging data will do.
 - Add a note to CLAUDE.md for production-adjacent modules: "When debugging sessions involve production data, apply data minimization. Do not include full customer records, PII fields, or payment data in session context." This reminder is visible at the point of session composition, when the decision is actually made.[^12]
 - Define the categories of customer data that may not appear in AI sessions under any circumstances — payment card data, social security numbers, health records, authentication credentials — and brief the team on those prohibitions explicitly. Some data categories warrant an absolute rule rather than a judgment call.[^2]
 - When a debugging session requires real customer data to diagnose an issue, document it: what data was used, what session it appeared in, what the diagnostic purpose was. This is the minimum record required to demonstrate that production data in AI sessions is tracked and deliberate rather than routine and unmonitored.[^1]
@@ -58,12 +58,12 @@ This pattern — real data in debugging sessions — is not unusual behavior by 
 
 **Description:** Competitive exposure through AI sessions is a less visible privacy risk than customer data — the information is confidential rather than regulated, and the harm is competitive rather than privacy-related — but it is a real risk for a team actively developing unreleased features. An engineer using Claude to design an unreleased API, discuss acquisition considerations, or prototype a roadmap feature is including competitively sensitive information in a session whose data handling may expose it beyond the team's control.[^13]
 
-The risk is heightened for agentic sessions — multi-step sessions where Claude Code operates across multiple files and modules. Agentic sessions may encounter unreleased code, internal documentation, or configuration files that were not explicitly included in the engineer's prompt but were included by Claude's tool calls during the session. This means the information scope of an agentic session is broader than what the engineer consciously chose to include, and the privacy implications of that scope may not be fully visible at session start.[^14]
+The risk is heightened for agentic sessions — multi-step sessions where Claude Code operates across multiple files and modules. Agentic sessions may encounter unreleased code, internal documentation, or configuration files that were not explicitly included in the engineer's prompt but were included by Claude's tool calls during the session. This means the information scope of an agentic session is broader than what the engineer consciously chose to include, and the privacy implications of that scope may not be fully visible at session start.
 
 **Recommended Practice:**
 - Maintain a list of information categories that require session scope awareness before use in AI sessions: unreleased features under active development, acquisition or partnership discussions, roadmap details not in public documentation, investor or board materials. This list is not a prohibition — it is a prompt to verify that the session's data handling terms are appropriate before including such information.[^13]
 - For sessions involving unreleased product features, add a prompt-level reminder: "This session involves unreleased features. Limit context to what is necessary for the current task." This narrows the information scope deliberately rather than letting Claude's context-building behavior determine what proprietary information appears in the session.[^12]
-- For agentic sessions in modules containing unreleased or proprietary features, configure the session scope to exclude directories or files whose contents should not appear in session data. Claude Code's CLAUDE.md `ignore` configuration is the mechanism for this scope control.[^14]
+- For agentic sessions in modules containing unreleased or proprietary features, configure the session scope to exclude directories or files whose contents should not appear in session data. Claude Code's CLAUDE.md `ignore` configuration is the mechanism for this scope control.
 - Brief the team on the agentic session scope issue specifically: unlike a manual prompt where the engineer chooses what to include, an agentic session's information scope is determined partly by Claude's tool call decisions. Engineers who understand this difference apply more deliberate session scoping than those who assume agentic sessions contain only what they explicitly asked about.[^8]
 
 ---
@@ -106,8 +106,6 @@ CLAUDE.md session scope reminders are the primary operational tool for maintaini
 [^4]: Stack Overflow — "Developers Remain Willing but Reluctant to Use AI: The 2025 Developer Survey Results," December 29, 2025. https://stackoverflow.blog/2025/12/29/developers-remain-willing-but-reluctant-to-use-ai-the-2025-developer-survey-results-are-here/
     Developer assumptions about session data privacy: the gap between what developers believe about AI session data handling and what current policies say.
 
-[^5]: Addy Osmani — "AI Session Hygiene: What Your Prompts Are Really Saying," addyosmani.com, April 2026. https://addyosmani.com/blog/ai-session-hygiene/
-    Data minimization principle applied to AI sessions: the workflow checklist approach to session composition; why the question of what data to include must be asked before the session, not after.
 
 [^6]: Gartner — "Predicts 2026: Software Engineering and DevSecOps," Gartner Research, January 2026. https://www.gartner.com/en/documents/predicts-2026-software-engineering-devsecops
     Compliance obligations and AI tool data handling: how product changes and customer contract additions create triggers for policy re-review; documentation of compliance reviews as due diligence evidence.
@@ -135,8 +133,6 @@ CLAUDE.md session scope reminders are the primary operational tool for maintaini
 [^13]: Ravikanth Konda — "Human-AI Collaboration in Software Teams: Evaluating Productivity, Quality, and Knowledge Transfer with Agentic and LLM-Based Tools," *International Journal of AI, BigData, Computational and Management Studies*, February 17, 2026. https://ijaibdcms.org/index.php/ijaibdcms/article/view/418
     Competitive exposure through AI sessions: the risk profile for unreleased feature information, roadmap details, and proprietary design decisions included in AI development sessions.
 
-[^14]: METR — "Current AI Safety and Security Practices," February 2026. https://metr.org/blog/2026/02/ai-safety-security-practices
-    Agentic session information scope: how multi-step agentic sessions encounter information beyond what was explicitly included in the initial prompt; the scope visibility problem for privacy governance.
 
 [^15]: GitHub — "Octoverse 2025: The State of AI in Software Development," GitHub Octoverse 2025. https://github.blog/news-insights/research/the-state-of-open-source-and-ai/
     Team-level AI data governance: organizational practices for maintaining session data policies across a team using AI tools daily; the gap between initial adoption policies and current practice.
@@ -144,15 +140,6 @@ CLAUDE.md session scope reminders are the primary operational tool for maintaini
 [^16]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
     CLAUDE.md as a data governance tool: how module-level session configuration files function as operational privacy reminders rather than policy documents; the specificity requirement for behavioral effectiveness.
 
-[^17]: Sabrina Ramonov — "Protecting Your Data While Using AI Coding Tools," YouTube, February 17, 2026. https://www.youtube.com/watch?v=T9r2xR8fvLk
-    - Session data hygiene in practice: what data categories regularly appear in AI debugging sessions and which ones engineers should flag before including
-    - The data minimization workflow: how to reframe a debugging prompt to remove PII while preserving the diagnostic information Claude needs
-    - Training data and enterprise plans: what the difference between standard and enterprise plans means in practical terms for a small team handling customer data
-
-[^18]: NetworkChuck — "Stop Putting Your Secrets Into AI Chatbots," YouTube, February 2026. https://www.youtube.com/watch?v=GzDRPQfBqsY
-    - How session data travels: a technical walkthrough of what happens to data submitted to AI coding tools, from prompt submission through processing and retention
-    - Real examples of sensitive data in AI sessions: common patterns of inadvertent exposure in developer workflows and how to recognize them before submitting
-    - Practical hygiene rules: the three categories of information that should never appear in an AI session under any circumstances and why
 
 [^a]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — privacy constraints on what data enters AI sessions are a core usage policy requirement; this ethical analysis is the basis for those policy provisions.
 

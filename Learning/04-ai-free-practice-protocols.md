@@ -144,15 +144,6 @@ An annual coding challenge and an architecture walkthrough test are the two most
     - 4:18:32 — Leadership modeling of AI-free practice: how CTOs and senior engineers who demonstrate AI-free debugging and architecture reasoning establish the team norm that these capabilities are worth maintaining
     - 5:01:16 — Future-proofing engineering capability: which skills remain high-value as AI handles more code generation, and why maintaining these skills through deliberate practice positions engineers for the highest-leverage work
 
-[^17]: ThePrimeagen — "AI Coding Is Making Us Worse at Coding," YouTube, 2025. https://www.youtube.com/watch?v=ThePrimeagen2025AIWorse
-    - Personal capability regression: direct observation of debugging speed decline after extended AI-first development; the specific session where the decline became undeniable
-    - AI-free practice as recovery: the deliberate practice regimen used to restore independent debugging speed and intuition after identifying regression
-    - The floor vs. ceiling distinction: why maintaining AI-free capability floor is more important than maximizing AI-assisted ceiling for long-term engineering career resilience
-
-[^18]: Fireship — "Stop Using AI as a Crutch (How to Use It Correctly)," YouTube, April 2026. https://www.youtube.com/watch?v=Qp7vDj9MCXQ
-    - Crutch vs. multiplier: the specific behavioral difference between engineers who maintain AI-free capability alongside AI use and those who have allowed AI to substitute for it
-    - Monthly debugging session format: what effective AI-free practice looks like in an AI-assisted team context; how to select problems that exercise the right skills without being so difficult that sessions become demoralizing
-    - The detection moment: how to recognize early signs of AI-free capability decline — slower independent debugging, reduced confidence in code reading — before the decline becomes significant
 
 [^a]: [Learning: Skill Maintenance](02-skill-maintenance.md) — AI-free practice protocols are the structural mechanism for skill maintenance; the two documents define the goal and the practice.
 [^b]: [Issues: Skill Atrophy](../Issues/06-skill-atrophy.md) — AI-free practice protocols are the specific intervention designed to prevent the atrophy described there; these documents are problem statement and prescription.

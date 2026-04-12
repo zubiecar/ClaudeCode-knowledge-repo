@@ -42,13 +42,13 @@ Framing metric findings in terms of delivery risk rather than technical quality 
 
 ## Section 3: Governance Effectiveness Evaluation
 
-**Description:** The governance effectiveness evaluation is the accountability loop at the heart of the quarterly review: did last quarter's governance decisions produce the intended improvements? This is the question that distinguishes active governance from policy theater. A team that makes governance decisions without ever evaluating whether they worked is not governing — it is administering rules. Active governance requires closing the feedback loop: we made a specific decision, we expected a specific outcome, here is what actually happened, and here is what that tells us about whether the decision was correct and whether the governance model is working.[^8]
+**Description:** The governance effectiveness evaluation is the accountability loop at the heart of the quarterly review: did last quarter's governance decisions produce the intended improvements? This is the question that distinguishes active governance from policy theater. A team that makes governance decisions without ever evaluating whether they worked is not governing — it is administering rules. Active governance requires closing the feedback loop: we made a specific decision, we expected a specific outcome, here is what actually happened, and here is what that tells us about whether the decision was correct and whether the governance model is working.
 
-Governance ROI is a legitimate concept. Policy enforcement, sprint planning gates, review requirements, and escalation procedures all consume engineering time. The question is whether the time investment produces better outcomes than the counterfactual. The governance effectiveness evaluation quantifies this — imperfectly, but usefully. If the Q2 decision to require spec.md for all AI-primary tasks consumed an estimated 0.5 story points per AI-primary story in specification effort, but produced a 40% reduction in AI-primary review round counts (each round at approximately 1 story point of combined engineer time), the ROI is strongly positive. If spec.md effort increased without review round reduction, the policy needs recalibration.[^9]
+Governance ROI is a legitimate concept. Policy enforcement, sprint planning gates, review requirements, and escalation procedures all consume engineering time. The question is whether the time investment produces better outcomes than the counterfactual. The governance effectiveness evaluation quantifies this — imperfectly, but usefully. If the Q2 decision to require spec.md for all AI-primary tasks consumed an estimated 0.5 story points per AI-primary story in specification effort, but produced a 40% reduction in AI-primary review round counts (each round at approximately 1 story point of combined engineer time), the ROI is strongly positive. If spec.md effort increased without review round reduction, the policy needs recalibration.
 
 **Recommended Practice:**
-- For each significant governance decision made in the prior quarter, prepare a one-page effectiveness evaluation: what was the decision, what outcome was expected, what metrics tracked the intended improvement, what did those metrics show, and what is the recommended adjustment (keep, modify, or retire the policy change).[^8]
-- When a governance intervention produces no measurable improvement after one quarter, the response is not automatic: first determine whether the metric being tracked is actually the right leading indicator for the intended outcome. If the metric is appropriate and shows no improvement, escalate to the CTO at the quarterly review for a decision about whether to continue, modify, or retire the intervention.[^9]
+- For each significant governance decision made in the prior quarter, prepare a one-page effectiveness evaluation: what was the decision, what outcome was expected, what metrics tracked the intended improvement, what did those metrics show, and what is the recommended adjustment (keep, modify, or retire the policy change).
+- When a governance intervention produces no measurable improvement after one quarter, the response is not automatic: first determine whether the metric being tracked is actually the right leading indicator for the intended outcome. If the metric is appropriate and shows no improvement, escalate to the CTO at the quarterly review for a decision about whether to continue, modify, or retire the intervention.
 - Measure governance ROI by comparing estimated policy compliance cost (engineer time per sprint) against estimated benefit (rework reduction, defect escape reduction, review cycle time reduction). These estimates will be approximate, but the order of magnitude is usually clear enough to support decisions. A governance practice that costs four hours per sprint and produces no measurable benefit is a candidate for simplification.[^2]
 - Document governance effectiveness evaluations in the governance changelog. Over multiple quarters, the evaluation record reveals which governance practices have demonstrated sustained value and which have produced diminishing returns — which is the data needed for the annual governance model review that connects to annual planning (Section 5).[^4]
 
@@ -122,11 +122,6 @@ The specific governance findings that translate to annual planning inputs are: p
 [^7]: CIO — "How Agentic AI Will Reshape Engineering Workflows in 2026," April 2026. https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
     Delivery risk framing for technical metric findings; the translation from technical quality metrics to delivery outcome language appropriate for CTO decision-making.
 
-[^8]: daily.dev — "AI Code Generation in 2026: The Governance Gap," April 2026. https://daily.dev/blog/ai-code-generation-governance-gap-2026
-    Governance effectiveness as the accountability loop; the distinction between active governance and policy theater; governance ROI as a legitimate evaluation concept.
-
-[^9]: GitClear — "Coding on Copilot: 2025 Data Suggests Downward Pressure on Code Quality," GitClear Research, 2025. https://www.gitclear.com/coding_on_copilot_data_suggests_downward_pressure_on_code_quality
-    Governance ROI calculation: compliance cost vs. rework reduction; the review round count metric as an indicator of AI-primary governance effectiveness.
 
 [^10]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny
     CTO-authority decision categories; structured decision proposals as a prerequisite for high-quality quarterly review decisions; the architect-analyzes / CTO-decides division of roles.
@@ -140,20 +135,12 @@ The specific governance findings that translate to annual planning inputs are: p
 [^13]: Stack Overflow — "2025 Developer Survey," Stack Overflow, December 2025. https://survey.stackoverflow.co/2025/
     Technical debt patterns that surface in quarterly reviews; the relationship between quarterly governance findings and engineering roadmap prioritization.
 
-[^14]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Six-month trend data in practice: how the same team looked healthy on monthly snapshots but showed clear degradation in the six-month trend — and what the quarterly review caught
-    - Delivery risk framing demonstration: how to translate "cyclomatic complexity increased 12%" into "the payment module's estimated defect density for the next major change increased by 30%"
-    - CTO decision quality: the difference in decision outcomes between quarterly reviews with pre-prepared analysis and those where the CTO had to perform the analysis at the meeting
 
 [^15]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - Metric tracking configuration: how to configure Claude Code session logging to produce the data needed for quarterly review metric charts without manual data collection
     - Governance effectiveness measurement: specific approaches for quantifying the review round count reduction from spec.md requirements and similar governance interventions
     - Annual governance model review: how to structure the meta-review that determines whether the governance model's overhead is calibrated to the team's AI maturity level
 
-[^16]: ThePrimeagen — "Sprint Planning in the AI Era," YouTube, February 2026. https://www.youtube.com/watch?v=K7mP3aQzX9d
-    - Quarterly vs. monthly governance: why the signals that matter for strategic decisions are invisible in monthly data but clear in six-month trends
-    - CTO as strategic governance actor: what changes when the CTO attends the quarterly review as a decision-maker rather than an observer
-    - Annual planning connection: how one team translated three consecutive quarterly reviews showing AI-primary rework accumulation into a successful annual planning argument for a spec.md tooling investment
 
 [^a]: [Metrics: Team Health Dashboard](../Metrics/02-health-dashboard.md) — The health dashboard is the primary data source for quarterly review; the review cadence and the dashboard metrics are designed together.
 

@@ -127,20 +127,12 @@ The checklist is not overhead — it is the due diligence record that protects t
 [^11]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny
     Enterprise API plan considerations: the data governance differences between individual and enterprise plans relevant to teams working with proprietary material.
 
-[^12]: Fireship — "AI Code Tools Have an Ethics Problem Nobody's Talking About," YouTube, February 2026. https://www.youtube.com/watch?v=xKq7bNmTp3M
-    - IP risk in practice: real examples of AI-generated code with identifiable similarity to licensed implementations; how teams discovered and handled the finding
-    - License compliance workflow: the specific steps between discovering a similarity and making a merge decision; what escalation to legal counsel looks like in a small team context
-    - Attribution culture: why the ownership framing ("we own what AI generates") changes how engineers approach review, and what happens to teams that have not established this framing
 
 [^13]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - CLAUDE.md for IP governance: using the system prompt to embed IP sensitivity markers, acceptable license constraints, and data handling reminders at the session level
     - Session data practices: how to configure sessions involving proprietary material to minimize inadvertent disclosure while maintaining AI assistance effectiveness
     - Enterprise API configuration: the specific settings that affect data use and training data contribution for teams with IP sensitivity requirements
 
-[^14]: ThePrimeagen — "Who Owns AI-Generated Code? This Is Getting Complicated," YouTube, September 2025. https://www.youtube.com/watch?v=H8qRt9m1fJK
-    - Legal landscape update: current status of AI-generated code IP cases as of mid-2025 and the practical implications for teams using AI code generation tools commercially
-    - Due diligence vs. legal certainty: why practical due diligence is the right goal for small teams, not waiting for legal certainty that the courts have not yet provided
-    - Case study: a team that discovered close similarity between AI-generated code and a GPL-licensed implementation, and the decision process that followed
 
 [^a]: [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md) — usage policy operationalizes the IP risk analysis here into prohibited and permitted use categories; the ethical analysis and the policy are paired.
 

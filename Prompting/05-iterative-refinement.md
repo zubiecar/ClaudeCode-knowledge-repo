@@ -136,15 +136,6 @@ Iteration templates accumulate from real sessions. Every time a session finds an
 [^14]: daily.dev — "The Developer's Guide to Prompt Engineering in 2026," daily.dev, March 2026. https://daily.dev/blog/the-developers-guide-to-prompt-engineering-in-2026
     Template library accumulation from real sessions: how to extract iteration templates from retrospective session review; template maturation patterns over time.
 
-[^15]: Theo (t3.gg) — "Prompting AI Correctly Is a Skill and Most Devs Don't Have It," YouTube, January 2026. https://www.youtube.com/watch?v=9xRmNzGiBo4
-    - Iterative refinement vs. single-shot in practice: why experienced engineers iterate deliberately rather than trying to write perfect prompts upfront
-    - Correction prompt precision: live comparison of vague corrections vs. three-component corrections and the difference in output convergence speed
-    - Convergence recognition: the specific output quality signals that indicate iteration is complete vs. still productively narrowing the specification gap
-
-[^16]: Jack Herrington — "Claude Code Deep Dive: Iteration Patterns That Actually Work," YouTube, February 2026. https://www.youtube.com/watch?v=3XfTr8Xk7oU
-    - Clarification loop in real sessions: the constrained three-question clarification prompt applied to feature implementation and refactoring tasks
-    - Restart vs. correction: the decision framework applied to a live session that diverged after two rounds, and why restarting with an updated prompt was faster than a third correction
-    - Template construction from session review: extracting an iteration template from a session that converged well and storing it in the prompt library for future reuse
 
 [^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Iteration planning: how to classify a task as single-shot vs. iteration-required at the start of a session and the different session designs for each

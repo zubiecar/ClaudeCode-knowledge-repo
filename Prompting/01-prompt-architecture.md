@@ -158,10 +158,6 @@ Calibrating for length requires distinguishing between structural components (al
     - Minimum sufficient context: empirical demonstration of how prompt length affects Claude's attention to specific constraints in the presence of surrounding noise
     - Prompt calibration: the 30-second reading test applied to real prompts; trimming explanatory prose to constraint-focused language
 
-[^14]: Theo (t3.gg) — "Prompting AI Correctly Is a Skill and Most Devs Don't Have It," YouTube, January 2026. https://www.youtube.com/watch?v=9xRmNzGiBo4
-    - The specification mindset: why senior engineers get better AI results by treating prompts as formal specifications rather than conversational queries
-    - Constraint-leading patterns: live comparison of prompts with and without explicit constraint components and the observable difference in output quality
-    - Verification component examples: the specific difference between "make sure it works" and a runnable verification command, demonstrated with real session output
 
 [^a]: [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md) — prompt architecture is the discipline that prevents fragmentation; structured, reusable prompt patterns are the countermeasure to the ad-hoc variation described there.
 [^b]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — prompt architecture operates within the context engineering framework; the two disciplines are nested — context engineering sets the session foundation, prompt architecture governs individual requests.

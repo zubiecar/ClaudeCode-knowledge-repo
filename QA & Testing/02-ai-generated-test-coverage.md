@@ -6,7 +6,7 @@
 
 ## Overview
 
-Coverage numbers are not a quality metric — they are an activity metric. They measure whether lines of code were executed during the test run; they do not measure whether incorrect behavior would have caused a test to fail. For human-authored test suites, this distinction is usually minor: engineers writing tests against a specification tend to write assertions that would fail if the code were wrong, even if they do not think of it in those terms. For AI-generated test suites, the distinction is material: Claude Code, when generating tests without an independent specification, tends to write tests that verify the code executes as written rather than that it executes correctly.[^1]
+Coverage numbers are not a quality metric — they are an activity metric. They measure whether lines of code were executed during the test run; they do not measure whether incorrect behavior would have caused a test to fail. For human-authored test suites, this distinction is usually minor: engineers writing tests against a specification tend to write assertions that would fail if the code were wrong, even if they do not think of it in those terms. For AI-generated test suites, the distinction is material: Claude Code, when generating tests without an independent specification, tends to write tests that verify the code executes as written rather than that it executes correctly.
 
 The result is a specific and repeatable failure mode: high coverage metrics combined with low fault detection. A module may report 87% line coverage and 72% branch coverage while harboring a bug that no test in the suite would catch, because every test assertion was derived from the same implementation logic that contains the bug. Coverage tools cannot see this problem — they report execution, not assertion quality. The team sees green numbers and ships defective code.[^2]
 
@@ -18,12 +18,12 @@ Addressing this requires three practices: supplementing coverage metrics with mu
 
 **Description:** The root cause of misleading AI coverage numbers is the derivation path for assertions. When a human writes a test for a sorting function, they typically write: "given these inputs, I expect this sorted output" — and they derive the expected output independently of the implementation. When Claude Code writes a test for the same function immediately after generating the implementation, it may write: "given these inputs, the function returns X" — where X is derived by mentally executing the implementation it just wrote. If the implementation sorts incorrectly, X is the incorrect sorted output, and the test passes.[^3]
 
-This is not a rare edge case. It is the structural default behavior of a generation session that holds both implementation and tests in the same context. The session knows what the code does; it naturally writes tests that confirm what the code does. Changing this behavior requires explicit instruction and independent specification input — not hoping that AI will independently derive correct expected values.[^1]
+This is not a rare edge case. It is the structural default behavior of a generation session that holds both implementation and tests in the same context. The session knows what the code does; it naturally writes tests that confirm what the code does. Changing this behavior requires explicit instruction and independent specification input — not hoping that AI will independently derive correct expected values.
 
 **Recommended Practice:**
 - Communicate to the full team that coverage percentages from AI-generated test suites are leading indicators of execution surface, not of defect detection reliability. Coverage numbers require interpretation, not trust, when the tests were AI-generated.[^2]
 - Treat any module where both the implementation and the test suite are predominantly AI-generated as requiring mutation testing before the coverage number can be accepted as a quality signal. The question is not "what percentage of lines are covered" but "what percentage of deliberate code mutations would this suite catch."[^3]
-- When reviewing AI-generated test PRs, examine assertion expected values explicitly: are they derivable from the spec, or are they transcribed from implementation behavior? An assertion with a magic number that appears in the implementation but not in the spec is a red flag.[^1]
+- When reviewing AI-generated test PRs, examine assertion expected values explicitly: are they derivable from the spec, or are they transcribed from implementation behavior? An assertion with a magic number that appears in the implementation but not in the spec is a red flag.
 - Document this failure mode in the team's contribution guidelines so that every engineer understands why coverage reports for AI-heavy modules require a second look. This is a literacy issue as much as a process issue.[^4]
 
 ---
@@ -51,7 +51,7 @@ The distinction is between using AI to generate assertions (high risk of mirrori
 **Recommended Practice:**
 - After generating a test suite, run coverage analysis and provide the coverage report to a fresh Claude Code session alongside the module spec. Ask the session to identify: (a) spec requirements with no test coverage, (b) branches with zero coverage, (c) error handling paths not exercised, and (d) any inputs explicitly mentioned in the spec that are not used in test cases.[^7]
 - Structure the coverage gap analysis session prompt to produce an actionable gap list, not a summary paragraph. The output should be a numbered list of specific gaps: "Line 142 error branch: no test exercises the case where the database connection fails." Each gap should be a concrete test to add.[^4]
-- Assign gap resolution to the test author after gap analysis is complete. The gap list from the coverage analysis session is an extension requirement, not an optional recommendation. Tests addressing all identified gaps must be added before the test suite is considered complete.[^1]
+- Assign gap resolution to the test author after gap analysis is complete. The gap list from the coverage analysis session is an extension requirement, not an optional recommendation. Tests addressing all identified gaps must be added before the test suite is considered complete.
 - Track which gap categories appear most frequently across modules over time. If null input gaps appear in every coverage analysis session, the test generation prompt needs a standing requirement for null input coverage. Gap patterns are prompt improvement signals.[^2]
 
 ---
@@ -83,8 +83,6 @@ Without trend tracking, test quality improvements are invisible. A mutation scor
 
 ---
 
-[^1]: Addy Osmani — "The Productivity Paradox of AI Coding Tools," addyosmani.com, April 2026. https://addyosmani.com/blog/ai-productivity-paradox
-    Assertion derivation path as the root cause of misleading AI coverage numbers; spec-independent assertion generation as the structural problem; expected value verification as the manual audit step.
 
 [^2]: Yue Liu et al. — "Debt Behind the AI Boom: A Large-Scale Empirical Study of AI-Generated Code in the Wild," arXiv:2603.28592, March 30, 2026. https://arxiv.org/html/2603.28592
     High coverage with low fault detection as an empirical pattern in AI-generated test suites; the survivorship of AI-introduced quality issues despite passing test suites.

@@ -133,15 +133,6 @@ Incident retrospectives for AI governance follow a different question framework 
 [^13]: Veracode — "Spring 2026 GenAI Code Security Update: Despite Claims, AI Models Are Still Failing Security," March 24, 2026. https://www.veracode.com/blog/spring-2026-genai-code-security/
     Governance failure patterns in security incidents: how the retrospective checklist distinguishes governance failures (specific, addressable) from general quality concerns (diffuse, not addressable).
 
-[^14]: Fireship — "The 2026 State of AI Coding (and Why Your Metrics Are Lying to You)," YouTube, March 2026. https://www.youtube.com/watch?v=oD8mN2Q5T7w
-    - Dashboard design principles: why less is more in governance dashboards; the three-question framework applied to real team metric selection
-    - Monthly practice review format: what a well-run 30-minute governance meeting looks like, demonstrated with a real team's dashboard review
-    - Incident retrospective findings: how AI governance checklists changed the root cause analysis of incidents that initially appeared to be unrelated to AI practices
-
-[^15]: Theo (t3.gg) — "Did AI Actually Make Us Faster? My Team's 6-Month Retrospective," YouTube, January 2026. https://www.youtube.com/watch?v=KpL8R7bBzTs
-    - Six-month retrospective methodology: how to structure a quarterly health review with honest interpretation of both velocity and quality trends
-    - Delivery risk framing: translating rework rates and security findings into business-relevant projections that CTO decision-makers can act on
-    - Accountability loops: how tracking whether last quarter's governance decisions produced the intended metric improvements changed team governance behavior
 
 [^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Metrics infrastructure setup: configuring CI output for automated data collection across security findings, coverage, and quality metrics

@@ -154,7 +154,3 @@ Teams without managed prompt libraries develop prompt fragmentation: eight engin
     - Step 2 (Prompt Library): building and maintaining a team command library in `.claude/commands/`; the lifecycle from draft to reviewed to active
     - Step 5 (Anti-Patterns): the specific prompt constructions that reliably degrade output quality and how to replace them with structured alternatives
 
-[^16]: Theo (t3.gg) — "Prompting AI Correctly Is a Skill and Most Devs Don't Have It," YouTube, January 2026. https://www.youtube.com/watch?v=9xRmNzGiBo4
-    - Why senior engineers get better results from AI tools: structured thinking about constraints and expected outputs rather than conversational requests
-    - The cost of not maintaining a prompt library: observable divergence in AI output quality across teams that standardize vs. those that don't
-    - Anti-pattern examples: live demonstrations of prompts that reliably produce poor output and the structured alternatives that fix them

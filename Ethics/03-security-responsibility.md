@@ -33,7 +33,7 @@ The organizational accountability that flows from PR authorship is not abstract.
 The ethical dimension of the verification gap is distinct from the quality dimension. Failing to verify AI-generated code in a low-stakes context is a quality and productivity concern. Failing to verify AI-generated code in security-critical contexts — authentication, authorization, input validation, cryptographic operations, data access controls — is a professional responsibility failure. The engineer is permitting potentially vulnerable code into a system that protects customer data, with awareness that the code may be untrustworthy, without the verification step that would identify the vulnerability. That is not a quality risk. That is an ethical failure of the role.[^8]
 
 **Recommended Practice:**
-- Maintain an explicit list of security-critical code paths where verification is non-negotiable: authentication handlers, authorization checks, input validation, cryptographic operations, data access controls, external API integrations, file system access. AI-generated code in these paths requires security-specific review, not just functional review.[^9]
+- Maintain an explicit list of security-critical code paths where verification is non-negotiable: authentication handlers, authorization checks, input validation, cryptographic operations, data access controls, external API integrations, file system access. AI-generated code in these paths requires security-specific review, not just functional review.
 - Apply the Sonar statistic directly in team briefings: "96% of us say we don't trust AI output, but only 48% of us verify it. We are going to be in the 48% — specifically for security-critical code." Naming the gap concretely is more effective than a general instruction to "be careful."[^7]
 - Require a second reviewer for AI-generated code in security-critical paths. The PR author's review is necessary but not sufficient in high-stakes contexts — a second pair of eyes is the verification mechanism that catches what the author misses. The architect is the appropriate second reviewer for security-critical AI-generated code.[^4]
 - Document verification steps in the PR for security-critical AI-generated code: what security properties were verified, how (review, automated testing, manual testing), and what the result was. This documentation is the accountability record that distinguishes a team that takes the verification obligation seriously from one that performs compliance theater.[^1]
@@ -50,18 +50,18 @@ The novel question is what AI origin means for CVE attribution and public disclo
 - Maintain a written security incident and disclosure policy that does not treat AI origin as a special category requiring different procedures. The vulnerability is the same kind of problem regardless of origin; the response process should be practiced, not improvised.[^10]
 - When AI origin is identified in a security incident post-mortem, document it specifically: which tool generated the code, what the prompting context was, what the vulnerability was, and whether the vulnerability pattern is known to be associated with AI-generated code in that domain. This internal documentation supports pattern recognition even when it does not affect the public disclosure.[^12]
 - Define the team's responsible disclosure timeline explicitly: internal discovery to internal notification, internal notification to engineering response, engineering response to customer notification, customer notification to public disclosure. These timelines are a compliance and trust obligation — they should not be undefined at the time of an incident.[^6]
-- For vulnerabilities in AI-generated code that are found before deployment, document the finding as a near-miss: what was found, in what AI-generated component, and how the review process that caught it worked. Near-miss documentation drives security process improvement more effectively than post-incident analysis alone.[^9]
+- For vulnerabilities in AI-generated code that are found before deployment, document the finding as a near-miss: what was found, in what AI-generated component, and how the review process that caught it worked. Near-miss documentation drives security process improvement more effectively than post-incident analysis alone.
 
 ---
 
 ## Section 4: Third-Party and Customer Liability
 
-**Description:** When AI-generated security vulnerabilities affect customers — producing data exposure, unauthorized access, or service disruption — the team's obligations to those customers are determined by contract, applicable law, and the applicable data protection regulations, not by the origin of the vulnerability. A data breach caused by an AI-generated SQL injection vulnerability triggers the same breach notification obligations as a breach from any other cause. The AI origin of the vulnerability is not a defense, a mitigation, or a basis for reduced obligation.[^13]
+**Description:** When AI-generated security vulnerabilities affect customers — producing data exposure, unauthorized access, or service disruption — the team's obligations to those customers are determined by contract, applicable law, and the applicable data protection regulations, not by the origin of the vulnerability. A data breach caused by an AI-generated SQL injection vulnerability triggers the same breach notification obligations as a breach from any other cause. The AI origin of the vulnerability is not a defense, a mitigation, or a basis for reduced obligation.
 
 The liability analysis for AI-generated vulnerabilities is still developing in 2026 courts and regulatory guidance, but the direction is consistent: AI tool vendors are not liable for vulnerabilities in AI-generated code deployed by engineering teams. The liability rests with the team and the organization that deployed the code. Vendors including Anthropic provide usage terms that disclaim liability for AI-generated output in production systems. This means the team's own security practices — the verification obligation, the review standards, the accountability framework — are the primary liability risk management mechanism, not the terms of service of the AI tool.[^5]
 
 **Recommended Practice:**
-- Review the team's contractual data protection obligations (customer contracts, data processing agreements, applicable regulations) and verify that the security review standards for AI-generated code are sufficient to meet those obligations. If not, tighten the standards before an incident rather than after.[^13]
+- Review the team's contractual data protection obligations (customer contracts, data processing agreements, applicable regulations) and verify that the security review standards for AI-generated code are sufficient to meet those obligations. If not, tighten the standards before an incident rather than after.
 - Confirm with the CTO that the organization's cyber insurance policy covers incidents arising from AI-generated code. Some policies are being updated to include AI-specific provisions; a policy that was purchased before AI adoption may not address the relevant risk.[^6]
 - Prepare customer communication templates for data breach scenarios that do not require the incident response team to draft fresh communications under time pressure. The AI origin of a vulnerability is unlikely to appear in customer communications — the relevant facts are what happened, what data was affected, and what the team is doing about it.[^10]
 - Maintain the team's vendor security review process for dependencies suggested by AI: AI frequently suggests packages and dependencies, and AI-suggested packages have the same supply chain security risk profile as packages discovered any other way. The AI origin of the suggestion does not change the obligation to review the dependency's security posture.[^11]
@@ -77,7 +77,7 @@ The security lead's responsibility under AI adoption is to ensure that security 
 **Recommended Practice:**
 - Establish explicit time-minimum standards for security review of AI-generated code in critical paths: a security-critical PR cannot be approved in under a defined minimum review period regardless of the reviewer's confidence. The time floor exists because thorough security review takes time, and a PR approved in two minutes was not thoroughly reviewed.[^2]
 - Run regular security review calibration exercises: present the team with AI-generated code containing known vulnerabilities and measure how reliably the team identifies them. This calibration data reveals where the team's AI-specific security blind spots are and drives targeted training.[^7]
-- Maintain the existing security tooling (static analysis, dependency scanning, secret detection) and confirm that it runs on AI-generated code without exception. Security tooling that is bypassed for AI-heavy PRs because "the AI already checked it" is not providing the protection it was configured to provide.[^9]
+- Maintain the existing security tooling (static analysis, dependency scanning, secret detection) and confirm that it runs on AI-generated code without exception. Security tooling that is bypassed for AI-heavy PRs because "the AI already checked it" is not providing the protection it was configured to provide.
 - The CTO should include AI-specific security posture in quarterly security reviews: what percentage of AI-generated PRs in security-critical paths received security-specific review, what the near-miss finding rate is, and whether the team's AI adoption has changed the security incident rate. This governance oversight is the organizational mechanism that prevents velocity pressure from silently eroding security standards.[^6]
 
 ---
@@ -118,8 +118,6 @@ The security lead's responsibility under AI adoption is to ensure that security 
 [^8]: Dark Reading — "AI-Assisted Development: The Security Risks Nobody Is Managing," October 2025. https://www.darkreading.com/application-security/ai-assisted-development-security-risks
     Velocity pressure as the primary AI-related security risk factor: analysis of late 2025 AI-related incidents; the specific mechanism by which increased PR volume decreases review depth.
 
-[^9]: METR — "Current AI Safety and Security Practices," February 2026. https://metr.org/blog/2026/02/ai-safety-security-practices
-    Security-critical code path definitions: the taxonomy of code categories requiring mandatory security review regardless of AI origin; verification documentation requirements.
 
 [^10]: Kyros — "Responsible AI Disclosure: What Engineering Teams Need to Know," March 2026. https://kyros.ai/blog/responsible-ai-disclosure
     Responsible disclosure timelines for AI-generated vulnerabilities: internal notification, engineering response, customer notification, and public disclosure; why AI origin does not modify these timelines.
@@ -130,26 +128,10 @@ The security lead's responsibility under AI adoption is to ensure that security 
 [^12]: Ravikanth Konda — "Human-AI Collaboration in Software Teams: Evaluating Productivity, Quality, and Knowledge Transfer with Agentic and LLM-Based Tools," *International Journal of AI, BigData, Computational and Management Studies*, February 17, 2026. https://ijaibdcms.org/index.php/ijaibdcms/article/view/418
     Near-miss documentation as security process improvement: how documenting pre-deployment vulnerability findings in AI-generated code drives better review practices than post-incident analysis.
 
-[^13]: daily.dev — "AI Code Security in 2026: What Every Developer Needs to Know," April 2026. https://daily.dev/blog/ai-code-security-2026
-    Data protection obligations and AI-generated vulnerabilities: why breach notification requirements apply equally regardless of vulnerability origin; contractual liability analysis.
 
 [^14]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny
     Security culture under AI adoption: how the team's security posture depends on maintaining review standards at increased volume; the organizational signals that indicate velocity pressure is eroding security review.
 
-[^15]: NetworkChuck — "AI Just Made Your Code LESS Secure (Here's Why)," YouTube, February 2026. https://www.youtube.com/watch?v=4RUvpZ1Q5vA
-    - Common AI-generated vulnerability patterns: SQL injection, insecure deserialization, and authentication bypass examples from real AI-generated code reviewed in the video
-    - The verification gap in practice: demonstration of how plausible-looking AI-generated code can contain serious vulnerabilities that a cursory review does not catch
-    - Accountability in incident response: what it looks like when an engineering team faces a post-mortem for an AI-generated vulnerability without a documented review process
-
-[^16]: Fireship — "AI Code Tools Have an Ethics Problem Nobody's Talking About," YouTube, February 2026. https://www.youtube.com/watch?v=xKq7bNmTp3M
-    - Security accountability in practice: examples of AI-generated code with security vulnerabilities and the accountability questions they raise for the engineering team
-    - Velocity vs. security tradeoff: how AI adoption changes the pressure on security review and what teams can do to prevent velocity from eroding security standards
-    - Organizational culture signals: which team behaviors predict good security posture under AI adoption and which predict degraded security review
-
-[^17]: Sabrina Ramonov — "Security Review for AI-Generated Code: A Practical Framework," YouTube, February 17, 2026. https://www.youtube.com/watch?v=nM7kNVqxoP4
-    - Security-critical path identification: how to build and maintain the list of code paths where AI-generated output requires security-specific review before merge
-    - Two-reviewer process in practice: what the second security review looks like in a small team context and how to calibrate it for security-critical vs. non-critical AI-generated code
-    - Attestation workflow: the specific PR checklist language and process for creating the security accountability record
 
 [^a]: [Issues: Security Vulnerabilities](../Issues/04-security-vulnerabilities.md) — security vulnerability accumulation is the operational risk; this document defines the accountability structure when that risk materializes.
 

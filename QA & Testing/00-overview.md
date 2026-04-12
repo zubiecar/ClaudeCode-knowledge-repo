@@ -1,6 +1,6 @@
 ## Overview
 
-For a team of 11 — 4 backend engineers, 3 frontend engineers, 1 architect, 1 QA engineer, and 2 product managers — using Claude Code at scale, quality assurance cannot remain a step that happens after development finishes. AI-assisted development changes the failure mode profile of software: code is generated faster, with more surface area, and with a structural tendency to satisfy stated requirements while missing implicit constraints. The QA engineer on this team is not threatened by AI tooling; they are required by it. Their role shifts from catching bugs at the end of a cycle to governing test quality, verification strategy, and the structural integrity of the team's testing practices throughout the development process.[^1]
+For a team of 11 — 4 backend engineers, 3 frontend engineers, 1 architect, 1 QA engineer, and 2 product managers — using Claude Code at scale, quality assurance cannot remain a step that happens after development finishes. AI-assisted development changes the failure mode profile of software: code is generated faster, with more surface area, and with a structural tendency to satisfy stated requirements while missing implicit constraints. The QA engineer on this team is not threatened by AI tooling; they are required by it. Their role shifts from catching bugs at the end of a cycle to governing test quality, verification strategy, and the structural integrity of the team's testing practices throughout the development process.
 
 This section consolidates QA and testing practices that have historically been scattered across Workflows, Tooling, and Governance into a unified reference. The five areas covered here address the specific ways in which AI-generated code changes the QA challenge: sessions must be designed to produce tests, not just implementation; coverage numbers require interpretation rather than trust; acceptance criteria can be automated but carry circular validation risks; regressions increase at higher rates when AI touches a module; and the QA engineer's workflow must evolve to govern the quality of AI-generated tests, not just AI-generated code.
 
@@ -38,11 +38,11 @@ The reliability of coverage metrics as quality signals depends on how the tests 
 
 **Description:** Claude Code sessions can consume acceptance criteria directly via MCP integrations with Linear or GitHub, generating test cases from the stated requirements. This creates an accelerated path from ticket to test — but it also creates a circular validation risk that must be governed explicitly. When the same AI system writes the implementation and the tests from the same acceptance criteria, any misunderstanding of the criteria propagates into both. The tests pass, the implementation ships, and the feature does not meet the product intent.[^8]
 
-Acceptance criteria automation is a genuine productivity tool when it is used correctly: as a starting point for test generation that the QA engineer then extends, challenges, and validates against independent product understanding. It becomes a risk when it is used as a complete substitute for QA judgment — when the QA step is reduced to confirming that AI-generated tests derived from AI-interpreted acceptance criteria all pass.[^1]
+Acceptance criteria automation is a genuine productivity tool when it is used correctly: as a starting point for test generation that the QA engineer then extends, challenges, and validates against independent product understanding. It becomes a risk when it is used as a complete substitute for QA judgment — when the QA step is reduced to confirming that AI-generated tests derived from AI-interpreted acceptance criteria all pass.
 
 **Proposed Solution:**
 - Use MCP integration with Linear or GitHub to inject acceptance criteria into test generation sessions as structured input. This reduces the manual overhead of translating tickets into test context and ensures tests map to stated requirements.[^8]
-- Treat AI-generated test cases from acceptance criteria as a first draft, not a final test plan. The QA engineer's mandatory step is to extend the draft with cases that test boundary conditions, failure paths, and behaviors implicit in the acceptance criteria but not explicitly stated.[^1]
+- Treat AI-generated test cases from acceptance criteria as a first draft, not a final test plan. The QA engineer's mandatory step is to extend the draft with cases that test boundary conditions, failure paths, and behaviors implicit in the acceptance criteria but not explicitly stated.
 - Establish a rule: the engineer who wrote the implementation code cannot be the sole reviewer of the AI-generated tests for that implementation. Breaking the human-level circularity requires that at least one person who did not write the code reviews the test coverage against the original product intent.[^9]
 - Document known acceptance criteria ambiguities in CLAUDE.md per feature area. If a category of acceptance criteria is consistently generating tests that miss a class of failure mode, that pattern is a CLAUDE.md entry — not a one-time correction.[^3]
 
@@ -64,12 +64,12 @@ Regression prevention in an AI-assisted team requires practices that go beyond t
 
 ## Area 5: QA Engineer Workflow with Claude Code
 
-**Description:** The QA engineer on a team using Claude Code at scale is not made redundant by AI test generation — they are elevated to a position of greater strategic importance. As AI generates more code and more tests, the human judgment required to validate the quality of both becomes more valuable, not less. The QA engineer's role shifts from manual test execution toward governing test quality, maintaining the team's test infrastructure, and serving as the human quality gate that AI's structural limitations require.[^1]
+**Description:** The QA engineer on a team using Claude Code at scale is not made redundant by AI test generation — they are elevated to a position of greater strategic importance. As AI generates more code and more tests, the human judgment required to validate the quality of both becomes more valuable, not less. The QA engineer's role shifts from manual test execution toward governing test quality, maintaining the team's test infrastructure, and serving as the human quality gate that AI's structural limitations require.
 
 This repositioning requires deliberate workflow changes. The QA engineer must use Claude Code for their own work — generating exploratory test scripts, analyzing coverage reports, synthesizing regression patterns — while simultaneously governing how the rest of the team uses Claude Code for testing. Their contributions to CLAUDE.md and to the team's `.claude/commands/` library are governance artifacts with leverage across every engineer's sessions.[^12]
 
 **Proposed Solution:**
-- Define the QA engineer's role explicitly in the team's contribution guidelines as a quality gate on AI-generated tests, not just AI-generated code. This framing ensures that QA review of test suites is not treated as optional overhead but as a required step in the AI-assisted development workflow.[^1]
+- Define the QA engineer's role explicitly in the team's contribution guidelines as a quality gate on AI-generated tests, not just AI-generated code. This framing ensures that QA review of test suites is not treated as optional overhead but as a required step in the AI-assisted development workflow.
 - Equip the QA engineer to use Claude Code for exploratory testing script generation: provide a standing prompt that generates test scripts targeting a specified module with instructions to focus on boundary conditions, error paths, and race conditions that unit tests typically miss.[^12]
 - Assign the QA engineer ownership of the `.claude/commands/` test command library. The prompt templates that the whole team uses for test generation should be authored and maintained by the person whose job is test quality — not by individual engineers optimizing for their own convenience.[^3]
 - Establish a process for QA-driven CLAUDE.md contributions: after any testing incident, regression, or coverage failure caused by AI-generated tests, the QA engineer documents the failure pattern in CLAUDE.md as a known edge case. Over time, this creates a living knowledge base of the failure modes AI tends to miss.[^9]
@@ -88,8 +88,6 @@ This repositioning requires deliberate workflow changes. The QA engineer must us
 
 ---
 
-[^1]: Addy Osmani — "The Productivity Paradox of AI Coding Tools," addyosmani.com, April 2026. https://addyosmani.com/blog/ai-productivity-paradox
-    Repositioning of QA in AI-assisted teams: the QA engineer's value increases as AI generation increases because human judgment on test quality becomes the rate-limiting factor for reliable software delivery.
 
 [^2]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
     Test session structure as a determinant of test quality; the risk of appending test generation to implementation sessions rather than treating it as a standalone session type with defined inputs.

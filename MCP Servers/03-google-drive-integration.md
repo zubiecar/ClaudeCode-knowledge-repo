@@ -46,7 +46,7 @@ The same pattern applies to runbooks, system design documents, API specification
 
 ## Section 3: Onboarding and Runbook Access
 
-**Description:** Runbooks — step-by-step operational guides for deployments, incident response, environment setup, and recurring maintenance tasks — are a category of documentation where Drive access delivers disproportionate value. Engineers currently either memorize runbook steps, keep them open in a browser tab alongside the Claude Code session, or describe the steps from memory. The Drive integration makes the authoritative runbook directly accessible in the session where it is needed.[^7]
+**Description:** Runbooks — step-by-step operational guides for deployments, incident response, environment setup, and recurring maintenance tasks — are a category of documentation where Drive access delivers disproportionate value. Engineers currently either memorize runbook steps, keep them open in a browser tab alongside the Claude Code session, or describe the steps from memory. The Drive integration makes the authoritative runbook directly accessible in the session where it is needed.
 
 For the QA engineer, Drive access to test plans, test environment setup guides, and test data management runbooks enables sessions that begin with the complete operational context rather than a reconstructed approximation. A test session anchored to the relevant test plan produces coverage that reflects the plan's actual requirements, not what the engineer remembered from the plan.
 
@@ -54,7 +54,7 @@ For onboarding, Drive access to the team's onboarding documentation — environm
 
 **Recommended Practice:**
 - Organize runbooks in a dedicated `Operations/Runbooks/` folder with consistent naming: `[component]-[operation]-runbook.md` (e.g., `database-migration-runbook.md`, `deployment-staging-runbook.md`). Consistent naming allows Claude to locate runbooks by pattern without requiring engineers to provide file IDs.[^2]
-- For operations that currently require engineers to switch between a terminal and a browser-based runbook, use the Drive integration to bring the runbook into the Claude Code session: Claude reads the relevant runbook step, translates it into the engineer's specific environment, and validates the output before proceeding to the next step.[^7]
+- For operations that currently require engineers to switch between a terminal and a browser-based runbook, use the Drive integration to bring the runbook into the Claude Code session: Claude reads the relevant runbook step, translates it into the engineer's specific environment, and validates the output before proceeding to the next step.
 - Keep runbooks in Drive as the single authoritative source; do not maintain parallel copies in the repository or in CLAUDE.md. When a runbook is updated, the Drive document is updated — and every subsequent session that reads it receives the current version without any additional update step.[^5]
 - For new engineer onboarding, instruct Claude to read the onboarding documentation in Drive before beginning any environment setup task. Claude can then provide guidance that is calibrated to the team's actual setup requirements rather than generic environment configuration advice.[^8]
 
@@ -62,14 +62,14 @@ For onboarding, Drive access to the team's onboarding documentation — environm
 
 ## Section 4: Product Manager and QA Workflows
 
-**Description:** The Google Drive integration delivers asymmetric value to the product managers and QA engineer on the team, whose workflows are most constrained by the distance between product documentation (in Drive) and engineering implementation (in Claude Code sessions). Product managers currently relay PRD requirements to engineers verbally or via Linear tickets; the Drive integration allows Claude to read the PRD directly, eliminating the relay and the information loss it introduces.[^9]
+**Description:** The Google Drive integration delivers asymmetric value to the product managers and QA engineer on the team, whose workflows are most constrained by the distance between product documentation (in Drive) and engineering implementation (in Claude Code sessions). Product managers currently relay PRD requirements to engineers verbally or via Linear tickets; the Drive integration allows Claude to read the PRD directly, eliminating the relay and the information loss it introduces.
 
 For product managers, the integration enables planning sessions that reference the actual product documentation: a session that begins by reading the relevant PRD section before planning sprint work produces a plan anchored to the complete product intent, not a summarized brief. The feature scoping decisions, the explicit non-goals, the acceptance criteria in their full form — all of this is accessible without requiring the product manager to manually import it into the session.
 
 For the QA engineer, acceptance criteria stored in Drive test plan documents can be read directly in test planning sessions. A test plan generated with direct access to the acceptance criteria document is more likely to be complete and correctly scoped than one generated from the engineer's memory of the acceptance criteria. The gap between those two starting points is where test coverage misses originate.[^10]
 
 **Recommended Practice:**
-- Establish a shared `Product/PRDs/` folder in Drive, scoped as MCP-accessible, where active PRDs for features in development are stored. The product manager maintains the document; Claude reads it in implementation and planning sessions.[^9]
+- Establish a shared `Product/PRDs/` folder in Drive, scoped as MCP-accessible, where active PRDs for features in development are stored. The product manager maintains the document; Claude reads it in implementation and planning sessions.
 - For QA sessions, add a session-start convention in CLAUDE.md: when planning tests for a feature, Claude reads the corresponding acceptance criteria document from Drive before generating the test plan. This should be documented as a required step, not optional.[^3]
 - Create a lightweight tagging convention for Drive documents that signals their MCP relevance: documents in folders with the prefix `[MCP]` are intended to be read in Claude Code sessions and should be kept current. Documents outside those folders are not guaranteed to be current in the session context.[^2]
 - Use Drive document retrieval to close the loop between product and engineering: when a QA session finds behavior that does not match the acceptance criteria, instruct Claude to read the relevant PRD and acceptance criteria document and produce a specific comparison of expected vs. observed behavior. This produces defect reports grounded in the product specification rather than in the engineer's interpretation.[^10]
@@ -122,16 +122,10 @@ This pattern does require that the referenced Drive documents are well-organized
 [^6]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     Context engineering as the primary discipline in agentic development; how external tool integration shifts workflows from local-only to service-aware sessions.
 
-[^7]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - ~4:30 — MCP server configuration patterns for documentation access integrations
-    - ~12:15 — Security: credential management and minimum-permission scoping for Google Workspace integrations
 
 [^8]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
     MCP architecture; resource types and how document content retrieval works in the protocol; permission scoping guidance.
 
-[^9]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~0:00 — Team rollout sequencing: why read-only scopes first is risk management
-    - ~9:10 — Shared `.mcp.json` in version control: review discipline and quarterly access audits
 
 [^10]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
     Minimum-permission configuration; prompt injection risk via retrieved document content; governance model for write-access MCP operations.

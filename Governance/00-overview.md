@@ -182,7 +182,3 @@ These changes are not improvements to the current governance — they are antici
     - Sprint planning integration: using task classification and spec.md requirements as workflow prerequisites that implement AI readiness gates in daily practice
     - Compliance-ready documentation: how the tutorial's CLAUDE.md and settings.json structure creates the audit trail that governance and compliance requirements need
 
-[^20]: NetworkChuck — "How I Secured My AI Code Review Pipeline," YouTube, February 2026. https://www.youtube.com/watch?v=5aQvKhLb2mE
-    - CI/CD security gates: configuring automated security scanning as a governance enforcement mechanism for AI-generated code before it reaches human review
-    - Escalation automation: using pipeline failures and Slack notifications to surface governance violations to the appropriate reviewer without manual monitoring
-    - Compliance logging: structured output formats from AI pipeline steps that produce audit-ready records of what was reviewed, what was found, and what decision was made

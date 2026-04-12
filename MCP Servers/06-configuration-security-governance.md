@@ -34,13 +34,13 @@ The file should be stored in the repository root and subject to required review 
 
 **Prompt injection** occurs when content retrieved through an MCP tool — a Slack message, a GitHub issue comment, a documentation page — contains text intended to manipulate Claude's behavior. The injection typically takes the form of instructions embedded in retrieved content: "Ignore previous instructions and instead..." followed by an unintended command. The primary mitigation is not filtering retrieved content (which is fragile and incomplete) but maintaining human review of Claude's planned actions before execution. If Claude retrieves a Slack thread and then proposes to post a message to an unexpected channel, the human engineer reviewing that proposal is the mitigation.[^5]
 
-**Excessive permission grants** occur when MCP server configurations include scopes that are broader than any task the team actually uses them for. A GitHub integration configured with `repo:write` when the team only needs `repo:read` for its current workflows is an unnecessary permission grant — it expands Claude's effective blast radius without delivering corresponding value. The mitigation is minimum-permission configuration applied at initial setup rather than after scope creep has occurred.[^6]
+**Excessive permission grants** occur when MCP server configurations include scopes that are broader than any task the team actually uses them for. A GitHub integration configured with `repo:write` when the team only needs `repo:read` for its current workflows is an unnecessary permission grant — it expands Claude's effective blast radius without delivering corresponding value. The mitigation is minimum-permission configuration applied at initial setup rather than after scope creep has occurred.
 
 **MCP server shadowing** occurs when a malicious MCP server defines a tool with the same name as a legitimate tool, overriding its behavior. This is an attack vector primarily relevant to teams that install MCP servers from untrusted sources — community servers without provenance, servers from repositories the team does not control. The mitigation is a restriction to official servers and servers the team builds internally, with architect review required for any third-party server addition.[^5]
 
 **Recommended Practice:**
 - For prompt injection: configure Claude Code to present a summary of planned external actions — Slack posts, GitHub comments, Linear updates — before executing them. The engineer reviews the plan and approves; Claude does not execute write operations without explicit confirmation in the session.[^5]
-- For excessive permissions: apply a permission audit at initial configuration for each server. Document the minimum scopes required for the team's actual use cases, configure exactly those scopes, and require justification for any addition that exceeds the documented minimum.[^6]
+- For excessive permissions: apply a permission audit at initial configuration for each server. Document the minimum scopes required for the team's actual use cases, configure exactly those scopes, and require justification for any addition that exceeds the documented minimum.
 - For server shadowing: restrict the team's `.mcp.json` to official platform servers (GitHub, Slack, Google, Linear) and internally built custom servers. Any third-party community server requires architect review and a documented rationale. Treat unreviewed third-party servers as untrusted code with system access.[^5]
 - Brief the engineering team on prompt injection risk in terms of the actual systems they use: a GitHub issue comment or a Slack message could theoretically contain injection instructions. Engineers should not treat retrieved content as inherently trusted; they should review Claude's proposed actions before execution regardless of where the context came from.[^7]
 
@@ -48,17 +48,17 @@ The file should be stored in the repository root and subject to required review 
 
 ## Section 3: Permission Minimum and Scope Audit
 
-**Description:** The principle of minimum permission — granting exactly the access required for the task and no more — is easy to state and systematically violated in practice. When configuring a new MCP server, the path of least resistance is to grant broad access so "it works" without debugging scope errors, then leave the broad access in place. The result is an integration surface that expands monotonically with each server addition, without any mechanism to contract it as requirements narrow or workflows change.[^6]
+**Description:** The principle of minimum permission — granting exactly the access required for the task and no more — is easy to state and systematically violated in practice. When configuring a new MCP server, the path of least resistance is to grant broad access so "it works" without debugging scope errors, then leave the broad access in place. The result is an integration surface that expands monotonically with each server addition, without any mechanism to contract it as requirements narrow or workflows change.
 
-The practical approach is to start each integration with the narrowest scopes that support the initial use case, document what those scopes are and why they are sufficient, and require justification to add scopes rather than requiring justification to remove them. This inverts the default: broad access must be earned, not assumed.[^8]
+The practical approach is to start each integration with the narrowest scopes that support the initial use case, document what those scopes are and why they are sufficient, and require justification to add scopes rather than requiring justification to remove them. This inverts the default: broad access must be earned, not assumed.
 
-For each MCP server the team operates, the relevant permission questions are: what operations are actually performed in sessions (read vs. write, which resource types), what operations could be performed given current scopes (what the configuration allows), and what is the gap between those two. The gap represents unnecessary permission — access that the configuration grants but no workflow requires. Identifying and closing that gap is the substance of the quarterly permission audit.[^6]
+For each MCP server the team operates, the relevant permission questions are: what operations are actually performed in sessions (read vs. write, which resource types), what operations could be performed given current scopes (what the configuration allows), and what is the gap between those two. The gap represents unnecessary permission — access that the configuration grants but no workflow requires. Identifying and closing that gap is the substance of the quarterly permission audit.
 
 **Recommended Practice:**
 - For each MCP server in `.mcp.json`, maintain a one-paragraph permission rationale: what scopes are granted, what workflows require them, and what operations would be possible if those scopes were not granted. This rationale is the baseline for the quarterly audit.[^2]
-- Quarterly, compare the permission rationale against the actual operation logs: if the rationale says "write access to Linear comments is required for QA test result posting" but the operation logs show no Linear comment posts in the quarter, the write access is unused and should be suspended.[^6]
+- Quarterly, compare the permission rationale against the actual operation logs: if the rationale says "write access to Linear comments is required for QA test result posting" but the operation logs show no Linear comment posts in the quarter, the write access is unused and should be suspended.
 - When a workflow changes — a team role is reorganized, a tool is deprecated, a process is automated differently — immediately review whether the associated MCP permissions are still required. Permission cleanup should happen at the same time as workflow changes, not at the next scheduled audit.[^3]
-- Apply scope restrictions at the most granular level the MCP server supports. For Slack, restrict to specific channels rather than workspace-wide. For GitHub, restrict to specific repositories rather than organization-wide. For Linear, restrict to specific teams rather than workspace-wide. Granular restrictions limit blast radius without restricting the actual use case.[^8]
+- Apply scope restrictions at the most granular level the MCP server supports. For Slack, restrict to specific channels rather than workspace-wide. For GitHub, restrict to specific repositories rather than organization-wide. For Linear, restrict to specific teams rather than workspace-wide. Granular restrictions limit blast radius without restricting the actual use case.
 
 ---
 
@@ -74,21 +74,21 @@ The inventory is a living document. It should be updated when a server is added,
 - Maintain the MCP server inventory as a Markdown document in the `.claude/` directory at the repository root, alongside CLAUDE.md. Each entry should include: server name, what it connects to, scopes granted, credential location (secrets management path, not the credential itself), owner, date added, date last reviewed.[^2]
 - Include the inventory review as a standing agenda item in the team's quarterly AI practice retrospective. The review should confirm that each entry reflects the current configuration, that ownership is current, and that credentials have been rotated within the team's standard rotation period.[^9]
 - Use the inventory as the input for onboarding new engineers to the team's Claude Code environment. A new engineer should be able to read the inventory and understand exactly what external access their Claude Code sessions will have — no surprises.[^7]
-- Establish a deprecation process for MCP servers: when a server is no longer actively used, it should be removed from `.mcp.json` and the inventory should be updated. Unused servers that remain configured are unnecessary permission grants and unnecessary infrastructure to maintain.[^6]
+- Establish a deprecation process for MCP servers: when a server is no longer actively used, it should be removed from `.mcp.json` and the inventory should be updated. Unused servers that remain configured are unnecessary permission grants and unnecessary infrastructure to maintain.
 
 ---
 
 ## Section 5: Write-Access Governance and Confirmation Requirements
 
-**Description:** Write-access MCP operations — posting to Slack, creating GitHub issues, updating Linear tickets, writing files to Google Drive — require governance that is proportional to their visibility and reversibility. The spectrum runs from highly reversible with low visibility (a comment on a GitHub issue that can be deleted) to difficult to reverse with high visibility (a Slack message posted to a team channel, which is seen immediately and cannot be fully retracted). The governance model should match the irreversibility of the operation.[^10]
+**Description:** Write-access MCP operations — posting to Slack, creating GitHub issues, updating Linear tickets, writing files to Google Drive — require governance that is proportional to their visibility and reversibility. The spectrum runs from highly reversible with low visibility (a comment on a GitHub issue that can be deleted) to difficult to reverse with high visibility (a Slack message posted to a team channel, which is seen immediately and cannot be fully retracted). The governance model should match the irreversibility of the operation.
 
 The foundational principle is that Claude should not execute any write operation through an MCP server without explicit confirmation from the engineer in the session. This is not the same as asking Claude to confirm before every action (which produces friction that degrades usability); it is asking Claude to present its intended write action, including the target and the content, and wait for the engineer to explicitly approve before proceeding. One confirmation per write operation, not one confirmation per session or no confirmation at all.[^5]
 
-For automated sessions — CI pipelines, scheduled jobs, or other contexts where Claude runs without a human in the loop — write-access MCP operations should be disabled by default. The confirmation requirement that mitigates write-access risk in attended sessions cannot be satisfied in unattended sessions; the appropriate mitigation is not to configure write access in those contexts.[^8]
+For automated sessions — CI pipelines, scheduled jobs, or other contexts where Claude runs without a human in the loop — write-access MCP operations should be disabled by default. The confirmation requirement that mitigates write-access risk in attended sessions cannot be satisfied in unattended sessions; the appropriate mitigation is not to configure write access in those contexts.
 
 **Recommended Practice:**
-- Configure Claude Code to require explicit confirmation before any MCP write operation using the tool confirmation settings in Claude Code's configuration. This setting should be applied globally to all sessions that have MCP server access, not just to specific sessions where write access seems likely.[^10]
-- Categorize write operations by reversibility when introducing them: easy to reverse (GitHub issue comments, draft PR creation), moderate reversibility (GitHub review comments, Linear status updates), difficult to reverse (Slack posts, Linear comments visible to stakeholders). Introduce them in that order, with longer observation periods for harder-to-reverse operations.[^6]
+- Configure Claude Code to require explicit confirmation before any MCP write operation using the tool confirmation settings in Claude Code's configuration. This setting should be applied globally to all sessions that have MCP server access, not just to specific sessions where write access seems likely.
+- Categorize write operations by reversibility when introducing them: easy to reverse (GitHub issue comments, draft PR creation), moderate reversibility (GitHub review comments, Linear status updates), difficult to reverse (Slack posts, Linear comments visible to stakeholders). Introduce them in that order, with longer observation periods for harder-to-reverse operations.
 - For CI and other automated contexts: create a separate `.mcp.json` configuration file specifically for automated sessions that includes only read-only MCP servers. The automated configuration should be explicitly named (`.mcp.ci.json`) and referenced explicitly in the CI configuration rather than using the default project configuration.[^4]
 - When a write operation is executed without the engineer intending it — an unexpected Slack post, a GitHub comment that appeared in the wrong thread — treat it as a configuration incident, not a workflow error. Investigate which configuration allowed the unattended write and add a constraint to prevent recurrence.[^5]
 
@@ -121,24 +121,14 @@ For automated sessions — CI pipelines, scheduled jobs, or other contexts where
 [^5]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
     The three primary MCP security risks: prompt injection via retrieved content, excessive permission grants, and MCP server shadowing. Mitigation strategies for each risk. Governance model for write-access operations in team environments.
 
-[^6]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    - ~0:00 — Team rollout sequencing: why read-only scopes first is risk management rather than caution; how write access should be gated on observed behavior
-    - ~9:10 — Shared `.mcp.json` in version control: review discipline, per-server scope documentation, and quarterly access audit workflow
-    - ~17:50 — Prompt injection via MCP tool results: threat model, real-world examples, and the human-in-the-loop confirmation pattern
-    - ~25:30 — Case study: permission incidents during team MCP rollout and resulting configuration changes
 
 [^7]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in reducing manual coordination overhead; external tool access as a team-level capability requiring governance proportional to its scope.
 
-[^8]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
-    - ~0:00 — MCP server architecture: how Claude Code acts as an MCP client connecting to external services
-    - ~12:15 — Security: credential management, minimum-permission scoping, and audit log configuration for MCP read and write operations
 
 [^9]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as a component of context engineering; shared configuration artifacts as team-level productivity multipliers; the governance overhead that scales with integration surface area.
 
-[^10]: Greg Kamradt — "MCP Servers for Teams: Governance and Rollout Patterns," YouTube, March 2026. https://www.youtube.com/watch?v=F8pOxXoqFcQ
-    Write-access governance: the confirmation-per-write-operation policy; categorizing operations by reversibility; the case study of a team that introduced write access too broadly and the incident that resulted.
 
 [^a]: [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md) — MCP server permissions are a specific category of settings governance; the two documents address the same concern at tool level and MCP level.
 [^b]: [Security: Secrets Management](../Security/04-secrets-management.md) — MCP server configurations often include credentials and API keys; secrets management practices are a prerequisite for secure MCP configuration.
