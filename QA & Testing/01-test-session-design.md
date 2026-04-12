@@ -1,6 +1,6 @@
 ## Test Session Design for AI-Generated Code
 
-**Related to:** [QA & Testing Overview](00-overview.md) — Area 1: Test Session Design for AI-Generated Code
+**Related to:** [QA & Testing Overview](00-overview.md) — Area 1: Test Session Design for AI-Generated Code · [Governance: Review Policies](../Governance/01-review-policies.md)[^a] · [Issues: Review Theater](../Issues/05-review-theater.md)[^b] · [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md)[^c] · [Prompting: Task-Specific Prompt Patterns](../Prompting/02-task-prompt-patterns.md)[^d]
 
 ---
 

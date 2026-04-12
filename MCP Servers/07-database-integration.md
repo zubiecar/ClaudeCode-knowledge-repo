@@ -1,6 +1,6 @@
 ## MCP Server 7: Database Integration (Postgres, SQLite, and Schema Access)
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 7
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 7 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [MCP Servers: Configuration, Security, and Governance](06-configuration-security-governance.md)[^c] · [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md)[^d]
 
 ---
 

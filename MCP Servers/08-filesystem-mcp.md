@@ -1,6 +1,6 @@
 ## MCP Server 8: Filesystem MCP — Scope Control and Security Implications
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 8
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 8 · [Tooling: MCP Integration](../Tooling/03-mcp-integration.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [MCP Servers: Configuration, Security, and Governance](06-configuration-security-governance.md)[^c] · [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md)[^d]
 
 ---
 

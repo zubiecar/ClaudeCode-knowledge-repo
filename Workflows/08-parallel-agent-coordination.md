@@ -1,6 +1,6 @@
 ## Parallel Agent Coordination
 
-**Related to:** [Workflows Overview](00-overview.md) — Workflow 8
+**Related to:** [Workflows Overview](00-overview.md) — Workflow 8 · [Workflows: Agentic Delegation](07-agentic-delegation.md)[^a] · [Tooling: Worktree Isolation](../Tooling/07-worktree-isolation.md)[^b] · [Issues: Velocity Governance](../Issues/08-velocity-governance.md)[^c] · [Governance: Review Policies](../Governance/01-review-policies.md)[^d]
 
 ---
 
@@ -132,3 +132,11 @@ Partial parallel output — three of five sessions complete, two fail — is the
 
 [^6]: Tessl — "8 Agentic Coding Trends Shaping Software Engineering in 2026," March 2026. https://tessl.io/blog/8-trends-shaping-software-engineering-in-2026-according-to-anthropics-agentic-coding-report/
     Multi-agent specialization and parallelization as the dominant 2026 agentic trend; orchestrator/subagent patterns; synchronization point design for multi-phase parallel workflows; failure handling in multi-agent pipelines.
+
+[^a]: [Workflows: Agentic Delegation](07-agentic-delegation.md) — parallel coordination is the multi-agent extension of single-agent delegation; understanding delegation is a prerequisite for understanding parallel coordination.
+
+[^b]: [Tooling: Worktree Isolation](../Tooling/07-worktree-isolation.md) — worktree isolation is the technical prerequisite for safe parallel agent execution; the workflow pattern depends on the isolation mechanism.
+
+[^c]: [Issues: Velocity Governance](../Issues/08-velocity-governance.md) — parallel agents produce the highest velocity multiplier and the highest governance complexity; the velocity-governance tension reaches its peak in parallel coordination.
+
+[^d]: [Governance: Review Policies](../Governance/01-review-policies.md) — parallel agent output requires careful review coordination; review policy should address how parallel-agent PRs are reviewed when they produce interdependent changes.

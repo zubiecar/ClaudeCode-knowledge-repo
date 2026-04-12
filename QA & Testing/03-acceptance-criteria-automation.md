@@ -1,6 +1,6 @@
 ## Acceptance Criteria Automation
 
-**Related to:** [QA & Testing Overview](00-overview.md) — Area 3: Acceptance Criteria Automation
+**Related to:** [QA & Testing Overview](00-overview.md) — Area 3: Acceptance Criteria Automation · [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md)[^a] · [Governance: Review Policies](../Governance/01-review-policies.md)[^b] · [MCP Servers: Linear Integration](../MCP%20Servers/04-linear-integration.md)[^c]
 
 ---
 

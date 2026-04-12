@@ -1,6 +1,6 @@
 ## QA Engineer Workflow with Claude Code
 
-**Related to:** [QA & Testing Overview](00-overview.md) — Area 5: QA Engineer Workflow with Claude Code
+**Related to:** [QA & Testing Overview](00-overview.md) — Area 5: QA Engineer Workflow with Claude Code · [Documentation: Runbook Standards](../Documentation/02-runbook-standards.md)[^a] · [Governance: Review Policies](../Governance/01-review-policies.md)[^b] · [QA & Testing: Test Session Design](01-test-session-design.md)[^c] · [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md)[^d]
 
 ---
 

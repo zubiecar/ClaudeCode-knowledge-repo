@@ -1,6 +1,6 @@
 ## Team Health Dashboard: Tracking AI Governance Outcomes
 
-**Related to:** [Metrics Overview](00-overview.md) — Metric 6
+**Related to:** [Metrics Overview](00-overview.md) — Metric 6 · [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md)[^a] · [Issues: Velocity Governance](../Issues/08-velocity-governance.md)[^b] · [Governance: Sprint Planning Gates](../Governance/03-sprint-planning-gates.md)[^c]
 
 ---
 
@@ -147,3 +147,9 @@ Incident retrospectives for AI governance follow a different question framework 
     - Metrics infrastructure setup: configuring CI output for automated data collection across security findings, coverage, and quality metrics
     - Session logging as a dashboard data source: how structured session outcome logs provide qualitative data that automated tools cannot capture
     - Monthly review format: how to run the AI practice review as a decision meeting rather than a reporting exercise
+
+[^a]: [Governance: Quarterly Health Review](../Governance/05-quarterly-health-review.md) — the health dashboard is the data source for quarterly review; the two documents describe the measurement system and its strategic use.
+
+[^b]: [Issues: Velocity Governance](../Issues/08-velocity-governance.md) — dashboard trends are the leading indicator of the velocity-governance feedback loop; the dashboard makes the tension between speed and quality visible before it becomes self-reinforcing.
+
+[^c]: [Governance: Sprint Planning Gates](../Governance/03-sprint-planning-gates.md) — health dashboard metrics inform sprint planning readiness classification; current health signals determine what level of AI autonomy is appropriate in the next sprint.

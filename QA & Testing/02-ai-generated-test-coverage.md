@@ -1,6 +1,6 @@
 ## AI-Generated Test Coverage Analysis
 
-**Related to:** [QA & Testing Overview](00-overview.md) — Area 2: AI-Generated Test Coverage Analysis
+**Related to:** [QA & Testing Overview](00-overview.md) — Area 2: AI-Generated Test Coverage Analysis · [Issues: Comprehension Debt](../Issues/01-comprehension-debt.md)[^a] · [Tooling: CI/CD Integration](../Tooling/06-cicd-integration.md)[^b] · [Tooling: Hooks and Automation](../Tooling/02-hooks-and-automation.md)[^c] · [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md)[^d]
 
 ---
 

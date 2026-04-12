@@ -1,6 +1,6 @@
 ## Regression Prevention
 
-**Related to:** [QA & Testing Overview](00-overview.md) — Area 4: Regression Prevention
+**Related to:** [QA & Testing Overview](00-overview.md) — Area 4: Regression Prevention · [Issues: Codebase Bloat](../Issues/02-codebase-bloat.md)[^a] · [Tooling: CI/CD Integration](../Tooling/06-cicd-integration.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c]
 
 ---
 

@@ -1,6 +1,6 @@
 ## Prompt Anti-Patterns: What Degrades Output and Why
 
-**Related to:** [Prompting Overview](00-overview.md) — Pattern 5
+**Related to:** [Prompting Overview](00-overview.md) — Pattern 5 · [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md)[^a] · [Prompting: Prompt Architecture](01-prompt-architecture.md)[^b] · [Governance: Review Policies](../Governance/01-review-policies.md)[^c]
 
 ---
 

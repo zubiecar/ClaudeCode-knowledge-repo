@@ -1,6 +1,6 @@
 ## Prompt Architecture: Structuring Requests for Reliable Output
 
-**Related to:** [Prompting Overview](00-overview.md) — Pattern 1
+**Related to:** [Prompting Overview](00-overview.md) — Pattern 1 · [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md)[^a] · [Workflows: Context Engineering](../Workflows/03-context-engineering.md)[^b] · [Prompting: Prompt Library Management](06-prompt-library.md)[^c] · [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md)[^d]
 
 ---
 
@@ -141,3 +141,8 @@ Calibrating for length requires distinguishing between structural components (al
     - The specification mindset: why senior engineers get better AI results by treating prompts as formal specifications rather than conversational queries
     - Constraint-leading patterns: live comparison of prompts with and without explicit constraint components and the observable difference in output quality
     - Verification component examples: the specific difference between "make sure it works" and a runnable verification command, demonstrated with real session output
+
+[^a]: [Issues: Prompt Fragmentation](../Issues/07-prompt-fragmentation.md) — prompt architecture is the discipline that prevents fragmentation; structured, reusable prompt patterns are the countermeasure to the ad-hoc variation described there.
+[^b]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — prompt architecture operates within the context engineering framework; the two disciplines are nested — context engineering sets the session foundation, prompt architecture governs individual requests.
+[^c]: [Prompting: Prompt Library Management](06-prompt-library.md) — the prompt library stores the output of good prompt architecture work; the architecture principles determine what goes into the library.
+[^d]: [Tooling: CLAUDE.md Configuration](../Tooling/01-claude-md-configuration.md) — CLAUDE.md provides the baseline context that all prompts execute within; prompt architecture must account for what CLAUDE.md already defines.

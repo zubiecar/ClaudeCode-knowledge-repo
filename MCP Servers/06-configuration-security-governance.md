@@ -1,6 +1,6 @@
 ## MCP Server 6: Configuration, Security, and Governance
 
-**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 6
+**Related to:** [MCP Servers Overview](00-overview.md) — MCP Server 6 · [Tooling: Settings and Permissions](../Tooling/05-settings-and-permissions.md)[^a] · [Security: Secrets Management](../Security/04-secrets-management.md)[^b] · [Governance: AI Usage Policy](../Governance/02-ai-usage-policy.md)[^c] · [Ethics: Training Data and Privacy](../Ethics/04-training-data-privacy.md)[^d]
 
 ---
 

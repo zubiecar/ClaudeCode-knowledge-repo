@@ -1,6 +1,6 @@
 ## Rework Rate: The Net Productivity Metric for AI-Generated Code
 
-**Related to:** [Metrics Overview](00-overview.md) — Metric 2: Rework Rate and Correction Cycles
+**Related to:** [Metrics Overview](00-overview.md) — Metric 2: Rework Rate and Correction Cycles · [Issues: Comprehension Debt](../Issues/01-comprehension-debt.md)[^a] · [Governance: Review Policies](../Governance/01-review-policies.md)[^b] · [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md)[^c]
 
 ---
 
