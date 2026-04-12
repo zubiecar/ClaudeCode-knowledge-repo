@@ -127,7 +127,7 @@ The signal for escalation is repeated session failure after reasonable attempts 
     - Verification workflows: practical approaches to catching AI hallucination before it reaches code review
     - Escalation signals: how experienced engineers recognize when AI iteration has reached its limit
 
-[^12]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Context degradation signals: how to identify the early warning signs before quality noticeably declines
     - Compact timing: demonstrations of proactive vs. reactive compaction and their quality outcomes
     - CLAUDE.md updates after failures: converting bad sessions into systemic prevention

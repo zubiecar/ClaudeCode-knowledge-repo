@@ -167,7 +167,7 @@ The METR productivity studies found that tasks where engineers expected 19% spee
     - Preservation constraint failure: before-and-after comparison of refactoring prompts with and without explicit "do not change" constraints
     - Premature delegation: real examples of agentic sessions that resolved implicit decision points incorrectly and the debugging cost that followed
 
-[^19]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^19]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Anti-pattern catalog: all six anti-patterns demonstrated in context of a real development workflow, with structural alternatives shown in the same session
     - CLAUDE.md clarification instruction: how adding "ask before improving without specific objectives" to CLAUDE.md prevents the vague improvement request anti-pattern at the session level
     - Permission review practice: the specific habit that maintains meaningful permission oversight while minimizing friction in high-velocity sessions

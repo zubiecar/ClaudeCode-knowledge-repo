@@ -58,6 +58,22 @@ There are two mechanisms for making ADRs session-accessible. The first, and most
 
 ## Section 4: Using Claude Code to Draft ADRs
 
+```mermaid
+flowchart TD
+    DISC[Architectural Decision Made\nmeeting · PR review · Slack thread] --> DRAFT["Claude Code drafts ADR\nfrom meeting notes / thread transcript\nwithin 24 hours of decision"]
+    DRAFT --> ARCH[Architect Reviews Draft\nConfirms rationale\nCorrects mischaracterized alternatives\nAdds AI Constraints field]
+    ARCH --> Q{ADR accepted?}
+    Q --> |Revisions needed| DRAFT
+    Q --> |Accepted| MERGE["Merge to docs/adr/NNN-title.md\nUpdate docs/adr/README.md index\nMark any superseded ADRs"]
+    MERGE --> CLAUDE["Extract AI Constraints field\nAdd to CLAUDE.md with ADR reference\n'# See ADR-042 — do not...'"]
+    CLAUDE --> ACTIVE["ADR Active\nSessions query README.md index\nCLAUDE.md enforces constraints"]
+    ACTIVE --> CHANGE{Architecture revisited?}
+    CHANGE --> |Yes| NEW[New ADR drafted\nOld ADR marked Superseded\nCLAUDE.md constraint updated]
+    NEW --> ARCH
+    CHANGE --> |No| QUARTERLY[Quarterly ADR Review\nStale? Missing? Ready for supersession?]
+    QUARTERLY --> ACTIVE
+```
+
 **Description:** The discipline of ADR creation breaks down primarily because of the lag between the decision and the documentation. Architectural decisions are made during fast-moving discussions, code reviews, and Slack threads — contexts where the intention to document is present but the immediate time to do it is not. By the time an engineer returns to write the ADR, the nuance of the discussion has faded, the alternatives considered are harder to reconstruct, and the rationale has partially merged with the outcome in memory.[^9]
 
 Claude Code can draft ADRs from the raw material of decision discussions — meeting notes, Slack thread exports, PR comment threads, and architecture meeting transcripts. The draft will not be publication-ready: it will require architect review to confirm the rationale, correct mischaracterized alternatives, and add the AI Constraints field. But a draft that is 70% right and requires 15 minutes of review is produced and reviewed more often than a blank template that requires 45 minutes of writing from scratch. Reducing the per-ADR creation cost is the primary mechanism for improving ADR adoption rate.[^1]

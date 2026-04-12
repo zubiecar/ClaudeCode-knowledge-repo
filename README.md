@@ -48,6 +48,13 @@ If you are new to this repository, start here:
 | [Ethics/](Ethics/) | Intellectual property, developer impact, security responsibility, training data privacy, environmental costs, bias |
 | [Documentation/](Documentation/) | Architecture decision records, runbook standards, knowledge transfer, rationale capture |
 
+### Economics and Reliability
+
+| Folder | What it covers |
+|---|---|
+| [Cost & Token Economics/](Cost%20&%20Token%20Economics/) | Token cost mechanics, model selection strategy, context optimization, budget governance, cost monitoring |
+| [Debugging & Troubleshooting/](Debugging%20&%20Troubleshooting/) | Session failure recognition, hallucination verification, context degradation, session recovery, escalation criteria |
+
 ### Reference Artifacts
 
 | Folder | What it covers |

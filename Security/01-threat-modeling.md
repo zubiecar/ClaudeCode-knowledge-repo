@@ -30,6 +30,24 @@ The mechanism is not that AI is careless — it is that AI generates code that i
 
 ## Section 2: STRIDE Applied to AI Development Sessions
 
+```mermaid
+flowchart TD
+    subgraph STRIDE["STRIDE Threat Categories — AI Development Sessions"]
+        S["Spoofing\nPrompt injection via repo files,\ndocumentation, or test fixtures\nmanipulates session behavior"]
+        T["Tampering\nAI-generated code introduces\nbackdoors or weakened controls\nthat survive review"]
+        I["Information Disclosure\nSession reads sensitive values\nthat appear in outputs or logs"]
+        E["Elevation of Privilege\nAgentic sessions with permissions\nbeyond what the task requires"]
+    end
+    S --> SM["Mitigations:\n.claudeignore scope restriction\nReview untrusted content before injection\nConstrained session scope"]
+    T --> TM["Mitigations:\nWriter/reviewer pattern\nSecurity-specialist reviewer session\nSAST on security-critical paths"]
+    I --> IM["Mitigations:\n.claudeignore sensitive assets\nSecrets directory exclusion\nAudit session context before run"]
+    E --> EM["Mitigations:\nMinimum-permission profiles\n--allowedTools scoping\nPlan Mode for exploration"]
+    SM --> CM[CLAUDE.md Security Constraints\n+ Sprint Threat Model Update]
+    TM --> CM
+    IM --> CM
+    EM --> CM
+```
+
 **Description:** STRIDE provides a structured vocabulary for the threats that AI development sessions introduce. Spoofing: prompt injection in repository files, documentation, or test fixtures can manipulate Claude Code's behavior to produce outputs the engineer did not intend — the AI session is "spoofed" into executing a different task than the engineer requested. Tampering: AI-generated code that modifies security-critical logic in ways that are not obviously wrong can introduce backdoors or weakened controls that survive review. Information Disclosure: sessions that read broadly from the codebase may incorporate sensitive values into generated outputs or logs. Elevation of Privilege: agentic sessions run with file-write or command-execute permissions broader than the task requires can make modifications with higher impact than the engineer intended to authorize.[^3]
 
 These are not equivalent in likelihood or impact for the team's current configuration. Prompt injection and information disclosure are the highest-probability categories: the team's repositories contain files that could plausibly carry injection payloads (test fixtures, data files, external content), and Claude Code's broad file-reading behavior means sensitive content in scope files can appear in session context. Tampering and privilege escalation are lower probability in interactive sessions but become significant concerns in agentic or headless configurations.[^1]

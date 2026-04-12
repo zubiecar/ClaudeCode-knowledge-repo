@@ -14,6 +14,25 @@ This memo covers when parallel agent workflows are appropriate and when they are
 
 ---
 
+```mermaid
+flowchart TD
+    A[Parallel Workflow Proposed] --> B{Independence test:\nNo shared file writes?\nOutputs integrate without\nsequential reasoning?}
+    B --> |No| SEQ[Run Sequentially]
+    B --> |Yes| C[Write Shared Spec Document\nModule boundaries · interface contracts\nNaming conventions · prohibited patterns]
+    C --> D[Create N Worktrees Atomically\ngit fetch then all worktrees\nfrom same base commit]
+    D --> E[Launch Parallel Sessions\nEach scoped to its worktree\nand explicit file assignment]
+    E --> F{Phase 1 Complete\nfor All Sessions?}
+    F --> |Session failed — owns\nshared dependency| G[Abort remaining sessions\nResolve failure — relaunch all]
+    F --> |Session failed — independent module| H[Continue others\nRelaunch failed session alone]
+    F --> |All complete| I[Synchronization Review\nCheck for shared-element changes\nCoordination owner — 30 min max]
+    I --> J{Shared interfaces\nneed updating?}
+    J --> |Yes| K[Update shared spec\nRelaunch Phase 2 with new spec]
+    J --> |No| L[Review Each Worktree\nas Independent PR]
+    K --> L
+    L --> M[Merge Agent Session\nIntegrates all parallel outputs]
+    M --> N[Batch Cleanup\nRemove all worktrees after PRs merged]
+```
+
 ## Section 1: When Parallelism Is Appropriate
 
 **Description:** Parallel agent coordination adds value when tasks are genuinely independent: they do not read or write the same files, they do not depend on shared state that any session might modify, and their outputs can be integrated through a merge process without requiring sequential reasoning about the combined result. These conditions are more restrictive than they appear. Many tasks that seem independent share a schema, a type definition, a shared utility, or an interface contract that all sessions will need to reference — and if any session modifies that shared element, the other sessions are operating against stale context.[^3]

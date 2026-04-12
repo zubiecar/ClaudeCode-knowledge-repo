@@ -12,6 +12,25 @@ This memo covers the structure of an AI workflow onboarding program for a small 
 
 ---
 
+```mermaid
+flowchart TD
+    START([New Engineer Joins]) --> CB[Week 1: Codebase Onboarding\nStandard process + tooling setup]
+    CB --> AI[Week 1: AI Workflow Onboarding\nDelivered by Architect\nCLAUDE.md tour · command library\nverification standards · escalation paths]
+    AI --> CK{Checklist Verification\nCan explain top 3 CLAUDE.md rules\nand incidents that motivated them?}
+    CK --> |Not yet| REVIEW[CLAUDE.md review\nwith Architect]
+    REVIEW --> CK
+    CK --> |Yes| SPRINT1[Sprint 1: Mentored Tasks\nOne per type: scaffold · refactor · test-gen\nBounded scope · existing tests · available mentor]
+    SPRINT1 --> PR1[First PRs Reviewed\nCLAUDE.md adherence · prompt structure\nverification practice · feedback within 24h]
+    PR1 --> SPRINT2[Sprint 2: Continued Mentoring\nAsync session log review\nStructured rubric: architecture · context · verification]
+    SPRINT2 --> MONTH1{Month 1 Assessment\nCan walk through session\nexplaining prompt choices?}
+    MONTH1 --> |Compliance — not internalization| AIFREE[AI-Free Debugging Exercise\nReal bug · no AI access\nReveals foundational understanding]
+    AIFREE --> EXTRA[Additional mentored sessions\n+ targeted AI-free practice]
+    EXTRA --> MONTH1
+    MONTH1 --> |Internalized| GATE[Explanation Gate Check\nWalk through completed module:\ndesign decisions · tradeoffs\nno Claude or session logs]
+    GATE --> |Pass| FULL[Full Team Member\nExpected to propose CLAUDE.md updates\nwhen encountering gaps]
+    GATE --> |Fail| EXTRA
+```
+
 ## Section 1: The AI Workflow Onboarding Checklist
 
 **Description:** New engineers cannot be expected to derive the team's AI workflow practices from general knowledge or from reading the codebase. The CLAUDE.md, the command library, the hook configuration, and the verification standards represent accumulated team-specific knowledge that must be actively transferred. An onboarding checklist makes this transfer explicit and verifiable — each item on the checklist represents knowledge the engineer should have before their first AI-assisted PR.[^2]
@@ -140,7 +159,7 @@ The fragile expert finding (see Issues — Comprehension Debt) is directly relev
     - 20:00 — Dependency formation during onboarding: how the first months of AI tool exposure shape long-term capability trajectories in both beneficial and limiting directions
     - 5:01:16 — The skills that make AI onboarding successful: which foundational engineering competencies enable engineers to use AI as a multiplier rather than a crutch from day one
 
-[^15]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^15]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Onboarding walkthrough: how the tutorial's structure mirrors an effective AI workflow onboarding sequence — from CLAUDE.md to commands to verification to quality gates
     - Session log demonstration: what a well-run session looks like from start to finish, including prompt structure, corrections, verification, and completion criteria
     - First-session task design: the tutorial's example tasks are calibrated to onboarding difficulty — bounded, well-specified, with architectural precedent and existing tests

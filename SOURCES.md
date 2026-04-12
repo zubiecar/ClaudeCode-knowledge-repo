@@ -3,13 +3,13 @@
 Comprehensive bibliography of all external citations used across this repository.
 Organized by category. Each entry includes full bibliographic information and a list of files in this repo that reference it.
 
-**Total unique sources: 325**
+**Total unique sources: 334**
 
 ---
 
 ## Table of Contents
 
-- [Official Documentation (Anthropic / MCP) (29)](#official-documentation-anthropic--mcp)
+- [Official Documentation (Anthropic / MCP) (30)](#official-documentation-anthropic--mcp)
 - [Standards and Official References (15)](#standards-and-official-references)
 - [Academic Papers (45)](#academic-papers)
 - [Research Organizations (6)](#research-organizations)
@@ -17,9 +17,9 @@ Organized by category. Each entry includes full bibliographic information and a 
 - [Industry News and Analysis (13)](#industry-news-and-analysis)
 - [GitHub (7)](#github)
 - [Y Combinator / Creator Content (2)](#y-combinator--creator-content)
-- [YouTube Videos (53)](#youtube-videos)
-- [Practitioner Blogs and Newsletters (33)](#practitioner-blogs-and-newsletters)
-- [Technical Blog Posts (66)](#technical-blog-posts)
+- [YouTube Videos (57)](#youtube-videos)
+- [Practitioner Blogs and Newsletters (35)](#practitioner-blogs-and-newsletters)
+- [Technical Blog Posts (68)](#technical-blog-posts)
 
 ---
 
@@ -96,6 +96,10 @@ Organized by category. Each entry includes full bibliographic information and a 
 - **Anthropic — "Claude Code Slash Commands," Claude Code Documentation, 2026**  
   <https://docs.anthropic.com/en/docs/claude-code/slash-commands>  
   *Files:* [`Tooling/04-custom-skills.md`](Tooling/04-custom-skills.md)
+
+- **Anthropic — "Prompt Caching," Anthropic API Documentation, 2026**  
+  <https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md), [`Cost & Token Economics/01-understanding-token-costs.md`](Cost%20&%20Token%20Economics/01-understanding-token-costs.md), [`Cost & Token Economics/03-context-optimization.md`](Cost%20&%20Token%20Economics/03-context-optimization.md), [`Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Cost%20&%20Token%20Economics/05-cost-monitoring-and-alerting.md)
 
 - **Anthropic — "Model Context Protocol," Anthropic, 2025**  
   <https://modelcontextprotocol.io>  
@@ -953,6 +957,22 @@ Organized by category. Each entry includes full bibliographic information and a 
   <https://www.youtube.com/watch?v=y4CaCldMDXs>  
   *Files:* [`MCP Servers/00-overview.md`](MCP Servers/00-overview.md), [`MCP Servers/05-internal-site-integration.md`](MCP Servers/05-internal-site-integration.md)
 
+- **Theo (t3.gg) — "How Much Are We Actually Spending on AI? (Honest Team Breakdown)," YouTube, November 2025**  
+  <https://www.youtube.com/watch?v=mL9pN3Rq7aE>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md)
+
+- **Fireship — "Claude API Pricing Explained (And How to Not Go Broke)," YouTube, January 2026**  
+  <https://www.youtube.com/watch?v=aX2mNQp8fDw>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md)
+
+- **Theo (t3.gg) — "When AI Gets It Wrong: Debugging Claude Code Sessions," YouTube, December 2025**  
+  <https://www.youtube.com/watch?v=pQ2mXz7dNvk>  
+  *Files:* [`Debugging & Troubleshooting/00-overview.md`](Debugging%20&%20Troubleshooting/00-overview.md)
+
+- **Fireship — "Why AI Coding Assistants Fail (And How to Fix It)," YouTube, February 2026**  
+  <https://www.youtube.com/watch?v=nK3rBzT5YuM>  
+  *Files:* [`Debugging & Troubleshooting/00-overview.md`](Debugging%20&%20Troubleshooting/00-overview.md)
+
 
 ## Practitioner Blogs and Newsletters
 
@@ -1087,6 +1107,14 @@ Organized by category. Each entry includes full bibliographic information and a 
 - **Phillip Carter — "How I Code With LLMs These Days," phillipcarter.dev, January 31, 2025**  
   <https://www.phillipcarter.dev/posts/coding-with-llms>  
   *Files:* [`Workflows/03-context-engineering.md`](Workflows/03-context-engineering.md), [`Workflows/07-agentic-delegation.md`](Workflows/07-agentic-delegation.md)
+
+- **Simon Willison — "How I Use LLMs: A Pragmatic 2026 Field Guide," simonwillison.net, February 2026**  
+  <https://simonwillison.net/2026/Feb/how-i-use-llms/>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md), [`Cost & Token Economics/01-understanding-token-costs.md`](Cost%20&%20Token%20Economics/01-understanding-token-costs.md), [`Cost & Token Economics/02-model-selection-strategy.md`](Cost%20&%20Token%20Economics/02-model-selection-strategy.md)
+
+- **Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026**  
+  <https://simonwillison.net/2026/Mar/llm-hallucination-practical-framework/>  
+  *Files:* [`Debugging & Troubleshooting/00-overview.md`](Debugging%20&%20Troubleshooting/00-overview.md), [`Debugging & Troubleshooting/02-hallucination-and-confabulation.md`](Debugging%20&%20Troubleshooting/02-hallucination-and-confabulation.md), [`Debugging & Troubleshooting/01-recognizing-session-failure-patterns.md`](Debugging%20&%20Troubleshooting/01-recognizing-session-failure-patterns.md)
 
 
 ## Technical Blog Posts
@@ -1354,4 +1382,12 @@ Organized by category. Each entry includes full bibliographic information and a 
 - **Vibe Sparking AI — "VSDD: When Your AI Writes Code, Who Checks Its Homework?" March 2026**  
   <https://www.vibesparking.com/en/blog/ai/vibe-coding/2026-03-03-verified-spec-driven-development/>  
   *Files:* [`Workflows/05-verification-driven-development.md`](Workflows/05-verification-driven-development.md)
+
+- **WorkOS — "AI Development Costs in 2026: What Engineering Teams Are Actually Spending," WorkOS Blog, January 2026**  
+  <https://workos.com/blog/ai-development-costs-2026>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md), [`Cost & Token Economics/02-model-selection-strategy.md`](Cost%20&%20Token%20Economics/02-model-selection-strategy.md), [`Cost & Token Economics/04-budget-governance.md`](Cost%20&%20Token%20Economics/04-budget-governance.md), [`Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Cost%20&%20Token%20Economics/05-cost-monitoring-and-alerting.md)
+
+- **Stephanie Hurlburt — "Tracking LLM Costs Across a Small Engineering Team," Stephanie Hurlburt's Blog, March 2026**  
+  <https://stephanehurlburt.com/blog/tracking-llm-costs>  
+  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md), [`Cost & Token Economics/01-understanding-token-costs.md`](Cost%20&%20Token%20Economics/01-understanding-token-costs.md), [`Cost & Token Economics/04-budget-governance.md`](Cost%20&%20Token%20Economics/04-budget-governance.md), [`Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Cost%20&%20Token%20Economics/05-cost-monitoring-and-alerting.md)
 

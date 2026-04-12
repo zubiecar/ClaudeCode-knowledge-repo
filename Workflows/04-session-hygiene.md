@@ -10,6 +10,29 @@ This memo covers context window management, the git worktree pattern for paralle
 
 ## Section 1: Context Window Degradation
 
+```mermaid
+stateDiagram-v2
+    [*] --> FreshContext: Session starts
+    FreshContext: Fresh Context\nAll constraints active\nHigh output quality
+    FreshContext --> DegradingContext: Session extends beyond\n60–90 min or spans multiple tasks
+
+    DegradingContext: Degrading Context\nEarlier instructions lose weight\nOutput drift becoming visible
+    DegradingContext --> CorrectionSpiral: Same error repeated\nafter correction
+    DegradingContext --> CompactDecision: Quality declining\nbut task still on-track
+
+    CorrectionSpiral: Correction Spiral\nFailed fixes pollute context\nContinuing is slower than resetting
+
+    CompactDecision --> CompactedContext: /compact with explicit\npreservation instructions
+    CompactedContext: Compacted Context\nKey state preserved in summary\nSession continues productively
+    CompactedContext --> DegradingContext: Session continues to extend
+
+    CompactDecision --> Reset: Scope has drifted far\nfrom original task
+    CorrectionSpiral --> Reset: /clear — more than\ntwo failed corrections
+
+    Reset: Fresh Session\nReconstruct context with\nimproved, tighter prompt
+    Reset --> FreshContext
+```
+
 **Description:** Claude's context window holds the entire conversation history — every message, every file read, every command output — from session start. As it fills, Claude's performance degrades in a pattern that is non-obvious to engineers who are not monitoring it. Earlier instructions receive less weight relative to recent context. Architectural decisions established in the first hour of a session may not be reliably applied in the fourth.[^1]
 
 The context window's capacity has grown substantially: Claude Opus 4.6 operates with a 1 million token window, sufficient to hold roughly 25,000 lines of code in a single conversation.[^2] This is large enough that many engineers never consciously hit a limit — but it is not large enough to make context management unnecessary. Long sessions that span multiple tasks, include broad codebase exploration, and accumulate correction cycles can fill a significant fraction of this window with material that actively degrades subsequent output quality.

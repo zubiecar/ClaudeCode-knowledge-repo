@@ -12,6 +12,27 @@ CodeRabbit's analysis found that AI-generated PRs had logic and correctness issu
 
 ---
 
+```mermaid
+flowchart TD
+    PR[PR Submitted] --> ORI{AI-primary\nlabel set?}
+    ORI --> |No — human-authored| SIMREV[Standard Implementation Review]
+    ORI --> |Yes| SIZE{Net diff\n> 400 lines?}
+    SIZE --> |Yes| DECOMP[Return for decomposition\ninto sub-PRs under 400 lines\nAuthor must understand it to split it]
+    SIZE --> |No| ARCH{PR > 100 lines or\nnew pattern introduced?}
+    ARCH --> |Yes| ARCHR[Architectural Review — Architect\nNew pattern? Duplicate abstraction?\nCoupling conflict? Convention fit?]
+    ARCH --> |No| IMPL
+    ARCHR --> |Misfit found| RETURN[Return for correction\nbefore implementation review]
+    ARCHR --> |Architecture fits| IMPL[Implementation Review\nLogic · tests · readability · CLAUDE.md adherence]
+    IMPL --> EXPL{Author can explain\ndesign decisions\nand tradeoffs?}
+    EXPL --> |No| COMP[Comprehension pass:\nread section + update PR description]
+    COMP --> EXPL
+    EXPL --> |Yes| SEC{Security-critical\nmodule?}
+    SEC --> |Yes| SECR[Secondary Security Review\nSAST findings + auth/crypto patterns\nJWT · SQL params · random sources]
+    SEC --> |No| APPROVE[Approve and Merge]
+    SECR --> APPROVE
+    SIMREV --> APPROVE
+```
+
 ## Section 1: PR Size and Decomposition Standards
 
 **Description:** Review quality degrades reliably above 400 lines. Reviewers lose the ability to hold the full change in working memory, begin skimming rather than reading, and miss interaction effects between sections of the PR that are only visible when the whole is considered together. AI-generated code compounds this problem: engineers who generate 600 lines in a single session may not have the deep comprehension needed to split the PR intelligently, and may merge large outputs without reviewing them with the attention that the size warrants.[^4]
@@ -149,7 +170,7 @@ The automation configuration is the team's first line of defense against the mos
     - Architectural review separation: the specific conversation that happens in architectural review vs. implementation review, demonstrated with real PR examples
     - Senior engineer review modeling: how the senior engineer's review behavior sets the standard for what thorough review looks like on the team
 
-[^18]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^18]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - PR template configuration: how to configure Claude Code PR template fields to trigger the appropriate review process automatically based on code origin
     - Writer/reviewer pre-review workflow: the specific session configuration and prompting approach that produces review-ready finding sets before human review begins
     - CI automation setup: configuring SAST, coverage, and complexity checks as pre-review gates that handle routine findings before human review begins

@@ -130,7 +130,7 @@ Documentation prompts that do not specify the audience, purpose, and format prod
 [^12]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt
     Documentation debt as a subset of AI-generated technical debt: how generic documentation fails the specific readers who need it, and audience-driven prompt design as the mitigation.
 
-[^13]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^13]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Task-specific command library: the five foundational command types (scaffold, refactor, test, security, docs) and how each is structured to match its task type's requirements
     - Refactoring command walkthrough: live demonstration of a preservation-constraint-leading refactoring prompt and the observable difference from a generic refactoring request
     - Security review command: vulnerability class enumeration, threat model reference, and severity-classified output format in a reusable team command

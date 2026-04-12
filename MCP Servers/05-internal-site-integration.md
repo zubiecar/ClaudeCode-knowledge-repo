@@ -117,7 +117,7 @@ For maintenance, the server's error logs are the primary signal: errors that rep
     - ~0:00 — Team rollout sequencing and risk management for new MCP integrations
     - ~9:10 — Shared configuration in version control: review discipline and quarterly access audit workflow
 
-[^5]: Fireship — "Model Context Protocol Explained in 100 Seconds," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
+[^5]: Greg Isenberg — "Model Context Protocol (MCP), clearly explained (why it matters)," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
     - ~0:00 — MCP protocol overview: client-server model, JSON-RPC transport, how Claude Code acts as an MCP client
     - ~0:45 — The three MCP primitives — resources, tools, and prompts — and how each maps to practical integration patterns
     - ~1:20 — Building a minimal custom server in TypeScript using the Anthropic SDK: the minimal viable server scaffold in under 50 lines

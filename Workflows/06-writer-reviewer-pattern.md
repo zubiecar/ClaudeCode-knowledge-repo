@@ -28,6 +28,30 @@ The operational implication is that fresh-context review is not a luxury for hig
 
 ## Section 2: The Implementer/Reviewer Architecture
 
+```mermaid
+sequenceDiagram
+    participant E as Engineer
+    participant I as Implementer Session
+    participant R as Reviewer Session
+    participant H as Human Reviewer
+
+    E->>I: Task + CLAUDE.md + spec.md
+    I->>I: Generate implementation
+    I-->>E: Implementation code
+    E->>E: Verify compiles / tests pass
+
+    E->>R: Code + CLAUDE.md + spec.md
+    Note over R: Fresh context only — no implementation session history
+    R->>R: Analyze structural issues,\narchitectural misfit, gaps
+    R-->>E: Findings: Action Required /\nRecommended / Optional
+
+    E->>E: Address Action Required findings
+
+    E->>H: PR + AI findings as pre-read comment
+    H->>H: Review architectural fit\n"Can you explain it?" test
+    H-->>E: Approve or request changes
+```
+
 **Description:** The implementer/reviewer architecture deploys two Claude sessions sequentially for each significant piece of work: one session (the implementer) owns all code generation; a separate session (the reviewer) owns all review of that code with fresh context, no knowledge of the implementation choices made, and no bias toward them.[^1]
 
 The reviewer session should be configured with three inputs: the code to review (via `@` file references), the `CLAUDE.md` architectural context, and the relevant specification or acceptance criteria. A reviewer that does not know the team's conventions cannot catch violations of them. A reviewer that does not know the acceptance criteria cannot catch code that passes tests but fails requirements.[^4]

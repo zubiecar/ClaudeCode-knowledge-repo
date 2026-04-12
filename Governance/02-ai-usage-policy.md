@@ -144,7 +144,7 @@ The review cadence for the acceptable use policy matters as much as the initial 
     - Prohibited use detection: automated flags for common prohibited patterns (PII in prompts, dangerouslySkipPermissions in CI logs) that surface violations before they become incidents
     - Policy changelog automation: using CI output and PR annotations to produce the audit trail that active governance requires
 
-[^16]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Usage category onboarding: how to introduce the three usage categories to new engineers in a way that makes policy compliance the default behavior rather than a remembered obligation
     - Session data hygiene: the specific prompt patterns and CLAUDE.md configurations that implement data handling policy at the session level
     - Acceptable use policy as living document: how the quarterly review process keeps the policy current with evolving tool capabilities and team practices

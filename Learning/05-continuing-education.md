@@ -155,7 +155,7 @@ The risk of AI-only education budget is a team whose AI tool proficiency increas
     - Practitioner source quality: which types of content from working engineers produce the highest signal for teams trying to improve their AI workflow practices
     - Education budget philosophy: the case for investing in foundational programming skills alongside AI tool proficiency; why engineers who understand fundamentals deeply get more out of AI assistance
 
-[^20]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^20]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Anthropic documentation as primary source: the tutorial's demonstration of Claude Code capabilities illustrates why documentation-first monitoring catches capability changes that secondary sources miss or delay
     - Practitioner workflow publishing: how detailed workflow tutorials by experienced Claude Code practitioners serve as high-signal sources for teams developing their own practices
     - Conference debrief application: the tutorial's content illustrates what a team-applicable external learning finding looks like — specific, implementable, and grounded in direct tool experience

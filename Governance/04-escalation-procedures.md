@@ -28,6 +28,24 @@ Escalation paths also function as policy feedback channels. Engineers who use es
 
 ## Section 2: The Three Escalation Classes
 
+```mermaid
+flowchart TD
+    E[Escalation Event Received] --> Q1{Intentional choice\nto act outside policy?}
+    Q1 --> |Yes| V[Class: Policy Violation\nOwner: Architect\nTimeline: 2 business days]
+    Q1 --> |No| Q2{Policy silent or\nambiguous about\nthis situation?}
+    Q2 --> |Yes| EC[Class: Edge Case\nOwner: Architect\nTimeline: 1 business day]
+    Q2 --> |No — policy addresses it\nbut doesn't fit a legitimate need| PE[Class: Policy Error\nOwner: Architect\nTimeline: Initiate PR revision]
+    V --> VR[Coaching conversation + log entry\nRoot cause: awareness / ambiguity / pressure\nCLAUDE.md or communication update]
+    EC --> ECR[Documented interpretation\nattached to policy section\nCanonical answer for all engineers]
+    PE --> PER[Temporary documented exception\nwhile revision PR completes]
+    VR --> LOG[Escalation Log Entry\nClass · policy section · resolution · trigger?]
+    ECR --> LOG
+    PER --> LOG
+    LOG --> PAT{Same class + policy section\n3+ times in a quarter?}
+    PAT --> |Yes| REV[Policy Revision Review\nvia PR process — CTO approval required]
+    PAT --> |No| DONE[Done]
+```
+
 **Description:** Not all escalations are alike. Conflating a policy violation — where an engineer did something outside authorized use — with an edge case — where the policy is genuinely ambiguous — with a policy error — where the policy is wrong for a legitimate need — produces responses that are miscalibrated in all three directions. Violations require coaching and possibly documentation; edge cases require architectural interpretation and possible policy clarification; policy errors require the policy revision process in Section 5. Treating violations as edge cases is lenient in the wrong direction; treating edge cases as violations is punitive in the wrong direction; treating policy errors as violations is governance dysfunction.[^6]
 
 The three-class system gives the architect the framework to route escalations appropriately from the moment they arrive, rather than determining the class during the resolution process. The class determines the owner, the timeline, and the output. Policy violations are resolved with a coaching conversation and a log entry. Edge cases are resolved with an architectural interpretation that is documented and attached to the relevant policy section. Policy errors are resolved with a policy revision request that goes through the PR process in Section 5. An engineer who escalates all three correctly receives three different responses — and that consistency builds trust in the escalation system.[^7]

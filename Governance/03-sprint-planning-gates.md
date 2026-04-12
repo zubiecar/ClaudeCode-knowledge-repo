@@ -150,7 +150,7 @@ The communication challenge is framing governance in terms that are meaningful t
     - Spec.md in practice: the difference between a user story and an actual specification, demonstrated with before/after examples from a real sprint planning session
     - Mid-sprint reclassification: how to handle the conversation when an AI-primary story turns out to require human-primary effort, without creating team friction
 
-[^17]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Spec.md construction walkthrough: how to produce a complete specification in 30–60 minutes that gives Claude Code the context it needs for reliable AI-primary output
     - Classification system onboarding: how to introduce the three tiers to new engineers so that their first sprint uses the classification correctly without constant guidance
     - Retrospective calibration workflow: using sprint retrospective data to identify systematic classification errors and adjust the criteria for the next sprint

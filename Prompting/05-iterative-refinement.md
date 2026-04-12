@@ -146,7 +146,7 @@ Iteration templates accumulate from real sessions. Every time a session finds an
     - Restart vs. correction: the decision framework applied to a live session that diverged after two rounds, and why restarting with an updated prompt was faster than a third correction
     - Template construction from session review: extracting an iteration template from a session that converged well and storing it in the prompt library for future reuse
 
-[^17]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Iteration planning: how to classify a task as single-shot vs. iteration-required at the start of a session and the different session designs for each
     - Preserve-what-is-good pattern: demonstration of correction prompts that explicitly scope the correction to avoid unintended changes to correct prior-round output
     - Iteration templates in the prompt library: how templates are stored, referenced, and updated based on new session learnings

@@ -24,6 +24,28 @@ The output of a Plan Mode session is an implementation plan in structured text. 
 
 ## Section 2: The Four Phases in Practice
 
+```mermaid
+flowchart TD
+    A[Task Identified] --> B{Single-sentence diff?\nOne file only?}
+    B --> |Yes| C[Direct Implementation\nNo planning phase needed]
+    B --> |No — multi-file or\nunfamiliar code| D[Explore Phase\nPlan Mode — read-only\nClaude reads files, asks questions]
+    D --> E{True scope larger\nthan expected?}
+    E --> |Yes| F[Narrow Task\nor Accept Broader Scope]
+    F --> G
+    E --> |No| G[Plan Phase\nStructured plan output\nno code written yet]
+    G --> H[Engineer Reviews Plan\nCtrl+G — edit assumptions\nnot just check correctness]
+    H --> I{Plan correct?\nArchitectural assumptions valid?}
+    I --> |No| G
+    I --> |Yes| J[Implement Phase\nExecute against approved plan]
+    J --> K{Implementation\nmatches plan?}
+    K --> |Drift detected| L[Compare vs. plan\nRevise or /rewind to plan point]
+    L --> J
+    K --> |Yes| M[Commit Phase\nAtomic commit per completed task\nnot per session]
+    M --> N{More tasks?}
+    N --> |Yes| D
+    N --> |No| O[Done]
+```
+
 **Description:** The full Explore-Plan-Implement-Commit sequence is the documented workflow from Anthropic's internal teams. Each phase has a distinct objective and failure mode. The Explore phase establishes shared understanding between the engineer and Claude. The Plan phase produces the implementation contract. The Implement phase executes against that contract. The Commit phase creates a verifiable checkpoint.[^1]
 
 In practice, the most commonly skipped phase is Explore. Engineers with familiarity with the codebase often skip directly to Plan, providing context in the prompt rather than having Claude read files. This produces faster sessions but higher risk: Claude's internal model of the codebase is built from the prompt description, not from reading the actual files, and the two diverge in ways that produce implementation bugs. Addy Osmani, in his documented workflow for 2026, describes the Explore phase as "due diligence" — and notes that "upfront planning pays dividends for implementation efficiency and output quality" even when it feels redundant.[^5]

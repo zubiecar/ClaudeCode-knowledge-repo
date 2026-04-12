@@ -28,6 +28,27 @@ The persona component is most commonly omitted because it feels artificial. But 
 
 ## Section 2: Context Hierarchy and Prompt Layers
 
+```mermaid
+flowchart TD
+    subgraph LAYERS["Context Hierarchy — loads at session start"]
+        GL["CLAUDE.md — Global Layer\nPersistent team rules loaded automatically\nArchitectural patterns · security constraints\ncoding conventions · never per-task"]
+        FL["spec.md — Feature Layer\nCurrent feature requirements\nDesign decisions · acceptance criteria\nwritten once per feature"]
+        SL["Session Prompt — Task Layer\nSpecific implementation step\nMinimum sufficient context only\nnever repeats what layers above cover"]
+    end
+    GL --> FL --> SL
+
+    subgraph FIVE["Five-Component Prompt Structure"]
+        P1["1 · Persona\nRole + expertise frame\n'Act as a backend engineer who\nknows our auth patterns'"]
+        P2["2 · Task\nSpecific evaluable output\nanchor to existing patterns by name"]
+        P3["3 · Constraints\nWhat must NOT change first\nthen what should change"]
+        P4["4 · Context\nOnly what layers above don't cover\n@ file references for specific examples"]
+        P5["5 · Verification\nRunnable command with binary outcome\n'Run pytest tests/auth/ — fix all failures'"]
+    end
+    SL --> P1
+    P1 --> P2 --> P3 --> P4 --> P5
+    P5 --> OUT["Output calibrated to team context\nnot training data defaults"]
+```
+
 **Description:** Every Claude Code session operates within a layered context hierarchy. The global layer is CLAUDE.md — the team's persistent architectural instructions that apply to all sessions. The feature layer is spec.md — the specific requirements and context for the current feature or task. The session layer is the prompt itself — the task-specific context for this particular implementation step. Well-structured prompts work with this hierarchy rather than against it: they build on CLAUDE.md without repeating it, add to spec.md without contradicting it, and provide task-specific context without burying it in information already available at higher layers.[^6]
 
 The most common structural error is context duplication: prompts that re-explain context already present in CLAUDE.md or spec.md. This adds length to the prompt, reduces the signal-to-noise ratio, and creates potential for contradictions if the duplicated content has drifted from the authoritative source. The discipline is minimum sufficient context — provide only what is not already present in higher layers.[^3]
@@ -127,7 +148,7 @@ Calibrating for length requires distinguishing between structural components (al
 [^11]: DEV Community — "AI Is Creating a New Kind of Tech Debt — And Nobody Is Talking About It," March 2026. https://dev.to/harsh2644/ai-is-creating-a-new-kind-of-tech-debt-and-nobody-is-talking-about-it-3pm6
     Prompt length and quality: how over-specified prompts dilute signal as effectively as under-specified prompts; the inverse-U relationship between verbosity and output precision.
 
-[^12]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 1 (Prompt Structure): live demonstration of the five-component prompt structure applied to a real feature implementation task
     - Planning vs. implementation separation: how to use the "do not write code" instruction to enforce a planning review gate before implementation begins
     - Verification design: converting descriptive verification statements into runnable commands that Claude can execute and evaluate

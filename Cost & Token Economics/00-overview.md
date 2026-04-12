@@ -127,7 +127,7 @@ The monitoring infrastructure for Claude Code spend is available through the Ant
     - Model selection heuristics: the task types where Haiku, Sonnet, and Opus are each the appropriate choice
     - Prompt caching setup: how to enable and verify cache hits in Claude Code sessions
 
-[^12]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Budget governance workflow: how to configure the Anthropic console for per-engineer spend tracking
     - Session cost estimation: pre-session context sizing before running expensive agentic workflows
     - `/compact` timing: when to compact within a session to avoid the context inflation cost curve

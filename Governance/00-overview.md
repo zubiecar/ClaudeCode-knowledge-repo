@@ -177,7 +177,7 @@ These changes are not improvements to the current governance — they are antici
     - Permission scoping: how task-level permission management reduces governance violations by making high-risk operations require explicit approval rather than passive acceptance
     - Audit infrastructure: how session logs and structured context provide the traceability that compliance requirements need
 
-[^19]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^19]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Acceptable use in practice: how to configure Claude Code to enforce team policies through settings.json and CLAUDE.md rather than relying on engineer memory
     - Sprint planning integration: using task classification and spec.md requirements as workflow prerequisites that implement AI readiness gates in daily practice
     - Compliance-ready documentation: how the tutorial's CLAUDE.md and settings.json structure creates the audit trail that governance and compliance requirements need

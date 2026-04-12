@@ -154,7 +154,7 @@ The danger on a small CTO-led team is that no one is structurally positioned to 
     - Frequent Intentional Compaction: technique for keeping long AI sessions focused and coherent as codebases grow, preventing context drift within a session
     - Large codebase management: strategies for scoping AI context to bounded, well-defined modules so outputs stay consistent with existing architecture
 
-[^16]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 3 (Quality Gate): configuring Claude Code hooks to run automated checks — linting, SAST scanning, tests — on every AI-generated output before it can be accepted
     - Step 6 (CLAUDE.md): creating and maintaining the shared architectural context file that governs all team Claude Code sessions, including stack choices and off-limits patterns
     - Steps 1–5 (Custom Skills / Prompt Playbook): defining reusable slash commands for common task types — feature scaffolding, refactoring, security review, and test generation

@@ -149,7 +149,7 @@ Teams without managed prompt libraries develop prompt fragmentation: eight engin
 [^14]: The Pragmatic Engineer — "AI Tooling for Software Engineers in 2026," March 2026. https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
     Prompt fragmentation at small companies: why standardization is rarely treated as an engineering priority at sub-20-person teams, and the compounding cost of divergent prompting practices as AI use scales.
 
-[^15]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^15]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 1 (Custom Skills): structuring slash commands with role, task, constraints, and verification components for consistent output across team members
     - Step 2 (Prompt Library): building and maintaining a team command library in `.claude/commands/`; the lifecycle from draft to reviewed to active
     - Step 5 (Anti-Patterns): the specific prompt constructions that reliably degrade output quality and how to replace them with structured alternatives

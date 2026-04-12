@@ -144,7 +144,7 @@ The "first week AI tour" is a half-day structured introduction to the team's acc
     - Session log culture: the cultural preconditions for engineers to document and share AI workflow findings voluntarily; what makes sharing feel valuable rather than administrative
     - Library maintenance: how to prevent a shared prompt library from becoming stale or overgrown; the curation practices that keep it a trusted reference
 
-[^17]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Session log as a teaching artifact: how annotated session recordings transfer workflow knowledge that written documentation alone cannot convey; what to highlight when sharing a session for team learning
     - Command library demonstration: how the tutorial's walkthrough of reusable commands illustrates the value of team-level prompt and pattern libraries vs. individual prompt collections
     - Knowledge transfer for new team members: the first-session walkthrough format as an onboarding pattern applicable to team AI workflow orientation

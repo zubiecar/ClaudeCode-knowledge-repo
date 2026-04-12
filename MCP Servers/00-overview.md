@@ -153,7 +153,7 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
 [^10]: Anthropic — "Building MCP Servers," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/servers
     Custom MCP server architecture: resource types, tool definitions, prompt templates, and the progression from minimal viable server to full-featured integration. Guidance on scoping initial server implementations.
 
-[^11]: Fireship — "Model Context Protocol Explained in 100 Seconds," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
+[^11]: Greg Isenberg — "Model Context Protocol (MCP), clearly explained (why it matters)," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
     - ~0:00 — MCP protocol overview: the client-server model, JSON-RPC transport layer, and how Claude Code acts as an MCP client connecting to external service endpoints
     - ~0:45 — The three MCP primitives — resources, tools, and prompts — and how each maps to practical integration patterns
     - ~1:20 — Building a minimal custom server in TypeScript using the official Anthropic SDK: the minimal viable server scaffold in under 50 lines

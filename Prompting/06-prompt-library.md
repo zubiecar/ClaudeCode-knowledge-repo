@@ -139,7 +139,7 @@ The quarterly audit is the structural mechanism for detecting staleness at scale
 [^15]: Gartner — "Hype Cycle for Emerging Technologies, 2026," Gartner Research, January 2026. https://www.gartner.com/en/documents/hype-cycle-emerging-technologies-2026
     Systematic prompt validation at scale: the quarterly audit framework; library health tracking over time; model evolution as a second staleness vector alongside codebase evolution.
 
-[^16]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Prompt library setup from scratch: creating the directory structure, writing the README, and seeding the library with the first three validated prompt entries
     - Validation workflow: how to test a prompt against a real task, document the test case, and write a peer review request that covers the four review criteria
     - Lifecycle demonstration: following a prompt from an ad-hoc session discovery through experimental entry, stable validation, and final graduation to a Claude Code skill

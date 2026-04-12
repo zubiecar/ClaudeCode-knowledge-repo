@@ -28,6 +28,26 @@ CIO's 2026 analysis of how agentic AI reshapes engineering workflows describes t
 
 ## Section 2: The Delegability Criteria
 
+```mermaid
+flowchart TD
+    A[Task Candidate for Delegation] --> B{1. Requirements fully\nspecifiable in text?\nNo org/relational context needed?}
+    B --> |No| DENY[Classify as AI-Assisted\nnot AI-Primary]
+    B --> |Yes| C{2. Pass/fail verification\nmechanism available?\nTest suite, build, linter?}
+    C --> |No| DENY
+    C --> |Yes| D{3. Scope bounded to\nwell-understood files?\nNo open-ended boundaries?}
+    D --> |No| DENY
+    D --> |Yes| E{4. Follows patterns already\nexisting in codebase?\nNot first-of-kind architecture?}
+    E --> |No| DENY
+    E --> |Yes| F{5. Output reviewable before\nany irreversible action?\nNo direct deploy / DB migration?}
+    F --> |No — hard gate| DENY
+    F --> |Yes — all 5 met| DELEGATE[Delegate with Bounded Autonomy\n--allowedTools scoped · audit log on\nExplicit scope, time, cost limits]
+    DELEGATE --> G[Review Output\nFresh-context reviewer + human review]
+    G --> H{Output correct?}
+    H --> |Yes| MERGE[Merge\nDelegating engineer retains\nfull accountability]
+    H --> |No| UPDATE[Diagnose failure\nUpdate delegable task list]
+    UPDATE --> DENY
+```
+
 **Description:** Identifying which tasks are in the delegable 20% requires a consistent evaluation framework. The criteria that reliably separate delegable from non-delegable tasks cluster into five dimensions:
 
 **Requirement completeness.** Delegable tasks have requirements that can be written down completely in a text prompt. If completing the task requires knowledge that is organizational, relational, or contextual in ways that cannot be expressed as text (what the customer actually wants, what the team decided in last week's meeting, what the undocumented reason is for a particular design choice), the task cannot be reliably delegated.[^2]

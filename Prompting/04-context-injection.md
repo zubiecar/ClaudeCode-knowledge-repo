@@ -138,7 +138,7 @@ Not all context is equally worth preserving when compressing. The decisions — 
     - Phase-boundary compression: demonstration of compressing at planning-to-implementation transition and the quality difference vs. compressing mid-implementation under pressure
     - Context triage: how to explicitly specify what to preserve in a `/compact` call and why generic compression produces lower-quality summaries than directed compression
 
-[^15]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^15]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Session setup workflow: the `/init` pattern in practice — loading CLAUDE.md and architecture files before task work and the calibration difference it produces
     - `@` mention context injection: live demonstration of file reference vs. content paste for codebase context and the readability and precision tradeoffs
     - Dynamic hook injection: configuring `UserPromptSubmit` to prepend git status to every prompt and the session quality consistency improvement it produces
