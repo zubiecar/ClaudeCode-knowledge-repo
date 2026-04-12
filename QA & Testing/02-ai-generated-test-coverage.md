@@ -106,3 +106,8 @@ Without trend tracking, test quality improvements are invisible. A mutation scor
 
 [^8]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
     Test quality trend tracking as a governance feedback mechanism; mutation score trend data as evidence of prompt improvement effectiveness; the relationship between session design maturity and measurable test quality improvement.
+
+[^a]: [Issues: Comprehension Debt](../Issues/01-comprehension-debt.md) — coverage gaps in AI-generated code often correspond to sections no engineer genuinely understood; coverage analysis is the metric for detecting comprehension debt.
+[^b]: [Tooling: CI/CD Integration](../Tooling/06-cicd-integration.md) — CI/CD pipelines run coverage analysis on every merge; the integration document describes the pipeline where coverage gates execute.
+[^c]: [Tooling: Hooks and Automation](../Tooling/02-hooks-and-automation.md) — coverage analysis can be triggered as a pre-commit hook for fast feedback before pipeline runs; the hook integration provides session-time coverage visibility.
+[^d]: [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md) — test coverage is a primary code quality metric for AI-generated code; the coverage signal feeds the quality dashboard.

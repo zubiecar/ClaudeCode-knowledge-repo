@@ -106,3 +106,7 @@ This is a high-value application of the reviewer session for AI-primary PRs modi
 
 [^8]: Workflows — "06-writer-reviewer-pattern.md," ClaudeCodeReview, 2026.
     Fresh-context reviewer sessions as regression detection: prompt design for shared utility regression analysis; reviewer session output as pre-CI triage input; regression concern comments as human review focus mechanisms.
+
+[^a]: [Issues: Codebase Bloat](../Issues/02-codebase-bloat.md) — regression risk compounds as codebase surface area grows; bloat and regression prevention are paired concerns because expanded surface area is harder to regression-test completely.
+[^b]: [Tooling: CI/CD Integration](../Tooling/06-cicd-integration.md) — regression suites run in CI/CD pipelines; the integration document describes the pipeline infrastructure that regression prevention depends on.
+[^c]: [Governance: Review Policies](../Governance/01-review-policies.md) — regression impact assessment is a review requirement for changes to shared components; the review policy includes regression scope evaluation.

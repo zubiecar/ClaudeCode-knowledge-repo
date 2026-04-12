@@ -101,3 +101,7 @@ This repositioning changes what the QA engineer does, not whether their role is 
 
 [^7]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
     QA repositioning in AI-assisted teams: from test scaffolding generation to independence check and quality gate; the QA engineer as the structural intervention for circular validation risk.
+
+[^a]: [Workflows: Verification-Driven Development](../Workflows/05-verification-driven-development.md) — automated acceptance criteria are the verification mechanism that makes verification-driven development possible at scale; the workflow depends on the QA infrastructure this document describes.
+[^b]: [Governance: Review Policies](../Governance/01-review-policies.md) — acceptance criteria completion is a review gate condition; automated verification of criteria reduces the reviewer burden for that check.
+[^c]: [MCP Servers: Linear Integration](../MCP%20Servers/04-linear-integration.md) — Linear MCP can surface acceptance criteria from tickets into sessions; automated criteria execution is easier when criteria are accessible to the session that generates the code.

@@ -108,3 +108,8 @@ QA contributions to CLAUDE.md are structured differently than architectural or i
 
 [^8]: Yue Liu et al. — "Debt Behind the AI Boom: A Large-Scale Empirical Study of AI-Generated Code in the Wild," arXiv:2603.28592, March 30, 2026. https://arxiv.org/html/2603.28592
     CLAUDE.md as long-term memory for QA knowledge: encoding failure history into session context; module-specific testing entries as higher-value context than general testing principles; the survivorship of AI-introduced issues in codebases lacking QA-driven session context.
+
+[^a]: [Documentation: Runbook Standards](../Documentation/02-runbook-standards.md) — QA engineers are primary runbook consumers; their workflow defines what runbook detail level is operationally sufficient.
+[^b]: [Governance: Review Policies](../Governance/01-review-policies.md) — QA engineer workflow is independent of but complementary to the review policy workflow; the two are parallel quality gates.
+[^c]: [QA & Testing: Test Session Design](01-test-session-design.md) — test session design is the foundational QA practice that the full QA engineer workflow is built around; the two documents describe the practice and its workflow integration.
+[^d]: [Metrics: AI Code Quality](../Metrics/01-ai-code-quality.md) — QA engineer workflow generates the defect and coverage data that quality metrics aggregate; the workflow is the primary data source for quality measurement.
