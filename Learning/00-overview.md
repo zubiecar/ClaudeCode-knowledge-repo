@@ -131,7 +131,7 @@ External education also serves a function internal practices cannot: exposure to
 [^13]: Ravikanth Konda — "Human-AI Collaboration in Software Teams: Evaluating Productivity, Quality, and Knowledge Transfer with Agentic and LLM-Based Tools," *International Journal of AI, BigData, Computational and Management Studies*, February 17, 2026. https://ijaibdcms.org/index.php/ijaibdcms/article/view/418
     Structured rationale capture and peer-to-peer explainability as the distinguishing factor between teams that built genuine organizational knowledge and those that accumulated surface-level proficiency.
 
-[^14]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^14]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Muscle memory erosion: how exclusive AI reliance degrades the low-level pattern recognition required for fast independent debugging
     - Intentional AI-free practice: why engineers need deliberate practice periods to maintain the baseline fluency required to catch what AI gets wrong
     - Side project recommendation: keeping at least one project AI-free to preserve the exploratory learning process

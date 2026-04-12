@@ -159,7 +159,7 @@ The danger on a small CTO-led team is that no one is structurally positioned to 
     - Step 6 (CLAUDE.md): creating and maintaining the shared architectural context file that governs all team Claude Code sessions, including stack choices and off-limits patterns
     - Steps 1–5 (Custom Skills / Prompt Playbook): defining reusable slash commands for common task types — feature scaffolding, refactoring, security review, and test generation
 
-[^17]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^17]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Muscle memory erosion: how exclusive reliance on AI completions degrades the low-level pattern recognition that enables fast debugging and sound architecture decisions
     - Intentional learning habits: why engineers need deliberate AI-free practice to maintain the baseline fluency required to catch what AI gets wrong
     - AI-free projects: argument for keeping side or learning projects free of AI assistance as a skill-maintenance discipline

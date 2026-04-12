@@ -130,7 +130,7 @@ The fragile expert finding (see Issues — Comprehension Debt) is directly relev
 [^12]: Judy Hanwen Shen and Alex Tamkin (Anthropic) — "How AI Assistance Impacts the Formation of Coding Skills," arXiv:2601.20245, January 28, 2026. https://arxiv.org/abs/2601.20245
     Comprehension gap risk during onboarding: why the first months of AI-assisted work are the highest-risk period for forming dependency patterns, and why catching them during onboarding is less costly than discovering them in incidents.
 
-[^13]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^13]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - AI-free debugging exercise as an onboarding success signal: what it reveals about whether AI-assisted work is building foundational understanding or covering its absence
     - The habit formation window: why the first weeks of AI-assisted work are the highest-leverage period for establishing good practices
     - Mentor modeling: how senior engineers who demonstrate active AI workflow practices accelerate new engineer habit formation more effectively than documentation alone

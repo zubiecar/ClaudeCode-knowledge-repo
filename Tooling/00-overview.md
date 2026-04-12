@@ -120,7 +120,7 @@ A CI pipeline that runs a standardized reviewer session on every PR — using a 
 [^5]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/
     96% of developers distrust AI-generated code; only 48% verify before committing. 42% of all committed code now originates from AI. Automation bias and its effect on permission hygiene.
 
-[^6]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^6]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 3 (Quality Gate): configuring PostToolUse hooks for automated linting and test execution on every write operation
     - Stop event hooks: SAST scanning at session completion and system notification dispatch for parallel session management
     - Step 6 (Custom Skills): the five foundational command library entries and how to structure them for team-wide consistency

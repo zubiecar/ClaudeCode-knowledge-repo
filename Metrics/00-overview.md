@@ -157,7 +157,7 @@ The Anthropic 2026 Agentic Coding Trends Report found that organizations achievi
     - Rework visibility: how teams that added rework tracking to their dashboards discovered costs invisible in standard velocity metrics
     - The measurement gap: the discrepancy between what engineering dashboards track and what determines whether AI adoption is going well
 
-[^17]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^17]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Quality gate metrics: using hook-driven CI output as the raw data for security vulnerability trend tracking
     - Session logs: how to structure qualitative session outcome logs for monthly aggregate analysis
     - CLAUDE.md effectiveness testing: using session correction rates to evaluate whether context configuration is current and complete

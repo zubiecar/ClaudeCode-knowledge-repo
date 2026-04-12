@@ -143,7 +143,7 @@ Incident retrospectives for AI governance follow a different question framework 
     - Delivery risk framing: translating rework rates and security findings into business-relevant projections that CTO decision-makers can act on
     - Accountability loops: how tracking whether last quarter's governance decisions produced the intended metric improvements changed team governance behavior
 
-[^16]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^16]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Metrics infrastructure setup: configuring CI output for automated data collection across security findings, coverage, and quality metrics
     - Session logging as a dashboard data source: how structured session outcome logs provide qualitative data that automated tools cannot capture
     - Monthly review format: how to run the AI practice review as a decision meeting rather than a reporting exercise

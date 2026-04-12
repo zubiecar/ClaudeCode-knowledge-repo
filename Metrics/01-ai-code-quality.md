@@ -149,7 +149,7 @@ Complexity and duplication metrics require tooling to measure automatically — 
     - Security finding trends: how tracking findings by category (not just count) reveals specific prompting and CLAUDE.md improvements that address root causes
     - Coverage interpretation: the difference between line coverage and behavioral coverage for AI-generated code, and why the former can be high while the latter is inadequate
 
-[^18]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^18]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Quality gate metrics: how to configure CI output for central tracking of security findings, complexity trends, and coverage rates by PR origin
     - CLAUDE.md feedback loop: using quality metrics to identify recurring failure modes and convert them into CLAUDE.md prohibitions and requirements
     - Rework visibility: how session logs and commit attribution create the data infrastructure for rework rate analysis without significant additional engineering overhead

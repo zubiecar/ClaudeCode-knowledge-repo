@@ -138,7 +138,7 @@ This is not a macro problem that individual teams are powerless about. It is a c
 [^13]: DEV Community — "AI Is Creating a New Kind of Tech Debt — And Nobody Is Talking About It," March 2026. https://dev.to/harsh2644/ai-is-creating-a-new-kind-of-tech-debt-and-nobody-is-talking-about-it-3pm6
     Profession-level implications of team-level AI practices: the collective outcome argument for individual teams maintaining deliberate junior development practices rather than treating this as others' responsibility.
 
-[^14]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^14]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - First-person junior developer perspective: the experience of discovering skill atrophy and the career trajectory implications of AI-dependent development
     - Portfolio strategy for AI-assisted developers: how to build external evidence of independent capability alongside AI-assisted productivity
     - Practical recovery: what the path from fragile expert to genuine expert looks like for a junior engineer who has recognized the pattern early enough to address it

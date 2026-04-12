@@ -140,7 +140,7 @@ Length is the most common silent failure mode. Anthropic's documentation and emp
     - Length management: empirical demonstration of how context window attention distributes across instructions of varying depth and placement in the file
     - Testing configuration effectiveness: techniques for verifying that instructions are being followed rather than silently ignored in long or complex CLAUDE.md files
 
-[^12]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 6 (CLAUDE.md): complete walkthrough of file structure, section organization, import patterns, and the five-category architecture for a maintainable team configuration file
     - Team ownership model: how to configure CODEOWNERS, the PR review process for CLAUDE.md changes, and the standing retrospective agenda item for collecting corrections
     - Validation: the test checklist approach for verifying CLAUDE.md effectiveness after updates

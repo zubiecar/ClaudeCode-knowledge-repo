@@ -150,7 +150,7 @@ The risk of AI-only education budget is a team whose AI tool proficiency increas
     - Source quality heuristics: the criteria practitioners use to evaluate whether a new source belongs on a team monitoring list vs. should be treated as a one-off reference
     - Brief format in practice: how structured learning briefs are actually used in practice review meetings; the difference between briefs that change team practice and briefs that are noted and filed
 
-[^19]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^19]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Content anxiety in AI development: the psychological experience of trying to track a fast-moving field; how selective source monitoring resolves the anxiety without creating a fear of missing out
     - Practitioner source quality: which types of content from working engineers produce the highest signal for teams trying to improve their AI workflow practices
     - Education budget philosophy: the case for investing in foundational programming skills alongside AI tool proficiency; why engineers who understand fundamentals deeply get more out of AI assistance

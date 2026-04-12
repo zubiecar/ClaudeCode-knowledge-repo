@@ -147,7 +147,7 @@ The additional review input question — when to involve reviewers beyond the st
     - Accessibility in AI-generated frontend code: demonstration of how AI-generated components fail WCAG criteria by default and how explicit prompting improves but does not guarantee compliance
     - Team review culture for bias: what it looks like when a team incorporates bias review as a normal part of code review vs. treating it as a special audit
 
-[^18]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^18]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - First-person experience with biased AI output: examples from junior developers of discovering cultural assumptions in AI-generated code during review
     - The review gap: how technical correctness review misses cultural assumption review when the checklist does not include it
     - Practical correction workflow: how to identify and correct naming, example, and documentation assumptions in AI-generated code without slowing the review process

@@ -156,7 +156,7 @@ The most operationally relevant form of this bias for a software team is archite
 [^17]: Yue Liu et al. — "Debt Behind the AI Boom: A Large-Scale Empirical Study of AI-Generated Code in the Wild," arXiv:2603.28592, March 30, 2026. https://arxiv.org/html/2603.28592
     Training data bias in AI-generated outputs: implicit architectural assumptions, convention drift toward majority patterns, and the role of explicit constraint in overriding training data defaults.
 
-[^18]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^18]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Junior developer perspective: first-person account of skill atrophy and the recognition that AI assistance was masking rather than building foundational capability
     - The career risk: why employers in 2025–2026 are skeptical of junior developers whose AI-assisted output quality masks uncertain independent competence
     - Practical countermeasures: what individual engineers and teams can do to ensure AI use builds rather than replaces the skills that underlie long-term career development

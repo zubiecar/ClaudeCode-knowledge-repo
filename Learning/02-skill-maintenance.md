@@ -136,7 +136,7 @@ The highest-signal sources for an 11-person team are: Anthropic's own documentat
 [^14]: HackerRank — "2025 Developer Skills Report." https://www.hackerrank.com/reports/developer-skills-report-2025
     Education budget allocation: why investment in foundational engineering skills (algorithms, systems, security) produces higher returns for AI-assisted teams than investment solely in AI tool proficiency.
 
-[^15]: Theo (t3.gg) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
+[^15]: ThePrimeagen (The PrimeTime) — "Jr Devs - 'I Can't Code Anymore'," YouTube, February 21, 2025. https://www.youtube.com/watch?v=1Se2zTlXDwY
     - Personal skill atrophy experience: first-person account of discovering debugging capability had degraded after months of AI-first development, and the deliberate practice required to restore it
     - AI-free project recommendation: maintaining at least one development context entirely outside AI tools to preserve the exploratory learning process
     - The dependency detection moment: how to recognize when AI assistance has shifted from multiplier to crutch, and the specific practices that reverse the trajectory

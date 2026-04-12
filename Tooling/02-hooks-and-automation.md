@@ -125,7 +125,7 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
 [^10]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/
     The verification gap — 52% of developers who distrust AI code accept it without verification — as the specific behavioral failure that quality gate hooks address by making verification automatic rather than voluntary.
 
-[^11]: Sabrina Ramonov — "The ULTIMATE Claude Code Tutorial," YouTube, February 17, 2026. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^11]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Step 3 (Quality Gate): complete walkthrough of configuring PostToolUse hooks for linting, testing, and security scanning with blocking behavior for failures
     - UserPromptSubmit hook configuration: live demonstration of dynamic context injection including date, sprint context, and recent git activity
     - settings.json team configuration: how to structure the project-level settings file for consistent hook distribution across all developer machines
