@@ -10,18 +10,18 @@ Codebase health is the lagging indicator in the AI governance metrics suite. Whi
 
 ```mermaid
 flowchart LR
-    A[AI Adoption\nIncreases] --> B[More AI-Generated Code\nOptimized for Direct Solutions]
-    B --> C[Duplication Rises\nRefactoring Declines\nComplexity Increases]
-    C --> D[CLAUDE.md Context\nMust Grow to Stay Accurate]
-    D --> E[Sessions Need More\nManual Context Loading]
-    E --> F[AI Output Deviates\nfrom Established Patterns]
-    F --> G[More Architectural\nRework]
+    A[AI Adoption<br/>Increases] --> B[More AI-Generated Code<br/>Optimized for Direct Solutions]
+    B --> C[Duplication Rises<br/>Refactoring Declines<br/>Complexity Increases]
+    C --> D[CLAUDE.md Context<br/>Must Grow to Stay Accurate]
+    D --> E[Sessions Need More<br/>Manual Context Loading]
+    E --> F[AI Output Deviates<br/>from Established Patterns]
+    F --> G[More Architectural<br/>Rework]
     G --> C
-    C --> H{Health Threshold\nExceeded?}
-    H --> |Yes| I[Remediation Sprint:\nDeduplication + Refactoring]
-    I --> J[Update CLAUDE.md\nArchitecture Guidance]
+    C --> H{Health Threshold<br/>Exceeded?}
+    H --> |Yes| I[Remediation Sprint:<br/>Deduplication + Refactoring]
+    I --> J[Update CLAUDE.md<br/>Architecture Guidance]
     J --> B
-    H --> |No| K[Continue Quarterly\nMonitoring]
+    H --> |No| K[Continue Quarterly<br/>Monitoring]
 ```
 
 The feedback loop makes codebase health a high-priority governance concern: poor codebase health degrades future AI output quality. As duplication rises and complexity increases, the CLAUDE.md context required to navigate the codebase accurately becomes more extensive, sessions require more manual context loading to produce targeted outputs, and AI-generated code is more likely to deviate from established patterns because those patterns are harder to represent concisely in context. Monitoring codebase health proactively — before the degradation is severe enough to impede development — is both a quality governance practice and a practical investment in the team's future AI productivity.

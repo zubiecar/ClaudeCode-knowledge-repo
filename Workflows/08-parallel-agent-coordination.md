@@ -16,21 +16,21 @@ This memo covers when parallel agent workflows are appropriate and when they are
 
 ```mermaid
 flowchart TD
-    A[Parallel Workflow Proposed] --> B{Independence test:\nNo shared file writes?\nOutputs integrate without\nsequential reasoning?}
+    A[Parallel Workflow Proposed] --> B{Independence test:<br/>No shared file writes?<br/>Outputs integrate without<br/>sequential reasoning?}
     B --> |No| SEQ[Run Sequentially]
-    B --> |Yes| C[Write Shared Spec Document\nModule boundaries · interface contracts\nNaming conventions · prohibited patterns]
-    C --> D[Create N Worktrees Atomically\ngit fetch then all worktrees\nfrom same base commit]
-    D --> E[Launch Parallel Sessions\nEach scoped to its worktree\nand explicit file assignment]
-    E --> F{Phase 1 Complete\nfor All Sessions?}
-    F --> |Session failed — owns\nshared dependency| G[Abort remaining sessions\nResolve failure — relaunch all]
-    F --> |Session failed — independent module| H[Continue others\nRelaunch failed session alone]
-    F --> |All complete| I[Synchronization Review\nCheck for shared-element changes\nCoordination owner — 30 min max]
-    I --> J{Shared interfaces\nneed updating?}
-    J --> |Yes| K[Update shared spec\nRelaunch Phase 2 with new spec]
-    J --> |No| L[Review Each Worktree\nas Independent PR]
+    B --> |Yes| C[Write Shared Spec Document<br/>Module boundaries · interface contracts<br/>Naming conventions · prohibited patterns]
+    C --> D[Create N Worktrees Atomically<br/>git fetch then all worktrees<br/>from same base commit]
+    D --> E[Launch Parallel Sessions<br/>Each scoped to its worktree<br/>and explicit file assignment]
+    E --> F{Phase 1 Complete<br/>for All Sessions?}
+    F --> |Session failed — owns<br/>shared dependency| G[Abort remaining sessions<br/>Resolve failure — relaunch all]
+    F --> |Session failed — independent module| H[Continue others<br/>Relaunch failed session alone]
+    F --> |All complete| I[Synchronization Review<br/>Check for shared-element changes<br/>Coordination owner — 30 min max]
+    I --> J{Shared interfaces<br/>need updating?}
+    J --> |Yes| K[Update shared spec<br/>Relaunch Phase 2 with new spec]
+    J --> |No| L[Review Each Worktree<br/>as Independent PR]
     K --> L
-    L --> M[Merge Agent Session\nIntegrates all parallel outputs]
-    M --> N[Batch Cleanup\nRemove all worktrees after PRs merged]
+    L --> M[Merge Agent Session<br/>Integrates all parallel outputs]
+    M --> N[Batch Cleanup<br/>Remove all worktrees after PRs merged]
 ```
 
 ## Section 1: When Parallelism Is Appropriate

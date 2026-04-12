@@ -33,16 +33,16 @@ The mechanism is not that AI is careless — it is that AI generates code that i
 ```mermaid
 flowchart TD
     subgraph STRIDE["STRIDE Threat Categories — AI Development Sessions"]
-        S["Spoofing\nPrompt injection via repo files,\ndocumentation, or test fixtures\nmanipulates session behavior"]
-        T["Tampering\nAI-generated code introduces\nbackdoors or weakened controls\nthat survive review"]
-        I["Information Disclosure\nSession reads sensitive values\nthat appear in outputs or logs"]
-        E["Elevation of Privilege\nAgentic sessions with permissions\nbeyond what the task requires"]
+        S["Spoofing<br/>Prompt injection via repo files,<br/>documentation, or test fixtures<br/>manipulates session behavior"]
+        T["Tampering<br/>AI-generated code introduces<br/>backdoors or weakened controls<br/>that survive review"]
+        I["Information Disclosure<br/>Session reads sensitive values<br/>that appear in outputs or logs"]
+        E["Elevation of Privilege<br/>Agentic sessions with permissions<br/>beyond what the task requires"]
     end
-    S --> SM["Mitigations:\n.claudeignore scope restriction\nReview untrusted content before injection\nConstrained session scope"]
-    T --> TM["Mitigations:\nWriter/reviewer pattern\nSecurity-specialist reviewer session\nSAST on security-critical paths"]
-    I --> IM["Mitigations:\n.claudeignore sensitive assets\nSecrets directory exclusion\nAudit session context before run"]
-    E --> EM["Mitigations:\nMinimum-permission profiles\n--allowedTools scoping\nPlan Mode for exploration"]
-    SM --> CM[CLAUDE.md Security Constraints\n+ Sprint Threat Model Update]
+    S --> SM["Mitigations:<br/>.claudeignore scope restriction<br/>Review untrusted content before injection<br/>Constrained session scope"]
+    T --> TM["Mitigations:<br/>Writer/reviewer pattern<br/>Security-specialist reviewer session<br/>SAST on security-critical paths"]
+    I --> IM["Mitigations:<br/>.claudeignore sensitive assets<br/>Secrets directory exclusion<br/>Audit session context before run"]
+    E --> EM["Mitigations:<br/>Minimum-permission profiles<br/>--allowedTools scoping<br/>Plan Mode for exploration"]
+    SM --> CM[CLAUDE.md Security Constraints<br/>+ Sprint Threat Model Update]
     TM --> CM
     IM --> CM
     EM --> CM

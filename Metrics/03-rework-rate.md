@@ -61,11 +61,11 @@ flowchart TD
     A[Rework Event Observed] --> B{Root Cause?}
     B --> C[Defect Rework]
     B --> D[Architectural Rework]
-    B --> E[Comprehension-Driven\nRewrite]
-    C --> F[Verification Gap\nImprove prompting & review]
-    D --> G[CLAUDE.md Context Gap\nAdd architectural guidance]
-    E --> H[Readability Standard Gap\nEnforce naming & comment standards]
-    F --> I[Measure Rework Rate\nDifferential Next Sprint]
+    B --> E[Comprehension-Driven<br/>Rewrite]
+    C --> F[Verification Gap<br/>Improve prompting & review]
+    D --> G[CLAUDE.md Context Gap<br/>Add architectural guidance]
+    E --> H[Readability Standard Gap<br/>Enforce naming & comment standards]
+    F --> I[Measure Rework Rate<br/>Differential Next Sprint]
     G --> I
     H --> I
     I --> |Differential still > 2×| J[Governance Review]

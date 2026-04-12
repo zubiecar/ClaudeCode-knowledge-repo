@@ -30,19 +30,19 @@ Escalation paths also function as policy feedback channels. Engineers who use es
 
 ```mermaid
 flowchart TD
-    E[Escalation Event Received] --> Q1{Intentional choice\nto act outside policy?}
-    Q1 --> |Yes| V[Class: Policy Violation\nOwner: Architect\nTimeline: 2 business days]
-    Q1 --> |No| Q2{Policy silent or\nambiguous about\nthis situation?}
-    Q2 --> |Yes| EC[Class: Edge Case\nOwner: Architect\nTimeline: 1 business day]
-    Q2 --> |No — policy addresses it\nbut doesn't fit a legitimate need| PE[Class: Policy Error\nOwner: Architect\nTimeline: Initiate PR revision]
-    V --> VR[Coaching conversation + log entry\nRoot cause: awareness / ambiguity / pressure\nCLAUDE.md or communication update]
-    EC --> ECR[Documented interpretation\nattached to policy section\nCanonical answer for all engineers]
-    PE --> PER[Temporary documented exception\nwhile revision PR completes]
-    VR --> LOG[Escalation Log Entry\nClass · policy section · resolution · trigger?]
+    E[Escalation Event Received] --> Q1{Intentional choice<br/>to act outside policy?}
+    Q1 --> |Yes| V[Class: Policy Violation<br/>Owner: Architect<br/>Timeline: 2 business days]
+    Q1 --> |No| Q2{Policy silent or<br/>ambiguous about<br/>this situation?}
+    Q2 --> |Yes| EC[Class: Edge Case<br/>Owner: Architect<br/>Timeline: 1 business day]
+    Q2 --> |No — policy addresses it<br/>but doesn't fit a legitimate need| PE[Class: Policy Error<br/>Owner: Architect<br/>Timeline: Initiate PR revision]
+    V --> VR[Coaching conversation + log entry<br/>Root cause: awareness / ambiguity / pressure<br/>CLAUDE.md or communication update]
+    EC --> ECR[Documented interpretation<br/>attached to policy section<br/>Canonical answer for all engineers]
+    PE --> PER[Temporary documented exception<br/>while revision PR completes]
+    VR --> LOG[Escalation Log Entry<br/>Class · policy section · resolution · trigger?]
     ECR --> LOG
     PER --> LOG
-    LOG --> PAT{Same class + policy section\n3+ times in a quarter?}
-    PAT --> |Yes| REV[Policy Revision Review\nvia PR process — CTO approval required]
+    LOG --> PAT{Same class + policy section<br/>3+ times in a quarter?}
+    PAT --> |Yes| REV[Policy Revision Review<br/>via PR process — CTO approval required]
     PAT --> |No| DONE[Done]
 ```
 

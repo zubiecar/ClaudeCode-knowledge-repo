@@ -60,17 +60,17 @@ There are two mechanisms for making ADRs session-accessible. The first, and most
 
 ```mermaid
 flowchart TD
-    DISC[Architectural Decision Made\nmeeting · PR review · Slack thread] --> DRAFT["Claude Code drafts ADR\nfrom meeting notes / thread transcript\nwithin 24 hours of decision"]
-    DRAFT --> ARCH[Architect Reviews Draft\nConfirms rationale\nCorrects mischaracterized alternatives\nAdds AI Constraints field]
+    DISC[Architectural Decision Made<br/>meeting · PR review · Slack thread] --> DRAFT["Claude Code drafts ADR<br/>from meeting notes / thread transcript<br/>within 24 hours of decision"]
+    DRAFT --> ARCH[Architect Reviews Draft<br/>Confirms rationale<br/>Corrects mischaracterized alternatives<br/>Adds AI Constraints field]
     ARCH --> Q{ADR accepted?}
     Q --> |Revisions needed| DRAFT
-    Q --> |Accepted| MERGE["Merge to docs/adr/NNN-title.md\nUpdate docs/adr/README.md index\nMark any superseded ADRs"]
-    MERGE --> CLAUDE["Extract AI Constraints field\nAdd to CLAUDE.md with ADR reference\n'# See ADR-042 — do not...'"]
-    CLAUDE --> ACTIVE["ADR Active\nSessions query README.md index\nCLAUDE.md enforces constraints"]
+    Q --> |Accepted| MERGE["Merge to docs/adr/NNN-title.md<br/>Update docs/adr/README.md index<br/>Mark any superseded ADRs"]
+    MERGE --> CLAUDE["Extract AI Constraints field<br/>Add to CLAUDE.md with ADR reference<br/>'# See ADR-042 — do not...'"]
+    CLAUDE --> ACTIVE["ADR Active<br/>Sessions query README.md index<br/>CLAUDE.md enforces constraints"]
     ACTIVE --> CHANGE{Architecture revisited?}
-    CHANGE --> |Yes| NEW[New ADR drafted\nOld ADR marked Superseded\nCLAUDE.md constraint updated]
+    CHANGE --> |Yes| NEW[New ADR drafted<br/>Old ADR marked Superseded<br/>CLAUDE.md constraint updated]
     NEW --> ARCH
-    CHANGE --> |No| QUARTERLY[Quarterly ADR Review\nStale? Missing? Ready for supersession?]
+    CHANGE --> |No| QUARTERLY[Quarterly ADR Review<br/>Stale? Missing? Ready for supersession?]
     QUARTERLY --> ACTIVE
 ```
 

@@ -13,23 +13,23 @@ This memo covers context window management, the git worktree pattern for paralle
 ```mermaid
 stateDiagram-v2
     [*] --> FreshContext: Session starts
-    FreshContext: Fresh Context\nAll constraints active\nHigh output quality
-    FreshContext --> DegradingContext: Session extends beyond\n60–90 min or spans multiple tasks
+    FreshContext: Fresh Context<br/>All constraints active<br/>High output quality
+    FreshContext --> DegradingContext: Session extends beyond<br/>60–90 min or spans multiple tasks
 
-    DegradingContext: Degrading Context\nEarlier instructions lose weight\nOutput drift becoming visible
-    DegradingContext --> CorrectionSpiral: Same error repeated\nafter correction
-    DegradingContext --> CompactDecision: Quality declining\nbut task still on-track
+    DegradingContext: Degrading Context<br/>Earlier instructions lose weight<br/>Output drift becoming visible
+    DegradingContext --> CorrectionSpiral: Same error repeated<br/>after correction
+    DegradingContext --> CompactDecision: Quality declining<br/>but task still on-track
 
-    CorrectionSpiral: Correction Spiral\nFailed fixes pollute context\nContinuing is slower than resetting
+    CorrectionSpiral: Correction Spiral<br/>Failed fixes pollute context<br/>Continuing is slower than resetting
 
-    CompactDecision --> CompactedContext: /compact with explicit\npreservation instructions
-    CompactedContext: Compacted Context\nKey state preserved in summary\nSession continues productively
+    CompactDecision --> CompactedContext: /compact with explicit<br/>preservation instructions
+    CompactedContext: Compacted Context<br/>Key state preserved in summary<br/>Session continues productively
     CompactedContext --> DegradingContext: Session continues to extend
 
-    CompactDecision --> Reset: Scope has drifted far\nfrom original task
-    CorrectionSpiral --> Reset: /clear — more than\ntwo failed corrections
+    CompactDecision --> Reset: Scope has drifted far<br/>from original task
+    CorrectionSpiral --> Reset: /clear — more than<br/>two failed corrections
 
-    Reset: Fresh Session\nReconstruct context with\nimproved, tighter prompt
+    Reset: Fresh Session<br/>Reconstruct context with<br/>improved, tighter prompt
     Reset --> FreshContext
 ```
 

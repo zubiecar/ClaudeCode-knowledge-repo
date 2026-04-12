@@ -18,20 +18,20 @@ This memo covers the hook event model, the four most valuable hook configuration
 flowchart LR
     subgraph LIFECYCLE["Session Lifecycle — Hook Trigger Points"]
         direction TB
-        START([Session Start]) --> UPS[UserPromptSubmit\nEvery prompt submission]
-        UPS --> PRE[PreToolUse\nBefore each tool call]
-        PRE --> TOOL[Tool Executes\nWrite · Bash · Read · etc.]
-        TOOL --> POST[PostToolUse\nAfter tool call completes]
-        POST --> STOP_E[Stop\nClaude finishes response]
+        START([Session Start]) --> UPS[UserPromptSubmit<br/>Every prompt submission]
+        UPS --> PRE[PreToolUse<br/>Before each tool call]
+        PRE --> TOOL[Tool Executes<br/>Write · Bash · Read · etc.]
+        TOOL --> POST[PostToolUse<br/>After tool call completes]
+        POST --> STOP_E[Stop<br/>Claude finishes response]
         STOP_E --> |Next prompt| UPS
         STOP_E --> END([Session End])
-        TOOL --> SUB[SubagentStop\nSubagent session completes]
+        TOOL --> SUB[SubagentStop<br/>Subagent session completes]
     end
-    UPS -.->|Inject date + recent\ngit log + sprint context| CTX["Context Injection\n(non-blocking)"]
-    PRE -.->|Log every Bash\ncommand to audit file| AUDIT["Audit Log\n(non-blocking)"]
-    POST -.->|Run linter on Write\nRun tests on source changes\nRun SAST on security paths| QG["Quality Gates\n(blocking on failure)"]
-    STOP_E -.->|Desktop notification\nSession summary written| NOTIFY["Notifications\n(non-blocking)"]
-    SUB -.->|Verify file scope\nmatches spec assignment| SAGENT["Subagent Audit\n(blocking on mismatch)"]
+    UPS -.->|Inject date + recent<br/>git log + sprint context| CTX["Context Injection<br/>(non-blocking)"]
+    PRE -.->|Log every Bash<br/>command to audit file| AUDIT["Audit Log<br/>(non-blocking)"]
+    POST -.->|Run linter on Write<br/>Run tests on source changes<br/>Run SAST on security paths| QG["Quality Gates<br/>(blocking on failure)"]
+    STOP_E -.->|Desktop notification<br/>Session summary written| NOTIFY["Notifications<br/>(non-blocking)"]
+    SUB -.->|Verify file scope<br/>matches spec assignment| SAGENT["Subagent Audit<br/>(blocking on mismatch)"]
 ```
 
 **Description:** Claude Code fires hooks at six event types in a session lifecycle: `PreToolUse` (before Claude uses any tool), `PostToolUse` (after a tool call completes), `UserPromptSubmit` (when the engineer submits a new prompt), `Stop` (when Claude finishes a response), `Notification` (when Claude sends a system notification), and `SubagentStop` (when a subagent session completes). Each hook type receives structured JSON input about the event — the tool name, the file being written, the command being run — and can return output that Claude incorporates into its next action.[^2]

@@ -30,15 +30,15 @@ The context exhaustion problem is structural. Claude Code sessions have a finite
 
 ```mermaid
 flowchart TD
-    A[Session in Progress] --> B{Complexity Signal\nDetected?}
-    B --> |No| C{Session > 90 min or\n> 800 lines generated?}
+    A[Session in Progress] --> B{Complexity Signal<br/>Detected?}
+    B --> |No| C{Session > 90 min or<br/>> 800 lines generated?}
     C --> |No| A
     C --> |Yes| B
-    B --> |Yes| D{Still on original\ntask frame?}
-    D --> |Yes — context\nstill coherent| E[Run /compact]
-    D --> |No — scope has\nexpanded significantly| F[Start Fresh Session]
-    E --> G[Continue with\ncompacted context]
-    F --> H[Reconstruct relevant context\n3-min setup: CLAUDE.md +\nmodule examples + task summary]
+    B --> |Yes| D{Still on original<br/>task frame?}
+    D --> |Yes — context<br/>still coherent| E[Run /compact]
+    D --> |No — scope has<br/>expanded significantly| F[Start Fresh Session]
+    E --> G[Continue with<br/>compacted context]
+    F --> H[Reconstruct relevant context<br/>3-min setup: CLAUDE.md +<br/>module examples + task summary]
     H --> I[New Focused Session]
 ```
 

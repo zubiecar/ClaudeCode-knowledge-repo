@@ -12,22 +12,22 @@ This memo covers when CI-run Claude Code adds value versus when it adds noise, h
 
 ```mermaid
 flowchart TD
-    PR[Pull Request Opened] --> R[PR Review Step\n/review-pr skill]
-    PR --> S[Security Gate\nSAST output + Claude triage]
-    PR --> C[Coverage Gate\nAI-primary threshold check]
-    R --> RF{Critical\nFindings?}
-    RF --> |Yes| BLOCK[Block Merge\nLine-specific review comments]
-    RF --> |No| ADVISE[Advisory PR Comments\nOrganized by category]
-    S --> SF{High/Critical\nVulnerabilities?}
+    PR[Pull Request Opened] --> R[PR Review Step<br/>/review-pr skill]
+    PR --> S[Security Gate<br/>SAST output + Claude triage]
+    PR --> C[Coverage Gate<br/>AI-primary threshold check]
+    R --> RF{Critical<br/>Findings?}
+    RF --> |Yes| BLOCK[Block Merge<br/>Line-specific review comments]
+    RF --> |No| ADVISE[Advisory PR Comments<br/>Organized by category]
+    S --> SF{High/Critical<br/>Vulnerabilities?}
     SF --> |Yes| BLOCK
     SF --> |No| ADVISE
-    C --> CF{Coverage\nBelow Threshold?}
-    CF --> |Yes| GEN[Generate Candidate Tests\nPosted as PR comment for review]
+    C --> CF{Coverage<br/>Below Threshold?}
+    CF --> |Yes| GEN[Generate Candidate Tests<br/>Posted as PR comment for review]
     CF --> |No| MERGE[Ready to Merge]
-    BLOCK --> |Engineer addresses or dismisses\nwith justification| MERGE
+    BLOCK --> |Engineer addresses or dismisses<br/>with justification| MERGE
     ADVISE --> MERGE
-    GEN --> |Engineer reviews\nand merges tests| MERGE
-    MERGE --> LOG[Audit Log\ntimestamp · skill version · findings · dismissals]
+    GEN --> |Engineer reviews<br/>and merges tests| MERGE
+    MERGE --> LOG[Audit Log<br/>timestamp · skill version · findings · dismissals]
 ```
 
 ---

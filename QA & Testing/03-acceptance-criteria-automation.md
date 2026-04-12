@@ -49,12 +49,12 @@ flowchart TD
     AI --> TESTS[Generated Tests]
     IMPL --> PASS{Tests Pass?}
     TESTS --> PASS
-    PASS --> |Yes — but shared\nmisinterpretation| SHIP[Feature Ships Broken]
+    PASS --> |Yes — but shared<br/>misinterpretation| SHIP[Feature Ships Broken]
     PASS --> |Yes — correct| OK[Feature Works Correctly]
 
-    AC --> QA[QA Engineer\nIndependent Review]
-    QA --> CHECK{Does implementation\nmatch intent?}
-    CHECK --> |No — catches\ncircularity| FIX[Fix Before Ship]
+    AC --> QA[QA Engineer<br/>Independent Review]
+    QA --> CHECK{Does implementation<br/>match intent?}
+    CHECK --> |No — catches<br/>circularity| FIX[Fix Before Ship]
     CHECK --> |Yes| OK
 ```
 

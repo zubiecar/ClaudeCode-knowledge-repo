@@ -26,21 +26,21 @@ The output of a Plan Mode session is an implementation plan in structured text. 
 
 ```mermaid
 flowchart TD
-    A[Task Identified] --> B{Single-sentence diff?\nOne file only?}
-    B --> |Yes| C[Direct Implementation\nNo planning phase needed]
-    B --> |No — multi-file or\nunfamiliar code| D[Explore Phase\nPlan Mode — read-only\nClaude reads files, asks questions]
-    D --> E{True scope larger\nthan expected?}
-    E --> |Yes| F[Narrow Task\nor Accept Broader Scope]
+    A[Task Identified] --> B{Single-sentence diff?<br/>One file only?}
+    B --> |Yes| C[Direct Implementation<br/>No planning phase needed]
+    B --> |No — multi-file or<br/>unfamiliar code| D[Explore Phase<br/>Plan Mode — read-only<br/>Claude reads files, asks questions]
+    D --> E{True scope larger<br/>than expected?}
+    E --> |Yes| F[Narrow Task<br/>or Accept Broader Scope]
     F --> G
-    E --> |No| G[Plan Phase\nStructured plan output\nno code written yet]
-    G --> H[Engineer Reviews Plan\nCtrl+G — edit assumptions\nnot just check correctness]
-    H --> I{Plan correct?\nArchitectural assumptions valid?}
+    E --> |No| G[Plan Phase<br/>Structured plan output<br/>no code written yet]
+    G --> H[Engineer Reviews Plan<br/>Ctrl+G — edit assumptions<br/>not just check correctness]
+    H --> I{Plan correct?<br/>Architectural assumptions valid?}
     I --> |No| G
-    I --> |Yes| J[Implement Phase\nExecute against approved plan]
-    J --> K{Implementation\nmatches plan?}
-    K --> |Drift detected| L[Compare vs. plan\nRevise or /rewind to plan point]
+    I --> |Yes| J[Implement Phase<br/>Execute against approved plan]
+    J --> K{Implementation<br/>matches plan?}
+    K --> |Drift detected| L[Compare vs. plan<br/>Revise or /rewind to plan point]
     L --> J
-    K --> |Yes| M[Commit Phase\nAtomic commit per completed task\nnot per session]
+    K --> |Yes| M[Commit Phase<br/>Atomic commit per completed task<br/>not per session]
     M --> N{More tasks?}
     N --> |Yes| D
     N --> |No| O[Done]

@@ -32,15 +32,15 @@ The specification input is the most critical. When Claude Code has access to the
 
 ```mermaid
 flowchart TD
-    A[Spec / Acceptance Criteria] --> B[Test Generation Session\nWriter — spec + known edge cases]
+    A[Spec / Acceptance Criteria] --> B[Test Generation Session<br/>Writer — spec + known edge cases]
     B --> C[Generated Test Suite]
-    C --> D[Reviewer Session\nFresh context — spec only, no implementation]
+    C --> D[Reviewer Session<br/>Fresh context — spec only, no implementation]
     A --> D
     D --> E{Gaps Found?}
-    E --> |Yes| F[Gap Report:\nMissing spec coverage\nWeak assertions\nUncovered error paths]
+    E --> |Yes| F[Gap Report:<br/>Missing spec coverage<br/>Weak assertions<br/>Uncovered error paths]
     F --> G[Extend Test Suite]
     G --> D
-    E --> |No| H[Test Suite Complete\nfor Human Review]
+    E --> |No| H[Test Suite Complete<br/>for Human Review]
 ```
 
 **Description:** The writer/reviewer pattern — running a fresh-context session to review the output of a generating session — is as applicable to test suites as it is to implementation code. The generating session knows which failure modes it chose to cover; it cannot easily see which failure modes it did not cover, because the uncovered modes are not present in its context. A fresh-context reviewer session approaches the test suite with no knowledge of the implementation choices and can identify gaps that are structurally invisible to the generating session.[^5]

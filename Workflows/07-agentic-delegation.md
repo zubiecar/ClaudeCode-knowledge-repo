@@ -30,21 +30,21 @@ CIO's 2026 analysis of how agentic AI reshapes engineering workflows describes t
 
 ```mermaid
 flowchart TD
-    A[Task Candidate for Delegation] --> B{1. Requirements fully\nspecifiable in text?\nNo org/relational context needed?}
-    B --> |No| DENY[Classify as AI-Assisted\nnot AI-Primary]
-    B --> |Yes| C{2. Pass/fail verification\nmechanism available?\nTest suite, build, linter?}
+    A[Task Candidate for Delegation] --> B{1. Requirements fully<br/>specifiable in text?<br/>No org/relational context needed?}
+    B --> |No| DENY[Classify as AI-Assisted<br/>not AI-Primary]
+    B --> |Yes| C{2. Pass/fail verification<br/>mechanism available?<br/>Test suite, build, linter?}
     C --> |No| DENY
-    C --> |Yes| D{3. Scope bounded to\nwell-understood files?\nNo open-ended boundaries?}
+    C --> |Yes| D{3. Scope bounded to<br/>well-understood files?<br/>No open-ended boundaries?}
     D --> |No| DENY
-    D --> |Yes| E{4. Follows patterns already\nexisting in codebase?\nNot first-of-kind architecture?}
+    D --> |Yes| E{4. Follows patterns already<br/>existing in codebase?<br/>Not first-of-kind architecture?}
     E --> |No| DENY
-    E --> |Yes| F{5. Output reviewable before\nany irreversible action?\nNo direct deploy / DB migration?}
+    E --> |Yes| F{5. Output reviewable before<br/>any irreversible action?<br/>No direct deploy / DB migration?}
     F --> |No — hard gate| DENY
-    F --> |Yes — all 5 met| DELEGATE[Delegate with Bounded Autonomy\n--allowedTools scoped · audit log on\nExplicit scope, time, cost limits]
-    DELEGATE --> G[Review Output\nFresh-context reviewer + human review]
+    F --> |Yes — all 5 met| DELEGATE[Delegate with Bounded Autonomy<br/>--allowedTools scoped · audit log on<br/>Explicit scope, time, cost limits]
+    DELEGATE --> G[Review Output<br/>Fresh-context reviewer + human review]
     G --> H{Output correct?}
-    H --> |Yes| MERGE[Merge\nDelegating engineer retains\nfull accountability]
-    H --> |No| UPDATE[Diagnose failure\nUpdate delegable task list]
+    H --> |Yes| MERGE[Merge<br/>Delegating engineer retains<br/>full accountability]
+    H --> |No| UPDATE[Diagnose failure<br/>Update delegable task list]
     UPDATE --> DENY
 ```
 

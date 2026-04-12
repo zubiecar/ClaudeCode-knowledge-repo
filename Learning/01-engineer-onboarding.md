@@ -14,20 +14,20 @@ This memo covers the structure of an AI workflow onboarding program for a small 
 
 ```mermaid
 flowchart TD
-    START([New Engineer Joins]) --> CB[Week 1: Codebase Onboarding\nStandard process + tooling setup]
-    CB --> AI[Week 1: AI Workflow Onboarding\nDelivered by Architect\nCLAUDE.md tour · command library\nverification standards · escalation paths]
-    AI --> CK{Checklist Verification\nCan explain top 3 CLAUDE.md rules\nand incidents that motivated them?}
-    CK --> |Not yet| REVIEW[CLAUDE.md review\nwith Architect]
+    START([New Engineer Joins]) --> CB[Week 1: Codebase Onboarding<br/>Standard process + tooling setup]
+    CB --> AI[Week 1: AI Workflow Onboarding<br/>Delivered by Architect<br/>CLAUDE.md tour · command library<br/>verification standards · escalation paths]
+    AI --> CK{Checklist Verification<br/>Can explain top 3 CLAUDE.md rules<br/>and incidents that motivated them?}
+    CK --> |Not yet| REVIEW[CLAUDE.md review<br/>with Architect]
     REVIEW --> CK
-    CK --> |Yes| SPRINT1[Sprint 1: Mentored Tasks\nOne per type: scaffold · refactor · test-gen\nBounded scope · existing tests · available mentor]
-    SPRINT1 --> PR1[First PRs Reviewed\nCLAUDE.md adherence · prompt structure\nverification practice · feedback within 24h]
-    PR1 --> SPRINT2[Sprint 2: Continued Mentoring\nAsync session log review\nStructured rubric: architecture · context · verification]
-    SPRINT2 --> MONTH1{Month 1 Assessment\nCan walk through session\nexplaining prompt choices?}
-    MONTH1 --> |Compliance — not internalization| AIFREE[AI-Free Debugging Exercise\nReal bug · no AI access\nReveals foundational understanding]
-    AIFREE --> EXTRA[Additional mentored sessions\n+ targeted AI-free practice]
+    CK --> |Yes| SPRINT1[Sprint 1: Mentored Tasks<br/>One per type: scaffold · refactor · test-gen<br/>Bounded scope · existing tests · available mentor]
+    SPRINT1 --> PR1[First PRs Reviewed<br/>CLAUDE.md adherence · prompt structure<br/>verification practice · feedback within 24h]
+    PR1 --> SPRINT2[Sprint 2: Continued Mentoring<br/>Async session log review<br/>Structured rubric: architecture · context · verification]
+    SPRINT2 --> MONTH1{Month 1 Assessment<br/>Can walk through session<br/>explaining prompt choices?}
+    MONTH1 --> |Compliance — not internalization| AIFREE[AI-Free Debugging Exercise<br/>Real bug · no AI access<br/>Reveals foundational understanding]
+    AIFREE --> EXTRA[Additional mentored sessions<br/>+ targeted AI-free practice]
     EXTRA --> MONTH1
-    MONTH1 --> |Internalized| GATE[Explanation Gate Check\nWalk through completed module:\ndesign decisions · tradeoffs\nno Claude or session logs]
-    GATE --> |Pass| FULL[Full Team Member\nExpected to propose CLAUDE.md updates\nwhen encountering gaps]
+    MONTH1 --> |Internalized| GATE[Explanation Gate Check<br/>Walk through completed module:<br/>design decisions · tradeoffs<br/>no Claude or session logs]
+    GATE --> |Pass| FULL[Full Team Member<br/>Expected to propose CLAUDE.md updates<br/>when encountering gaps]
     GATE --> |Fail| EXTRA
 ```
 

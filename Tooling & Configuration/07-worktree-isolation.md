@@ -72,25 +72,25 @@ Their practical setup recommendation is to keep worktrees as siblings to the mai
 
 ```mermaid
 flowchart TD
-    A[Task Ready for Parallel Session] --> B["git fetch origin\n(always current base)"]
-    B --> C["git worktree add\n../repo-claude-task -b claude/task origin/main"]
-    C --> D[Launch Claude Code Session\nin isolated worktree directory]
-    D --> E[Session runs — no interference\nfrom other sessions]
+    A[Task Ready for Parallel Session] --> B["git fetch origin<br/>(always current base)"]
+    B --> C["git worktree add<br/>../repo-claude-task -b claude/task origin/main"]
+    C --> D[Launch Claude Code Session<br/>in isolated worktree directory]
+    D --> E[Session runs — no interference<br/>from other sessions]
     E --> F{Session complete?}
     F --> |Still running| E
-    F --> |Complete| G[Run test suite\nfrom within worktree]
+    F --> |Complete| G[Run test suite<br/>from within worktree]
     G --> H{Tests pass?}
     H --> |No| I[Fix within worktree]
     I --> G
-    H --> |Yes| J[Open PR for\nworktree branch]
-    J --> K[Writer/reviewer session\nreviews output]
+    H --> |Yes| J[Open PR for<br/>worktree branch]
+    J --> K[Writer/reviewer session<br/>reviews output]
     K --> L[Human code review]
     L --> M{Approved?}
     M --> |Changes needed| N[Continue in same worktree]
     N --> G
     M --> |Approved| O[Merge to main]
-    O --> P["git worktree remove\n../repo-claude-task"]
-    P --> Q[Worktree and branch\ncleaned up]
+    O --> P["git worktree remove<br/>../repo-claude-task"]
+    P --> Q[Worktree and branch<br/>cleaned up]
 ```
 
 **Description:** The worktree lifecycle has four phases: creation before session start, active use during the session, review after session completion, and removal after merge or discard. Each phase has specific requirements that, if not followed, produce either lost work (premature removal) or stale state accumulation (failure to remove). The lifecycle discipline is what separates a team that uses worktrees sustainably from a team that creates them opportunistically and finds itself managing a growing collection of stale branches and orphaned directories.[^3]

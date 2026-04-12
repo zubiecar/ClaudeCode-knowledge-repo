@@ -19,13 +19,13 @@ flowchart TD
     S[Claude Code Session] --> A
     S --> B
     S --> C
-    A[CLAUDE.md\nAlways-on context and defaults]
-    B[Custom Skills\nOn-demand procedures]
-    C[MCP Tools\nExternal capabilities and data]
-    A --> A1[Persistent constraints:\ncode style · security rules\narchitecture patterns]
-    B --> B1[Invocable workflows:\n/review-pr · /audit-security\n/check-architecture]
-    C --> C1[External access:\nGitHub · Linear · databases\nfilesystem]
-    B --> B2[Triggered explicitly:\nexpands to full instructions\nfor the duration of the task]
+    A[CLAUDE.md<br/>Always-on context and defaults]
+    B[Custom Skills<br/>On-demand procedures]
+    C[MCP Tools<br/>External capabilities and data]
+    A --> A1[Persistent constraints:<br/>code style · security rules<br/>architecture patterns]
+    B --> B1[Invocable workflows:<br/>/review-pr · /audit-security<br/>/check-architecture]
+    C --> C1[External access:<br/>GitHub · Linear · databases<br/>filesystem]
+    B --> B2[Triggered explicitly:<br/>expands to full instructions<br/>for the duration of the task]
 ```
 
 **Description:** Custom skills are Markdown files stored in `.claude/commands/` at the repository root (for project-level skills) or in `~/.claude/commands/` (for personal skills available across all projects). Each file's name becomes the slash command: a file named `review.md` becomes `/review`. When an engineer types `/review`, Claude Code reads the file's contents and expands them into the active session as full instructions — the skill's Markdown becomes Claude's operating procedure for the duration of that invocation.[^1] Skills differ from MCP tools in that they do not provide external capabilities; they provide procedural instructions. An MCP tool might give Claude access to a database; a skill tells Claude how to conduct a thorough database-schema review using whatever context is available in the session.

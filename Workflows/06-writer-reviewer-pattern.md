@@ -42,13 +42,13 @@ sequenceDiagram
 
     E->>R: Code + CLAUDE.md + spec.md
     Note over R: Fresh context only — no implementation session history
-    R->>R: Analyze structural issues,\narchitectural misfit, gaps
-    R-->>E: Findings: Action Required /\nRecommended / Optional
+    R->>R: Analyze structural issues,<br/>architectural misfit, gaps
+    R-->>E: Findings: Action Required /<br/>Recommended / Optional
 
     E->>E: Address Action Required findings
 
     E->>H: PR + AI findings as pre-read comment
-    H->>H: Review architectural fit\n"Can you explain it?" test
+    H->>H: Review architectural fit<br/>"Can you explain it?" test
     H-->>E: Approve or request changes
 ```
 

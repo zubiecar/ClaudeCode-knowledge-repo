@@ -14,20 +14,20 @@ CodeRabbit's analysis found that AI-generated PRs had logic and correctness issu
 
 ```mermaid
 flowchart TD
-    PR[PR Submitted] --> ORI{AI-primary\nlabel set?}
+    PR[PR Submitted] --> ORI{AI-primary<br/>label set?}
     ORI --> |No — human-authored| SIMREV[Standard Implementation Review]
-    ORI --> |Yes| SIZE{Net diff\n> 400 lines?}
-    SIZE --> |Yes| DECOMP[Return for decomposition\ninto sub-PRs under 400 lines\nAuthor must understand it to split it]
-    SIZE --> |No| ARCH{PR > 100 lines or\nnew pattern introduced?}
-    ARCH --> |Yes| ARCHR[Architectural Review — Architect\nNew pattern? Duplicate abstraction?\nCoupling conflict? Convention fit?]
+    ORI --> |Yes| SIZE{Net diff<br/>> 400 lines?}
+    SIZE --> |Yes| DECOMP[Return for decomposition<br/>into sub-PRs under 400 lines<br/>Author must understand it to split it]
+    SIZE --> |No| ARCH{PR > 100 lines or<br/>new pattern introduced?}
+    ARCH --> |Yes| ARCHR[Architectural Review — Architect<br/>New pattern? Duplicate abstraction?<br/>Coupling conflict? Convention fit?]
     ARCH --> |No| IMPL
-    ARCHR --> |Misfit found| RETURN[Return for correction\nbefore implementation review]
-    ARCHR --> |Architecture fits| IMPL[Implementation Review\nLogic · tests · readability · CLAUDE.md adherence]
-    IMPL --> EXPL{Author can explain\ndesign decisions\nand tradeoffs?}
-    EXPL --> |No| COMP[Comprehension pass:\nread section + update PR description]
+    ARCHR --> |Misfit found| RETURN[Return for correction<br/>before implementation review]
+    ARCHR --> |Architecture fits| IMPL[Implementation Review<br/>Logic · tests · readability · CLAUDE.md adherence]
+    IMPL --> EXPL{Author can explain<br/>design decisions<br/>and tradeoffs?}
+    EXPL --> |No| COMP[Comprehension pass:<br/>read section + update PR description]
     COMP --> EXPL
-    EXPL --> |Yes| SEC{Security-critical\nmodule?}
-    SEC --> |Yes| SECR[Secondary Security Review\nSAST findings + auth/crypto patterns\nJWT · SQL params · random sources]
+    EXPL --> |Yes| SEC{Security-critical<br/>module?}
+    SEC --> |Yes| SECR[Secondary Security Review<br/>SAST findings + auth/crypto patterns<br/>JWT · SQL params · random sources]
     SEC --> |No| APPROVE[Approve and Merge]
     SECR --> APPROVE
     SIMREV --> APPROVE

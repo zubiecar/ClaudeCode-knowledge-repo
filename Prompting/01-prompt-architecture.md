@@ -31,22 +31,22 @@ The persona component is most commonly omitted because it feels artificial. But 
 ```mermaid
 flowchart TD
     subgraph LAYERS["Context Hierarchy — loads at session start"]
-        GL["CLAUDE.md — Global Layer\nPersistent team rules loaded automatically\nArchitectural patterns · security constraints\ncoding conventions · never per-task"]
-        FL["spec.md — Feature Layer\nCurrent feature requirements\nDesign decisions · acceptance criteria\nwritten once per feature"]
-        SL["Session Prompt — Task Layer\nSpecific implementation step\nMinimum sufficient context only\nnever repeats what layers above cover"]
+        GL["CLAUDE.md — Global Layer<br/>Persistent team rules loaded automatically<br/>Architectural patterns · security constraints<br/>coding conventions · never per-task"]
+        FL["spec.md — Feature Layer<br/>Current feature requirements<br/>Design decisions · acceptance criteria<br/>written once per feature"]
+        SL["Session Prompt — Task Layer<br/>Specific implementation step<br/>Minimum sufficient context only<br/>never repeats what layers above cover"]
     end
     GL --> FL --> SL
 
     subgraph FIVE["Five-Component Prompt Structure"]
-        P1["1 · Persona\nRole + expertise frame\n'Act as a backend engineer who\nknows our auth patterns'"]
-        P2["2 · Task\nSpecific evaluable output\nanchor to existing patterns by name"]
-        P3["3 · Constraints\nWhat must NOT change first\nthen what should change"]
-        P4["4 · Context\nOnly what layers above don't cover\n@ file references for specific examples"]
-        P5["5 · Verification\nRunnable command with binary outcome\n'Run pytest tests/auth/ — fix all failures'"]
+        P1["1 · Persona<br/>Role + expertise frame<br/>'Act as a backend engineer who<br/>knows our auth patterns'"]
+        P2["2 · Task<br/>Specific evaluable output<br/>anchor to existing patterns by name"]
+        P3["3 · Constraints<br/>What must NOT change first<br/>then what should change"]
+        P4["4 · Context<br/>Only what layers above don't cover<br/>@ file references for specific examples"]
+        P5["5 · Verification<br/>Runnable command with binary outcome<br/>'Run pytest tests/auth/ — fix all failures'"]
     end
     SL --> P1
     P1 --> P2 --> P3 --> P4 --> P5
-    P5 --> OUT["Output calibrated to team context\nnot training data defaults"]
+    P5 --> OUT["Output calibrated to team context<br/>not training data defaults"]
 ```
 
 **Description:** Every Claude Code session operates within a layered context hierarchy. The global layer is CLAUDE.md — the team's persistent architectural instructions that apply to all sessions. The feature layer is spec.md — the specific requirements and context for the current feature or task. The session layer is the prompt itself — the task-specific context for this particular implementation step. Well-structured prompts work with this hierarchy rather than against it: they build on CLAUDE.md without repeating it, add to spec.md without contradicting it, and provide task-specific context without burying it in information already available at higher layers.[^6]
