@@ -117,17 +117,7 @@ The monitoring infrastructure for Claude Code spend is available through the Ant
 [^9]: Stephanie Hurlburt — "Tracking LLM Costs Across a Small Engineering Team," Stephanie Hurlburt's Blog, March 2026. https://stephanehurlburt.com/blog/tracking-llm-costs
     Per-session cost attribution via hook instrumentation; dashboard configuration for daily spend tracking; anomaly detection patterns for agentic session cost spikes; quarterly recalibration of alert thresholds.
 
-[^10]: Theo (t3.gg) — "How Much Are We Actually Spending on AI? (Honest Team Breakdown)," YouTube, November 2025. https://www.youtube.com/watch?v=mL9pN3Rq7aE
-    - Real team spend breakdown across model tiers: what the distribution looked like before and after model selection policy
-    - Context optimization impact: measured cost reduction from targeted file injection vs. directory-level context
-    - Prompt caching ROI: cache hit rates achieved after restructuring CLAUDE.md for cache stability
-
-[^11]: Fireship — "Claude API Pricing Explained (And How to Not Go Broke)," YouTube, January 2026. https://www.youtube.com/watch?v=aX2mNQp8fDw
-    - Token cost mental model: practical intuition for estimating session cost before running it
-    - Model selection heuristics: the task types where Haiku, Sonnet, and Opus are each the appropriate choice
-    - Prompt caching setup: how to enable and verify cache hits in Claude Code sessions
-
-[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^10]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Budget governance workflow: how to configure the Anthropic console for per-engineer spend tracking
     - Session cost estimation: pre-session context sizing before running expensive agentic workflows
     - `/compact` timing: when to compact within a session to avoid the context inflation cost curve

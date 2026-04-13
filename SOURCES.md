@@ -715,22 +715,6 @@ Organized by category. Each entry includes full bibliographic information and a 
   *Timestamps:* `20:00` AI dependency and skill atrophy; `1:12:45` Compute cost and AI tool responsibility; `2:34:07` Agentic session efficiency; `3:58:22` The value-add test for AI tool use; `4:18:32` Engineering culture and leadership; `5:01:16` Future of software engineering
   *Files:* [`Ethics/00-overview.md`](Ethics/00-overview.md), [`Ethics/02-developer-impact.md`](Ethics/02-developer-impact.md), [`Ethics/05-environmental-costs.md`](Ethics/05-environmental-costs.md), [`Issues/00-overview.md`](Issues/00-overview.md), [`Learning/00-overview.md`](Learning/00-overview.md), [`Learning/01-engineer-onboarding.md`](Learning/01-engineer-onboarding.md), [`Learning/02-skill-maintenance.md`](Learning/02-skill-maintenance.md), [`Learning/04-ai-free-practice-protocols.md`](Learning/04-ai-free-practice-protocols.md)
 
-- **Theo (t3.gg) — "How Much Are We Actually Spending on AI? (Honest Team Breakdown)," YouTube, November 2025**
-  <https://www.youtube.com/watch?v=mL9pN3Rq7aE>
-  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md)
-
-- **Fireship — "Claude API Pricing Explained (And How to Not Go Broke)," YouTube, January 2026**
-  <https://www.youtube.com/watch?v=aX2mNQp8fDw>
-  *Files:* [`Cost & Token Economics/00-overview.md`](Cost%20&%20Token%20Economics/00-overview.md)
-
-- **Theo (t3.gg) — "When AI Gets It Wrong: Debugging Claude Code Sessions," YouTube, December 2025**
-  <https://www.youtube.com/watch?v=pQ2mXz7dNvk>
-  *Files:* [`Debugging & Troubleshooting/00-overview.md`](Debugging%20&%20Troubleshooting/00-overview.md)
-
-- **Fireship — "Why AI Coding Assistants Fail (And How to Fix It)," YouTube, February 2026**
-  <https://www.youtube.com/watch?v=nK3rBzT5YuM>
-  *Files:* [`Debugging & Troubleshooting/00-overview.md`](Debugging%20&%20Troubleshooting/00-overview.md)
-
 
 ## Practitioner Blogs and Newsletters
 

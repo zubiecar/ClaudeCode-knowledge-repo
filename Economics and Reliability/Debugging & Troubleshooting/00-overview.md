@@ -117,17 +117,7 @@ The signal for escalation is repeated session failure after reasonable attempts 
 [^9]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
     Escalation criteria for agentic workflows; the boundary between AI-appropriate and human-judgment-required tasks; normalization of escalation in team workflow documentation.
 
-[^10]: Theo (t3.gg) — "When AI Gets It Wrong: Debugging Claude Code Sessions," YouTube, December 2025. https://www.youtube.com/watch?v=pQ2mXz7dNvk
-    - Live session failure diagnosis: walking through a real session where context degradation was initially misread as task difficulty
-    - Recovery workflow: the pre-reset diagnostic, git stash step, and recovery brief structure
-    - Two-turn rule in practice: the cost difference between catching failure at turn 3 vs. turn 12
-
-[^11]: Fireship — "Why AI Coding Assistants Fail (And How to Fix It)," YouTube, February 2026. https://www.youtube.com/watch?v=nK3rBzT5YuM
-    - Hallucination patterns in Claude Code: the specific task types most likely to produce confident wrong output
-    - Verification workflows: practical approaches to catching AI hallucination before it reaches code review
-    - Escalation signals: how experienced engineers recognize when AI iteration has reached its limit
-
-[^12]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
+[^10]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Context degradation signals: how to identify the early warning signs before quality noticeably declines
     - Compact timing: demonstrations of proactive vs. reactive compaction and their quality outcomes
     - CLAUDE.md updates after failures: converting bad sessions into systemic prevention
