@@ -100,7 +100,7 @@ AI tools generate code at a rate that outpaces any team's capacity to review, re
  Randomized controlled trial with 16 experienced developers across 246 real tasks. AI tools (Cursor Pro + Claude 3.5/3.7) produced a 19% slowdown vs. no-AI control group. Slowdown most pronounced in large, complex, mature codebases.
 
 [^3]: Faros AI — "DORA Report 2025 Key Takeaways: AI Impact on Dev Metrics," 2025. https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025
- Telemetry across 10,000 developers on 1,255 teams. AI adoption correlates with +98% more PRs merged, +154% increase in PR size, +91% increase in code review time, and +9% increase in bug rates. Individual productivity gains do not translate to organizational delivery improvements. The 2025 DORA report (dora.dev/research/2025/dora-report/) separately confirmed AI acts as an amplifier of existing team strengths and weaknesses across ~5,000 respondents.
+ Telemetry across 10,000 developers on 1,255 teams. AI adoption correlates with +98% more PRs merged, +154% increase in PR size, +91% increase in code review time, and +9% increase in bug rates. Individual productivity gains do not translate to organizational delivery improvements. The 2025 DORA report (dora.dev/dora-report-2025/) separately confirmed AI acts as an amplifier of existing team strengths and weaknesses across ~5,000 respondents.
 
 [^4]: Ox Security — "The Army of Juniors: The AI Code Security Crisis," October 2025. https://www.ox.security/resource-category/whitepapers-and-reports/army-of-juniors/
  Analysis of 300+ open-source repositories. "Avoidance of Refactors" appears in 80–90% of AI-generated codebases. AI generates highly functional but architecturally judgment-free code.

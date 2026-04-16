@@ -96,7 +96,7 @@ The Velocity–Governance Feedback Loop is the condition in which the metrics th
 
 ---
 
-[^1]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025." https://dora.dev/research/2025/dora-report/
+[^1]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025." https://dora.dev/dora-report-2025/
     ~5,000 developers surveyed. Higher AI adoption is associated with both higher delivery throughput AND higher delivery instability. AI acts as an amplifier of existing organizational strengths and weaknesses. Introduces rework rate as fifth DORA metric.
 
 [^2]: Jessica Baolin and Nathen Harvey (DORA) — "Balancing AI Tensions: Moving from AI Adoption to Effective SDLC Use," March 10, 2026. https://dora.dev/insights/balancing-ai-tensions/

@@ -3,7 +3,7 @@
 Comprehensive bibliography of all external citations used across this repository.
 Organized by category. Each entry includes full bibliographic information and a list of files in this repo that reference it.
 
-**Total unique sources: 238**
+**Total unique sources: 233**
 
 ---
 
@@ -79,7 +79,7 @@ Organized by category. Each entry includes full bibliographic information and a 
 
 - **Anthropic — "Claude Code in CI/CD Pipelines," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/cicd>
-  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md)
+  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/06-cicd-integration.md`](Core%20Practice/Tooling%20%26%20Configuration/06-cicd-integration.md)
 
 - **Anthropic — "Enterprise Configuration," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/enterprise-configuration>
@@ -96,22 +96,6 @@ Organized by category. Each entry includes full bibliographic information and a 
 - **Anthropic — "Models Overview," Anthropic API Documentation, 2026**
   <https://docs.anthropic.com/en/docs/about-claude/models/overview>
   *Files:* [`Economics and Reliability/Cost & Token Economics/00-overview.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/00-overview.md), [`Economics and Reliability/Cost & Token Economics/01-understanding-token-costs.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/01-understanding-token-costs.md), [`Economics and Reliability/Cost & Token Economics/02-model-selection-strategy.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/02-model-selection-strategy.md), [`Economics and Reliability/Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/05-cost-monitoring-and-alerting.md)
-
-- **Anthropic — "Claude Code in CI/CD Pipelines," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/ci-cd>
-  *Files:* [`Core Practice/Tooling & Configuration/06-cicd-integration.md`](Core%20Practice/Tooling%20%26%20Configuration/06-cicd-integration.md)
-
-- **Anthropic — "CLAUDE.md Configuration Guide," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/memory>
-  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/04-custom-skills.md`](Core%20Practice/Tooling%20%26%20Configuration/04-custom-skills.md), [`Economics and Reliability/Cost & Token Economics/03-context-optimization.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/03-context-optimization.md), [`Economics and Reliability/Debugging & Troubleshooting/01-recognizing-session-failure-patterns.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/01-recognizing-session-failure-patterns.md), [`Economics and Reliability/Debugging & Troubleshooting/04-recovering-from-bad-sessions.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/04-recovering-from-bad-sessions.md)
-
-- **Anthropic — "Security and Permissions," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/security>
-  *Files:* [`Core Practice/Tooling & Configuration/05-settings-and-permissions.md`](Core%20Practice/Tooling%20%26%20Configuration/05-settings-and-permissions.md), [`Quality and Safety/Security/01-threat-modeling.md`](Quality%20and%20Safety/Security/01-threat-modeling.md)
-
-- **Anthropic — "Claude Code Settings Reference," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/settings>
-  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/05-settings-and-permissions.md`](Core%20Practice/Tooling%20%26%20Configuration/05-settings-and-permissions.md), [`Quality and Safety/Security/00-overview.md`](Quality%20and%20Safety/Security/00-overview.md), [`Quality and Safety/Security/04-secrets-management.md`](Quality%20and%20Safety/Security/04-secrets-management.md)
 
 - **Anthropic — "Claude Code Slash Commands," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/slash-commands>
@@ -435,7 +419,7 @@ Organized by category. Each entry includes full bibliographic information and a 
 
 - **Google Cloud / DORA — "State of AI-Assisted Software Development 2025."**
   <https://dora.dev/dora-report-2025/>
-  *Files:* [`Quality and Safety/Issues/05-review-theater.md`](Quality%20and%20Safety/Issues/05-review-theater.md)
+  *Files:* [`Quality and Safety/Issues/03-architectural-drift.md`](Quality%20and%20Safety/Issues/03-architectural-drift.md), [`Quality and Safety/Issues/05-review-theater.md`](Quality%20and%20Safety/Issues/05-review-theater.md), [`Quality and Safety/Issues/08-velocity-governance.md`](Quality%20and%20Safety/Issues/08-velocity-governance.md)
 
 - **Jessica Baolin and Nathen Harvey (DORA) — "Balancing AI Tensions: Moving from AI Adoption to Effective SDLC Use," March 10, 2026**
   <https://dora.dev/insights/balancing-ai-tensions/>
@@ -444,10 +428,6 @@ Organized by category. Each entry includes full bibliographic information and a 
 - **DORA / Google Cloud — "DORA 2025 Accelerate State of DevOps Report," 2025**
   <https://dora.dev/research/2025/>
   *Files:* [`Team Operations/Governance/05-quarterly-health-review.md`](Team%20Operations/Governance/05-quarterly-health-review.md)
-
-- **Google Cloud / DORA — "State of AI-Assisted Software Development 2025."**
-  <https://dora.dev/research/2025/dora-report/>
-  *Files:* [`Quality and Safety/Issues/03-architectural-drift.md`](Quality%20and%20Safety/Issues/03-architectural-drift.md), [`Quality and Safety/Issues/08-velocity-governance.md`](Quality%20and%20Safety/Issues/08-velocity-governance.md)
 
 - **Nohé Hinniger-Foray et al. (Escape.tech) — "Methodology: How We Discovered Over 2k High-Impact Vulnerabilities in Apps Built with Vibe Coding Platforms," October 29, 2025**
   <https://escape.tech/blog/methodology-how-we-discovered-vulnerabilities-apps-built-with-vibe-coding/>

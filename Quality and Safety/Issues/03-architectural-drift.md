@@ -124,7 +124,7 @@ Architectural drift in AI-assisted development is not a failure of individual en
 [^12]: Stefan van Egmond — "I Built a 2300-File Codebase with AI. Here's the Jig I Built to Prevent Architectural Drift," Medium, January 27, 2026. https://medium.com/@stefanvanegmond/i-built-a-2300-file-codebase-with-ai-heres-the-jig-i-built-to-prevent-architectural-drift-56453fe2d5b4
     First-hand practitioner benchmark data. Without constraint enforcement, only 17% of AI sessions achieved zero architectural drift; with enforcement, 70%. Six categories of silent failure invisible to compilation and testing.
 
-[^13]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025." https://dora.dev/research/2025/dora-report/
+[^13]: Google Cloud / DORA — "State of AI-Assisted Software Development 2025." https://dora.dev/dora-report-2025/
     "Clear and communicated AI stances" and "strong version control practices" are two of seven capabilities that separate teams where AI adoption improves outcomes from those where it amplifies problems. Without these, AI-driven inconsistencies propagate across codebases.
 
 [^a]: [Documentation: Architecture Decision Records](../Documentation/01-architecture-decision-records.md) — ADRs are the primary countermeasure to architectural drift; maintaining accessible decision records prevents sessions from regenerating already-rejected alternatives.
