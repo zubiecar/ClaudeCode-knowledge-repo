@@ -106,19 +106,19 @@ The architect's role in database MCP governance is more active than in other MCP
 
 ---
 
-[^1]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^1]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture overview; permission scoping guidance; read-only enforcement patterns; server configuration in .mcp.json with environment variable credential referencing.
 
 [^2]: Model Context Protocol — "Server: Postgres," modelcontextprotocol.io, 2025. https://modelcontextprotocol.io/docs/servers/postgres
     Official Postgres MCP server documentation: installation, connection string configuration, supported operations (schema introspection, SELECT execution), and operation scoping. Read-only enforcement at the database user level.
 
-[^3]: Model Context Protocol — "Server: SQLite," modelcontextprotocol.io, 2025. https://modelcontextprotocol.io/docs/servers/sqlite
+[^3]: Model Context Protocol — "Server: SQLite (GitHub Archive)," modelcontextprotocol.io, 2025. https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite
     SQLite MCP server documentation and comparison with Postgres server: schema introspection API, query execution patterns, and the information_schema access pattern for metadata-only sessions.
 
 [^4]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices
     Session context discipline; credential security practices; CLAUDE.md convention patterns for role-specific workflows; the governance documentation standard for external integrations.
 
-[^5]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^5]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Minimum-permission configuration; credential management for MCP server connections; the three primary MCP security risks applied to database integration contexts; write-access governance model.
 
 [^6]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a

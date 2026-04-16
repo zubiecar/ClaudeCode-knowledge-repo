@@ -132,7 +132,6 @@ For the QA engineer, cross-repository search is useful for identifying test cove
 [^1]: GitHub — "GitHub MCP Server," GitHub Official Repository, 2025. https://github.com/github/github-mcp-server
     Full operation catalog: repositories, issues, pull requests, branches, file contents, code search. Authentication setup, OAuth scope configuration, and permission model for read vs. write access.
 
-
 [^3]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging patterns for external service integrations; quarterly review practices; treating AI tool access with the same governance applied to other service dependencies.
 
@@ -145,9 +144,8 @@ For the QA engineer, cross-repository search is useful for identifying test cove
 [^6]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as context engineering; reducing manual context assembly; shared configuration artifacts as team-level productivity multipliers.
 
-[^7]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^7]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture overview; permission scoping guidance; the three primary MCP security risks relevant to GitHub write access.
-
 
 [^a]: [Tooling: MCP Integration](../Tooling & Configuration/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the GitHub server specifically.
 [^b]: [Governance: Review Policies](../Governance/01-review-policies.md) — GitHub MCP enables sessions to query PR context during review; it is a tool for making review policy requirements actionable within a session.

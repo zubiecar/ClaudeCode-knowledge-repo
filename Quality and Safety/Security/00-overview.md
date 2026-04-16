@@ -117,7 +117,7 @@ Sonar's 2026 research found that AI now writes 42% of code in repositories that 
 [^11]: Snyk — "The State of Open Source Security 2025," Snyk, 2025. https://snyk.io/reports/open-source-security/
  Automated dependency scanning effectiveness; lockfile discipline as a supply chain security practice; CVE remediation timelines for open-source dependencies.
 
-[^12]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^12]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Session context and secrets exposure risk; data retention policies for session inputs; guidance on credential handling in AI-assisted workflows.
 
 [^13]: GitGuardian — "State of Secrets Sprawl 2025," GitGuardian, 2025. https://www.gitguardian.com/state-of-secrets-sprawl

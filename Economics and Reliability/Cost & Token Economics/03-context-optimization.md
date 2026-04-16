@@ -79,7 +79,7 @@ The structure of CLAUDE.md also affects prompt caching efficiency. Content that 
 
 ---
 
-[^1]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^1]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  Context accumulation in long sessions; `/compact` mechanics and cost reset effect; agentic session termination criteria; phase-boundary compaction timing.
 
 [^3]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices

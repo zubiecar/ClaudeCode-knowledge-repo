@@ -69,10 +69,10 @@ Key settings surfaces include: `permissions.allow` and `permissions.deny` arrays
 
 ---
 
-[^8]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^8]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  Permission profile configuration, `--allowedTools` flag semantics, and the rationale for work-context-specific permission scoping in production-adjacent sessions.
 
-[^10]: Anthropic — "Enterprise Configuration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/enterprise-configuration
+[^10]: Anthropic — "Server-Managed Settings," Claude Code Documentation, 2026. https://code.claude.com/docs/en/server-managed-settings
  `managed-settings.json` and `managed-mcp.json` as non-overridable policy floors; deployment patterns for organization-wide Claude Code configuration; drop-in fragment support via `managed-settings.d/`.
 
 [^11]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/
@@ -90,24 +90,23 @@ Key settings surfaces include: `permissions.allow` and `permissions.deny` arrays
 
 ## Configuration 3: Hooks and Event Automation
 
-**Description:** Claude Code supports event hooks — shell commands that fire automatically at defined points in every session. Five hook events are available: `PreToolUse` (fires before any tool call), `PostToolUse` (fires after any tool call), `UserPromptSubmit` (fires before the model processes a user message), `Stop` (fires when a session ends), and `Notification` (fires when Claude generates an alert).[^15]
+**Description:** Claude Code supports event hooks — shell commands that fire automatically at defined points in every session. Five hook events are available: `PreToolUse` (fires before any tool call), `PostToolUse` (fires after any tool call), `UserPromptSubmit` (fires before the model processes a user message), `Stop` (fires when a session ends), and `Notification` (fires when Claude generates an alert).[^17]
 
 Hooks are the mechanism by which a team enforces quality standards without relying on engineer discipline in the moment. A `PostToolUse` hook on file write operations can automatically run linting and type-checking; a `Stop` hook can run a final SAST scan before a session concludes; a `UserPromptSubmit` hook can inject current sprint context and the current date into every session without requiring engineers to type it manually. The value of hooks is proportional to how consistently they are deployed — a team where every engineer has the same hooks via a shared `.claude/settings.json` enforces the same quality gates uniformly.[^3]
 
-Hooks are configured in `settings.json` under the `hooks` key. Each hook specifies the event, an optional matcher (to fire only for specific tool names), the shell command to run, and whether the hook blocks execution (a blocking hook that exits non-zero can prevent a tool call from proceeding). This blocking capability makes hooks the enforcement mechanism for pre-conditions that CLAUDE.md instructions alone cannot enforce — a hook can prevent a write to a protected path in a way that a CLAUDE.md instruction cannot.[^15]
+Hooks are configured in `settings.json` under the `hooks` key. Each hook specifies the event, an optional matcher (to fire only for specific tool names), the shell command to run, and whether the hook blocks execution (a blocking hook that exits non-zero can prevent a tool call from proceeding). This blocking capability makes hooks the enforcement mechanism for pre-conditions that CLAUDE.md instructions alone cannot enforce — a hook can prevent a write to a protected path in a way that a CLAUDE.md instruction cannot.[^17]
 
 Given that AI-generated code introduces security vulnerabilities at higher rates than human-written code[^11], automated scanning at the hook level catches vulnerabilities before they reach human review regardless of which engineer wrote the session.
 
 **Proposed Solution:**
-- Define team-standard hooks in `.claude/settings.json` covering: `PostToolUse` linting on write operations, `PostToolUse` test execution on source file changes, and a `Stop`-event SAST scan.[^15]
+- Define team-standard hooks in `.claude/settings.json` covering: `PostToolUse` linting on write operations, `PostToolUse` test execution on source file changes, and a `Stop`-event SAST scan.[^17]
 - Use the `UserPromptSubmit` hook to inject current date and sprint context into every session — removing the dependency on individual engineers to supply this context manually.[^3]
 - Configure a `Notification` hook to dispatch system notifications when long-running sessions complete, enabling true parallel session management without active monitoring.[^17]
-- Use blocking `PreToolUse` hooks to enforce hard write-path restrictions that supplement permission profiles — preventing writes to configuration files, migration directories, or secret paths during scoped sessions.[^15]
+- Use blocking `PreToolUse` hooks to enforce hard write-path restrictions that supplement permission profiles — preventing writes to configuration files, migration directories, or secret paths during scoped sessions.[^17]
 - Audit hook configuration quarterly: verify team-standard hooks are in effect on all developer machines, identify frequently-firing hooks, and investigate any hooks being bypassed or overridden in `settings.local.json`.[^1]
 
 ---
 
-[^15]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
  Complete hooks API: event types (PreToolUse, PostToolUse, UserPromptSubmit, Stop, Notification), shell command configuration, blocking semantics, and tool-name matchers.
 
 [^17]: Anthropic — "Claude Code Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
@@ -132,10 +131,10 @@ The MCP permission model mirrors the settings permission model: servers are gran
 
 ---
 
-[^21]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^21]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
  MCP open standard architecture; server permission model; minimum-permission configuration guidance; the progression from read-only to write-access integrations.
 
-[^24]: Anthropic — "MCP Configuration Security," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-security
+[^24]: Anthropic — "Claude Code Security," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security
  Credential handling for MCP server connections; environment variable reference syntax in `.mcp.json`; separation of team configuration from machine-specific secrets.
 
 [^25]: Jack Herrington — "Claude Code MCP Servers: A Complete Setup Guide," YouTube, November 2025. https://www.youtube.com/watch?v=3QkVZj_nKoA
@@ -258,7 +257,7 @@ All team configuration artifacts — CLAUDE.md, `settings.json`, `.mcp.json`, ho
 
 ---
 
-[^51]: Anthropic — "Claude Code in CI/CD Pipelines," Claude Code Documentation, 2026. https://code.claude.com/docs/en/cicd
+[^51]: Anthropic — "Claude Code Headless Mode," Claude Code Documentation, 2026. https://code.claude.com/docs/en/headless
  Headless CI mode patterns; `--permission-mode plan` flag for read-only analysis; how team configuration artifacts apply in pipeline sessions.
 
 ---

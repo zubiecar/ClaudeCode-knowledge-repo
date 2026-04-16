@@ -139,7 +139,7 @@ Calibrating for length requires distinguishing between structural components (al
 [^8]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     Spec.md as pre-work for session prompts: how upfront specification reduces session-level prompt length and improves implementation precision.
 
-[^10]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
+[^10]: Anthropic — "Claude Code Hooks," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
     Blocking verification via hooks: how PostToolUse and Stop hooks create automated verification gates that complement prompt-level verification instructions.
 
 [^11]: DEV Community — "AI Is Creating a New Kind of Tech Debt — And Nobody Is Talking About It," March 2026. https://dev.to/harsh2644/ai-is-creating-a-new-kind-of-tech-debt-and-nobody-is-talking-about-it-3pm6

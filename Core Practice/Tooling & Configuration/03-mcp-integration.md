@@ -139,13 +139,13 @@ Prompt injection via MCP is an emerging risk category: if Claude fetches content
 [^1]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in eliminating coordination overhead: how external tool integration changes engineering sessions from context-gathering exercises to execution-focused work.
 
-[^2]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^2]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture, client-server model, server type taxonomy, permission model, and `alwaysAllow` configuration for write-access tools.
 
 [^3]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     Context overhead elimination: how MCP integrations reduce the manual context-gathering work that precedes effective AI sessions; frequency-of-use as the primary criteria for integration prioritization.
 
-[^4]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^4]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
     `.mcp.json` configuration file structure, credential management via environment variables, permission scoping, and branch protection in GitHub MCP server configuration.
 
 [^5]: Artur Less — "Spec-Driven Development with Claude Code," Level Up Coding / Medium, March 2026. https://levelup.gitconnected.com/spec-driven-development-with-claude-code-1b08184965e3

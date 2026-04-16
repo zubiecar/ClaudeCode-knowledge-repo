@@ -94,7 +94,7 @@ CLAUDE.md session scope reminders are the primary operational tool for maintaini
 
 ---
 
-[^1]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^1]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Session data retention and training use policies: what is logged, what may contribute to training, and how plan type affects these terms; the distinction between logging and training data contribution.
 
 [^2]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny

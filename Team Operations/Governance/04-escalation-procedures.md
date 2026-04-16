@@ -141,7 +141,7 @@ The PR process for governance documents is not bureaucratic overhead — it is t
 [^8]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
  Override request design: the three-part format (use case, policy exceeded, risk assessment) as a documentation structure that satisfies both engineer and governance needs.
 
-[^9]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^9]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  Override approval timeline requirements; CTO referral for security and compliance implications; the practical speed requirement that makes override culture sustainable.
 
 [^10]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt

@@ -114,7 +114,7 @@ Tracking suppressed findings is as important as tracking acted-upon findings. If
 
 ---
 
-[^1]: Anthropic — "Claude Code in CI/CD Pipelines," Claude Code Documentation, 2026. https://docs.anthropic.com/en/docs/claude-code/cicd
+[^1]: Anthropic — "Claude Code Headless Mode," Claude Code Documentation, 2026. https://code.claude.com/docs/en/headless
  CI pipeline integration architecture: triggering on PR events, `--allowedTools` scoping for CI sessions, CLAUDE.md context injection, and the permission model for unattended pipeline runs.
 
 [^2]: Boris Cherny — "How Boris Uses Claude Code," January 2026. https://howborisusesclaudecode.com

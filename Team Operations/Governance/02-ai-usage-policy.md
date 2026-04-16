@@ -134,10 +134,10 @@ The review cadence for the acceptable use policy matters as much as the initial 
 [^5]: CodeRabbit — "State of AI Code Generation: AI vs. Human Code Report," December 17, 2025. https://www.coderabbit.ai/blog/state-of-ai-vs-human-code-generation-report
  AI-primary PR definition and classification: the origin field implementation and its relationship to the AI code review policy requirements.
 
-[^6]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^6]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  Agentic use permission model: `--dangerouslySkipPermissions` documentation; agentic session scope and the approval requirement for write access to shared environments.
 
-[^7]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^7]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Data minimization principle for AI sessions: PII and PHI handling requirements; the distinction between prohibited behaviors and high-risk authorized uses that require elevated review.
 
 [^8]: Ravikanth Konda — "Human-AI Collaboration in Software Teams: Evaluating Productivity, Quality, and Knowledge Transfer with Agentic and LLM-Based Tools," *International Journal of AI, BigData, Computational and Management Studies*, February 17, 2026. https://ijaibdcms.org/index.php/ijaibdcms/article/view/418

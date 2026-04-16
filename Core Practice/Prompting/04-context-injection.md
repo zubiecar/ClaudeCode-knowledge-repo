@@ -115,7 +115,7 @@ Not all context is equally worth preserving when compressing. The decisions — 
 [^7]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
     Context specificity as a proxy for task clarity; how over-broad file injection reduces the precision of context-dependent outputs compared to single well-chosen examples.
 
-[^8]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
+[^8]: Anthropic — "Claude Code Hooks," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
     `UserPromptSubmit` hook mechanics; `/compact` compression command; session-start context verification patterns.
 
 [^9]: Sreecharan Sankaranarayanan — "Towards Reliable AI Code Agents: A Framework for Evaluating Context Window Management," arXiv:2602.20206, February 2026. https://arxiv.org/abs/2602.20206
@@ -130,7 +130,7 @@ Not all context is equally worth preserving when compressing. The decisions — 
 [^12]: Judy Shen and Alex Tamkin — "How Instruction Following Affects Context Use in Large Language Models," Anthropic / arXiv:2601.20245, January 2026. https://arxiv.org/abs/2601.20245
     Context attention dynamics: how automatic injection of structured, concise context (branch, task list) improves instruction-following accuracy compared to implicit reliance on model defaults.
 
-[^13]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^13]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
     `/compact` mechanics and timing; context window management; compressing at clean phase boundaries vs. emergency compression; fresh-session-with-updated-files as an alternative to heavy compression.
 
 [^14]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
@@ -142,7 +142,6 @@ Not all context is equally worth preserving when compressing. The decisions — 
     - Session setup workflow: the `/init` pattern in practice — loading CLAUDE.md and architecture files before task work and the calibration difference it produces
     - `@` mention context injection: live demonstration of file reference vs. content paste for codebase context and the readability and precision tradeoffs
     - Dynamic hook injection: configuring `UserPromptSubmit` to prepend git status to every prompt and the session quality consistency improvement it produces
-
 
 [^a]: [Workflows: Context Engineering](../Workflows/03-context-engineering.md) — context injection is a specific technique within the broader context engineering discipline; the two documents describe the practice at different levels of specificity.
 [^b]: [Tooling: CLAUDE.md Configuration](../Tooling & Configuration/01-claude-md-configuration.md) — CLAUDE.md is the primary context injection mechanism for session-persistent information; explicit injection supplements what CLAUDE.md already provides.

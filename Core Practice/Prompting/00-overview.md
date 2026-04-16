@@ -126,7 +126,7 @@ Teams without managed prompt libraries develop prompt fragmentation: eight engin
 [^8]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
  Context engineering as the primary discipline: "The real skill in working with coding agents is no longer prompt design — it's context engineering." Minimum sufficient context vs. injecting everything available.
 
-[^9]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
+[^9]: Anthropic — "Claude Code Hooks," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
  UserPromptSubmit hook for automatic context injection; removing the dependency on engineers to supply standard context manually at each session start.
 
 [^10]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny

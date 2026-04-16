@@ -95,7 +95,7 @@ The Google Drive runbook library with MCP accessibility is the recommended appro
 [^5]: Anthropic — "Model Context Protocol," Anthropic, 2025. https://www.anthropic.com/news/model-context-protocol
  MCP accessibility for operational documentation: configuring Google Drive MCP for runbook discoverability; the runbook header metadata format that allows sessions to verify currency before execution.
 
-[^7]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^7]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  Permission scoping for operational execution sessions: how to configure Claude Code sessions with only the permissions required for specific runbook steps; the `--dangerouslySkipPermissions` flag and why it should never appear in runbook execution sessions.
 
 [^8]: Kyros — "The Vibe Coding Crisis: How AI-Generated Technical Debt Is Costing Companies Millions," March 2026. https://usekyros.ai/blog/vibe-coding-crisis-ai-technical-debt

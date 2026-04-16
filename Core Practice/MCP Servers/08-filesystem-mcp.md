@@ -108,12 +108,11 @@ Production server filesystem access is categorically prohibited. Even in a devel
 
 ---
 
-[^1]: Model Context Protocol — "Server: Filesystem," modelcontextprotocol.io, 2025. https://modelcontextprotocol.io/docs/servers/filesystem
+[^1]: Model Context Protocol — "Server: Filesystem (GitHub)," modelcontextprotocol.io, 2025. https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem
     Official filesystem MCP server documentation: allowed paths configuration, read/write operation support, default scope behavior, and exclusion pattern configuration. Comparison with Claude Code's native file access tools.
 
-[^2]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^2]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Minimum-permission configuration; path traversal risk in filesystem MCP; credential exposure vectors; the governance model for filesystem access grants in team environments.
-
 
 [^4]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
     Shared `.mcp.json` project configuration; CLAUDE.md documentation patterns for tool-specific use cases; the governance artifact standard for external integrations including filesystem access.

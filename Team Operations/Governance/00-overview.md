@@ -145,7 +145,7 @@ These changes are not improvements to the current governance — they are antici
 [^8]: daily.dev — "Vibe Coding in 2026: How AI Is Changing the Way Developers Write Code," April 2026. https://daily.dev/blog/vibe-coding-how-ai-changing-developers-code
  The "can you explain it" standard as an architectural review gate: why test passage is insufficient evidence of comprehension and why PR review must include explanation capability.
 
-[^9]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^9]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  Permission model documentation: authorized vs. prohibited operations, `--dangerouslySkipPermissions` flag documentation and risks, and the permission scoping framework for different session types.
 
 [^11]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices

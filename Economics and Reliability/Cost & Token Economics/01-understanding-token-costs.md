@@ -88,7 +88,7 @@ The category of sessions with the highest cost risk are open-ended agentic sessi
 [^4]: Stephanie Hurlburt — "Tracking LLM Costs Across a Small Engineering Team," Stephanie Hurlburt's Blog, March 2026. https://stephanehurlburt.com/blog/tracking-llm-costs
  Input/output token ratio baselines for common session types; cache hit rate monitoring; pre-session cost estimation methodology; estimated vs. actual cost calibration tracking.
 
-[^5]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^5]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  `/compact` command mechanics and per-turn cost reset; context window accumulation in long sessions; phase-boundary compaction as the recommended timing strategy.
 
 [^6]: Anthropic — "Prompt Caching," Anthropic API Documentation, 2026. https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching

@@ -3,7 +3,7 @@
 Comprehensive bibliography of all external citations used across this repository.
 Organized by category. Each entry includes full bibliographic information and a list of files in this repo that reference it.
 
-**Total unique sources: 233**
+**Total unique sources: 231**
 
 ---
 
@@ -37,56 +37,48 @@ Organized by category. Each entry includes full bibliographic information and a 
   <https://docs.anthropic.com/en/docs/claude-code/common-workflows>
   *Files:* [`Core Practice/MCP Servers/00-overview.md`](Core%20Practice/MCP%20Servers/00-overview.md), [`Core Practice/MCP Servers/01-github-integration.md`](Core%20Practice/MCP%20Servers/01-github-integration.md), [`Core Practice/MCP Servers/02-slack-integration.md`](Core%20Practice/MCP%20Servers/02-slack-integration.md), [`Core Practice/MCP Servers/03-google-drive-integration.md`](Core%20Practice/MCP%20Servers/03-google-drive-integration.md), [`Core Practice/MCP Servers/04-linear-integration.md`](Core%20Practice/MCP%20Servers/04-linear-integration.md), [`Core Practice/MCP Servers/06-configuration-security-governance.md`](Core%20Practice/MCP%20Servers/06-configuration-security-governance.md), [`Core Practice/MCP Servers/08-filesystem-mcp.md`](Core%20Practice/MCP%20Servers/08-filesystem-mcp.md), [`Core Practice/Prompting/00-overview.md`](Core%20Practice/Prompting/00-overview.md), [`Core Practice/Prompting/01-prompt-architecture.md`](Core%20Practice/Prompting/01-prompt-architecture.md), [`Core Practice/Prompting/02-task-prompt-patterns.md`](Core%20Practice/Prompting/02-task-prompt-patterns.md), [`Core Practice/Prompting/04-context-injection.md`](Core%20Practice/Prompting/04-context-injection.md), [`Core Practice/Prompting/05-iterative-refinement.md`](Core%20Practice/Prompting/05-iterative-refinement.md), [`Core Practice/Prompting/06-prompt-library.md`](Core%20Practice/Prompting/06-prompt-library.md), [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/01-claude-md-configuration.md`](Core%20Practice/Tooling%20%26%20Configuration/01-claude-md-configuration.md), [`Core Practice/Tooling & Configuration/02-hooks-and-automation.md`](Core%20Practice/Tooling%20%26%20Configuration/02-hooks-and-automation.md), [`Core Practice/Tooling & Configuration/07-worktree-isolation.md`](Core%20Practice/Tooling%20%26%20Configuration/07-worktree-isolation.md), [`Core Practice/Workflows/00-overview.md`](Core%20Practice/Workflows/00-overview.md), [`Core Practice/Workflows/01-explore-plan-implement.md`](Core%20Practice/Workflows/01-explore-plan-implement.md), [`Core Practice/Workflows/03-context-engineering.md`](Core%20Practice/Workflows/03-context-engineering.md), [`Core Practice/Workflows/04-session-hygiene.md`](Core%20Practice/Workflows/04-session-hygiene.md), [`Core Practice/Workflows/05-verification-driven-development.md`](Core%20Practice/Workflows/05-verification-driven-development.md), [`Core Practice/Workflows/07-agentic-delegation.md`](Core%20Practice/Workflows/07-agentic-delegation.md), [`Core Practice/Workflows/08-parallel-agent-coordination.md`](Core%20Practice/Workflows/08-parallel-agent-coordination.md), [`Economics and Reliability/Cost & Token Economics/03-context-optimization.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/03-context-optimization.md), [`Economics and Reliability/Debugging & Troubleshooting/00-overview.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/00-overview.md), [`Economics and Reliability/Debugging & Troubleshooting/02-hallucination-and-confabulation.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/02-hallucination-and-confabulation.md), [`Economics and Reliability/Debugging & Troubleshooting/03-context-degradation.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/03-context-degradation.md), [`Economics and Reliability/Debugging & Troubleshooting/05-escalation-and-human-judgment.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/05-escalation-and-human-judgment.md), [`Team Operations/Learning/01-engineer-onboarding.md`](Team%20Operations/Learning/01-engineer-onboarding.md)
 
-- **Anthropic — "Claude Code: Custom Commands," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/custom-commands>
+- **Anthropic — "Claude Code Skills," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/skills>
   *Files:* [`Quality and Safety/Security/06-security-review-checklist.md`](Quality%20and%20Safety/Security/06-security-review-checklist.md)
 
 - **Anthropic — "Claude Code Hooks Reference," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/hooks>
-  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Economics and Reliability/Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/05-cost-monitoring-and-alerting.md), [`Quality and Safety/Security/00-overview.md`](Quality%20and%20Safety/Security/00-overview.md), [`Quality and Safety/Security/02-sast-dast-integration.md`](Quality%20and%20Safety/Security/02-sast-dast-integration.md)
+  *Files:* [`Core Practice/Prompting/00-overview.md`](Core%20Practice/Prompting/00-overview.md), [`Core Practice/Prompting/01-prompt-architecture.md`](Core%20Practice/Prompting/01-prompt-architecture.md), [`Core Practice/Prompting/03-prompt-antipatterns.md`](Core%20Practice/Prompting/03-prompt-antipatterns.md), [`Core Practice/Prompting/04-context-injection.md`](Core%20Practice/Prompting/04-context-injection.md), [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/02-hooks-and-automation.md`](Core%20Practice/Tooling%20%26%20Configuration/02-hooks-and-automation.md), [`Economics and Reliability/Cost & Token Economics/05-cost-monitoring-and-alerting.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/05-cost-monitoring-and-alerting.md), [`Quality and Safety/Security/00-overview.md`](Quality%20and%20Safety/Security/00-overview.md), [`Quality and Safety/Security/02-sast-dast-integration.md`](Quality%20and%20Safety/Security/02-sast-dast-integration.md)
 
-- **Anthropic — "Hooks Reference," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/hooks-reference>
-  *Files:* [`Core Practice/Prompting/00-overview.md`](Core%20Practice/Prompting/00-overview.md), [`Core Practice/Prompting/01-prompt-architecture.md`](Core%20Practice/Prompting/01-prompt-architecture.md), [`Core Practice/Prompting/03-prompt-antipatterns.md`](Core%20Practice/Prompting/03-prompt-antipatterns.md), [`Core Practice/Prompting/04-context-injection.md`](Core%20Practice/Prompting/04-context-injection.md), [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/02-hooks-and-automation.md`](Core%20Practice/Tooling%20%26%20Configuration/02-hooks-and-automation.md)
-
-- **Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/managing-long-sessions>
+- **Anthropic — "Context Window Management," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/context-window>
   *Files:* [`Core Practice/Prompting/04-context-injection.md`](Core%20Practice/Prompting/04-context-injection.md), [`Economics and Reliability/Cost & Token Economics/00-overview.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/00-overview.md), [`Economics and Reliability/Cost & Token Economics/01-understanding-token-costs.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/01-understanding-token-costs.md), [`Economics and Reliability/Cost & Token Economics/03-context-optimization.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/03-context-optimization.md), [`Economics and Reliability/Debugging & Troubleshooting/00-overview.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/00-overview.md), [`Economics and Reliability/Debugging & Troubleshooting/03-context-degradation.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/03-context-degradation.md), [`Economics and Reliability/Debugging & Troubleshooting/04-recovering-from-bad-sessions.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/04-recovering-from-bad-sessions.md)
 
-- **Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/mcp-introduction>
+- **Anthropic — "MCP Integration," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/mcp>
   *Files:* [`Core Practice/MCP Servers/00-overview.md`](Core%20Practice/MCP%20Servers/00-overview.md), [`Core Practice/MCP Servers/01-github-integration.md`](Core%20Practice/MCP%20Servers/01-github-integration.md), [`Core Practice/MCP Servers/02-slack-integration.md`](Core%20Practice/MCP%20Servers/02-slack-integration.md), [`Core Practice/MCP Servers/03-google-drive-integration.md`](Core%20Practice/MCP%20Servers/03-google-drive-integration.md), [`Core Practice/MCP Servers/04-linear-integration.md`](Core%20Practice/MCP%20Servers/04-linear-integration.md), [`Core Practice/MCP Servers/05-internal-site-integration.md`](Core%20Practice/MCP%20Servers/05-internal-site-integration.md), [`Core Practice/MCP Servers/06-configuration-security-governance.md`](Core%20Practice/MCP%20Servers/06-configuration-security-governance.md), [`Core Practice/MCP Servers/07-database-integration.md`](Core%20Practice/MCP%20Servers/07-database-integration.md), [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/03-mcp-integration.md`](Core%20Practice/Tooling%20%26%20Configuration/03-mcp-integration.md)
 
-- **Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/privacy-data-handling>
+- **Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/data-usage>
   *Files:* [`Quality and Safety/Security/00-overview.md`](Quality%20and%20Safety/Security/00-overview.md), [`Quality and Safety/Security/04-secrets-management.md`](Quality%20and%20Safety/Security/04-secrets-management.md), [`Team Operations/Ethics/00-overview.md`](Team%20Operations/Ethics/00-overview.md), [`Team Operations/Ethics/01-intellectual-property.md`](Team%20Operations/Ethics/01-intellectual-property.md), [`Team Operations/Ethics/04-training-data-privacy.md`](Team%20Operations/Ethics/04-training-data-privacy.md), [`Team Operations/Governance/02-ai-usage-policy.md`](Team%20Operations/Governance/02-ai-usage-policy.md), [`Team Operations/Governance/06-compliance-and-audit.md`](Team%20Operations/Governance/06-compliance-and-audit.md)
 
 - **Anthropic — "Prompt Injection and Security Considerations for Claude Code," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/security>
-  *Files:* [`Core Practice/Tooling & Configuration/05-settings-and-permissions.md`](Core%20Practice/Tooling%20%26%20Configuration/05-settings-and-permissions.md), [`Quality and Safety/Security/01-threat-modeling.md`](Quality%20and%20Safety/Security/01-threat-modeling.md)
+  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/05-settings-and-permissions.md`](Core%20Practice/Tooling%20%26%20Configuration/05-settings-and-permissions.md), [`Quality and Safety/Security/01-threat-modeling.md`](Quality%20and%20Safety/Security/01-threat-modeling.md)
 
-- **Anthropic — "Security and Permissions," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/security-permissions>
+- **Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/permissions>
   *Files:* [`Core Practice/Prompting/03-prompt-antipatterns.md`](Core%20Practice/Prompting/03-prompt-antipatterns.md), [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/03-mcp-integration.md`](Core%20Practice/Tooling%20%26%20Configuration/03-mcp-integration.md), [`Team Operations/Documentation/02-runbook-standards.md`](Team%20Operations/Documentation/02-runbook-standards.md), [`Team Operations/Governance/00-overview.md`](Team%20Operations/Governance/00-overview.md), [`Team Operations/Governance/02-ai-usage-policy.md`](Team%20Operations/Governance/02-ai-usage-policy.md), [`Team Operations/Governance/04-escalation-procedures.md`](Team%20Operations/Governance/04-escalation-procedures.md), [`Team Operations/Governance/06-compliance-and-audit.md`](Team%20Operations/Governance/06-compliance-and-audit.md)
 
 - **Anthropic — "Claude Code: Settings and Configuration," Claude Code Documentation, 2026**
   <https://docs.anthropic.com/en/docs/claude-code/settings>
   *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/05-settings-and-permissions.md`](Core%20Practice/Tooling%20%26%20Configuration/05-settings-and-permissions.md), [`Quality and Safety/Security/00-overview.md`](Quality%20and%20Safety/Security/00-overview.md), [`Quality and Safety/Security/04-secrets-management.md`](Quality%20and%20Safety/Security/04-secrets-management.md)
 
-- **Anthropic — "Usage Policy and Developer Responsibility," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/usage-policy>
+- **Anthropic — "Legal and Compliance," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/legal-and-compliance>
   *Files:* [`Team Operations/Ethics/03-security-responsibility.md`](Team%20Operations/Ethics/03-security-responsibility.md)
 
-- **Anthropic — "Claude Code in CI/CD Pipelines," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/cicd>
+- **Anthropic — "Claude Code Headless Mode," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/headless>
   *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md), [`Core Practice/Tooling & Configuration/06-cicd-integration.md`](Core%20Practice/Tooling%20%26%20Configuration/06-cicd-integration.md)
 
-- **Anthropic — "Enterprise Configuration," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/enterprise-configuration>
-  *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md)
-
-- **Anthropic — "MCP Configuration Security," Claude Code Documentation, 2026**
-  <https://docs.anthropic.com/en/docs/claude-code/mcp-security>
+- **Anthropic — "Server-Managed Settings," Claude Code Documentation, 2026**
+  <https://docs.anthropic.com/en/docs/claude-code/server-managed-settings>
   *Files:* [`Core Practice/Tooling & Configuration/00-overview.md`](Core%20Practice/Tooling%20%26%20Configuration/00-overview.md)
 
 - **Anthropic — "Claude Code Memory," Claude Code Documentation, 2026**
@@ -109,24 +101,24 @@ Organized by category. Each entry includes full bibliographic information and a 
   <https://modelcontextprotocol.io>
   *Files:* [`Quality and Safety/QA & Testing/00-overview.md`](Quality%20and%20Safety/QA%20%26%20Testing/00-overview.md), [`Quality and Safety/QA & Testing/03-acceptance-criteria-automation.md`](Quality%20and%20Safety/QA%20%26%20Testing/03-acceptance-criteria-automation.md)
 
-- **Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025**
-  <https://modelcontextprotocol.io/docs/concepts/security>
+- **Model Context Protocol — "Security Best Practices," MCP Documentation, 2025**
+  <https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices>
   *Files:* [`Core Practice/MCP Servers/00-overview.md`](Core%20Practice/MCP%20Servers/00-overview.md), [`Core Practice/MCP Servers/02-slack-integration.md`](Core%20Practice/MCP%20Servers/02-slack-integration.md), [`Core Practice/MCP Servers/03-google-drive-integration.md`](Core%20Practice/MCP%20Servers/03-google-drive-integration.md), [`Core Practice/MCP Servers/04-linear-integration.md`](Core%20Practice/MCP%20Servers/04-linear-integration.md), [`Core Practice/MCP Servers/05-internal-site-integration.md`](Core%20Practice/MCP%20Servers/05-internal-site-integration.md), [`Core Practice/MCP Servers/06-configuration-security-governance.md`](Core%20Practice/MCP%20Servers/06-configuration-security-governance.md), [`Core Practice/MCP Servers/07-database-integration.md`](Core%20Practice/MCP%20Servers/07-database-integration.md), [`Core Practice/MCP Servers/08-filesystem-mcp.md`](Core%20Practice/MCP%20Servers/08-filesystem-mcp.md)
 
-- **Anthropic — "Building MCP Servers," Model Context Protocol Documentation, 2025**
-  <https://modelcontextprotocol.io/docs/concepts/servers>
+- **Model Context Protocol — "Server Concepts," MCP Documentation, 2025**
+  <https://modelcontextprotocol.io/docs/learn/server-concepts>
   *Files:* [`Core Practice/MCP Servers/00-overview.md`](Core%20Practice/MCP%20Servers/00-overview.md), [`Core Practice/MCP Servers/05-internal-site-integration.md`](Core%20Practice/MCP%20Servers/05-internal-site-integration.md)
 
-- **Model Context Protocol — "Server: Filesystem," modelcontextprotocol.io, 2025**
-  <https://modelcontextprotocol.io/docs/servers/filesystem>
+- **Model Context Protocol — "Server: Filesystem (GitHub)," modelcontextprotocol/servers, 2025**
+  <https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem>
   *Files:* [`Core Practice/MCP Servers/08-filesystem-mcp.md`](Core%20Practice/MCP%20Servers/08-filesystem-mcp.md)
 
 - **Model Context Protocol — "Server: Postgres," modelcontextprotocol.io, 2025**
   <https://modelcontextprotocol.io/docs/servers/postgres>
   *Files:* [`Core Practice/MCP Servers/07-database-integration.md`](Core%20Practice/MCP%20Servers/07-database-integration.md)
 
-- **Model Context Protocol — "Server: SQLite," modelcontextprotocol.io, 2025**
-  <https://modelcontextprotocol.io/docs/servers/sqlite>
+- **Model Context Protocol — "Server: SQLite (GitHub Archive)," modelcontextprotocol/servers-archived, 2025**
+  <https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite>
   *Files:* [`Core Practice/MCP Servers/07-database-integration.md`](Core%20Practice/MCP%20Servers/07-database-integration.md)
 
 - **Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026**

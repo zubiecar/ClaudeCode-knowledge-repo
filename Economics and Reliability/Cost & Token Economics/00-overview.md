@@ -105,7 +105,7 @@ The monitoring infrastructure for Claude Code spend is available through the Ant
 [^6]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
  Model selection as both a cost and quality decision; escalation criteria for Opus-tier tasks; team-level model policy as a governance artifact rather than individual engineer preference.
 
-[^7]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^7]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  `/compact` command mechanics and timing; context accumulation as a cost driver in long sessions; the quality-cost tradeoff of unmanaged context growth; session scope definition as a cost control.
 
 [^8]: WorkOS — "AI Development Costs in 2026: What Engineering Teams Are Actually Spending," WorkOS Blog, January 2026. https://workos.com/blog/ai-development-costs-2026

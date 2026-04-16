@@ -101,7 +101,7 @@ Multi-session task architecture converts the context degradation problem from a 
 
 ---
 
-[^1]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^1]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  Context degradation mechanism; `/compact` mechanics and timing; session reset vs. compact decision criteria; context window attention behavior as the session lengthens.
 
 [^2]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices

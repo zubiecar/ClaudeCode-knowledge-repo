@@ -120,7 +120,7 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
 
 ---
 
-[^1]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^1]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP open standard architecture, the client-server protocol model, permission scoping guidance, and the three primary MCP security risks: prompt injection, excessive permissions, and server shadowing.
 
 [^2]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
@@ -138,14 +138,13 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
 [^6]: Slack — "Slack MCP Server," Slack Developer Documentation, 2025. https://api.slack.com/docs/mcp
     Official Slack MCP server capabilities: message search, channel history, thread retrieval, and write operations including message posting and canvas creation. Permission scope definitions and workspace access controls.
 
-
 [^8]: Google — "Google Drive MCP Server," Google Workspace Developer Documentation, 2025. https://developers.google.com/workspace/mcp
     Official Google Drive MCP server: file and folder access, document content retrieval, search by content, and permission scoping to specific Drive folders. Authentication via OAuth and service account configuration.
 
 [^9]: Linear — "Linear MCP Server," Linear Developer Documentation, 2025. https://linear.app/docs/mcp
     Linear MCP server capabilities: issue and comment access, project and team structure, status transitions, and comment creation. Authentication via API key and permission model for bot versus user credentials.
 
-[^10]: Anthropic — "Building MCP Servers," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/servers
+[^10]: Model Context Protocol — "Server Concepts," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/learn/server-concepts
     Custom MCP server architecture: resource types, tool definitions, prompt templates, and the progression from minimal viable server to full-featured integration. Guidance on scoping initial server implementations.
 
 [^11]: Greg Isenberg — "Model Context Protocol (MCP), clearly explained (why it matters)," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
@@ -153,9 +152,8 @@ Anthropic's guidance on MCP security identifies three primary risk areas: prompt
     - ~0:45 — The three MCP primitives — resources, tools, and prompts — and how each maps to practical integration patterns
     - ~1:20 — Building a minimal custom server in TypeScript using the official Anthropic SDK: the minimal viable server scaffold in under 50 lines
 
-[^12]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^12]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Prompt injection risk via retrieved content, minimum-permission configuration guidance, MCP server shadowing and how to detect it, and the governance model for write-access MCP operations in team environments.
-
 
 [^14]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as a component of context engineering; the argument that reducing manual context assembly is as important as prompt quality; shared configuration artifacts as team-level productivity multipliers.

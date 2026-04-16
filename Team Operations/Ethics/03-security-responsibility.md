@@ -103,7 +103,7 @@ The security lead's responsibility under AI adoption is to ensure that security 
 [^4]: Sreecharan Sankaranarayanan — "Mitigating 'Epistemic Debt' in Generative AI-Scaffolded Novice Programming using Metacognitive Scripts," arXiv:2602.20206, February 22, 2026. https://arxiv.org/abs/2602.20206
  Accountability posture and review quality: how engineers who understand themselves as owners of AI-generated code apply different review standards than those who treat themselves as conduits.
 
-[^5]: Anthropic — "Usage Policy and Developer Responsibility," Claude Code Documentation, 2026. https://code.claude.com/docs/en/usage-policy
+[^5]: Anthropic — "Legal and Compliance," Claude Code Documentation, 2026. https://code.claude.com/docs/en/legal-and-compliance
  Vendor liability disclaimers for AI-generated production code: why Anthropic's terms of service place liability for deployed code with the engineering team rather than the AI vendor.
 
 [^6]: CIO — "How Agentic AI Will Reshape Engineering Workflows in 2026," April 2026. https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html

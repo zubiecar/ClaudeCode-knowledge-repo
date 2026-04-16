@@ -142,13 +142,13 @@ The METR productivity studies found that tasks where engineers expected 19% spee
 [^11]: Yonatan Sason — "The Black Box Problem: Why AI-Generated Code Stops Being Maintainable," *Towards Data Science*, March 6, 2026. https://towardsdatascience.com/the-black-box-problem-why-ai-generated-code-stops-being-maintainable/
     Context dilution: how important constraints buried in large context blocks receive less attention than structurally prominent constraints; the structural fix of leading with constraints rather than embedding them in documentation.
 
-[^12]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^12]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
     Permission prompt mechanics: what information each prompt provides; the importance of reading before approving; sensitive-context permission restriction as a structural protection against reflexive approval.
 
 [^13]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/
     Automation bias in permission approval: the 52% verification gap between stated distrust and actual verification behavior; the behavioral research on reflexive approval of AI actions.
 
-[^14]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
+[^14]: Anthropic — "Claude Code Hooks," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
     PreToolUse audit logging as a compensation mechanism for reflexive approval: creating a session-level record of all tool calls and parameters that can be reviewed after the fact.
 
 [^15]: Anthropic — "2026 Agentic Coding Trends Report," Anthropic, 2026. https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
@@ -156,7 +156,6 @@ The METR productivity studies found that tasks where engineers expected 19% spee
 
 [^16]: METR — "We Are Changing Our Developer Productivity Experiment Design," METR Research, February 2026. https://www.metr.org/blog/2026-02-24-uplift-update/
     Productivity slowdown from premature delegation: the 19% slowdown on complex tasks as evidence that agentic delegation of the wrong task types produces more debugging overhead than it saves in execution time.
-
 
 [^19]: Sabrina Ramonov — "CLAUDE CODE FULL COURSE," YouTube, February 17, 2025. https://www.youtube.com/watch?v=fYX6hHC9FhQ
     - Anti-pattern catalog: all six anti-patterns demonstrated in context of a real development workflow, with structural alternatives shown in the same session

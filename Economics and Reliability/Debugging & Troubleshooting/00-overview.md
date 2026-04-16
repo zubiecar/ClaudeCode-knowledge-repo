@@ -108,7 +108,7 @@ The signal for escalation is repeated session failure after reasonable attempts 
 [^6]: Veracode — "Spring 2026 GenAI Code Security Update: Despite Claims, AI Models Are Still Failing Security," March 24, 2026. https://www.veracode.com/blog/spring-2026-genai-code-security/
  45% security test failure rate for AI-generated code; subtle wrong output as the highest-risk failure mode; the gap between casual review and systematic verification.
 
-[^8]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^8]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  Context degradation symptoms and their distinction from task difficulty; `/compact` as the primary degradation intervention; proactive vs. reactive compact timing; planned compact checkpoints for long sessions.
 
 [^9]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows

@@ -118,7 +118,7 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
 [^1]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     Team-level hook standardization as governance infrastructure: the difference between aspirational standards and enforced standards in AI-assisted development.
 
-[^2]: Anthropic — "Hooks Reference," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks-reference
+[^2]: Anthropic — "Claude Code Hooks," Claude Code Documentation, 2026. https://code.claude.com/docs/en/hooks
     Complete hooks API: event types, JSON input structure, blocking semantics, project-level settings.json configuration, and hook ordering for multi-hook event handlers.
 
 [^3]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
@@ -149,7 +149,6 @@ Claude Code supports project-level hook configuration via `.claude/settings.json
     - Step 3 (Quality Gate): complete walkthrough of configuring PostToolUse hooks for linting, testing, and security scanning with blocking behavior for failures
     - UserPromptSubmit hook configuration: live demonstration of dynamic context injection including date, sprint context, and recent git activity
     - settings.json team configuration: how to structure the project-level settings file for consistent hook distribution across all developer machines
-
 
 [^13]: Dex Horthy (YC Root Access) — "Advanced Context Engineering for Agents," YouTube, August 2025. https://www.youtube.com/watch?v=IS_y40zY-hc
     - UserPromptSubmit hooks for dynamic context: how automated context injection removes the engineer burden of supplying standard context manually in every session

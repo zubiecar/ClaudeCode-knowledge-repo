@@ -104,7 +104,7 @@ For maintenance, the server's error logs are the primary signal: errors that rep
 
 ---
 
-[^1]: Anthropic — "Building MCP Servers," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/servers
+[^1]: Model Context Protocol — "Server Concepts," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/learn/server-concepts
     Custom MCP server architecture: resource types, tool definitions, prompt templates, and the progression from minimal viable server to full-featured integration. Guidance on scoping initial server implementations.
 
 [^2]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
@@ -113,21 +113,18 @@ For maintenance, the server's error logs are the primary signal: errors that rep
 [^3]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as context engineering; reducing manual context assembly; the argument that reducing friction is as important as prompt quality.
 
-
 [^5]: Greg Isenberg — "Model Context Protocol (MCP), clearly explained (why it matters)," YouTube, January 2025. https://www.youtube.com/watch?v=7j_NE6Pjv-E
     - ~0:00 — MCP protocol overview: client-server model, JSON-RPC transport, how Claude Code acts as an MCP client
     - ~0:45 — The three MCP primitives — resources, tools, and prompts — and how each maps to practical integration patterns
     - ~1:20 — Building a minimal custom server in TypeScript using the Anthropic SDK: the minimal viable server scaffold in under 50 lines
 
-[^6]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^6]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP open standard architecture; the three primitive types (resources, tools, prompts); transport layer options (stdio for local development, SSE for production deployment).
-
 
 [^8]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging patterns for external service integrations; operational monitoring practices; quarterly review for permission scoping.
 
-
-[^10]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^10]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Credential management for shared MCP servers; prompt injection risk; the elevated blast radius of compromised shared-server credentials vs. individual credentials.
 
 [^a]: [Tooling: MCP Integration](../Tooling & Configuration/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to custom internal server implementations.

@@ -133,7 +133,6 @@ For the architect reviewing implementation sessions, cross-tool chaining also cr
 [^2]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in reducing manual coordination overhead; how ticket context access changes implementation session quality; context engineering as the primary discipline in agentic development.
 
-
 [^4]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
     Shared `.mcp.json` project configuration; CLAUDE.md session-start convention patterns; checking AI configuration into git as a team-owned resource.
 
@@ -146,12 +145,11 @@ For the architect reviewing implementation sessions, cross-tool chaining also cr
 [^7]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging for external service integrations; quarterly review of permission scoping; QA workflow integration patterns.
 
-[^8]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^8]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture; client-server protocol model; write-access governance and human-in-the-loop patterns.
 
-[^9]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^9]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Minimum-permission configuration; bot account governance for write-access operations; prompt injection risk via retrieved ticket content.
-
 
 [^a]: [Tooling: MCP Integration](../Tooling & Configuration/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the Linear server specifically.
 [^b]: [Governance: Sprint Planning Gates](../Governance/03-sprint-planning-gates.md) — Linear MCP provides ticket context to sessions; sprint planning gate classifications can be surfaced within sessions working on classified tickets.

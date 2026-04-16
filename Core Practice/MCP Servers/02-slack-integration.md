@@ -110,12 +110,11 @@ This is not a hypothetical concern. A team member who asks a sensitive question 
 [^2]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in reducing manual coordination overhead; converting conversational context into accessible session input; context engineering as the primary discipline in agentic development.
 
-[^3]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^3]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Prompt injection risk, minimum-permission configuration, and the governance model for write-access MCP operations in team environments.
 
 [^4]: Anthropic — "Common Workflows," Claude Code Documentation, 2026. https://code.claude.com/docs/en/common-workflows
     Shared `.mcp.json` project configuration; CLAUDE.md patterns for session conventions; checking AI configuration artifacts into git as team-owned resources.
-
 
 [^6]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging patterns for external service integrations; quarterly review practices for permission scoping.
@@ -123,9 +122,8 @@ This is not a hypothetical concern. A team member who asks a sensitive question 
 [^7]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as context engineering; reducing manual context assembly; shared configuration artifacts as team-level productivity multipliers.
 
-[^8]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^8]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP open standard architecture; client-server protocol model; permission scoping guidance.
-
 
 [^a]: [Tooling: MCP Integration](../Tooling & Configuration/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the Slack server specifically.
 [^b]: [Documentation: Knowledge Transfer](../Documentation/03-knowledge-transfer.md) — Slack MCP makes conversation-based decisions queryable; it is a tool for capturing the tacit knowledge that knowledge transfer practices depend on.

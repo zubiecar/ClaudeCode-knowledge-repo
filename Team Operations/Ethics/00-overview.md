@@ -135,7 +135,7 @@ The most operationally relevant form of this bias for a software team is archite
 [^11]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
  Audit trail creation for AI-generated security-critical code: visible responsibility assignment as a governance and liability management practice.
 
-[^12]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^12]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Data processing terms, session data retention policies, and guidance on what categories of data should not be included in Claude Code sessions.
 
 [^14]: Anthropic — "Anthropic's Approach to AI Safety and Environmental Responsibility," Anthropic, 2026. https://www.anthropic.com/safety-and-responsibility

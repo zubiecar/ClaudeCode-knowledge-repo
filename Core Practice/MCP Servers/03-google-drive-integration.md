@@ -143,12 +143,10 @@ This pattern does require that the referenced Drive documents are well-organized
 [^6]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     Context engineering as the primary discipline in agentic development; how external tool integration shifts workflows from local-only to service-aware sessions.
 
-
-[^8]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^8]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture; resource types and how document content retrieval works in the protocol; permission scoping guidance.
 
-
-[^10]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^10]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     Minimum-permission configuration; prompt injection risk via retrieved document content; governance model for write-access MCP operations.
 
 [^a]: [Tooling: MCP Integration](../Tooling & Configuration/03-mcp-integration.md) — MCP integration covers the general configuration discipline; this document applies it to the Google Drive server specifically.

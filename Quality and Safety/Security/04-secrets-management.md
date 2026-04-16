@@ -113,7 +113,7 @@ The environment variable pattern — reading credentials from `os.environ`, `pro
 
 ---
 
-[^1]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^1]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Session context and credential exposure risk; Anthropic data retention policies; the specific risk of credentials appearing in AI-generated output when present in session context.
 
 [^2]: GitGuardian — "State of Secrets Sprawl 2025," GitGuardian, 2025. https://www.gitguardian.com/state-of-secrets-sprawl

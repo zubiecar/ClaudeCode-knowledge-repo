@@ -112,7 +112,7 @@ The checklist is not overhead — it is the due diligence record that protects t
 [^9]: Fannar Steinn Aðalsteinsson et al. — "Rethinking Code Review Workflows with LLM Assistance: An Empirical Study," arXiv:2505.16339, May 22, 2025. https://arxiv.org/abs/2505.16339
  AI code review attestation: how explicit ownership statements in PR process create the accountability record that legal and organizational frameworks need.
 
-[^10]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^10]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Data use policy for Claude Code sessions: training data practices, retention terms, enterprise plan provisions, and the annual review obligation for teams with compliance requirements.
 
 [^11]: Boris Cherny at Y Combinator — "Inside Claude Code With Its Creator Boris Cherny," February 17, 2026. https://www.ycombinator.com/library/NJ-inside-claude-code-with-its-creator-boris-cherny

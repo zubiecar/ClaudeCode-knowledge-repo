@@ -123,7 +123,7 @@ The CI integration architecture is straightforward: a GitHub Actions workflow th
 [^5]: OWASP — "OWASP Top 10 2021," OWASP Foundation. https://owasp.org/Top10/
  Security review category taxonomy: A01 Broken Access Control, A02 Cryptographic Failures, A03 Injection, A07 Identification and Authentication Failures; the OWASP Top 10 as the foundation for checklist category selection.
 
-[^6]: Anthropic — "Claude Code: Custom Commands," Claude Code Documentation, 2026. https://code.claude.com/docs/en/custom-commands
+[^6]: Anthropic — "Claude Code Skills," Claude Code Documentation, 2026. https://code.claude.com/docs/en/skills
  Slash command implementation via `.claude/commands/` directory; command prompt structure for structured output generation; `/security-review` command design patterns.
 
 [^7]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4

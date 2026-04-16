@@ -115,20 +115,17 @@ For automated sessions — CI pipelines, scheduled jobs, or other contexts where
 [^3]: Roman Fedytskyi — "A Safer CI Pattern for Agentic Code Review," Medium, March 2026. https://medium.com/@roman_fedyskyi/a-safer-ci-pattern-for-agentic-code-review-94a484b5e3c4
     Audit logging patterns for external service integrations; quarterly review practices; treating AI tool access with the same governance applied to other service dependencies.
 
-[^4]: Anthropic — "Model Context Protocol Introduction," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp-introduction
+[^4]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP open standard architecture; client-server protocol model; permission scoping guidance; transport layer options.
 
-[^5]: Anthropic — "MCP Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/concepts/security
+[^5]: Model Context Protocol — "Security Best Practices," Model Context Protocol Documentation, 2025. https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
     The three primary MCP security risks: prompt injection via retrieved content, excessive permission grants, and MCP server shadowing. Mitigation strategies for each risk. Governance model for write-access operations in team environments.
-
 
 [^7]: Dave Patten — "The State of AI Coding Agents (2026): From Pair Programming to Autonomous AI Teams," Medium, March 2026. https://medium.com/@dave-patten/the-state-of-ai-coding-agents-2026-from-pair-programming-to-autonomous-ai-teams-b11f2b39232a
     MCP's role in reducing manual coordination overhead; external tool access as a team-level capability requiring governance proportional to its scope.
 
-
 [^9]: Addy Osmani — "My LLM Coding Workflow Going Into 2026," April 2026. https://addyosmani.com/blog/ai-coding-workflow/
     External tool integration as a component of context engineering; shared configuration artifacts as team-level productivity multipliers; the governance overhead that scales with integration surface area.
-
 
 [^a]: [Tooling: Settings and Permissions](../Tooling & Configuration/05-settings-and-permissions.md) — MCP server permissions are a specific category of settings governance; the two documents address the same concern at tool level and MCP level.
 [^b]: [Security: Secrets Management](../Security/04-secrets-management.md) — MCP server configurations often include credentials and API keys; secrets management practices are a prerequisite for secure MCP configuration.

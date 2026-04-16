@@ -134,10 +134,10 @@ Regulatory monitoring is not a full-time responsibility for an 11-person team �
 [^1]: Veracode — "Spring 2026 GenAI Code Security Update: Despite Claims, AI Models Are Still Failing Security," March 24, 2026. https://www.veracode.com/blog/spring-2026-genai-code-security/
  Compliance cost comparison: proactive documentation vs. reactive remediation; the growing scope of AI tool use in SOC 2 audit frameworks; security testing requirements for AI-generated code.
 
-[^2]: Anthropic — "Privacy and Data Handling," Claude Code Documentation, 2026. https://code.claude.com/docs/en/privacy-data-handling
+[^2]: Anthropic — "Data Usage and Privacy," Claude Code Documentation, 2026. https://code.claude.com/docs/en/data-usage
  Governance log as compliance artifact; version control for governance documents as an audit history mechanism; data handling commitments and their documentation requirements.
 
-[^5]: Anthropic — "Security and Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/security-permissions
+[^5]: Anthropic — "Claude Code Permissions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/permissions
  CTO-level obligations for data processing review and BAA applicability assessment; regulatory monitoring trigger conditions; agentic use expansion as a data handling review trigger.
 
 [^6]: Sonar (SonarSource) — "Sonar Data Reveals Critical 'Verification Gap' in AI Coding," press release, January 8, 2026. https://www.sonarsource.com/company/press-releases/sonar-data-reveals-critical-verification-gap-in-ai-coding/

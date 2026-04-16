@@ -114,7 +114,7 @@ The prevention action should be identified in the pre-reset diagnostic (the four
 [^2]: Anthropic — "Best Practices for Claude Code," Claude Code Documentation, 2026. https://code.claude.com/docs/en/best-practices
  Recovery session as a fresh-start workflow; salvageable output as direct-fact context rather than prior-session references; model tier selection for recovery sessions; recovery brief specification standards.
 
-[^3]: Anthropic — "Managing Long Sessions," Claude Code Documentation, 2026. https://code.claude.com/docs/en/managing-long-sessions
+[^3]: Anthropic — "Context Window Management," Claude Code Documentation, 2026. https://code.claude.com/docs/en/context-window
  Pre-reset session state assessment; git stash pattern for partial rollback; recovery session brief incorporating diagnostic outputs; scope revision for scope-drift failure recovery.
 
 [^4]: Anthropic — "CLAUDE.md Configuration Guide," Claude Code Documentation, 2026. https://docs.anthropic.com/en/docs/claude-code/memory
