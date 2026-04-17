@@ -109,7 +109,7 @@ The architect's role in database MCP governance is more active than in other MCP
 [^1]: Anthropic — "MCP Integration," Claude Code Documentation, 2026. https://code.claude.com/docs/en/mcp
     MCP architecture overview; permission scoping guidance; read-only enforcement patterns; server configuration in .mcp.json with environment variable credential referencing.
 
-[^2]: Model Context Protocol — "Server: Postgres," modelcontextprotocol.io, 2025. https://modelcontextprotocol.io/docs/servers/postgres
+[^2]: Model Context Protocol — "Server: PostgreSQL (GitHub Archive)," modelcontextprotocol/servers-archived, 2025. https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres
     Official Postgres MCP server documentation: installation, connection string configuration, supported operations (schema introspection, SELECT execution), and operation scoping. Read-only enforcement at the database user level.
 
 [^3]: Model Context Protocol — "Server: SQLite (GitHub Archive)," modelcontextprotocol.io, 2025. https://github.com/modelcontextprotocol/servers-archived/tree/main/src/sqlite

@@ -81,7 +81,7 @@ Sonar's 2026 research found that the verification gap — the proportion of AI-g
 
 ---
 
-[^1]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2026/Mar/llm-hallucination-practical-framework/
+[^1]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2025/Mar/2/hallucinations-in-code/
  Hallucination as a structural property of language model generation; confidence-accuracy independence; high-risk hallucination categories for engineering work; "read before trust" as the primary operational mitigation.
 
 [^3]: Veracode — "Spring 2026 GenAI Code Security Update: Despite Claims, AI Models Are Still Failing Security," March 24, 2026. https://www.veracode.com/blog/spring-2026-genai-code-security/

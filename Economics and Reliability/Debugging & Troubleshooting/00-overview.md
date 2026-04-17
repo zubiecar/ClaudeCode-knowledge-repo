@@ -102,7 +102,7 @@ The signal for escalation is repeated session failure after reasonable attempts 
 [^4]: Boris Cherny — "How Boris Uses Claude Code," January 2026. https://howborisusesclaudecode.com
  Early failure signal recognition; the cost of late recognition in long sessions; five-minute pre-reset diagnostic habit; documentation of failure diagnosis before recovery session.
 
-[^5]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2026/Mar/llm-hallucination-practical-framework/
+[^5]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2025/Mar/2/hallucinations-in-code/
  Hallucination as a structural property of language model generation; the "read before trust" verification pattern; why model confidence does not predict factual accuracy; hallucination-prone task type identification.
 
 [^6]: Veracode — "Spring 2026 GenAI Code Security Update: Despite Claims, AI Models Are Still Failing Security," March 24, 2026. https://www.veracode.com/blog/spring-2026-genai-code-security/

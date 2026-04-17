@@ -115,6 +115,6 @@ The failure pattern log is the empirical foundation for CLAUDE.md improvements, 
 [^4]: Anthropic — "CLAUDE.md Configuration Guide," Claude Code Documentation, 2026. https://docs.anthropic.com/en/docs/claude-code/memory
  Constraint violation causes: ambiguous CLAUDE.md language, constraint depth in document, context degradation; constraint repositioning as a violation mitigation; team failure log as CLAUDE.md update trigger.
 
-[^5]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2026/Mar/llm-hallucination-practical-framework/
+[^5]: Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026. https://simonwillison.net/2025/Mar/2/hallucinations-in-code/
  False specificity as the most dangerous hallucination form; hallucination indistinguishable from correct output without verification; external API and library version as the highest-risk hallucination contexts.
 

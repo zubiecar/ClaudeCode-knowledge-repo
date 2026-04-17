@@ -113,8 +113,8 @@ Organized by category. Each entry includes full bibliographic information and a 
   <https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem>
   *Files:* [`Core Practice/MCP Servers/08-filesystem-mcp.md`](Core%20Practice/MCP%20Servers/08-filesystem-mcp.md)
 
-- **Model Context Protocol — "Server: Postgres," modelcontextprotocol.io, 2025**
-  <https://modelcontextprotocol.io/docs/servers/postgres>
+- **Model Context Protocol — "Server: PostgreSQL (GitHub Archive)," modelcontextprotocol/servers-archived, 2025**
+  <https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres>
   *Files:* [`Core Practice/MCP Servers/07-database-integration.md`](Core%20Practice/MCP%20Servers/07-database-integration.md)
 
 - **Model Context Protocol — "Server: SQLite (GitHub Archive)," modelcontextprotocol/servers-archived, 2025**
@@ -714,7 +714,7 @@ Organized by category. Each entry includes full bibliographic information and a 
   *Files:* [`Economics and Reliability/Cost & Token Economics/00-overview.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/00-overview.md), [`Economics and Reliability/Cost & Token Economics/01-understanding-token-costs.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/01-understanding-token-costs.md), [`Economics and Reliability/Cost & Token Economics/02-model-selection-strategy.md`](Economics%20and%20Reliability/Cost%20%26%20Token%20Economics/02-model-selection-strategy.md)
 
 - **Simon Willison — "LLM Hallucination: A Practical Framework for 2026," simonwillison.net, March 2026**
-  <https://simonwillison.net/2026/Mar/llm-hallucination-practical-framework/>
+  <https://simonwillison.net/2025/Mar/2/hallucinations-in-code/>
   *Files:* [`Economics and Reliability/Debugging & Troubleshooting/00-overview.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/00-overview.md), [`Economics and Reliability/Debugging & Troubleshooting/01-recognizing-session-failure-patterns.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/01-recognizing-session-failure-patterns.md), [`Economics and Reliability/Debugging & Troubleshooting/02-hallucination-and-confabulation.md`](Economics%20and%20Reliability/Debugging%20%26%20Troubleshooting/02-hallucination-and-confabulation.md)
 
 ## Technical Blog Posts
